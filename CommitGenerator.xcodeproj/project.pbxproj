@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
+		9361E8ED27C8967A007B8740 /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EC27C8967A007B8740 /* Selector.swift */; };
+		9361E8EF27C897E9007B8740 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EE27C897E9007B8740 /* Tag.swift */; };
 		938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F227C8828800D22C6A /* CommitGeneratorApp.swift */; };
 		938830F527C8828800D22C6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F427C8828800D22C6A /* ContentView.swift */; };
 		938830F727C8828900D22C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
@@ -14,6 +17,7 @@
 		9388310427C8828900D22C6A /* CommitGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310327C8828900D22C6A /* CommitGeneratorTests.swift */; };
 		9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */; };
 		9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */; };
+		9388312227C8903000D22C6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388312127C8903000D22C6A /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		9361E8EC27C8967A007B8740 /* Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
+		9361E8EE27C897E9007B8740 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		938830EF27C8828800D22C6A /* CommitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938830F227C8828800D22C6A /* CommitGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorApp.swift; sourceTree = "<group>"; };
 		938830F427C8828800D22C6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 		9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITests.swift; sourceTree = "<group>"; };
 		9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9388312127C8903000D22C6A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9361E8E927C89434007B8740 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9361E8EA27C8943B007B8740 /* Button.swift */,
+				9361E8EC27C8967A007B8740 /* Selector.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		938830E627C8828800D22C6A = {
 			isa = PBXGroup;
 			children = (
@@ -94,20 +111,12 @@
 		938830F127C8828800D22C6A /* CommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				9388311E27C88F0D00D22C6A /* Model */,
+				9388311D27C88F0800D22C6A /* View */,
+				9388311C27C88EC000D22C6A /* Resources */,
 				938830F227C8828800D22C6A /* CommitGeneratorApp.swift */,
-				938830F427C8828800D22C6A /* ContentView.swift */,
-				938830F627C8828900D22C6A /* Assets.xcassets */,
-				938830F827C8828900D22C6A /* Preview Content */,
 			);
 			path = CommitGenerator;
-			sourceTree = "<group>";
-		};
-		938830F827C8828900D22C6A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				938830F927C8828900D22C6A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9388310227C8828900D22C6A /* CommitGeneratorTests */ = {
@@ -125,6 +134,49 @@
 				9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */,
 			);
 			path = CommitGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		9388311C27C88EC000D22C6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				938830F627C8828900D22C6A /* Assets.xcassets */,
+				938830F927C8828900D22C6A /* Preview Assets.xcassets */,
+				9388312127C8903000D22C6A /* Color.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9388311D27C88F0800D22C6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9361E8E927C89434007B8740 /* Helpers */,
+				9388312027C88F1E00D22C6A /* Main */,
+				9388311F27C88F1700D22C6A /* Setting */,
+				938830F427C8828800D22C6A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9388311E27C88F0D00D22C6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9361E8EE27C897E9007B8740 /* Tag.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9388311F27C88F1700D22C6A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		9388312027C88F1E00D22C6A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9361E8EF27C897E9007B8740 /* Tag.swift in Sources */,
 				938830F527C8828800D22C6A /* ContentView.swift in Sources */,
 				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
+				9361E8ED27C8967A007B8740 /* Selector.swift in Sources */,
+				9388312227C8903000D22C6A /* Color.swift in Sources */,
+				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Resources\"";
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +503,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Resources\"";
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
