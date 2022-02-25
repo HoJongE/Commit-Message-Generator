@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932D888827C8DC080072B896 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888727C8DC080072B896 /* TagSelector.swift */; };
+		932D888B27C8DECA0072B896 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888A27C8DECA0072B896 /* TagList.swift */; };
+		932D888D27C8E0F80072B896 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888C27C8E0F80072B896 /* TagRow.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
-		9361E8ED27C8967A007B8740 /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EC27C8967A007B8740 /* Selector.swift */; };
 		9361E8EF27C897E9007B8740 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EE27C897E9007B8740 /* Tag.swift */; };
 		938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F227C8828800D22C6A /* CommitGeneratorApp.swift */; };
 		938830F527C8828800D22C6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F427C8828800D22C6A /* ContentView.swift */; };
@@ -38,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		932D888727C8DC080072B896 /* TagSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
+		932D888A27C8DECA0072B896 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		932D888C27C8E0F80072B896 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		9361E8EC27C8967A007B8740 /* Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
 		9361E8EE27C897E9007B8740 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		938830EF27C8828800D22C6A /* CommitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938830F227C8828800D22C6A /* CommitGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorApp.swift; sourceTree = "<group>"; };
@@ -79,11 +83,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		932D888927C8DEBA0072B896 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				932D888727C8DC080072B896 /* TagSelector.swift */,
+				932D888A27C8DECA0072B896 /* TagList.swift */,
+				932D888C27C8E0F80072B896 /* TagRow.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 		9361E8E927C89434007B8740 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				9361E8EA27C8943B007B8740 /* Button.swift */,
-				9361E8EC27C8967A007B8740 /* Selector.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 		9388311D27C88F0800D22C6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				932D888927C8DEBA0072B896 /* Tag */,
 				9361E8E927C89434007B8740 /* Helpers */,
 				9388312027C88F1E00D22C6A /* Main */,
 				9388311F27C88F1700D22C6A /* Setting */,
@@ -310,11 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9361E8EF27C897E9007B8740 /* Tag.swift in Sources */,
+				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* ContentView.swift in Sources */,
+				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
 				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
-				9361E8ED27C8967A007B8740 /* Selector.swift in Sources */,
 				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
+				932D888827C8DC080072B896 /* TagSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
