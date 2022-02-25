@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    let tag = Tag.provideDummyTags()
     var body: some View {
-        ScrollView(.vertical, showsIndicators: true) {
-            Text("제목")
-                .font(.title2)
-                .padding()
-            
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment:.leading,spacing: 16) {
+                Text("제목")
+                    .font(.title2).fontWeight(.semibold)
+                TagSelector(placeholder: "태그", tags: Tag.provideDummyTags(), onTagSelected: {_ in
+                    
+                })
+                
+            }
+            .padding()
         }
         .navigationTitle("커밋 작성")
         .toolbar {
