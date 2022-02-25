@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F227C8828800D22C6A /* CommitGeneratorApp.swift */; };
+		938830F527C8828800D22C6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F427C8828800D22C6A /* ContentView.swift */; };
+		938830F727C8828900D22C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
+		938830FA27C8828900D22C6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F927C8828900D22C6A /* Preview Assets.xcassets */; };
+		9388310427C8828900D22C6A /* CommitGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310327C8828900D22C6A /* CommitGeneratorTests.swift */; };
+		9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */; };
+		9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9388310027C8828900D22C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 938830E727C8828800D22C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 938830EE27C8828800D22C6A;
+			remoteInfo = CommitGenerator;
+		};
+		9388310A27C8828900D22C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 938830E727C8828800D22C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 938830EE27C8828800D22C6A;
+			remoteInfo = CommitGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		938830EF27C8828800D22C6A /* CommitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		938830F227C8828800D22C6A /* CommitGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorApp.swift; sourceTree = "<group>"; };
+		938830F427C8828800D22C6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		938830F627C8828900D22C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		938830F927C8828900D22C6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		938830FF27C8828900D22C6A /* CommitGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9388310327C8828900D22C6A /* CommitGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorTests.swift; sourceTree = "<group>"; };
+		9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITests.swift; sourceTree = "<group>"; };
+		9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		938830EC27C8828800D22C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938830FC27C8828900D22C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9388310627C8828900D22C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		938830E627C8828800D22C6A = {
+			isa = PBXGroup;
+			children = (
+				938830F127C8828800D22C6A /* CommitGenerator */,
+				9388310227C8828900D22C6A /* CommitGeneratorTests */,
+				9388310C27C8828900D22C6A /* CommitGeneratorUITests */,
+				938830F027C8828800D22C6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		938830F027C8828800D22C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				938830EF27C8828800D22C6A /* CommitGenerator.app */,
+				938830FF27C8828900D22C6A /* CommitGeneratorTests.xctest */,
+				9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		938830F127C8828800D22C6A /* CommitGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				938830F227C8828800D22C6A /* CommitGeneratorApp.swift */,
+				938830F427C8828800D22C6A /* ContentView.swift */,
+				938830F627C8828900D22C6A /* Assets.xcassets */,
+				938830F827C8828900D22C6A /* Preview Content */,
+			);
+			path = CommitGenerator;
+			sourceTree = "<group>";
+		};
+		938830F827C8828900D22C6A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				938830F927C8828900D22C6A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9388310227C8828900D22C6A /* CommitGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				9388310327C8828900D22C6A /* CommitGeneratorTests.swift */,
+			);
+			path = CommitGeneratorTests;
+			sourceTree = "<group>";
+		};
+		9388310C27C8828900D22C6A /* CommitGeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */,
+				9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */,
+			);
+			path = CommitGeneratorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		938830EE27C8828800D22C6A /* CommitGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9388311327C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGenerator" */;
+			buildPhases = (
+				938830EB27C8828800D22C6A /* Sources */,
+				938830EC27C8828800D22C6A /* Frameworks */,
+				938830ED27C8828800D22C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommitGenerator;
+			productName = CommitGenerator;
+			productReference = 938830EF27C8828800D22C6A /* CommitGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		938830FE27C8828900D22C6A /* CommitGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9388311627C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorTests" */;
+			buildPhases = (
+				938830FB27C8828900D22C6A /* Sources */,
+				938830FC27C8828900D22C6A /* Frameworks */,
+				938830FD27C8828900D22C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9388310127C8828900D22C6A /* PBXTargetDependency */,
+			);
+			name = CommitGeneratorTests;
+			productName = CommitGeneratorTests;
+			productReference = 938830FF27C8828900D22C6A /* CommitGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9388310827C8828900D22C6A /* CommitGeneratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9388311927C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorUITests" */;
+			buildPhases = (
+				9388310527C8828900D22C6A /* Sources */,
+				9388310627C8828900D22C6A /* Frameworks */,
+				9388310727C8828900D22C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9388310B27C8828900D22C6A /* PBXTargetDependency */,
+			);
+			name = CommitGeneratorUITests;
+			productName = CommitGeneratorUITests;
+			productReference = 9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		938830E727C8828800D22C6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					938830EE27C8828800D22C6A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					938830FE27C8828900D22C6A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 938830EE27C8828800D22C6A;
+					};
+					9388310827C8828900D22C6A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 938830EE27C8828800D22C6A;
+					};
+				};
+			};
+			buildConfigurationList = 938830EA27C8828800D22C6A /* Build configuration list for PBXProject "CommitGenerator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 938830E627C8828800D22C6A;
+			productRefGroup = 938830F027C8828800D22C6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				938830EE27C8828800D22C6A /* CommitGenerator */,
+				938830FE27C8828900D22C6A /* CommitGeneratorTests */,
+				9388310827C8828900D22C6A /* CommitGeneratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		938830ED27C8828800D22C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938830FA27C8828900D22C6A /* Preview Assets.xcassets in Resources */,
+				938830F727C8828900D22C6A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938830FD27C8828900D22C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9388310727C8828900D22C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		938830EB27C8828800D22C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938830F527C8828800D22C6A /* ContentView.swift in Sources */,
+				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938830FB27C8828900D22C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9388310427C8828900D22C6A /* CommitGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9388310527C8828900D22C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */,
+				9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9388310127C8828900D22C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 938830EE27C8828800D22C6A /* CommitGenerator */;
+			targetProxy = 9388310027C8828900D22C6A /* PBXContainerItemProxy */;
+		};
+		9388310B27C8828900D22C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 938830EE27C8828800D22C6A /* CommitGenerator */;
+			targetProxy = 9388310A27C8828900D22C6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9388311127C8828900D22C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9388311227C8828900D22C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9388311427C8828900D22C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9388311527C8828900D22C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9388311727C8828900D22C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitGenerator.app/CommitGenerator";
+			};
+			name = Debug;
+		};
+		9388311827C8828900D22C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitGenerator.app/CommitGenerator";
+			};
+			name = Release;
+		};
+		9388311A27C8828900D22C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGeneratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommitGenerator;
+			};
+			name = Debug;
+		};
+		9388311B27C8828900D22C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGeneratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommitGenerator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		938830EA27C8828800D22C6A /* Build configuration list for PBXProject "CommitGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9388311127C8828900D22C6A /* Debug */,
+				9388311227C8828900D22C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9388311327C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9388311427C8828900D22C6A /* Debug */,
+				9388311527C8828900D22C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9388311627C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9388311727C8828900D22C6A /* Debug */,
+				9388311827C8828900D22C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9388311927C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9388311A27C8828900D22C6A /* Debug */,
+				9388311B27C8828900D22C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 938830E727C8828800D22C6A /* Project object */;
+}
