@@ -23,13 +23,30 @@ struct SettingButton<Destination : View> : View {
     }
 }
 
+struct CopyButton : View {
+    
+    var body: some View {
+        Button(action: {}){
+            Text("클립보드 복사")
+                .font(.body)
+                .foregroundColor(.white)
+        }
+        .frame(maxWidth:.infinity)
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 6).fill(Color.brand))
+    }
+}
+
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SettingButton {
                 Text("설정")
             }
+            
+            CopyButton()
         }
+        .padding()
         .previewLayout(.sizeThatFits)
     }
 }

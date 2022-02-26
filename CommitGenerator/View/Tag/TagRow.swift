@@ -23,34 +23,40 @@ struct TagRow: View {
                         .foregroundColor(.green)
                 }
             }
-            Text(tag.name).font(.body)
+            Text(tag.name ?? "이름 없음").font(.body)
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
-            Divider()
-                .background(Color.white)
-            Text("설명")
-                .foregroundColor(.text3)
-                .font(.footnote)
-            Text(tag.tagDescription)
-                .foregroundColor(.white)
-                .font(.system(size: 14))
+            
+            if let description = tag.tagDescription {
+                
+                Divider()
+                    .background(Color.white)
+                Text("설명")
+                    .foregroundColor(.text3)
+                    .font(.footnote)
+                Text(description)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14))
+                    .lineSpacing(4)
+            }
             
         }
+        .multilineTextAlignment(.leading)
         .frame(maxWidth:.infinity,alignment: .topLeading)
         .padding()
-        .background(RoundedRectangle(cornerRadius: 6).fill(Color(hex: tag.colorHex)))
+        .background(RoundedRectangle(cornerRadius: 6).fill(Color(hex: tag.colorHex ?? "123456") ).opacity(0.4))
         
     }
 }
 
 struct TagRow_Previews: PreviewProvider {
+    
     static var previews: some View {
+        let mockedCoreData = MockedCoreData.shared
+        
         Group {
-            TagRow(tag: Tag("Feat", "기능을 추가하거나 받아옴,브레이킹 배드 뉴스 엄청난 API 의 수정!", color: "#123456")
-                   ,selected: true)
-            
-            TagRow(tag: Tag("Feat", "기능을 추가하거나 받아옴,브레이킹 배드 뉴스 엄청난 API 의 수정!", color: "#123456")
-                   ,selected: false)
+            TagRow(tag: mockedCoreData.tag(),selected: true)
+            TagRow(tag: mockedCoreData.tag(),selected: false)
             
         }
         .padding()
