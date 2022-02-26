@@ -37,9 +37,5 @@ extension Color {
         self.init(red: r, green: g, blue: b)
 
     }
-    
-    
-    enum ColorError : Error {
-        case InvalidHex
-    }
+  
 }

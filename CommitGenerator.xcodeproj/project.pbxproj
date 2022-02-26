@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
+		932189A127C9DB36007472FD /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
+		932189A327C9DE20007472FD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A227C9DE20007472FD /* TextField.swift */; };
 		932D888827C8DC080072B896 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888727C8DC080072B896 /* TagSelector.swift */; };
 		932D888B27C8DECA0072B896 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888A27C8DECA0072B896 /* TagList.swift */; };
 		932D888D27C8E0F80072B896 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888C27C8E0F80072B896 /* TagRow.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
-		9361E8EF27C897E9007B8740 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EE27C897E9007B8740 /* Tag.swift */; };
 		938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F227C8828800D22C6A /* CommitGeneratorApp.swift */; };
 		938830F527C8828800D22C6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938830F427C8828800D22C6A /* ContentView.swift */; };
 		938830F727C8828900D22C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 		9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */; };
 		9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */; };
 		9388312227C8903000D22C6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388312127C8903000D22C6A /* Color.swift */; };
+		93E8105627C9B639008B423A /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9321899E27C9BB5E007472FD /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		932189A027C9DB36007472FD /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		932189A227C9DE20007472FD /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		932D888727C8DC080072B896 /* TagSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
 		932D888A27C8DECA0072B896 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		932D888C27C8E0F80072B896 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		9361E8EE27C897E9007B8740 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		938830EF27C8828800D22C6A /* CommitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938830F227C8828800D22C6A /* CommitGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorApp.swift; sourceTree = "<group>"; };
 		938830F427C8828800D22C6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITests.swift; sourceTree = "<group>"; };
 		9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9388312127C8903000D22C6A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		93E8105527C9B639008B423A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9361E8EA27C8943B007B8740 /* Button.swift */,
+				932189A227C9DE20007472FD /* TextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 		938830F127C8828800D22C6A /* CommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				93E8105127C9B4E6008B423A /* CoreData */,
 				9388311E27C88F0D00D22C6A /* Model */,
 				9388311D27C88F0800D22C6A /* View */,
 				9388311C27C88EC000D22C6A /* Resources */,
@@ -174,7 +182,6 @@
 		9388311E27C88F0D00D22C6A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9361E8EE27C897E9007B8740 /* Tag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +198,16 @@
 			children = (
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		93E8105127C9B4E6008B423A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9321899D27C9BB5E007472FD /* Database.xcdatamodeld */,
+				93E8105527C9B639008B423A /* PersistenceController.swift */,
+				932189A027C9DB36007472FD /* MockedData.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9361E8EF27C897E9007B8740 /* Tag.swift in Sources */,
+				932189A127C9DB36007472FD /* MockedData.swift in Sources */,
+				932189A327C9DE20007472FD /* TextField.swift in Sources */,
+				93E8105627C9B639008B423A /* PersistenceController.swift in Sources */,
 				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* ContentView.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
+				9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */,
 				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
 				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
@@ -657,6 +677,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9321899D27C9BB5E007472FD /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9321899E27C9BB5E007472FD /* Database.xcdatamodel */,
+			);
+			currentVersion = 9321899E27C9BB5E007472FD /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 938830E727C8828800D22C6A /* Project object */;
 }
