@@ -12,13 +12,11 @@ struct TagList: View {
     let placeholder : String
     var selected : Binding<Tag?>
     let tags : [Tag]
-    let onTagSelected : (Tag) -> Void
 
-    init(_ placeholder : String ,_ selected : Binding<Tag?>, _ tags : [Tag], onTagSelected : @escaping (Tag) -> Void){
+    init(_ placeholder : String ,_ selected : Binding<Tag?>, _ tags : [Tag]){
         self.placeholder  = placeholder
         self.selected = selected
         self.tags = tags
-        self.onTagSelected = onTagSelected
     }
 
     var body: some View {
@@ -27,7 +25,6 @@ struct TagList: View {
                 Button(action:{
                     dismiss()
                     selected.wrappedValue = tag
-                    onTagSelected(tag)
                 }){
                     TagRow(tag: tag, selected: selected.wrappedValue != nil &&
                            selected.wrappedValue! == tag)
@@ -46,9 +43,7 @@ struct TagList: View {
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TagList("기능",.constant(MockedCoreData.shared.tag()),MockedCoreData.shared.tags()){ _ in
-
-            }
+            TagList("기능",.constant(MockedCoreData.shared.tag()),MockedCoreData.shared.tags())
         }
     }
 }

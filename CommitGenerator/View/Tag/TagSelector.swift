@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct TagSelector: View {
-    @State private var selected : Tag? = nil
+    @Binding var selected : Tag?
     let placeholder : String
     let tags : [Tag]
 
-    let onTagSelected : (Tag) -> Void
-
     var body: some View {
-        NavigationLink(destination: TagList(placeholder, $selected, tags, onTagSelected: onTagSelected)) {
+        NavigationLink(destination: TagList(placeholder, $selected, tags)) {
             HStack(spacing:0) {
                 Text(selected?.name ?? placeholder)
                     .font(.body)
@@ -36,7 +34,7 @@ struct TagSelector: View {
 
 struct TagSelector_Previews: PreviewProvider {
     static var previews: some View {
-        TagSelector(placeholder: "기능", tags: MockedCoreData.shared.tags()){_ in }
+        TagSelector(selected: .constant(nil), placeholder: "기능", tags: MockedCoreData.shared.tags())
             .previewLayout(.sizeThatFits)
             .padding()
             .background(Color.black)
