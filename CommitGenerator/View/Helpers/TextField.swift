@@ -7,48 +7,38 @@
 
 import SwiftUI
 
-struct RoundedTextField: View {
-    let placeholder : String
-    var text : Binding<String>
-    let showTextCount : Bool
-    let textLimit : Int
+struct RoundedTextField<Content: View>: View {
     
-    init(placeholder : String,text : Binding<String>,
-         showTextCount :Bool = true,textLimit : Int = 50) {
-        self.placeholder = placeholder
+    let editorType : EditorType
+    var text : Binding<String>
+    
+    let content : () -> Content
+    init(_ editorType:EditorType,_ text : Binding<String>,@ViewBuilder content : @escaping () -> Content) {
+        self.editorType = editorType
         self.text = text
-        self.showTextCount = showTextCount
-        self.textLimit = textLimit
-        UITextView.appearance().backgroundColor = .clear
+        self.content = content
     }
     
     var body: some View {
-        
-        VStack(alignment:.leading){
-            Text(placeholder)
-                .foregroundColor(.text3)
-                .font(.caption)
-            TextEditor(text: text)
-                .onChange(of: text.wrappedValue) { value in
-                    print(text.wrappedValue)
-                    if text.wrappedValue.count > textLimit {
-                        text.wrappedValue = String(text.wrappedValue.prefix(textLimit))
-                    }
-                }
-                .foregroundColor(.black)
-                .frame(minHeight:30,maxHeight: 100)
-                .textFieldStyle(PlainTextFieldStyle())
-                .lineLimit(1)
-                .font(.body)
-                
-            HStack {
-                Spacer()
-                Text("\(text.wrappedValue.count)/\(textLimit)")
+        NavigationLink(destination: FullScreenTextEditor(editorType: editorType, text: text,content: content)) {
+            VStack(alignment:.leading){
+                Text(editorType.title)
+                    .foregroundColor(.text3)
                     .font(.caption)
-                    .foregroundColor(.text2)
+                Text(text.wrappedValue)
+                    .foregroundColor(.black)
+                    .frame(minHeight:30,maxHeight: 100,alignment: .topLeading)
+                    .font(.body)
+                
+                HStack {
+                    Spacer()
+                    Text("\(text.wrappedValue.count)/\(editorType.textLimit)")
+                        .font(.caption)
+                        .foregroundColor(.text2)
+                }
             }
+            .multilineTextAlignment(.leading)
         }
-        .multilineTextAlignment(.leading)
         .frame(maxWidth:.infinity)
         .padding()
         .background(RoundedRectangle(cornerRadius: 6).fill(.white))
@@ -57,7 +47,7 @@ struct RoundedTextField: View {
 
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedTextField(placeholder : "라벨" ,text: .constant(""))
+        RoundedTextField(.Body, .constant("아하하하!!"), content: {})
             .padding()
             .previewLayout(.sizeThatFits)
             .background(Color.black)

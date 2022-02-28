@@ -20,14 +20,12 @@ struct CommitGeneratorApp: App {
         }
         
     }
- 
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
-            }
-            .environment(\.managedObjectContext,
-                          persistenceController.container.viewContext)
+            RootTabView()
+                .environment(\.managedObjectContext,
+                              persistenceController.container.viewContext)
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {

@@ -7,44 +7,32 @@
 
 import SwiftUI
 
-struct SettingButton<Destination : View> : View {
+struct SaveButton : View {
     
-    let destination : () -> Destination
+    let copy : (CopyType) -> Void
     
-    init(@ViewBuilder destination: @escaping () -> Destination) {
-        self.destination = destination
-    }
     var body: some View {
-        NavigationLink(destination: destination()){
-            Label("설정", systemImage: "gear")
-                .foregroundColor(.brand)
+        Menu(content: {
+            Button(action : {copy(.TitleOnly)}) {
+                Label("제목만 복사", systemImage: "abc")
+            }
+            Button(action: {copy(.BodyOnly)}) {
+                Label("본문만 복사", systemImage: "list.bullet.circle")
+            }
+            Button(action: {copy(.All)}) {
+                Label("전체 복사", systemImage: "doc.on.doc")
+            }
+        }) {
+            Label("커밋 복사", systemImage: "arrow.up.doc.on.clipboard")
                 .labelStyle(.titleAndIcon)
         }
-    }
-}
-
-struct CopyButton : View {
-    
-    var body: some View {
-        Button(action: {}){
-            Text("클립보드 복사")
-                .font(.body)
-                .foregroundColor(.white)
-        }
-        .frame(maxWidth:.infinity)
-        .padding(16)
-        .background(RoundedRectangle(cornerRadius: 6).fill(Color.brand))
     }
 }
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SettingButton {
-                Text("설정")
-            }
-            
-            CopyButton()
+            SaveButton(copy: {_ in})
         }
         .padding()
         .previewLayout(.sizeThatFits)
