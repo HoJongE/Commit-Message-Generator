@@ -13,8 +13,7 @@ struct CommitWriteHost: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags : FetchedResults<Tag>
     
-    
-    @ObservedObject private var commitViewModel = CommitViewModel()
+    @EnvironmentObject var commitViewModel : CommitViewModel
     
     var basicTags : [Tag] {
         tags.filter { tag in

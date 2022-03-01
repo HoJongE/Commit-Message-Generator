@@ -50,7 +50,6 @@ final class KeyChainManager {
               let token = try? JSONDecoder().decode(String.self, from: data) else {
                   return nil
               }
-        print(token)
         return token
 
     }

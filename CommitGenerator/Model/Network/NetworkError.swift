@@ -12,4 +12,5 @@ enum NetworkError : Error {
     case Error404
     case Error422
     case ResponseNotExist
+    case authenticationError
 }

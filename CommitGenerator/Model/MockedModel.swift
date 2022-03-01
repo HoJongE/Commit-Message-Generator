@@ -15,7 +15,7 @@ extension PreviewDevice {
 }
 
 extension Issue {
-    static let mocIssue : [Issue] = [Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5)]
+    static let mocIssue : [Issue] = [Issue(title: "하이", number: 5, user: User(login: "", avatar_url: "", gravatar_id: "", url: ""))]
 }
 
 #endif

@@ -17,6 +17,7 @@ extension Const {
         static let GITHUB_ACCESS_TOKEN = "https://github.com/login/oauth/access_token"
         static let URL_TYPE = "commitgenerator://"
         static let GITHUB_ISSUE = "https://api.github.com/issues"
+        static let GITHUB_USER = "https://api.github.com/user"
     }
 }
 

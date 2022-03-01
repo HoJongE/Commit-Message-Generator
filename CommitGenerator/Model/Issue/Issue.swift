@@ -8,15 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct Issue : Hashable , Codable {
+struct Issue : Codable,Hashable  {
    
     let title : String
     let number : Int
+    let user : User
     
 }
 
 extension Issue : CustomStringConvertible {
     var description: String {
-        "Issue Number:\(number) Issue Title:\(title)"
+        "Issue Number:\(number) Issue Title:\(title) maker:\(user.login)"
     }
 }
