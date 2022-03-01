@@ -12,7 +12,7 @@ import SwiftUI
 
 struct PersistenceController {
     
-    static let shared = PersistenceController()
+    static let shared : PersistenceController = PersistenceController()
     
     let container : NSPersistentContainer
     
@@ -52,14 +52,13 @@ extension PersistenceController {
     func deleteAllData() {
         guard let url = self.container.persistentStoreDescriptions.first?.url else { return }
     
-           
         let persistentStoreCoordinator = self.container.persistentStoreCoordinator
 
             do {
                 try persistentStoreCoordinator.destroyPersistentStore(at:url, ofType: NSSQLiteStoreType, options: nil)
                 try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
             } catch {
-                print("Attempted to clear persistent store: " + error.localizedDescription)
+                print("Attempted to clear persistent store: ".appending(error.localizedDescription))
             }
     }
     

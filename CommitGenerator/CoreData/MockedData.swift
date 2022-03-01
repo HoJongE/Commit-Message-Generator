@@ -12,7 +12,7 @@ import CoreData
 
 struct MockedCoreData{
     
-    static let shared = MockedCoreData()
+    static let shared : MockedCoreData = MockedCoreData()
     
     let container : NSPersistentContainer
     

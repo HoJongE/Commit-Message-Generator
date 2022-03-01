@@ -46,25 +46,25 @@ struct IssuePicker: View {
         .navigationTitle(issueType.korTitle)
     }
 }
-
-struct ErrorView : View {
-    let error : Error
-    let retry : (Int) -> Void
-    var body: some View {
-        VStack {
-            Text("이슈를 불러오는데 에러가 발생했습니다.\n\(error.localizedDescription)")
-                .foregroundColor(.error)
-                .padding()
-            Button("다시 시도",action: {retry(1)})
-                .padding()
-            Spacer()
+extension IssuePicker {
+    private struct ErrorView : View {
+        let error : Error
+        let retry : (Int) -> Void
+        var body: some View {
+            VStack {
+                Text("이슈를 불러오는데 에러가 발생했습니다.\n\(error.localizedDescription)")
+                    .foregroundColor(.error)
+                    .padding()
+                Button("다시 시도",action: {retry(1)})
+                    .padding()
+                Spacer()
+            }
+            .frame(maxWidth:.infinity,maxHeight: .infinity)
+            .background(Color.background1.edgesIgnoringSafeArea(.all))
+            .multilineTextAlignment(.center)
         }
-        .frame(maxWidth:.infinity,maxHeight: .infinity)
-        .background(Color.background1.edgesIgnoringSafeArea(.all))
-        .multilineTextAlignment(.center)
     }
 }
-
 struct IssuePicker_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

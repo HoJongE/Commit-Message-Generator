@@ -8,7 +8,7 @@
 import Foundation
 
 
-class BottomSheetManager : ObservableObject {
+final class BottomSheetManager : ObservableObject {
     @Published var isPresent : Bool = false
     private(set) var action = Action.None
     

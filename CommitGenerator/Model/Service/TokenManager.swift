@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class TokenManager  {
+final class TokenManager  {
     static let shared = TokenManager()
     
     func requestAccessToken(with code: String, _ completion : @escaping (Lodable<String>) -> Void = {_ in}) {

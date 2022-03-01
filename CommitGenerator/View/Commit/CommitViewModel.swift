@@ -12,15 +12,15 @@ import UIKit
 extension CommitWriteHost {
     
     
-    class CommitViewModel : ObservableObject {
+    final class CommitViewModel : ObservableObject {
         
-        @Published var title : String
-        @Published var body : String
+        @Published var title : String = ""
+        @Published var body : String = ""
         
-        @Published var resolvedIssues : [Issue]
-        @Published var fixingIssues : [Issue]
-        @Published var refIssues : [Issue]
-        @Published var relatedIssues : [Issue]
+        @Published var resolvedIssues : [Issue] = [Issue]()
+        @Published var fixingIssues : [Issue] = [Issue]()
+        @Published var refIssues : [Issue] = [Issue]()
+        @Published var relatedIssues : [Issue] = [Issue]()
         
         @Published var selectedTag : Tag?
         @Published var selectedFunction : Tag?
@@ -32,12 +32,6 @@ extension CommitWriteHost {
         private let githubService : GithubService
         
         init(githubService : GithubService = GithubService.shared) {
-            title = ""
-            body = ""
-            resolvedIssues = [Issue]()
-            fixingIssues = [Issue]()
-            refIssues = [Issue]()
-            relatedIssues = [Issue]()
             self.githubService = githubService
         }
         
