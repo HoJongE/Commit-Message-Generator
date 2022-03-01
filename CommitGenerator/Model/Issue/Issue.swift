@@ -12,6 +12,8 @@ struct Issue : Codable,Hashable  {
    
     let title : String
     let number : Int
+    let body : String?
+    let repository_url : String
     let user : User
     
 }
