@@ -28,6 +28,13 @@ enum Lodable<T>{
             default: return nil
         }
     }
+    
+    var loading : Bool {
+        switch self {
+            case .Loading: return true
+            default : return false
+        }
+    }
 }
 
 extension Lodable : Equatable {

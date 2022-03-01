@@ -22,6 +22,7 @@ struct BottomSheetContainer: View {
                 Spacer()
                 Button(action:{dismiss()}) {
                     Image(systemName: "xmark.circle.fill")
+                        .imageScale(.large)
                         .foregroundColor(.gray)
                 }
             }

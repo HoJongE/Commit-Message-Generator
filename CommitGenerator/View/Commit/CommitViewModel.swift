@@ -11,6 +11,7 @@ import UIKit
 
 extension CommitWriteHost {
     
+    
     class CommitViewModel : ObservableObject {
         
         @Published var title : String
