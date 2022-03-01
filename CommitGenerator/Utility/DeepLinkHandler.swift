@@ -8,10 +8,10 @@
 import Foundation
 
 struct DeepLinkHandler {
-    func openLink(with url : URL){
-        if url.absoluteString.starts(with: Const.URL.URL_TYPE + "login") {
+    func openLink(with url : URL,authentication : Authentication) {
+        if url.absoluteString.starts(with: Const.URL.URL_TYPE + "login"){
             if let code = url.absoluteString.split(separator: "=").last.map({String($0)}) {
-                TokenManager.shared.requestAccessToken(with: code)
+                authentication.requestAccessToken(with: code)
             }
         }
     }

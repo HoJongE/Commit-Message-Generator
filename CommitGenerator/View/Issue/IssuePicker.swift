@@ -11,22 +11,35 @@ struct IssuePicker: View {
     
     let issueType : IssueType
     let issueAdd : (Issue) -> Void
-    @State private var issueNumber : String = ""
     @Environment(\.dismiss) private var dismiss
-
+    @EnvironmentObject var commitViewModel : CommitWriteHost.CommitViewModel
+    @EnvironmentObject var authentication : Authentication
+    @EnvironmentObject var bottomSheetManager : BottomSheetManager
+    
     var body: some View {
         VStack(alignment:.center){
-            TextField("이슈번호", text: $issueNumber)
-                .padding()
-                .multilineTextAlignment(.center)
-                .keyboardType(.decimalPad)
-            Button("추가") {
-                let issue = Issue(title: "하이하이", number: Int(issueNumber)!)
-                issueAdd(issue)
-                dismiss()
+            switch commitViewModel.issues {
+                case .Success(data: let data):
+                    Text(data.description)
+                case .Error(error: let error):
+                    ErrorView(error: error,retry: commitViewModel.getIssues(_:))
+                default:
+                    ProgressView()
             }
-            .disabled(issueNumber.count == 0)
             Spacer()
+        }
+        .onAppear {
+            commitViewModel.getIssues(1)
+            if let error = authentication.user.error {
+                if case NetworkError.authenticationError = error {
+                    bottomSheetManager.openGithubLogin()
+                }
+            }
+        }
+        .onChange(of: authentication.user) { newValue in
+            if case Lodable.Success(data: _) = newValue {
+                commitViewModel.getIssues(1)
+            }
         }
         .padding()
         .frame(maxWidth:.infinity,maxHeight: .infinity)
@@ -35,11 +48,32 @@ struct IssuePicker: View {
     }
 }
 
+struct ErrorView : View {
+    let error : Error
+    let retry : (Int) -> Void
+    var body: some View {
+        VStack {
+            Text("이슈를 불러오는데 에러가 발생했습니다.\n\(error.localizedDescription)")
+                .foregroundColor(.error)
+                .padding()
+            Button("다시 시도",action: {retry(1)})
+                .padding()
+            Spacer()
+        }
+        .frame(maxWidth:.infinity,maxHeight: .infinity)
+        .background(Color.background1.edgesIgnoringSafeArea(.all))
+        .multilineTextAlignment(.center)
+    }
+}
+
 struct IssuePicker_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             IssuePicker(issueType: .Ref){_ in}
         }
+        .environmentObject(CommitWriteHost.CommitViewModel())
+        .environmentObject(BottomSheetManager())
+        .environmentObject(Authentication())
         .preferredColorScheme(.dark)
     }
 }

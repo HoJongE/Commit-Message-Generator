@@ -13,10 +13,11 @@ class GithubService {
     
     private init(){}
     
-    func getIssues(_ page : Int,_ completion : @escaping (Lodable<Issue>) -> Void = {_ in}){
+    func getIssues(_ page : Int,_ completion : @escaping (Lodable<[Issue]>) -> Void = {_ in}){
         let url = Const.URL.GITHUB_ISSUE
         let accessToken = KeyChainManager.shared.readToken()
         guard let accessToken = accessToken else {
+            completion(Lodable.Error(error: NetworkError.authenticationError))
             return
         }
 
@@ -40,8 +41,50 @@ class GithubService {
                 return
             }
             
-            print(try? JSONDecoder().decode([Issue].self, from: value).description)
+            do {
+                let issues = try JSONDecoder().decode([Issue].self, from: value)
+                completion(Lodable.Success(data: issues))
+                
+            } catch {
+                completion(Lodable.Error(error: error))
+            }
         }
+    }
+    
+    func getUser(completion :@escaping (Lodable<User>) -> Void = {_ in}) {
+        let url = Const.URL.GITHUB_USER
+        let accessToken = KeyChainManager.shared.readToken()
+        guard let accessToken = accessToken else {
+            completion(Lodable.Error(error: NetworkError.authenticationError))
+            return
+        }
+        
+        let headers : HTTPHeaders = ["accept":"application/vnd.github.v3+json",
+                                     "Authorization":"token \(accessToken)"]
+        
+        AF.request(url,
+                   method: .get,
+                   headers: headers).responseData { result in
+            
+            guard let response = result.response,let value = result.value else {
+                completion(Lodable.Error(error: NetworkError.ResponseNotExist))
+                return
+            }
+            
+            if let error = self.judgeStatus(response.statusCode) {
+                completion(Lodable.Error(error: error))
+                return
+            }
+            
+            do {
+                let user = try JSONDecoder().decode(User.self, from: value)
+                completion(Lodable.Success(data: user))
+            } catch {
+                completion(Lodable.Error(error: error))
+            }
+
+        }
+
     }
     
     private func judgeStatus(_ statusCode : Int) -> Error? {

@@ -44,7 +44,7 @@ struct IssuePlusButton : View {
 struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueItem(Issue(title: "하이하이", number: 5))
+            IssueItem(Issue.mocIssue[0])
             
             IssuePlusButton(issueType: .Related ,onIssueAdded: {_ in })
         }

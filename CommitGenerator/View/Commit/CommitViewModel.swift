@@ -24,15 +24,20 @@ extension CommitWriteHost {
         @Published var selectedTag : Tag?
         @Published var selectedFunction : Tag?
         
+        @Published var issues : Lodable<[Issue]> = Lodable.Empty
+        
         private let commitWriter : CommitWriter = CommitWriter()
         
-        init() {
+        private let githubService : GithubService
+        
+        init(githubService : GithubService = GithubService.shared) {
             title = ""
             body = ""
             resolvedIssues = [Issue]()
             fixingIssues = [Issue]()
             refIssues = [Issue]()
             relatedIssues = [Issue]()
+            self.githubService = githubService
         }
         
         func selectTag(_ tag : Tag) {
@@ -64,6 +69,13 @@ extension CommitWriteHost {
             fixingIssues.removeAll()
             selectedTag = nil
             selectedFunction = nil
+        }
+        
+        func getIssues(_ page : Int) {
+            githubService.getIssues(page) { result in
+                self.issues = result
+                print(result.description)
+            }
         }
     }
 }

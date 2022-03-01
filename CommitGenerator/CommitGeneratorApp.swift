@@ -11,28 +11,43 @@ import SwiftUI
 struct CommitGeneratorApp: App {
     
     let persistenceController = PersistenceController.shared
+    @StateObject var authentication : Authentication = Authentication()
+    @StateObject var commitViewModel : CommitWriteHost.CommitViewModel = CommitWriteHost.CommitViewModel()
+    @StateObject var bottomSheetManager : BottomSheetManager = BottomSheetManager()
     @Environment(\.scenePhase) var scenePhase
     
     init(){
         if !UserDefaults.standard.bool(forKey: "first_time") {
             persistenceController.reset()
             UserDefaults.standard.set(true, forKey: "first_time")
+            
         }
         
     }
     
     var body: some Scene {
         WindowGroup {
-//            RootTabView()
-//                .environment(\.managedObjectContext,
-//                              persistenceController.container.viewContext)
-//                .onOpenURL { url in
-//                    print(url.absoluteString)
-//                }
-            GithubLoginView()
+            RootTabView()
+                .environment(\.managedObjectContext,
+                              persistenceController.container.viewContext)
+                .environmentObject(authentication)
+                .environmentObject(commitViewModel)
+                .environmentObject(bottomSheetManager)
+                .fullScreenCover(isPresented: $bottomSheetManager.isPresent) {
+                    BottomSheetContainer()
+                        .environmentObject(authentication)
+                        .environmentObject(commitViewModel)
+                        .environmentObject(bottomSheetManager)
+                }
                 .onOpenURL { url in
-                    print(url.absoluteString)
-                    DeepLinkHandler().openLink(with: url)
+                    DeepLinkHandler().openLink(with: url,authentication: authentication)
+                }
+                .onAppear {
+                    if KeyChainManager.shared.deleteToken() {
+                        print("success")
+                    } else {
+                        print("false")
+                    }
                 }
         }
         .onChange(of: scenePhase) { newScenePhase in

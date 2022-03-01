@@ -23,6 +23,10 @@
 		9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9D27CC6E2800AF6F25 /* CopyType.swift */; };
 		9351EFA027CC6E8E00AF6F25 /* CommitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
+		93639BB027CDB06000D52C5C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BAF27CDB06000D52C5C /* Authentication.swift */; };
+		93639BB327CDB14200D52C5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB227CDB14200D52C5C /* User.swift */; };
+		93639BB627CDBB1700D52C5C /* BottomSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */; };
+		93639BB827CDC84B00D52C5C /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */; };
 		93845B9927C9FF3A00951A57 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9827C9FF3A00951A57 /* TextEditor.swift */; };
 		93845B9B27CA002F00951A57 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9A27CA002F00951A57 /* EditorType.swift */; };
 		93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9D27CA25C100951A57 /* MockedModel.swift */; };
@@ -89,6 +93,10 @@
 		9351EF9D27CC6E2800AF6F25 /* CopyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyType.swift; sourceTree = "<group>"; };
 		9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriter.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		93639BAF27CDB06000D52C5C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		93639BB227CDB14200D52C5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetManager.swift; sourceTree = "<group>"; };
+		93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
 		93845B9827C9FF3A00951A57 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		93845B9A27CA002F00951A57 /* EditorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorType.swift; sourceTree = "<group>"; };
 		93845B9D27CA25C100951A57 /* MockedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedModel.swift; sourceTree = "<group>"; };
@@ -207,6 +215,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		93639BB127CDB13E00D52C5C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				93639BB227CDB14200D52C5C /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		93639BB427CDBB0A00D52C5C /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */,
+				93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		93845B9C27CA00AA00951A57 /* Const */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +307,7 @@
 		9388311D27C88F0800D22C6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93639BB427CDBB0A00D52C5C /* BottomSheet */,
 				93D381E627CCBD740047043A /* Github */,
 				9351EF8F27CC5E2C00AF6F25 /* Commit */,
 				93B7ADDE27CA46DC00A1EF24 /* Issue */,
@@ -297,6 +323,7 @@
 		9388311E27C88F0D00D22C6A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				93639BB127CDB13E00D52C5C /* User */,
 				93D381F727CD15470047043A /* Network */,
 				93D381EF27CD0A490047043A /* KeyChain */,
 				93D381E927CCD5B40047043A /* Service */,
@@ -330,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				93D381E727CCBD7F0047043A /* GithubLoginView.swift */,
+				93639BAF27CDB06000D52C5C /* Authentication.swift */,
 			);
 			path = Github;
 			sourceTree = "<group>";
@@ -641,6 +669,7 @@
 				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* CommitWriteHost.swift in Sources */,
 				93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */,
+				93639BB327CDB14200D52C5C /* User.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
 				9351EF9C27CC6D1300AF6F25 /* CommitValidator.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
@@ -651,13 +680,16 @@
 				93B7ADDD27CA3D1800A1EF24 /* ViewExtension.swift in Sources */,
 				93D381EE27CCD8330047043A /* DeepLinkHandler.swift in Sources */,
 				93D381F327CD11690047043A /* GithubService.swift in Sources */,
+				93639BB827CDC84B00D52C5C /* BottomSheetContainer.swift in Sources */,
 				9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */,
 				93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */,
+				93639BB027CDB06000D52C5C /* Authentication.swift in Sources */,
 				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				93845B9B27CA002F00951A57 /* EditorType.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
 				93D381F527CD13C40047043A /* Lodable.swift in Sources */,
 				93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */,
+				93639BB627CDBB1700D52C5C /* BottomSheetManager.swift in Sources */,
 				93B7ADE427CA4FC600A1EF24 /* TabView.swift in Sources */,
 				932D888827C8DC080072B896 /* TagSelector.swift in Sources */,
 				93D381E527CCBCD30047043A /* Const.swift in Sources */,
