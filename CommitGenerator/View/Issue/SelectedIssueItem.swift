@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct IssueItem: View {
-    let issue : Issue
-    let deleteIssue : (Issue) -> Void
+    private let issue : Issue
+    private let deleteIssue : (Issue) -> Void
+    
     init(_ issue : Issue,deleteIssue :@escaping (Issue) -> Void){
         self.issue = issue
         self.deleteIssue = deleteIssue

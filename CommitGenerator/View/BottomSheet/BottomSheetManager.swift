@@ -10,7 +10,7 @@ import Foundation
 
 final class BottomSheetManager : ObservableObject {
     @Published var isPresent : Bool = false
-    private(set) var action = Action.None
+    private(set) var action : Action = .None
     
     func openGithubLogin() {
         action = .GithubLogin

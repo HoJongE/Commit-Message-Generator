@@ -23,8 +23,8 @@ final class Authentication : ObservableObject {
     }
     
     func requestCode() {
-        let scope = "repo,user"
-        let urlString = "https://github.com/login/oauth/authorize?client_id=\(Const.GitHub.CLIEND_ID)&scope=\(scope)"
+        let scope : String = "repo,user"
+        let urlString : String = "https://github.com/login/oauth/authorize?client_id=\(Const.GitHub.CLIEND_ID)&scope=\(scope)"
         if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }

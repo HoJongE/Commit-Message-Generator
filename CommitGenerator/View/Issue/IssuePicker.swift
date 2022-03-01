@@ -11,9 +11,9 @@ struct IssuePicker: View {
     
     let issueType : IssueType
     let issueAdd : (Issue) -> Void
-    @EnvironmentObject var commitViewModel : CommitWriteHost.CommitViewModel
-    @EnvironmentObject var authentication : Authentication
-    @EnvironmentObject var bottomSheetManager : BottomSheetManager
+    @EnvironmentObject private var commitViewModel : CommitWriteHost.CommitViewModel
+    @EnvironmentObject private var authentication : Authentication
+    @EnvironmentObject private var bottomSheetManager : BottomSheetManager
     
     var body: some View {
         VStack(alignment:.center){

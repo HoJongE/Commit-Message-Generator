@@ -9,31 +9,30 @@ import SwiftUI
 
 struct RoundedTextField<Content: View>: View {
     
-    let editorType : EditorType
-    var text : Binding<String>
-    
-    let content : () -> Content
+    private let editorType : EditorType
+    private let content : () -> Content
+    @Binding var text : String
     
     init(_ editorType:EditorType,_ text : Binding<String>,@ViewBuilder content : @escaping () -> Content) {
         self.editorType = editorType
-        self.text = text
+        self._text = text
         self.content = content
     }
     
     var body: some View {
-        NavigationLink(destination: FullScreenTextEditor(editorType: editorType, text: text,content: content)) {
+        NavigationLink(destination: FullScreenTextEditor(editorType: editorType, text: $text,content: content)) {
             VStack(alignment:.leading){
                 Text(editorType.title)
                     .foregroundColor(.text3)
                     .font(.caption)
-                Text(text.wrappedValue)
+                Text(text)
                     .foregroundColor(.black)
                     .frame(minHeight:30,maxHeight: 100,alignment: .topLeading)
                     .font(.body)
                 
                 HStack {
                     Spacer()
-                    Text("\(text.wrappedValue.count)/\(editorType.textLimit)")
+                    Text("\(text)/\(editorType.textLimit)")
                         .font(.caption)
                         .foregroundColor(.text2)
                 }

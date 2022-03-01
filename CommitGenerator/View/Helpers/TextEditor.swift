@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct FullScreenTextEditor<Content:View> : View {
-    let editorType : EditorType
-    var text : Binding<String>
-    let content : () -> Content
-    
+    private let editorType : EditorType
+    @Binding private var text : String
+    private let content : () -> Content
     @State private var showGuide : Bool = false
 
     
     init(editorType:  EditorType,text : Binding<String>,
     @ViewBuilder content :@escaping () -> Content) {
         self.editorType = editorType
-        self.text = text
+        self._text = text
         self.content = content
         UITextView.appearance().backgroundColor = .clear
     }
@@ -32,14 +31,14 @@ struct FullScreenTextEditor<Content:View> : View {
                 if showGuide {
                     GuideBox(content: editorType.guideText)
                 }
-                TextEditor(text: text)
-                    .onChange(of: text.wrappedValue,perform: constraintTextLength(value:))
+                TextEditor(text: $text)
+                    .onChange(of: text,perform: constraintTextLength(value:))
                     .foregroundColor(.black)
                     .background(Color.white)
                     .padding(.horizontal,12)
                 HStack{
                     Spacer()
-                    Text("\(text.wrappedValue.count)/\(editorType.textLimit)")
+                    Text("\(text.count)/\(editorType.textLimit)")
                         .foregroundColor(.text3)
                         .font(.caption)
                         .padding()
@@ -52,7 +51,7 @@ struct FullScreenTextEditor<Content:View> : View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ResetButton {
-                    text.wrappedValue = ""
+                    text = ""
                 }
             }
         }
@@ -62,8 +61,8 @@ struct FullScreenTextEditor<Content:View> : View {
     }
     
     func constraintTextLength(value : String) {
-        if text.wrappedValue.count > editorType.textLimit {
-            text.wrappedValue = String(text.wrappedValue.prefix(editorType.textLimit))
+        if text.count > editorType.textLimit {
+            text = String(text.prefix(editorType.textLimit))
         }
     }
 }

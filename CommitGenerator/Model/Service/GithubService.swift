@@ -9,13 +9,14 @@ import Foundation
 import Alamofire
 
 final class GithubService {
-    static let shared = GithubService()
+    static let shared : GithubService = GithubService()
     
     private init(){}
     
     func getIssues(_ page : Int,_ completion : @escaping (Lodable<[Issue]>) -> Void = {_ in}){
-        let url = Const.URL.GITHUB_ISSUE
-        let accessToken = KeyChainManager.shared.readToken()
+        let url : String = Const.URL.GITHUB_ISSUE
+        let accessToken :String? = KeyChainManager.shared.readToken()
+        
         guard let accessToken = accessToken else {
             completion(Lodable.Error(error: NetworkError.authenticationError))
             return
@@ -42,7 +43,7 @@ final class GithubService {
             }
             
             do {
-                let issues = try JSONDecoder().decode([Issue].self, from: value)
+                let issues : [Issue] = try JSONDecoder().decode([Issue].self, from: value)
                 completion(Lodable.Success(data: issues))
                 
             } catch {
@@ -52,8 +53,8 @@ final class GithubService {
     }
     
     func getUser(completion :@escaping (Lodable<User>) -> Void = {_ in}) {
-        let url = Const.URL.GITHUB_USER
-        let accessToken = KeyChainManager.shared.readToken()
+        let url : String = Const.URL.GITHUB_USER
+        let accessToken : String? = KeyChainManager.shared.readToken()
         guard let accessToken = accessToken else {
             completion(Lodable.Error(error: NetworkError.authenticationError))
             return
@@ -77,7 +78,7 @@ final class GithubService {
             }
             
             do {
-                let user = try JSONDecoder().decode(User.self, from: value)
+                let user : User = try JSONDecoder().decode(User.self, from: value)
                 completion(Lodable.Success(data: user))
             } catch {
                 completion(Lodable.Error(error: error))

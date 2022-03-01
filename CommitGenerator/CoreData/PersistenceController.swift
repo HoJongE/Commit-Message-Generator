@@ -26,7 +26,7 @@ struct PersistenceController {
     }
     
     func save(completion: @escaping (Error?) -> () = {_ in}) {
-        let context = container.viewContext
+        let context : NSManagedObjectContext = container.viewContext
         if context.hasChanges {
             do {
                 try context.save()
@@ -41,8 +41,7 @@ struct PersistenceController {
     }
     
     func delete(_ object: NSManagedObject,completion: @escaping (Error?) -> () = {_ in} ) {
-        let context = container.viewContext
-        context.delete(object)
+        container.viewContext.delete(object)
         save(completion: completion)
     }
 }
