@@ -42,13 +42,6 @@ struct CommitGeneratorApp: App {
                 .onOpenURL { url in
                     DeepLinkHandler().openLink(with: url,authentication: authentication)
                 }
-                .onAppear {
-                    if KeyChainManager.shared.deleteToken() {
-                        print("success")
-                    } else {
-                        print("false")
-                    }
-                }
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {

@@ -15,9 +15,11 @@ final class Authentication : ObservableObject {
     private let githubService : GithubService
     
     
+    //TODO: Test 용도 릴리즈 버전엔 없애야함!
     init(tokenManager : TokenManager = TokenManager.shared,githubService: GithubService = GithubService.shared) {
         self.tokenManager = tokenManager
         self.githubService = githubService
+        KeyChainManager.shared.deleteToken()
         getUser()
     }
     
@@ -30,6 +32,7 @@ final class Authentication : ObservableObject {
     }
     
     func requestAccessToken(with code: String) {
+        user = Lodable.Loading
         tokenManager.requestAccessToken(with: code) { result in
             switch result {
                     
@@ -46,6 +49,7 @@ final class Authentication : ObservableObject {
     }
     
     func getUser() {
+        user = Lodable.Loading
         githubService.getUser { result in
             self.user = result
         }

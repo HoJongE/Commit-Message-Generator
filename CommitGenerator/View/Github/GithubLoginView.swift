@@ -11,11 +11,19 @@ struct GithubLoginView: View {
     @EnvironmentObject var authentication : Authentication
     let dismiss : () -> Void
     var body: some View {
-        Button(action: {
-            authentication.requestCode()
-        }){
-            Text("로그인하기")
+        VStack(alignment:.center, spacing:16) {
+            GithubImage()
+            Text("기능을 이용하시려면\n깃허브에 로그인 해야합니다.")
+                .foregroundColor(.white)
+                .fontWeight(.semibold)
+                .font(.body)
+                .padding()
+            
+            LoginButton(onClick: authentication.requestCode,loading: authentication.user.loading)
         }
+        .multilineTextAlignment(.center)
+        .frame(maxWidth:.infinity,maxHeight: .infinity)
+        .background(Color.background1.edgesIgnoringSafeArea(.all))
         .onChange(of: authentication.user) { newValue in
             if case Lodable.Success(data: _) = newValue {
                 dismiss()
@@ -24,10 +32,33 @@ struct GithubLoginView: View {
     }
 }
 
+extension GithubLoginView {
+    
+    struct LoginButton : View {
+        let onClick : () -> Void
+        let loading : Bool
+        var body: some View {
+            Button(action:onClick) {
+                if loading {
+                    ProgressView()
+                } else {
+                    Text("Github로 로그인하기")
+                        .font(.subheadline).fontWeight(.semibold)
+                        .frame(width: 180, height: 50, alignment: .center)
+                        .background(RoundedRectangle(cornerRadius: 6).fill(.white))
+                        .foregroundColor(.black)
+                        .padding()
+                }
+            }
+        }
+    }
+}
 
 struct GithubLoginView_Previews: PreviewProvider {
     static var previews: some View {
-        GithubLoginView{}
-        .environmentObject(Authentication())
+        Group {
+            GithubLoginView{}
+                .environmentObject(Authentication())
+        }
     }
 }

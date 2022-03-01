@@ -27,6 +27,7 @@
 		93639BB327CDB14200D52C5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB227CDB14200D52C5C /* User.swift */; };
 		93639BB627CDBB1700D52C5C /* BottomSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */; };
 		93639BB827CDC84B00D52C5C /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */; };
+		9372F66927CDDF290077A3E0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372F66827CDDF290077A3E0 /* Image.swift */; };
 		93845B9927C9FF3A00951A57 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9827C9FF3A00951A57 /* TextEditor.swift */; };
 		93845B9B27CA002F00951A57 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9A27CA002F00951A57 /* EditorType.swift */; };
 		93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9D27CA25C100951A57 /* MockedModel.swift */; };
@@ -38,6 +39,7 @@
 		9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */; };
 		9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */; };
 		9388312227C8903000D22C6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388312127C8903000D22C6A /* Color.swift */; };
+		939A5FDF27CDE2630055E17B /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A5FDE27CDE2630055E17B /* Text.swift */; };
 		93B7ADDD27CA3D1800A1EF24 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADDC27CA3D1800A1EF24 /* ViewExtension.swift */; };
 		93B7ADE027CA46E800A1EF24 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADDF27CA46E800A1EF24 /* IssueItem.swift */; };
 		93B7ADE227CA482C00A1EF24 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADE127CA482C00A1EF24 /* IssueList.swift */; };
@@ -97,6 +99,7 @@
 		93639BB227CDB14200D52C5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetManager.swift; sourceTree = "<group>"; };
 		93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
+		9372F66827CDDF290077A3E0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		93845B9827C9FF3A00951A57 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		93845B9A27CA002F00951A57 /* EditorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorType.swift; sourceTree = "<group>"; };
 		93845B9D27CA25C100951A57 /* MockedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedModel.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITests.swift; sourceTree = "<group>"; };
 		9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9388312127C8903000D22C6A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		939A5FDE27CDE2630055E17B /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		93B7ADDC27CA3D1800A1EF24 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		93B7ADDF27CA46E800A1EF24 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
 		93B7ADE127CA482C00A1EF24 /* IssueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueList.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				9361E8EA27C8943B007B8740 /* Button.swift */,
 				932189A227C9DE20007472FD /* TextField.swift */,
 				93845B9827C9FF3A00951A57 /* TextEditor.swift */,
+				9372F66827CDDF290077A3E0 /* Image.swift */,
+				939A5FDE27CDE2630055E17B /* Text.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -669,6 +675,7 @@
 				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* CommitWriteHost.swift in Sources */,
 				93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */,
+				9372F66927CDDF290077A3E0 /* Image.swift in Sources */,
 				93639BB327CDB14200D52C5C /* User.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
 				9351EF9C27CC6D1300AF6F25 /* CommitValidator.swift in Sources */,
@@ -689,6 +696,7 @@
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
 				93D381F527CD13C40047043A /* Lodable.swift in Sources */,
 				93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */,
+				939A5FDF27CDE2630055E17B /* Text.swift in Sources */,
 				93639BB627CDBB1700D52C5C /* BottomSheetManager.swift in Sources */,
 				93B7ADE427CA4FC600A1EF24 /* TabView.swift in Sources */,
 				932D888827C8DC080072B896 /* TagSelector.swift in Sources */,
