@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Issue : Hashable {
-    let issueNumber : Int
-    let issueType : IssueType
-    let color : Color
+struct Issue : Hashable , Codable {
+   
+    let title : String
+    let number : Int
     
-    init(_ issueNumber : Int,_ issueType : IssueType ){
-        self.issueNumber = issueNumber
-        self.issueType = issueType
-        color = Color.random
+}
+
+extension Issue : CustomStringConvertible {
+    var description: String {
+        "Issue Number:\(number) Issue Title:\(title)"
     }
-    
 }

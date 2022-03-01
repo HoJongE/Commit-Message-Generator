@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C44CC71362A30B5707C9F35 /* Pods_CommitGenerator_CommitGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */; };
+		3C362538DB9A15AD67897C2C /* Pods_CommitGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */; };
 		9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
 		932189A127C9DB36007472FD /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
 		932189A327C9DE20007472FD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A227C9DE20007472FD /* TextField.swift */; };
@@ -36,7 +38,16 @@
 		93B7ADE027CA46E800A1EF24 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADDF27CA46E800A1EF24 /* IssueItem.swift */; };
 		93B7ADE227CA482C00A1EF24 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADE127CA482C00A1EF24 /* IssueList.swift */; };
 		93B7ADE427CA4FC600A1EF24 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADE327CA4FC600A1EF24 /* TabView.swift */; };
+		93D381E527CCBCD30047043A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381E427CCBCD30047043A /* Const.swift */; };
+		93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381E727CCBD7F0047043A /* GithubLoginView.swift */; };
+		93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381EA27CCD5BD0047043A /* TokenManager.swift */; };
+		93D381EE27CCD8330047043A /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381ED27CCD8330047043A /* DeepLinkHandler.swift */; };
+		93D381F127CD0A670047043A /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F027CD0A670047043A /* KeyChainManager.swift */; };
+		93D381F327CD11690047043A /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F227CD11690047043A /* GithubService.swift */; };
+		93D381F527CD13C40047043A /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
+		93D381F927CD154D0047043A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F827CD154D0047043A /* NetworkError.swift */; };
 		93E8105627C9B639008B423A /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
+		D769A4AC8E256061ECC96F5A /* Pods_CommitGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +68,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		319F74841EC1D012A3D62C49 /* Pods-CommitGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGeneratorTests.release.xcconfig"; path = "Target Support Files/Pods-CommitGeneratorTests/Pods-CommitGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C003D0B0C9D8A8E6A1A1A8F /* Pods-CommitGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-CommitGeneratorTests/Pods-CommitGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		601E2A26098ABCFF496F5E89 /* Pods-CommitGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator.release.xcconfig"; path = "Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		862C343D21BACCC78A08C529 /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88F3E203F560DBF144931957 /* Pods-CommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		9321899E27C9BB5E007472FD /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		932189A027C9DB36007472FD /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		932189A227C9DE20007472FD /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -89,7 +107,18 @@
 		93B7ADDF27CA46E800A1EF24 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
 		93B7ADE127CA482C00A1EF24 /* IssueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueList.swift; sourceTree = "<group>"; };
 		93B7ADE327CA4FC600A1EF24 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		93D381E327CCBADB0047043A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		93D381E427CCBCD30047043A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		93D381E727CCBD7F0047043A /* GithubLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLoginView.swift; sourceTree = "<group>"; };
+		93D381EA27CCD5BD0047043A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		93D381ED27CCD8330047043A /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		93D381F027CD0A670047043A /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		93D381F227CD11690047043A /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		93D381F427CD13C40047043A /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
+		93D381F827CD154D0047043A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		93E8105527C9B639008B423A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator_CommitGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A2BACE5ADEFBF4709D4C9D /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C362538DB9A15AD67897C2C /* Pods_CommitGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D769A4AC8E256061ECC96F5A /* Pods_CommitGeneratorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,12 +142,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C44CC71362A30B5707C9F35 /* Pods_CommitGenerator_CommitGeneratorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183433A2B234880526F0393B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */,
+				B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */,
+				85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		932D888927C8DEBA0072B896 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +210,7 @@
 		93845B9C27CA00AA00951A57 /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				93D381E427CCBCD30047043A /* Const.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -179,6 +222,8 @@
 				9388310227C8828900D22C6A /* CommitGeneratorTests */,
 				9388310C27C8828900D22C6A /* CommitGeneratorUITests */,
 				938830F027C8828800D22C6A /* Products */,
+				F3003F0FAEA69B5790800926 /* Pods */,
+				183433A2B234880526F0393B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +240,8 @@
 		938830F127C8828800D22C6A /* CommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				93D381EC27CCD82B0047043A /* Utility */,
+				93D381E327CCBADB0047043A /* Info.plist */,
 				93845B9C27CA00AA00951A57 /* Const */,
 				93E8105127C9B4E6008B423A /* CoreData */,
 				9388311E27C88F0D00D22C6A /* Model */,
@@ -235,6 +282,7 @@
 		9388311D27C88F0800D22C6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93D381E627CCBD740047043A /* Github */,
 				9351EF8F27CC5E2C00AF6F25 /* Commit */,
 				93B7ADDE27CA46DC00A1EF24 /* Issue */,
 				932D888927C8DEBA0072B896 /* Tag */,
@@ -249,10 +297,14 @@
 		9388311E27C88F0D00D22C6A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				93D381F727CD15470047043A /* Network */,
+				93D381EF27CD0A490047043A /* KeyChain */,
+				93D381E927CCD5B40047043A /* Service */,
 				9351EF9A27CC6D0B00AF6F25 /* Commit */,
 				9351EF9427CC61C900AF6F25 /* Issue */,
 				93845B9A27CA002F00951A57 /* EditorType.swift */,
 				93845B9D27CA25C100951A57 /* MockedModel.swift */,
+				93D381F427CD13C40047043A /* Lodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +326,47 @@
 			path = Issue;
 			sourceTree = "<group>";
 		};
+		93D381E627CCBD740047043A /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				93D381E727CCBD7F0047043A /* GithubLoginView.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		93D381E927CCD5B40047043A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				93D381EA27CCD5BD0047043A /* TokenManager.swift */,
+				93D381F227CD11690047043A /* GithubService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		93D381EC27CCD82B0047043A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				93D381ED27CCD8330047043A /* DeepLinkHandler.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		93D381EF27CD0A490047043A /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				93D381F027CD0A670047043A /* KeyChainManager.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		93D381F727CD15470047043A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				93D381F827CD154D0047043A /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		93E8105127C9B4E6008B423A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +377,19 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		F3003F0FAEA69B5790800926 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88F3E203F560DBF144931957 /* Pods-CommitGenerator.debug.xcconfig */,
+				601E2A26098ABCFF496F5E89 /* Pods-CommitGenerator.release.xcconfig */,
+				D6A2BACE5ADEFBF4709D4C9D /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */,
+				862C343D21BACCC78A08C529 /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */,
+				5C003D0B0C9D8A8E6A1A1A8F /* Pods-CommitGeneratorTests.debug.xcconfig */,
+				319F74841EC1D012A3D62C49 /* Pods-CommitGeneratorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,9 +397,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9388311327C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGenerator" */;
 			buildPhases = (
+				9730E55DE5C85EEE6691DE11 /* [CP] Check Pods Manifest.lock */,
 				938830EB27C8828800D22C6A /* Sources */,
 				938830EC27C8828800D22C6A /* Frameworks */,
 				938830ED27C8828800D22C6A /* Resources */,
+				A2D869369D2A3999A8E1F8CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9388311627C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorTests" */;
 			buildPhases = (
+				8C979BAC7969316AF873245D /* [CP] Check Pods Manifest.lock */,
 				938830FB27C8828900D22C6A /* Sources */,
 				938830FC27C8828900D22C6A /* Frameworks */,
 				938830FD27C8828900D22C6A /* Resources */,
@@ -326,9 +435,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9388311927C8828900D22C6A /* Build configuration list for PBXNativeTarget "CommitGeneratorUITests" */;
 			buildPhases = (
+				9AB95E61097CDF5ECF0111D1 /* [CP] Check Pods Manifest.lock */,
 				9388310527C8828900D22C6A /* Sources */,
 				9388310627C8828900D22C6A /* Frameworks */,
 				9388310727C8828900D22C6A /* Resources */,
+				C274AEE38448C857E59FC260 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +520,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8C979BAC7969316AF873245D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommitGeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9730E55DE5C85EEE6691DE11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommitGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB95E61097CDF5ECF0111D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommitGenerator-CommitGeneratorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D869369D2A3999A8E1F8CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C274AEE38448C857E59FC260 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		938830EB27C8828800D22C6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -421,9 +635,12 @@
 				932189A327C9DE20007472FD /* TextField.swift in Sources */,
 				93B7ADE027CA46E800A1EF24 /* IssueItem.swift in Sources */,
 				93E8105627C9B639008B423A /* PersistenceController.swift in Sources */,
+				93D381F127CD0A670047043A /* KeyChainManager.swift in Sources */,
 				9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */,
+				93D381F927CD154D0047043A /* NetworkError.swift in Sources */,
 				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* CommitWriteHost.swift in Sources */,
+				93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
 				9351EF9C27CC6D1300AF6F25 /* CommitValidator.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
@@ -432,13 +649,18 @@
 				93845B9927C9FF3A00951A57 /* TextEditor.swift in Sources */,
 				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
 				93B7ADDD27CA3D1800A1EF24 /* ViewExtension.swift in Sources */,
+				93D381EE27CCD8330047043A /* DeepLinkHandler.swift in Sources */,
+				93D381F327CD11690047043A /* GithubService.swift in Sources */,
 				9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */,
+				93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */,
 				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				93845B9B27CA002F00951A57 /* EditorType.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
+				93D381F527CD13C40047043A /* Lodable.swift in Sources */,
 				93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */,
 				93B7ADE427CA4FC600A1EF24 /* TabView.swift in Sources */,
 				932D888827C8DC080072B896 /* TagSelector.swift in Sources */,
+				93D381E527CCBCD30047043A /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +815,7 @@
 		};
 		9388311427C8828900D22C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F3E203F560DBF144931957 /* Pods-CommitGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -602,6 +825,7 @@
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommitGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -622,6 +846,7 @@
 		};
 		9388311527C8828900D22C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 601E2A26098ABCFF496F5E89 /* Pods-CommitGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -631,6 +856,7 @@
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommitGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -651,6 +877,7 @@
 		};
 		9388311727C8828900D22C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C003D0B0C9D8A8E6A1A1A8F /* Pods-CommitGeneratorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -671,6 +898,7 @@
 		};
 		9388311827C8828900D22C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 319F74841EC1D012A3D62C49 /* Pods-CommitGeneratorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,6 +919,7 @@
 		};
 		9388311A27C8828900D22C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A2BACE5ADEFBF4709D4C9D /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -709,6 +938,7 @@
 		};
 		9388311B27C8828900D22C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862C343D21BACCC78A08C529 /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

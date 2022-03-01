@@ -64,10 +64,10 @@ struct CommitWriteHost: View {
                     Text("이슈 트래커")
                         .font(.title2).fontWeight(.semibold)
                     
-                    IssueList(issueType:.Resolved, issues: commitViewModel.resolvedIssues, onIssueAdded: commitViewModel.addIssue(_:))
-                    IssueList(issueType : .Fixing , issues: commitViewModel.fixingIssues, onIssueAdded:commitViewModel.addIssue(_:))
-                    IssueList(issueType : .Ref, issues: commitViewModel.refIssues, onIssueAdded: commitViewModel.addIssue(_:))
-                    IssueList(issueType:.Related, issues: commitViewModel.relatedIssues, onIssueAdded: commitViewModel.addIssue(_:))
+                    IssueList(issueType:.Resolved, issues: $commitViewModel.resolvedIssues)
+                    IssueList(issueType : .Fixing , issues: $commitViewModel.fixingIssues)
+                    IssueList(issueType : .Ref, issues: $commitViewModel.refIssues)
+                    IssueList(issueType:.Related, issues: $commitViewModel.relatedIssues)
                 }
             }
             .padding()

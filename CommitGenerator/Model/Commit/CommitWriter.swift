@@ -35,7 +35,8 @@ struct CommitWriter {
     }
     
     private func writeBody(body : String,resolved:[Issue],fixing:[Issue],ref:[Issue],related:[Issue])  -> String {
-        var ret = body + "\n"
+        var ret = body.count == 0 ? "" : body + "\n"
+        
         ret += writeIssue(value: resolved)
         ret += writeIssue(value: fixing)
         ret += writeIssue(value: ref)
@@ -46,12 +47,12 @@ struct CommitWriter {
     
     private func writeIssue(value : [Issue]) -> String {
         if value.count > 0 {
-            var ret = "\n" + value[0].issueType.rawValue + ": "
+            var ret = "\n" + ": "
             for i in 0..<value.count {
                 if i != value.count - 1 {
-                    ret += "#\(value[i].issueNumber), "
+                    ret += "#\(value[i].number), "
                 } else {
-                    ret += "#\(value[i].issueNumber)"
+                    ret += "#\(value[i].number)"
                 }
             }
             return ret

@@ -15,7 +15,7 @@ extension PreviewDevice {
 }
 
 extension Issue {
-    static let mocIssue : [Issue] = [Issue(5, .Fixing),Issue(5, .Fixing),Issue(5, .Fixing),Issue(5, .Fixing),Issue(5, .Fixing)]
+    static let mocIssue : [Issue] = [Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5),Issue(title: "하이", number: 5)]
 }
 
 #endif

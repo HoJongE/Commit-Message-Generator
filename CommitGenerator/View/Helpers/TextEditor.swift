@@ -126,7 +126,7 @@ struct TextEditor_Previews: PreviewProvider {
         Group {
             ForEach(PreviewDevice.mock,id: \.self) {
                 NavigationView {
-                    FullScreenTextEditor(editorType: .Title, text: .constant("")){}
+                    FullScreenTextEditor(editorType: .Title, text: .constant("")){Text("안녕 ㅎㅎ")}
                 }
                 .previewDevice(PreviewDevice(rawValue: $0))
             }

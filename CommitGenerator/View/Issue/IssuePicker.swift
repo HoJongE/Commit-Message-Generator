@@ -21,7 +21,7 @@ struct IssuePicker: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.decimalPad)
             Button("추가") {
-                let issue = Issue(Int(issueNumber)!, issueType)
+                let issue = Issue(title: "하이하이", number: Int(issueNumber)!)
                 issueAdd(issue)
                 dismiss()
             }
@@ -31,7 +31,7 @@ struct IssuePicker: View {
         .padding()
         .frame(maxWidth:.infinity,maxHeight: .infinity)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
-        .navigationTitle(issueType.rawValue)
+        .navigationTitle(issueType.korTitle)
     }
 }
 
