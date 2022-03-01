@@ -10,19 +10,18 @@ import SwiftUI
 struct IssueList: View {
     
     let issueType : IssueType
-    let issues : [Issue]
-    let onIssueAdded : (Issue) -> Void
+    @Binding var issues : [Issue]
     
     var body: some View {
         VStack(alignment:.leading) {
             
-            Text(issueType.rawValue)
+            Text(issueType.korTitle)
                 .font(.system(size: 16)).fontWeight(.semibold)
                 .foregroundColor(.white)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing:16) {
-                    IssuePlusButton(issueType: issueType, onIssueAdded: onIssueAdded)
+                    IssuePlusButton(issueType: issueType, onIssueAdded: {issues.append($0)})
                     ForEach(issues, id: \.self) {
                         IssueItem($0)
                     }
@@ -34,7 +33,7 @@ struct IssueList: View {
 
 struct IssueList_Previews: PreviewProvider {
     static var previews: some View {
-        IssueList(issueType: .Ref ,issues: Issue.mocIssue, onIssueAdded: {_ in })
+        IssueList(issueType: .Ref ,issues: .constant(Issue.mocIssue))
             .previewLayout(.sizeThatFits)
             .padding()
             .background(Color.background1)

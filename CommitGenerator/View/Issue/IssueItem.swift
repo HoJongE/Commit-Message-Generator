@@ -9,18 +9,16 @@ import SwiftUI
 
 struct IssueItem: View {
     let issue : Issue
-    let color : Color
     
     init(_ issue : Issue){
         self.issue = issue
-        color = Color.random
     }
     
     var body: some View {
-        Text("#\(issue.issueNumber)")
+        Text("#\(issue.number)")
             .foregroundColor(.white)
             .frame(width:70,height: 30,alignment: .center)
-            .background(issue.color.opacity(0.85))
+            .background(Color.brand.opacity(0.8))
             .cornerRadius(6)
             .font(.body)
     }
@@ -46,7 +44,7 @@ struct IssuePlusButton : View {
 struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueItem(Issue(58, .Fixing))
+            IssueItem(Issue(title: "하이하이", number: 5))
             
             IssuePlusButton(issueType: .Related ,onIssueAdded: {_ in })
         }

@@ -23,9 +23,17 @@ struct CommitGeneratorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootTabView()
-                .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext)
+//            RootTabView()
+//                .environment(\.managedObjectContext,
+//                              persistenceController.container.viewContext)
+//                .onOpenURL { url in
+//                    print(url.absoluteString)
+//                }
+            GithubLoginView()
+                .onOpenURL { url in
+                    print(url.absoluteString)
+                    DeepLinkHandler().openLink(with: url)
+                }
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
@@ -40,5 +48,6 @@ struct CommitGeneratorApp: App {
                     print("unknown App Status")
             }
         }
+        
     }
 }

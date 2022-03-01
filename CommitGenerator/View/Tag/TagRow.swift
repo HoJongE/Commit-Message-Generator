@@ -18,6 +18,7 @@ struct TagRow: View {
                     .foregroundColor(.text3)
                     .font(.footnote)
                 Spacer()
+                
                 if selected {
                     Label("현재 선택됨!", systemImage: "checkmark.circle")
                         .foregroundColor(.green)

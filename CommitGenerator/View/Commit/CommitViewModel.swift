@@ -24,11 +24,6 @@ extension CommitWriteHost {
         @Published var selectedTag : Tag?
         @Published var selectedFunction : Tag?
         
-        var validation : Bool {
-            commitValidator.check(selectedTag: selectedTag, selectedFunction: selectedFunction, title: title)
-        }
-        
-        private let commitValidator : CommitValidator = CommitValidator()
         private let commitWriter : CommitWriter = CommitWriter()
         
         init() {
@@ -52,20 +47,6 @@ extension CommitWriteHost {
             }
         }
         
-        func addIssue(_ issue:Issue){
-            switch issue.issueType {
-                case .Resolved:
-                    resolvedIssues.append(issue)
-                case .Fixing:
-                    fixingIssues.append(issue)
-                case .Ref:
-                    refIssues.append(issue)
-                case .Related:
-                    relatedIssues.append(issue)
-            }
-        }
-        
-        
         func copyToClipboard(_ copyType:CopyType) {
             do {
                 try UIPasteboard.general.string = commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
@@ -81,7 +62,6 @@ extension CommitWriteHost {
             refIssues.removeAll()
             relatedIssues.removeAll()
             fixingIssues.removeAll()
-            
             selectedTag = nil
             selectedFunction = nil
         }

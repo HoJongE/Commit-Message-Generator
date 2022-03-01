@@ -13,6 +13,7 @@ struct RoundedTextField<Content: View>: View {
     var text : Binding<String>
     
     let content : () -> Content
+    
     init(_ editorType:EditorType,_ text : Binding<String>,@ViewBuilder content : @escaping () -> Content) {
         self.editorType = editorType
         self.text = text
@@ -47,7 +48,9 @@ struct RoundedTextField<Content: View>: View {
 
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedTextField(.Body, .constant("아하하하!!"), content: {})
+        RoundedTextField(.Body, .constant("아하하하!!"), content: {
+            
+        })
             .padding()
             .previewLayout(.sizeThatFits)
             .background(Color.black)
