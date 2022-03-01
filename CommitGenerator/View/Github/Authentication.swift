@@ -19,7 +19,6 @@ final class Authentication : ObservableObject {
     init(tokenManager : TokenManager = TokenManager.shared,githubService: GithubService = GithubService.shared) {
         self.tokenManager = tokenManager
         self.githubService = githubService
-        KeyChainManager.shared.deleteToken()
         getUser()
     }
     

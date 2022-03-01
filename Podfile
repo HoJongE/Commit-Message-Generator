@@ -7,6 +7,8 @@ target 'CommitGenerator' do
 
   # Pods for CommitGenerator
   pod 'Alamofire'
+  pod 'SDWebImageSwiftUI'
+
   target 'CommitGeneratorTests' do
     inherit! :search_paths
     # Pods for testing

@@ -16,7 +16,7 @@ struct CommitWriter {
             case .BodyOnly:
                 return writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related)
             case .All:
-                return try writeTitle(tag: tag, function: function, title: title) + "\n\n" + writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related)
+                return try writeTitle(tag: tag, function: function, title: title) + "\n" + writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related)
         }
     }
     
@@ -35,19 +35,19 @@ struct CommitWriter {
     }
     
     private func writeBody(body : String,resolved:[Issue],fixing:[Issue],ref:[Issue],related:[Issue])  -> String {
-        var ret = body.count == 0 ? "" : body + "\n"
+        var ret = body.count == 0 ? "" : body + "\n\n"
         
-        ret += writeIssue(value: resolved)
-        ret += writeIssue(value: fixing)
-        ret += writeIssue(value: ref)
-        ret += writeIssue(value: related)
+        ret += writeIssue(value: resolved,of: .Resolved)
+        ret += writeIssue(value: fixing,of: .Fixing)
+        ret += writeIssue(value: ref,of: .Ref)
+        ret += writeIssue(value: related,of: .Related)
         
         return ret
     }
     
-    private func writeIssue(value : [Issue]) -> String {
+    private func writeIssue(value : [Issue],of type : IssueType) -> String {
         if value.count > 0 {
-            var ret = "\n" + ": "
+            var ret = "\(type.engTitle): "
             for i in 0..<value.count {
                 if i != value.count - 1 {
                     ret += "#\(value[i].number), "
@@ -55,7 +55,7 @@ struct CommitWriter {
                     ret += "#\(value[i].number)"
                 }
             }
-            return ret
+            return ret + "\n"
         }
         
         return ""

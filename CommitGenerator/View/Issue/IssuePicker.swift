@@ -11,7 +11,6 @@ struct IssuePicker: View {
     
     let issueType : IssueType
     let issueAdd : (Issue) -> Void
-    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var commitViewModel : CommitWriteHost.CommitViewModel
     @EnvironmentObject var authentication : Authentication
     @EnvironmentObject var bottomSheetManager : BottomSheetManager
@@ -20,7 +19,7 @@ struct IssuePicker: View {
         VStack(alignment:.center){
             switch commitViewModel.issues {
                 case .Success(data: let data):
-                    Text(data.description)
+                    IssueList(issues: data,addIssue: issueAdd)
                 case .Error(error: let error):
                     ErrorView(error: error,retry: commitViewModel.getIssues(_:))
                 default:
@@ -41,7 +40,7 @@ struct IssuePicker: View {
                 commitViewModel.getIssues(1)
             }
         }
-        .padding()
+        .padding(.vertical)
         .frame(maxWidth:.infinity,maxHeight: .infinity)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .navigationTitle(issueType.korTitle)

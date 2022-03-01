@@ -9,9 +9,10 @@ import SwiftUI
 
 struct IssueItem: View {
     let issue : Issue
-    
-    init(_ issue : Issue){
+    let deleteIssue : (Issue) -> Void
+    init(_ issue : Issue,deleteIssue :@escaping (Issue) -> Void){
         self.issue = issue
+        self.deleteIssue = deleteIssue
     }
     
     var body: some View {
@@ -21,6 +22,9 @@ struct IssueItem: View {
             .background(Color.brand.opacity(0.8))
             .cornerRadius(6)
             .font(.body)
+            .onLongPressGesture {
+                deleteIssue(issue)
+            }
     }
 }
 
@@ -44,7 +48,9 @@ struct IssuePlusButton : View {
 struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueItem(Issue.mocIssue[0])
+            IssueItem(Issue.mocIssue[0]){_ in
+                
+            }
             
             IssuePlusButton(issueType: .Related ,onIssueAdded: {_ in })
         }
