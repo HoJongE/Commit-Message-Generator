@@ -12,11 +12,13 @@ struct IssueList : View {
     @Environment(\.dismiss) private var dismiss
     let issues : [Issue]
     let addIssue : (Issue) -> Void
+    
     var headerView : some View {
             Divider().background(.gray)
     }
     
     var body: some View {
+        
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack(pinnedViews:[.sectionHeaders]) {
                 Section(header:headerView) {
@@ -42,6 +44,7 @@ struct IssueList : View {
 struct DetailIssueItem : View {
     let issue : Issue
     @State private var showBody : Bool = false
+    
     var body: some View {
         VStack(alignment:.leading) {
             HStack(alignment:.center) {

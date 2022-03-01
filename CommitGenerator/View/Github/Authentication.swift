@@ -36,8 +36,8 @@ final class Authentication : ObservableObject {
             switch result {
                     
                 case .Success(data: let data):
-                    KeyChainManager.shared.deleteToken()
-                    KeyChainManager.shared.saveToken(data)
+                    _ = KeyChainManager.shared.deleteToken()
+                    _ = KeyChainManager.shared.saveToken(data)
                     self.getUser()
                 case .Error(error: let error):
                     self.user = Lodable.Error(error: error)
@@ -55,7 +55,7 @@ final class Authentication : ObservableObject {
     }
     
     func logout() {
-        KeyChainManager.shared.deleteToken()
+        _ = KeyChainManager.shared.deleteToken()
         user = Lodable.Empty
     }
 }

@@ -9,25 +9,27 @@ import SwiftUI
 
 struct TagList: View {
     @Environment(\.dismiss) private var dismiss
-    let placeholder : String
-    var selected : Binding<Tag?>
-    let tags : [Tag]
+    private let placeholder : String
+    private let tags : [Tag]
+    
+    @Binding var selected : Tag?
 
     init(_ placeholder : String ,_ selected : Binding<Tag?>, _ tags : [Tag]){
         self.placeholder  = placeholder
-        self.selected = selected
+        self._selected = selected
         self.tags = tags
     }
 
     var body: some View {
+        
         ScrollView(.vertical, showsIndicators: true){
             ForEach(tags,id: \.self) { tag in
                 Button(action:{
                     dismiss()
-                    selected.wrappedValue = tag
+                    selected = tag
                 }){
-                    TagRow(tag: tag, selected: selected.wrappedValue != nil &&
-                           selected.wrappedValue! == tag)
+                    TagRow(tag: tag, selected: selected != nil &&
+                           selected! == tag)
                         .padding(.horizontal)
                         .padding(.vertical,4)
                 }

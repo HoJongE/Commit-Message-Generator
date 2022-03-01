@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class GithubService {
+final class GithubService {
     static let shared = GithubService()
     
     private init(){}

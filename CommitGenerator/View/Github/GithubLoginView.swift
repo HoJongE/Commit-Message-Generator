@@ -34,9 +34,10 @@ struct GithubLoginView: View {
 
 extension GithubLoginView {
     
-    struct LoginButton : View {
+    private struct LoginButton : View {
         let onClick : () -> Void
         let loading : Bool
+        
         var body: some View {
             Button(action:onClick) {
                 if loading {

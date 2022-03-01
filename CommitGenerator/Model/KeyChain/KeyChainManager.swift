@@ -8,12 +8,12 @@
 import Foundation
 
 final class KeyChainManager {
-    static let shared = KeyChainManager()
+    static let shared : KeyChainManager = KeyChainManager()
     
     private init(){}
     
-    private let account = "accessToken"
-    private let service = Bundle.main.bundleIdentifier
+    private let account : String = "accessToken"
+    private let service : String? = Bundle.main.bundleIdentifier
     
     func saveToken(_ token : String) -> Bool {
         guard let data = try? JSONEncoder().encode(token), let service = self.service else {
