@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GithubLoginView: View {
-    @EnvironmentObject var authentication : Authentication
+    @EnvironmentObject private var authentication : Authentication
     let dismiss : () -> Void
     var body: some View {
         VStack(alignment:.center, spacing:16) {

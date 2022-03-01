@@ -9,11 +9,11 @@ import Foundation
 import Alamofire
 
 final class TokenManager  {
-    static let shared = TokenManager()
+    static let shared : TokenManager = TokenManager()
     
     func requestAccessToken(with code: String, _ completion : @escaping (Lodable<String>) -> Void = {_ in}) {
-        let url = Const.URL.GITHUB_ACCESS_TOKEN
-        let parameters = ["client_id": Const.GitHub.CLIEND_ID,
+        let url : String = Const.URL.GITHUB_ACCESS_TOKEN
+        let parameters : Parameters = ["client_id": Const.GitHub.CLIEND_ID,
                           "client_secret": Const.GitHub.CLIENT_SECRET,
                           "code": code]
         

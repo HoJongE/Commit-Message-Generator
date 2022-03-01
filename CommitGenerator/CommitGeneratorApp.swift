@@ -10,19 +10,17 @@ import SwiftUI
 @main
 struct CommitGeneratorApp: App {
     
-    let persistenceController = PersistenceController.shared
-    @StateObject var authentication : Authentication = Authentication()
-    @StateObject var commitViewModel : CommitWriteHost.CommitViewModel = CommitWriteHost.CommitViewModel()
-    @StateObject var bottomSheetManager : BottomSheetManager = BottomSheetManager()
-    @Environment(\.scenePhase) var scenePhase
+    private let persistenceController : PersistenceController = PersistenceController.shared
+    @StateObject private var authentication : Authentication = Authentication()
+    @StateObject private var commitViewModel : CommitWriteHost.CommitViewModel = CommitWriteHost.CommitViewModel()
+    @StateObject private var bottomSheetManager : BottomSheetManager = BottomSheetManager()
+    @Environment(\.scenePhase) private var scenePhase
     
     init(){
         if !UserDefaults.standard.bool(forKey: "first_time") {
             persistenceController.reset()
             UserDefaults.standard.set(true, forKey: "first_time")
-            
         }
-        
     }
     
     var body: some Scene {

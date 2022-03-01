@@ -19,7 +19,6 @@
 		9351EF9327CC612F00AF6F25 /* IssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9227CC612F00AF6F25 /* IssueType.swift */; };
 		9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9527CC61D300AF6F25 /* Issue.swift */; };
 		9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9827CC693F00AF6F25 /* IssuePicker.swift */; };
-		9351EF9C27CC6D1300AF6F25 /* CommitValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9B27CC6D1300AF6F25 /* CommitValidator.swift */; };
 		9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9D27CC6E2800AF6F25 /* CopyType.swift */; };
 		9351EFA027CC6E8E00AF6F25 /* CommitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
@@ -92,7 +91,6 @@
 		9351EF9227CC612F00AF6F25 /* IssueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueType.swift; sourceTree = "<group>"; };
 		9351EF9527CC61D300AF6F25 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		9351EF9827CC693F00AF6F25 /* IssuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
-		9351EF9B27CC6D1300AF6F25 /* CommitValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitValidator.swift; sourceTree = "<group>"; };
 		9351EF9D27CC6E2800AF6F25 /* CopyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyType.swift; sourceTree = "<group>"; };
 		9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriter.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 		9351EF9A27CC6D0B00AF6F25 /* Commit */ = {
 			isa = PBXGroup;
 			children = (
-				9351EF9B27CC6D1300AF6F25 /* CommitValidator.swift */,
 				9351EF9D27CC6E2800AF6F25 /* CopyType.swift */,
 				9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */,
 			);
@@ -682,7 +679,6 @@
 				93639BB327CDB14200D52C5C /* User.swift in Sources */,
 				939A5FE227CDF09C0055E17B /* IssueList.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
-				9351EF9C27CC6D1300AF6F25 /* CommitValidator.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
 				9351EF9327CC612F00AF6F25 /* IssueType.swift in Sources */,
 				9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */,

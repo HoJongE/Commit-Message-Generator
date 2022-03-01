@@ -9,11 +9,13 @@ import SwiftUI
 
 struct CommitWriteHost: View {
     
-    @Environment(\.managedObjectContext) var managedObjectContext
+    @Environment(\.managedObjectContext) private var managedObjectContext
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags : FetchedResults<Tag>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var tags : FetchedResults<Tag>
     
-    @EnvironmentObject var commitViewModel : CommitViewModel
+    @EnvironmentObject private var commitViewModel : CommitViewModel
+    
+    @State private var showingAlert = false
     
     var basicTags : [Tag] {
         tags.filter { tag in

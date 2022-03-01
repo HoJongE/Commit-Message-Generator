@@ -12,7 +12,7 @@ struct TagList: View {
     private let placeholder : String
     private let tags : [Tag]
     
-    @Binding var selected : Tag?
+    @Binding private var selected : Tag?
 
     init(_ placeholder : String ,_ selected : Binding<Tag?>, _ tags : [Tag]){
         self.placeholder  = placeholder
