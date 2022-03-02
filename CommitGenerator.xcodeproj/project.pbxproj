@@ -21,6 +21,9 @@
 		9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9827CC693F00AF6F25 /* IssuePicker.swift */; };
 		9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9D27CC6E2800AF6F25 /* CopyType.swift */; };
 		9351EFA027CC6E8E00AF6F25 /* CommitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */; };
+		9356FAF527CF0074004A59C2 /* SettingHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF427CF0074004A59C2 /* SettingHost.swift */; };
+		9356FAF727CF007F004A59C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF627CF007F004A59C2 /* ProfileView.swift */; };
+		9356FAF927CF055B004A59C2 /* TagSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF827CF055B004A59C2 /* TagSettingView.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
 		93639BB027CDB06000D52C5C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BAF27CDB06000D52C5C /* Authentication.swift */; };
 		93639BB327CDB14200D52C5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB227CDB14200D52C5C /* User.swift */; };
@@ -93,6 +96,9 @@
 		9351EF9827CC693F00AF6F25 /* IssuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
 		9351EF9D27CC6E2800AF6F25 /* CopyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyType.swift; sourceTree = "<group>"; };
 		9351EF9F27CC6E8E00AF6F25 /* CommitWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriter.swift; sourceTree = "<group>"; };
+		9356FAF427CF0074004A59C2 /* SettingHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHost.swift; sourceTree = "<group>"; };
+		9356FAF627CF007F004A59C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9356FAF827CF055B004A59C2 /* TagSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSettingView.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		93639BAF27CDB06000D52C5C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		93639BB227CDB14200D52C5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -344,6 +350,9 @@
 		9388311F27C88F1700D22C6A /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				9356FAF427CF0074004A59C2 /* SettingHost.swift */,
+				9356FAF627CF007F004A59C2 /* ProfileView.swift */,
+				9356FAF827CF055B004A59C2 /* TagSettingView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -668,6 +677,7 @@
 				93B7ADE227CA482C00A1EF24 /* SelectedIssueList.swift in Sources */,
 				932189A327C9DE20007472FD /* TextField.swift in Sources */,
 				93B7ADE027CA46E800A1EF24 /* SelectedIssueItem.swift in Sources */,
+				9356FAF927CF055B004A59C2 /* TagSettingView.swift in Sources */,
 				93E8105627C9B639008B423A /* PersistenceController.swift in Sources */,
 				93D381F127CD0A670047043A /* KeyChainManager.swift in Sources */,
 				9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */,
@@ -675,6 +685,7 @@
 				932D888B27C8DECA0072B896 /* TagList.swift in Sources */,
 				938830F527C8828800D22C6A /* CommitWriteHost.swift in Sources */,
 				93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */,
+				9356FAF727CF007F004A59C2 /* ProfileView.swift in Sources */,
 				9372F66927CDDF290077A3E0 /* Image.swift in Sources */,
 				93639BB327CDB14200D52C5C /* User.swift in Sources */,
 				939A5FE227CDF09C0055E17B /* IssueList.swift in Sources */,
@@ -694,6 +705,7 @@
 				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				93845B9B27CA002F00951A57 /* EditorType.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
+				9356FAF527CF0074004A59C2 /* SettingHost.swift in Sources */,
 				93D381F527CD13C40047043A /* Lodable.swift in Sources */,
 				93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */,
 				939A5FDF27CDE2630055E17B /* Text.swift in Sources */,

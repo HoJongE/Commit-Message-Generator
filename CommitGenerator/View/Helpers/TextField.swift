@@ -11,7 +11,7 @@ struct RoundedTextField<Content: View>: View {
     
     private let editorType : EditorType
     private let content : () -> Content
-    @Binding var text : String
+    @Binding private var text : String
     
     init(_ editorType:EditorType,_ text : Binding<String>,@ViewBuilder content : @escaping () -> Content) {
         self.editorType = editorType
@@ -32,7 +32,7 @@ struct RoundedTextField<Content: View>: View {
                 
                 HStack {
                     Spacer()
-                    Text("\(text)/\(editorType.textLimit)")
+                    Text("\(text.count)/\(editorType.textLimit)")
                         .font(.caption)
                         .foregroundColor(.text2)
                 }

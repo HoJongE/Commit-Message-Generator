@@ -19,11 +19,13 @@ struct RootTabView: View {
                 Text("커밋 작성")
             }
             
-            Text("하이")
-                .tabItem {
-                    Image(systemName: "gearshape.2")
-                    Text("설정")
-                }
+            NavigationView {
+                SettingHost()
+            }
+            .tabItem {
+                Image(systemName: "gearshape.2")
+                Text("설정")
+            }
         }
     }
 }

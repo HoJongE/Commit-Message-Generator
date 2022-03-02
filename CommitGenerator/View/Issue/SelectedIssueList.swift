@@ -14,11 +14,18 @@ struct SelectedIssueList: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-            
-            Text(issueType.korTitle)
-                .font(.system(size: 16)).fontWeight(.semibold)
-                .foregroundColor(.white)
-            
+            HStack {
+                Text(issueType.korTitle)
+                    .font(.system(size: 16)).fontWeight(.semibold)
+                    .foregroundColor(.white)
+                Spacer()
+                Button(action: {issues.removeAll()}) {
+                    Image(systemName: "trash")
+                        .foregroundColor(.brand)
+                        .padding(.horizontal)
+                        .padding(.vertical,4)
+                }
+            }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing:16) {
                     IssuePlusButton(issueType: issueType, onIssueAdded: {issues.append($0)})
