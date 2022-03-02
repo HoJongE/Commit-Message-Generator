@@ -28,6 +28,25 @@ struct SaveButton : View {
         }
     }
 }
+struct LoginButton : View {
+    let onClick : () -> Void
+    let loading : Bool
+    
+    var body: some View {
+        Button(action:onClick) {
+            if loading {
+                ProgressView()
+            } else {
+                Text("Github로 로그인하기")
+                    .font(.subheadline).fontWeight(.semibold)
+                    .frame(width: 180, height: 50, alignment: .center)
+                    .background(RoundedRectangle(cornerRadius: 6).fill(.white))
+                    .foregroundColor(.black)
+                    .padding()
+            }
+        }
+    }
+}
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {

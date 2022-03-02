@@ -15,15 +15,15 @@ struct CommitWriteHost: View {
     
     @EnvironmentObject private var commitViewModel : CommitViewModel
     
-    @State private var showingAlert = false
-    
-    var basicTags : [Tag] {
+    @State private var showingResetAlert : Bool = false
+        
+    private var basicTags : [Tag] {
         tags.filter { tag in
             tag.category == "태그"
         }
     }
     
-    var functionTags : [Tag] {
+    private var functionTags : [Tag] {
         tags.filter { tag in
             tag.category == "기능"
         }
@@ -81,8 +81,15 @@ struct CommitWriteHost: View {
             }
             
             ToolbarItem(placement: .cancellationAction) {
-                ResetButton(onClick: commitViewModel.reset)
+                ResetButton(onClick: {showingResetAlert = true})
             }
+        }
+        .alert("변경 내용이 초기화됩니다.", isPresented: $showingResetAlert) {
+            Button("초기화" , role: .destructive) {
+                commitViewModel.reset()
+            }
+        } message: {
+            Text("계속하시겠습니까?")
         }
         .frame(maxWidth:.infinity, maxHeight: .infinity,alignment: .topLeading)
         .background(Color.background1.edgesIgnoringSafeArea(.all))

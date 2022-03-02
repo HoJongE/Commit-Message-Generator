@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FullScreenTextEditor<Content:View> : View {
     private let editorType : EditorType
-    @Binding private var text : String
     private let content : () -> Content
+    @Binding private var text : String
     @State private var showGuide : Bool = false
 
     

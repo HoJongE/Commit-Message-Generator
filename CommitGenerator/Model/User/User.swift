@@ -11,7 +11,7 @@ struct User : Codable, Hashable {
     let login : String
     let avatar_url : String
     let gravatar_id : String
-    let url : String
+    let html_url : String
 }
 
 
