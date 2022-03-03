@@ -7,43 +7,41 @@
 
 import SwiftUI
 
-struct FullScreenTextEditor<Content:View> : View {
-    private let editorType : EditorType
+struct FullScreenTextEditor<Content: View>: View {
+    private let editorType: EditorType
     private let content : () -> Content
-    @Binding private var text : String
-    @State private var showGuide : Bool = false
+    @Binding private var text: String
+    @State private var showGuide: Bool = false
 
-    
-    init(editorType:  EditorType,text : Binding<String>,
-    @ViewBuilder content :@escaping () -> Content) {
+    init(editorType: EditorType, text: Binding<String>, @ViewBuilder content :@escaping () -> Content) {
         self.editorType = editorType
         self._text = text
         self.content = content
         UITextView.appearance().backgroundColor = .clear
     }
-    
+
     var body: some View {
-        VStack (alignment:.leading,spacing:16){
+        VStack(alignment: .leading, spacing: 16) {
             content()
-            VStack(alignment:.leading,spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
                 GuideButton(showGuide: $showGuide)
                 Divider().padding(.horizontal)
                 if showGuide {
                     GuideBox(content: editorType.guideText)
                 }
                 TextEditor(text: $text)
-                    .onChange(of: text,perform: constraintTextLength(value:))
+                    .onChange(of: text, perform: constraintTextLength(value:))
                     .foregroundColor(.black)
                     .background(Color.white)
-                    .padding(.horizontal,12)
-                HStack{
+                    .padding(.horizontal, 12)
+                HStack {
                     Spacer()
                     Text("\(text.count)/\(editorType.textLimit)")
                         .foregroundColor(.text3)
                         .font(.caption)
                         .padding()
                 }
-                
+
                 Spacer()
             }
             .background(RoundedRectangle(cornerRadius: 6).fill(.white))
@@ -57,75 +55,72 @@ struct FullScreenTextEditor<Content:View> : View {
         }
         .padding()
         .navigationTitle(editorType.title)
-        
+
     }
-    
-    func constraintTextLength(value : String) {
+
+    func constraintTextLength(value: String) {
         if text.count > editorType.textLimit {
             text = String(text.prefix(editorType.textLimit))
         }
     }
 }
 
-struct GuideButton : View {
+struct GuideButton: View {
     @Binding var showGuide: Bool
-    
+
     var body: some View {
-        Button(action:onTap)
-        {
+        Button(action: onTap) {
             Label("도움말 보기", systemImage: "questionmark.circle.fill")
                 .labelStyle(.titleAndIcon)
                 .font(.subheadline)
-                
+
         }
-        .padding(.horizontal,16)
-        .padding(.vertical,12)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
         .background(.white)
         .cornerRadius(6, corners: .topLeft)
         .cornerRadius(6, corners: .topRight)
-    
-        
+
     }
-    
+
     private func onTap() {
-        withAnimation(.easeInOut){
+        withAnimation(.easeInOut) {
             showGuide.toggle()
         }
     }
 }
 
-struct ResetButton : View {
-    let onClick : ()->Void
+struct ResetButton: View {
+    let onClick : () -> Void
     var body: some View {
-        Button(action:onClick) {
+        Button(action: onClick) {
             Label("삭제", systemImage: "trash")
                 .labelStyle(.titleAndIcon)
         }
     }
 }
 
-struct GuideBox : View {
-    let content : String
+struct GuideBox: View {
+    let content: String
     var body: some View {
         Text(content)
             .font(.caption)
             .foregroundColor(.text2)
             .padding(.horizontal)
-            .padding(.vertical,4)
+            .padding(.vertical, 4)
             .foregroundColor(.white)
-            .frame(maxWidth:.infinity,alignment: .topLeading)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
             .multilineTextAlignment(.leading)
     }
 }
 
-
 struct TextEditor_Previews: PreviewProvider {
     static var previews: some View {
-        
+
         Group {
-            ForEach(PreviewDevice.mock,id: \.self) {
+            ForEach(PreviewDevice.mock, id: \.self) {
                 NavigationView {
-                    FullScreenTextEditor(editorType: .Title, text: .constant("")){Text("안녕 ㅎㅎ")}
+                    FullScreenTextEditor(editorType: .title, text: .constant("")) {Text("안녕 ㅎㅎ")}
                 }
                 .previewDevice(PreviewDevice(rawValue: $0))
             }
@@ -133,5 +128,3 @@ struct TextEditor_Previews: PreviewProvider {
         .preferredColorScheme(.dark)
     }
 }
-
-

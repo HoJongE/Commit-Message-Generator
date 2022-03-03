@@ -8,7 +8,7 @@
 import Foundation
 
 enum CopyType {
-    case TitleOnly
-    case BodyOnly
-    case All
+    case titleOnly
+    case bodyOnly
+    case all
 }

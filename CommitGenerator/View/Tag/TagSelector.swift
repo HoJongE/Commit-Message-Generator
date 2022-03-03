@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct TagSelector: View {
-    @Binding var selected : Tag?
-    let placeholder : String
-    let tags : [Tag]
+    @Binding var selected: Tag?
+    let placeholder: String
+    let tags: [Tag]
 
     var body: some View {
         NavigationLink(destination: TagList(placeholder, $selected, tags)) {
-            HStack(spacing:0) {
+            HStack(spacing: 0) {
                 Text(selected?.name ?? placeholder)
                     .font(.body)
                     .padding()

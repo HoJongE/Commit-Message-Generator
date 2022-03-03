@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct IssueItem: View {
-    private let issue : Issue
-    private let deleteIssue : (Issue) -> Void
-    
-    init(_ issue : Issue,deleteIssue :@escaping (Issue) -> Void){
+    private let issue: Issue
+    private let deleteIssue: (Issue) -> Void
+
+    init(_ issue: Issue, deleteIssue :@escaping (Issue) -> Void) {
         self.issue = issue
         self.deleteIssue = deleteIssue
     }
-    
+
     var body: some View {
         Text("#\(issue.number)")
             .foregroundColor(.white)
-            .frame(width:70,height: 30,alignment: .center)
+            .frame(width: 70, height: 30, alignment: .center)
             .background(Color.brand.opacity(0.8))
             .cornerRadius(6)
             .font(.body)
@@ -29,13 +29,13 @@ struct IssueItem: View {
     }
 }
 
-struct IssuePlusButton : View {
-    
-    let issueType : IssueType
-    let onIssueAdded : (Issue) -> Void
-    
+struct IssuePlusButton: View {
+
+    let issueType: IssueType
+    let onIssueAdded: (Issue) -> Void
+
     var body: some View {
-        
+
         NavigationLink(destination: IssuePicker(issueType: issueType, issueAdd: onIssueAdded)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
@@ -49,11 +49,11 @@ struct IssuePlusButton : View {
 struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueItem(Issue.mocIssue[0]){_ in
-                
+            IssueItem(Issue.mocIssue[0]) {_ in
+
             }
-            
-            IssuePlusButton(issueType: .Related ,onIssueAdded: {_ in })
+
+            IssuePlusButton(issueType: .related, onIssueAdded: {_ in })
         }
         .previewLayout(.sizeThatFits)
         .padding()

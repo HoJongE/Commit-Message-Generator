@@ -8,48 +8,46 @@
 import Foundation
 import UIKit
 
-
 extension CommitWriteHost {
-    
-    
-    final class CommitViewModel : ObservableObject {
-        
-        @Published var title : String = ""
-        @Published var body : String = ""
-        
-        @Published var resolvedIssues : [Issue] = [Issue]()
-        @Published var fixingIssues : [Issue] = [Issue]()
-        @Published var refIssues : [Issue] = [Issue]()
-        @Published var relatedIssues : [Issue] = [Issue]()
-        
-        @Published var selectedTag : Tag?
-        @Published var selectedFunction : Tag?
-        
-        @Published var issues : Lodable<[Issue]> = Lodable.Empty
-        
-        var filteredIssues : [Issue] {
+
+    final class CommitViewModel: ObservableObject {
+
+        @Published var title: String = ""
+        @Published var body: String = ""
+
+        @Published var resolvedIssues: [Issue] = [Issue]()
+        @Published var fixingIssues: [Issue] = [Issue]()
+        @Published var refIssues: [Issue] = [Issue]()
+        @Published var relatedIssues: [Issue] = [Issue]()
+
+        @Published var selectedTag: Tag?
+        @Published var selectedFunction: Tag?
+
+        @Published var issues: Lodable<[Issue]> = Lodable.empty
+
+        var filteredIssues: [Issue] {
             switch self.issues {
-                case .Success(data: let data):
+                case .success(data: let data):
                     return data.filter { issue in
-                        !resolvedIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
-                        !fixingIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
-                        !refIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
-                        !relatedIssues.contains{selectedIssue in issue.id == selectedIssue.id}
+                        !resolvedIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
+                        !fixingIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
+                        !refIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
+                        !relatedIssues.contains {selectedIssue in issue.id == selectedIssue.id}
                     }
                 default : return [Issue]()
             }
         }
-                
-        private let commitWriter : CommitWriter = CommitWriter()
-        
-        private let githubService : GithubService
-        
-        init(githubService : GithubService = GithubService.shared) {
+
+        private let commitWriter: CommitWriter = CommitWriter()
+
+        private let githubService: GithubService
+
+        init(githubService: GithubService = GithubService.shared) {
             self.githubService = githubService
         }
-        
-        func selectTag(_ tag : Tag) {
-            
+
+        func selectTag(_ tag: Tag) {
+
             switch tag.category {
                 case "태그" :
                     selectedTag = tag
@@ -59,15 +57,15 @@ extension CommitWriteHost {
                     print("알 수 없는 태그")
             }
         }
-        
-        func copyToClipboard(_ copyType:CopyType) {
+
+        func copyToClipboard(_ copyType: CopyType) {
             do {
                 try UIPasteboard.general.string = commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
             } catch {
                 print(error.localizedDescription)
             }
         }
-        
+
         func reset() {
             title = ""
             body = ""
@@ -78,8 +76,8 @@ extension CommitWriteHost {
             selectedTag = nil
             selectedFunction = nil
         }
-        
-        func getIssues(_ page : Int) {
+
+        func getIssues(_ page: Int) {
             githubService.getIssues(page) { result in
                 self.issues = result
             }

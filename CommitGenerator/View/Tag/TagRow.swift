@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct TagRow: View {
-    let tag : Tag
-    let selected : Bool
-    
+    let tag: Tag
+    let selected: Bool
+
     var body: some View {
-        VStack(alignment:.leading,spacing: 8) {
+        VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text("이름")
                     .foregroundColor(.text3)
                     .font(.footnote)
                 Spacer()
-                
+
                 if selected {
                     Label("현재 선택됨!", systemImage: "checkmark.circle")
                         .foregroundColor(.green)
@@ -27,9 +27,9 @@ struct TagRow: View {
             Text(tag.name ?? "이름 없음").font(.body)
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
-            
+
             if let description = tag.tagDescription {
-                
+
                 Divider()
                     .background(Color.white)
                 Text("설명")
@@ -40,28 +40,28 @@ struct TagRow: View {
                     .font(.system(size: 14))
                     .lineSpacing(4)
             }
-            
+
         }
         .multilineTextAlignment(.leading)
-        .frame(maxWidth:.infinity,alignment: .topLeading)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
         .padding()
         .background(RoundedRectangle(cornerRadius: 6).fill(Color(hex: tag.colorHex ?? "123456") ).opacity(0.4))
-        
+
     }
 }
 
 struct TagRow_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         let mockedCoreData = MockedCoreData.shared
-        
+
         Group {
-            TagRow(tag: mockedCoreData.tag(),selected: true)
-            TagRow(tag: mockedCoreData.tag(),selected: false)
-            
+            TagRow(tag: mockedCoreData.tag(), selected: true)
+            TagRow(tag: mockedCoreData.tag(), selected: false)
+
         }
         .padding()
         .previewLayout(.sizeThatFits)
-        
+
     }
 }

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ProfileView: View {
-    private let user : User?
-    
-    init(of user : User?) {
+    private let user: User?
+
+    init(of user: User?) {
         self.user = user
     }
-    
+
     var body: some View {
-        HStack(alignment:.center) {
+        HStack(alignment: .center) {
             CircleWebImage(url: user?.avatar_url ?? "", width: 50)
-            VStack(alignment:.leading) {
+            VStack(alignment: .leading) {
                 Text(user?.login ?? "로그인 해주세요")
                     .foregroundColor(.white)
                     .font(.body)
@@ -28,9 +28,9 @@ struct ProfileView: View {
                         .font(.subheadline)
                 }
             }
-            .padding(.leading,8)
+            .padding(.leading, 8)
         }
-        .frame(maxWidth:.infinity,alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
     }
 }
