@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct SaveButton : View {
-    
-    let copy : (CopyType) -> Void
-    
+struct SaveButton: View {
+
+    let copy: (CopyType) -> Void
+
     var body: some View {
         Menu(content: {
-            Button(action : {copy(.TitleOnly)}) {
+            Button(action: {copy(.titleOnly)}) {
                 Label("제목만 복사", systemImage: "abc")
             }
-            Button(action: {copy(.BodyOnly)}) {
+            Button(action: {copy(.bodyOnly)}) {
                 Label("본문만 복사", systemImage: "list.bullet.circle")
             }
-            Button(action: {copy(.All)}) {
+            Button(action: {copy(.all)}) {
                 Label("전체 복사", systemImage: "doc.on.doc")
             }
         }) {
@@ -28,12 +28,12 @@ struct SaveButton : View {
         }
     }
 }
-struct LoginButton : View {
-    let onClick : () -> Void
-    let loading : Bool
-    
+struct LoginButton: View {
+    let onClick: () -> Void
+    let loading: Bool
+
     var body: some View {
-        Button(action:onClick) {
+        Button(action: onClick) {
             if loading {
                 ProgressView()
             } else {

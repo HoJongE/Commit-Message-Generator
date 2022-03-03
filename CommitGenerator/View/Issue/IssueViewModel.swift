@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class IssueViewModel : ObservableObject {
-    
+final class IssueViewModel: ObservableObject {
+
 }

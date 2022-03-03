@@ -15,13 +15,13 @@ struct GithubImage: View {
             .frame(width: 50, height: 50, alignment: .center)
             .shadow(color: .white, radius: 3)
             .background(Circle().foregroundColor(.white).padding(1))
-        
+
     }
 }
 
-struct CircleWebImage : View {
-    let url : String
-    let width : CGFloat
+struct CircleWebImage: View {
+    let url: String
+    let width: CGFloat
     var body: some View {
         WebImage(url: URL(string: url))
             .resizable()
@@ -31,7 +31,6 @@ struct CircleWebImage : View {
             .overlay(Circle().stroke(.gray, lineWidth: width/40))
     }
 }
-
 
 struct Image_Previews: PreviewProvider {
     static var previews: some View {

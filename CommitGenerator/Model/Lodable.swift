@@ -7,63 +7,63 @@
 
 import Foundation
 
-enum Lodable<T>{
-    case Empty
-    case Loading
-    case Success(data : T)
-    case Error(error : Error)
-    
-    var value : T? {
+enum Lodable<T> {
+    case empty
+    case loading
+    case success(data: T)
+    case error(error: Error)
+
+    var value: T? {
         switch self {
-            case .Success(data: let data):
+            case .success(data: let data):
                 return data
             default: return nil
         }
     }
-    
-    var error : Error? {
+
+    var error: Error? {
         switch self {
-            case .Error(error: let error):
+            case .error(error: let error):
                 return error
             default: return nil
         }
     }
-    
-    var loading : Bool {
+
+    var loading: Bool {
         switch self {
-            case .Loading: return true
+            case .loading: return true
             default : return false
         }
     }
 }
 
-extension Lodable : Equatable {
-    
-    static func == (lhs:Lodable, rhs:Lodable) -> Bool {
-        switch (lhs,rhs){
-            case (Lodable.Empty,Lodable.Empty),
-                (Lodable.Loading,Lodable.Loading),
-                (Lodable.Success(data: _),Lodable.Success(data: _)),
-                (Lodable.Error(error: _),Lodable.Error(error: _)):
+extension Lodable: Equatable {
+
+    static func == (lhs: Lodable, rhs: Lodable) -> Bool {
+        switch (lhs, rhs) {
+            case (Lodable.empty, Lodable.empty),
+                (Lodable.loading, Lodable.loading),
+                (Lodable.success(data: _), Lodable.success(data: _)),
+                (Lodable.error(error: _), Lodable.error(error: _)):
                 return true
             default:
                 return false
         }
     }
-    
+
 }
-extension Lodable : CustomStringConvertible where T:CustomStringConvertible {
+extension Lodable: CustomStringConvertible where T: CustomStringConvertible {
     var description: String {
         switch self {
-            case .Error(error: let error):
+            case .error(error: let error):
                 #if DEBUG
                 print(error)
                 #endif
                 return "data is error : \(error.localizedDescription)"
-                
-            case .Loading: return "data is Loading"
-            case .Empty: return "data is Empty"
-            case .Success(data: let data): return data.description
+
+            case .loading: return "data is Loading"
+            case .empty: return "data is Empty"
+            case .success(data: let data): return data.description
         }
     }
 }

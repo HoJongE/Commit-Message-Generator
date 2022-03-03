@@ -8,44 +8,44 @@
 import Foundation
 
 final class KeyChainManager {
-    static let shared : KeyChainManager = KeyChainManager()
-    
-    private init(){}
-    
-    private let account : String = "accessToken"
-    private let service : String? = Bundle.main.bundleIdentifier
-    
-    func saveToken(_ token : String) -> Bool {
+    static let shared: KeyChainManager = KeyChainManager()
+
+    private init() {}
+
+    private let account: String = "accessToken"
+    private let service: String? = Bundle.main.bundleIdentifier
+
+    func saveToken(_ token: String) -> Bool {
         guard let data = try? JSONEncoder().encode(token), let service = self.service else {
             return false
         }
-        
-        let query : [CFString : Any] = [kSecClass : kSecClassGenericPassword,
-                                  kSecAttrService : service,
-                                  kSecAttrAccount : account,
-                                  kSecAttrGeneric : data]
-        
+
+        let query: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
+                                  kSecAttrService: service,
+                                  kSecAttrAccount: account,
+                                  kSecAttrGeneric: data]
+
         return SecItemAdd(query as CFDictionary, nil) == errSecSuccess
     }
-    
+
     func readToken() -> String? {
         guard let service = service else {
             return nil
         }
-        
-        let query : [CFString : Any] = [kSecClass : kSecClassGenericPassword,
-                                  kSecAttrService : service,
-                                  kSecAttrAccount : account,
-                                   kSecMatchLimit : kSecMatchLimitOne,
-                             kSecReturnAttributes : true,
-                                   kSecReturnData : true]
-        
-        var item : CFTypeRef?
+
+        let query: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
+                                  kSecAttrService: service,
+                                  kSecAttrAccount: account,
+                                   kSecMatchLimit: kSecMatchLimitOne,
+                             kSecReturnAttributes: true,
+                                   kSecReturnData: true]
+
+        var item: CFTypeRef?
         if SecItemCopyMatching(query as CFDictionary, &item) != errSecSuccess {
             return nil
         }
-        
-        guard let existingItem = item as? [String : Any],
+
+        guard let existingItem = item as? [String: Any],
               let data = existingItem[kSecAttrGeneric as String] as? Data,
               let token = try? JSONDecoder().decode(String.self, from: data) else {
                   return nil
@@ -53,17 +53,17 @@ final class KeyChainManager {
         return token
 
     }
-    
-    func deleteToken() -> Bool{
-        let deleteQuery : [CFString : Any] = [kSecClass : kSecClassGenericPassword,
-                                        kSecAttrAccount : account]
+
+    func deleteToken() -> Bool {
+        let deleteQuery: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
+                                        kSecAttrAccount: account]
         return SecItemDelete(deleteQuery as CFDictionary) == errSecSuccess
     }
-    
-    func updateToken(_ token : String) -> Bool {
-        let previousQuery : [CFString : Any] = [kSecClass : kSecClassGenericPassword, kSecAttrAccount : account]
-        let query : [CFString : Any] = [kSecValueData : token]
+
+    func updateToken(_ token: String) -> Bool {
+        let previousQuery: [CFString: Any] = [kSecClass: kSecClassGenericPassword, kSecAttrAccount: account]
+        let query: [CFString: Any] = [kSecValueData: token]
         return SecItemUpdate(previousQuery as CFDictionary, query as CFDictionary) == errSecSuccess
-        
+
     }
 }

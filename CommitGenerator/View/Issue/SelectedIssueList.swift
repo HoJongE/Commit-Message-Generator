@@ -8,29 +8,28 @@
 import SwiftUI
 
 struct SelectedIssueList: View {
-    
-    let issueType : IssueType
-    @Binding var issues : [Issue]
-    
+
+    let issueType: IssueType
+    @Binding var issues: [Issue]
+
     var body: some View {
-        VStack(alignment:.leading) {
+        VStack(alignment: .leading) {
             HStack {
                 Text(issueType.korTitle)
                     .font(.system(size: 16)).fontWeight(.semibold)
                     .foregroundColor(.white)
                 Spacer()
-                Button(action: {issues.removeAll()}) {
+                Button(action: {issues.removeAll()}, label: {
                     Image(systemName: "trash")
                         .foregroundColor(.brand)
                         .padding(.horizontal)
-                        .padding(.vertical,4)
-                }
+                        .padding(.vertical, 4)})
             }
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing:16) {
+                HStack(spacing: 16) {
                     IssuePlusButton(issueType: issueType, onIssueAdded: {issues.append($0)})
                     ForEach(issues, id: \.self) {
-                        IssueItem($0){ issue in
+                        IssueItem($0) { issue in
                             issues.removeAll { iter in
                                 issue.number == iter.number
                             }
@@ -44,7 +43,7 @@ struct SelectedIssueList: View {
 
 struct IssueList_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedIssueList(issueType: .Ref ,issues: .constant(Issue.mocIssue))
+        SelectedIssueList(issueType: .ref, issues: .constant(Issue.mocIssue))
             .previewLayout(.sizeThatFits)
             .padding()
             .background(Color.background1)

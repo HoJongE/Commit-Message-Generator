@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct GithubLoginView: View {
-    @EnvironmentObject private var authentication : Authentication
+    @EnvironmentObject private var authentication: Authentication
     let dismiss : () -> Void
     var body: some View {
-        VStack(alignment:.center, spacing:16) {
+        VStack(alignment: .center, spacing: 16) {
             GithubImage()
             Text("기능을 이용하시려면\n깃허브에 로그인 해야합니다.")
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
                 .font(.body)
                 .padding()
-            
-            LoginButton(onClick: authentication.requestCode,loading: authentication.user.loading)
+
+            LoginButton(onClick: authentication.requestCode, loading: authentication.user.loading)
         }
         .multilineTextAlignment(.center)
-        .frame(maxWidth:.infinity,maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .onChange(of: authentication.user) { newValue in
-            if case Lodable.Success(data: _) = newValue {
+            if case Lodable.success(data: _) = newValue {
                 dismiss()
             }
         }
@@ -35,7 +35,7 @@ struct GithubLoginView: View {
 struct GithubLoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GithubLoginView{}
+            GithubLoginView {}
                 .environmentObject(Authentication())
         }
     }

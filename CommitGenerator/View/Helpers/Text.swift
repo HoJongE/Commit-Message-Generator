@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct PointText: View {
-    private let text : String
-    
-    init(_ text : String){
+    private let text: String
+
+    init(_ text: String) {
         self.text = text
     }
-    
+
     var body: some View {
         HStack {
             Circle()
                 .frame(width: 8, height: 8)
             Text(text)
                 .font(.subheadline)
-                
+
         }
     }
+    // ionroi;aninoiaenvrneovnononoisnviorenoivne;roisnsoeirvnoienvoinsreivnesinvioern;viosenrinseirvnoiesnvoisrnvioesnvioes;ovinesrionres;ono;eirvn;osenvioesn;voiesniono
 }
 
 struct Text_Previews: PreviewProvider {

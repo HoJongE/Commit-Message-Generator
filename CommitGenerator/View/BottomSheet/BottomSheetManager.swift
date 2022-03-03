@@ -7,19 +7,18 @@
 
 import Foundation
 
+final class BottomSheetManager: ObservableObject {
+    @Published var isPresent: Bool = false
+    private(set) var action: Action = .none
 
-final class BottomSheetManager : ObservableObject {
-    @Published var isPresent : Bool = false
-    private(set) var action : Action = .None
-    
     func openGithubLogin() {
-        action = .GithubLogin
+        action = .githubLogin
         isPresent = true
     }
-    
-    enum Action : String {
-        case GithubLogin = "깃허브 로그인"
-        case None = "없음"
+
+    enum Action: String {
+        case githubLogin = "깃허브 로그인"
+        case none = "없음"
     }
-    
+
 }
