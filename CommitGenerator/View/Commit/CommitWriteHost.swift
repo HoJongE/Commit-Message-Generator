@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct CommitWriteHost: View {
 
@@ -17,6 +18,9 @@ struct CommitWriteHost: View {
 
     @State private var showingResetAlert: Bool = false
 
+    @State private var showSuccess: Bool = false
+    @State private var showError: Bool = false
+    
     private var basicTags: [Tag] {
         tags.filter { tag in
             tag.category == "태그"
@@ -77,7 +81,9 @@ struct CommitWriteHost: View {
         .navigationTitle("커밋 작성")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                SaveButton(copy: commitViewModel.copyToClipboard(_:))
+                SaveButton {
+                    showCopyResult(commitViewModel.copyToClipboard($0))
+                }
             }
 
             ToolbarItem(placement: .cancellationAction) {
@@ -94,7 +100,22 @@ struct CommitWriteHost: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .preferredColorScheme(.dark)
+        .toast(isPresenting: $showSuccess) {
+            AlertToast(type: .systemImage("doc.on.clipboard.fill", .gray), title: "클립보드\n복사완료")
+        }
+        .toast(isPresenting: $showError) {
+            AlertToast(type: .error(.error), title: "복사 실패!\n양식을 지켜주세요")
+        }
+    }
+}
 
+extension CommitWriteHost {
+    private func showCopyResult(_ result: Bool) {
+        if result {
+            showSuccess = true
+        } else {
+            showError = true
+        }
     }
 }
 
