@@ -18,8 +18,8 @@ struct IssuePicker: View {
     var body: some View {
         VStack(alignment:.center){
             switch commitViewModel.issues {
-                case .Success(data: let data):
-                    IssueList(issues: data,addIssue: issueAdd)
+                case .Success(data: _):
+                    IssueList(issues: commitViewModel.filteredIssues ,addIssue: issueAdd)
                 case .Error(error: let error):
                     ErrorView(error: error,retry: commitViewModel.getIssues(_:))
                 default:
