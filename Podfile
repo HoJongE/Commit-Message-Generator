@@ -9,6 +9,7 @@ target 'CommitGenerator' do
   pod 'Alamofire'
   pod 'SDWebImageSwiftUI'
   pod 'SwiftLint'
+  pod 'AlertToast'
   target 'CommitGeneratorTests' do
     inherit! :search_paths
     # Pods for testing

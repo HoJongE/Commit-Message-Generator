@@ -23,7 +23,6 @@ struct PointText: View {
 
         }
     }
-    // ionroi;aninoiaenvrneovnononoisnviorenoivne;roisnsoeirvnoienvoinsreivnesinvioern;viosenrinseirvnoiesnvoisrnvioesnvioes;ovinesrionres;ono;eirvn;osenvioesn;voiesniono
 }
 
 struct Text_Previews: PreviewProvider {

@@ -58,11 +58,12 @@ extension CommitWriteHost {
             }
         }
 
-        func copyToClipboard(_ copyType: CopyType) {
+        func copyToClipboard(_ copyType: CopyType) -> Bool {
             do {
                 try UIPasteboard.general.string = commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
+                return true
             } catch {
-                print(error.localizedDescription)
+                return false
             }
         }
 

@@ -7,7 +7,7 @@ included:
 excluded:
 - Pods
 - /Users/jongho/Desktop/Personal_Project/CommitGenerator/CommitGenerator/Resources/Color.swift
-
+- /Users/jongho/Desktop/Personal_Project/CommitGenerator/CommitGenerator/View/ViewExtension.swift
 
 type_name:
  allowed_symbols: ["_"]
