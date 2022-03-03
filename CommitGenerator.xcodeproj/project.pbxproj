@@ -24,6 +24,8 @@
 		9356FAF527CF0074004A59C2 /* SettingHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF427CF0074004A59C2 /* SettingHost.swift */; };
 		9356FAF727CF007F004A59C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF627CF007F004A59C2 /* ProfileView.swift */; };
 		9356FAF927CF055B004A59C2 /* TagSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAF827CF055B004A59C2 /* TagSettingView.swift */; };
+		9356FAFF27CF207C004A59C2 /* EditTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FAFE27CF207C004A59C2 /* EditTagList.swift */; };
+		9356FB0127CF249B004A59C2 /* EditTagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356FB0027CF249B004A59C2 /* EditTagRow.swift */; };
 		9361E8EB27C8943B007B8740 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E8EA27C8943B007B8740 /* Button.swift */; };
 		93639BB027CDB06000D52C5C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BAF27CDB06000D52C5C /* Authentication.swift */; };
 		93639BB327CDB14200D52C5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB227CDB14200D52C5C /* User.swift */; };
@@ -56,6 +58,7 @@
 		93D381F527CD13C40047043A /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
 		93D381F927CD154D0047043A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F827CD154D0047043A /* NetworkError.swift */; };
 		93E8105627C9B639008B423A /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
+		93EB6AB527CF465000B69672 /* EditTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB6AB427CF465000B69672 /* EditTagView.swift */; };
 		D769A4AC8E256061ECC96F5A /* Pods_CommitGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,8 @@
 		9356FAF427CF0074004A59C2 /* SettingHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHost.swift; sourceTree = "<group>"; };
 		9356FAF627CF007F004A59C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9356FAF827CF055B004A59C2 /* TagSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSettingView.swift; sourceTree = "<group>"; };
+		9356FAFE27CF207C004A59C2 /* EditTagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagList.swift; sourceTree = "<group>"; };
+		9356FB0027CF249B004A59C2 /* EditTagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagRow.swift; sourceTree = "<group>"; };
 		9361E8EA27C8943B007B8740 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		93639BAF27CDB06000D52C5C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		93639BB227CDB14200D52C5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		93D381F427CD13C40047043A /* Lodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
 		93D381F827CD154D0047043A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		93E8105527C9B639008B423A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		93EB6AB427CF465000B69672 /* EditTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagView.swift; sourceTree = "<group>"; };
 		B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator_CommitGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A2BACE5ADEFBF4709D4C9D /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,6 +359,9 @@
 				9356FAF427CF0074004A59C2 /* SettingHost.swift */,
 				9356FAF627CF007F004A59C2 /* ProfileView.swift */,
 				9356FAF827CF055B004A59C2 /* TagSettingView.swift */,
+				9356FAFE27CF207C004A59C2 /* EditTagList.swift */,
+				9356FB0027CF249B004A59C2 /* EditTagRow.swift */,
+				93EB6AB427CF465000B69672 /* EditTagView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -690,14 +699,17 @@
 				93639BB327CDB14200D52C5C /* User.swift in Sources */,
 				939A5FE227CDF09C0055E17B /* IssueList.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
+				93EB6AB527CF465000B69672 /* EditTagView.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
 				9351EF9327CC612F00AF6F25 /* IssueType.swift in Sources */,
+				9356FB0127CF249B004A59C2 /* EditTagRow.swift in Sources */,
 				9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */,
 				93845B9927C9FF3A00951A57 /* TextEditor.swift in Sources */,
 				938830F327C8828800D22C6A /* CommitGeneratorApp.swift in Sources */,
 				93B7ADDD27CA3D1800A1EF24 /* ViewExtension.swift in Sources */,
 				93D381EE27CCD8330047043A /* DeepLinkHandler.swift in Sources */,
 				93D381F327CD11690047043A /* GithubService.swift in Sources */,
+				9356FAFF27CF207C004A59C2 /* EditTagList.swift in Sources */,
 				93639BB827CDC84B00D52C5C /* BottomSheetContainer.swift in Sources */,
 				9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */,
 				93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */,

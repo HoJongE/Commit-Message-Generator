@@ -27,6 +27,19 @@ extension CommitWriteHost {
         
         @Published var issues : Lodable<[Issue]> = Lodable.Empty
         
+        var filteredIssues : [Issue] {
+            switch self.issues {
+                case .Success(data: let data):
+                    return data.filter { issue in
+                        !resolvedIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
+                        !fixingIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
+                        !refIssues.contains{selectedIssue in issue.id == selectedIssue.id} &&
+                        !relatedIssues.contains{selectedIssue in issue.id == selectedIssue.id}
+                    }
+                default : return [Issue]()
+            }
+        }
+                
         private let commitWriter : CommitWriter = CommitWriter()
         
         private let githubService : GithubService
@@ -69,7 +82,6 @@ extension CommitWriteHost {
         func getIssues(_ page : Int) {
             githubService.getIssues(page) { result in
                 self.issues = result
-                print(result.description)
             }
         }
     }

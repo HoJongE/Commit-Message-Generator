@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Issue : Codable,Hashable  {
-   
+    let id : Int
     let title : String
     let number : Int
     let body : String?

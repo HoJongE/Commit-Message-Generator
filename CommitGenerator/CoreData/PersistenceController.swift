@@ -44,6 +44,11 @@ struct PersistenceController {
         container.viewContext.delete(object)
         save(completion: completion)
     }
+    
+    func add(_ object: NSManagedObject, completion: @escaping (Error?) -> () = {_ in}) {
+        container.viewContext.insert(object)
+        save(completion: completion)
+    }
 }
 
 
