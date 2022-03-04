@@ -20,7 +20,7 @@ struct CommitWriteHost: View {
 
     @State private var showSuccess: Bool = false
     @State private var showError: Bool = false
-    
+
     private var basicTags: [Tag] {
         tags.filter { tag in
             tag.category == "태그"

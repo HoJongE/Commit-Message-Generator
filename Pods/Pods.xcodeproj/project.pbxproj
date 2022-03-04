@@ -41,7 +41,7 @@
 		138DFC533930F784B55D9BB8AACC0E06 /* SDImageCacheDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C4AE101CDD721AB9072B8966049488 /* SDImageCacheDefine.m */; };
 		164DEB7B33A09DD8663942511488AD16 /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 260365789ABEBF38198610DB18DC8210 /* SDImageGIFCoder.m */; };
 		168AB5EA0EBEB75D0434B55D0B97AD47 /* SDImageIOAnimatedCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = D7523D68EF0E92DD380C60DBD856A1C0 /* SDImageIOAnimatedCoderInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		16C8E39AA1B3735535BAD025F808E120 /* Pods-CommitGeneratorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D346E574A844486AE2F35BC5C6D783C2 /* Pods-CommitGeneratorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16C8E39AA1B3735535BAD025F808E120 /* Pods-CommitGeneratorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC8091A723BA922E42B0EC0E4D5B4BD /* Pods-CommitGeneratorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18303B692A81A7D708973A6B9CBA75D8 /* SDAsyncBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC7A14A6CC66B68FE0E5842DCD3348F /* SDAsyncBlockOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1976BB7D7E26A12E29283E71154B63B3 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7606EC0AA9E9DF7CB87C56FA95F944DA /* SessionDelegate.swift */; };
 		1EE44196E7BCE57AD96A2C751651EF40 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A46BA030BDAD9DC010A7AD80AD6889A /* AlamofireExtended.swift */; };
@@ -96,10 +96,12 @@
 		5A3E5B854E8188DDF4E958BBC9198600 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87079E483F59AB0817E19A156766B320 /* Foundation.framework */; };
 		5B3271A67137276C4B2CD554BAB9F4DA /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F60C97E0AA06989AF72AED67B0B3D2F3 /* UIImage+MultiFormat.m */; };
 		5B69919844A3BD774BAABB186D6A524F /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = B5605EDC553EA8C00E9BDD55AF7C51EE /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B78197AB6DD97913016FC0290F48303 /* Pods-CommitGenerator-IssueWidgetExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45B44B798FC247FA3A510B8AC1628B88 /* Pods-CommitGenerator-IssueWidgetExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BBE7719912593F1DEFF8E763EAD4ED6 /* SDImageCacheDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FCE236356D5CF67D7A1EA320EC320D /* SDImageCacheDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C7E1FD0252DFA6033E7E08D5984D7B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87079E483F59AB0817E19A156766B320 /* Foundation.framework */; };
+		5E6FB1AC421C24D0D879B3C73D08AB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87079E483F59AB0817E19A156766B320 /* Foundation.framework */; };
 		5F49C3C9A3733CD50642E0B57D405D44 /* SDWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D88226A5DA9E959EB4762D88B97DF /* SDWebImageError.m */; };
-		60DFBF6AF46468D3EC1B9C24A4B74D66 /* Pods-CommitGenerator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24361E38B015E2AAA2E33238DFD99E31 /* Pods-CommitGenerator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60DFBF6AF46468D3EC1B9C24A4B74D66 /* Pods-CommitGenerator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A025E835827F514C1835CC54E8E5AF /* Pods-CommitGenerator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61CD5A24511DC980EFF397CF57AC50F5 /* SDInternalMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2F6EF91563CEEABAE1E07EF4FE8540 /* SDInternalMacros.m */; };
 		62A22A4C10675F9B65C7677CFD6C4676 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 816D1122A9F73CD9A0869F60B90A373B /* SDWebImagePrefetcher.m */; };
 		64CDB33E49BDBE16653C88756E26B8CB /* SDImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4544FF6B1CB043518F60F4377F410C /* SDImageCoder.m */; };
@@ -116,7 +118,7 @@
 		75966A9262648D4647D764E3E76BC6AC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBDCB62D4C52BB035C7F58537042F1 /* Response.swift */; };
 		78AE96580BD551EB905F72C21AB81E97 /* SDImageCachesManagerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D86CEB75C1442EF2DC7587A83AC9B40 /* SDImageCachesManagerOperation.m */; };
 		7930C94414B4C661867AC4FBE82E996C /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914AD3C67C91256188AF40FFA1C72F9 /* URLEncodedFormEncoder.swift */; };
-		7A03ED5FC648A6C45A47448B2C1B5450 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D62931E2E5D3F49586A0C8DC5BA0CDC5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */; };
+		7A03ED5FC648A6C45A47448B2C1B5450 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 111F052E71EC97B5E876E3AF0D2D9AF5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */; };
 		7A424FED21A399FE2610DCB710A4A3FB /* SDWebImageOptionsProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 10230B904A994466246C802C7443E36F /* SDWebImageOptionsProcessor.m */; };
 		7ABC507AF4E384FC551A22DE93891D1D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B0BF74CDF828CD3C1FC725F6EF2C6 /* Transition.swift */; };
 		7B068137A8925891446203B5D3D6A4ED /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFA5A35A31A8C50621E0D18A79D3D9 /* CFNetwork.framework */; };
@@ -128,7 +130,7 @@
 		7FE695DA8EE7FF1286556E06B692009B /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB6AEAF94D435C1786666246FC620C /* MultipartFormData.swift */; };
 		808C960C82D708FC1A42C581D6CB4940 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1C5A50DD34A6DDE201A2A58C0B40A /* URLSessionConfiguration+Alamofire.swift */; };
 		809A09224ABB6A00BEF6B72EFAB30B4E /* SDImageAPNGCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A738683911DCAE6013A3EEB9DD710C /* SDImageAPNGCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80D0B48974F3D404EE34AD9C2946A0AF /* Pods-CommitGenerator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2618DE489244C2D2125FB4AFC5A5C086 /* Pods-CommitGenerator-dummy.m */; };
+		80D0B48974F3D404EE34AD9C2946A0AF /* Pods-CommitGenerator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B8C1CD578795638CDCC1D5EFE9BD9E /* Pods-CommitGenerator-dummy.m */; };
 		80D4A72C26C2EF865F9DCA400D2F1E70 /* SDImageGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 25E161007F37ED66FB7B68D550C45E11 /* SDImageGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81B8D2B7CEB25C2448B0BC9B33591A65 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E6467BCD1BB230831544A3052335EF /* Session.swift */; };
 		824D816B1EE404F2DD400EE678695CBE /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521382E4AD2EA0E3CA8301917000CAE /* ResponseSerialization.swift */; };
@@ -150,7 +152,7 @@
 		96479C9C76FDC513C03ADD58168F6911 /* SDImageIOAnimatedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D55242EED0A0990DF629B191E26253 /* SDImageIOAnimatedCoder.m */; };
 		9917CEAD8CE1CEB7FEC031255AED8FA8 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE67E0BD70A93AAA67FD7CBCB012BF /* SDWebImageError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		994327308CC7ECE7850C804FA0EA5F21 /* NSImage+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 447BC8764FBEC60B1B07077A6F9792EC /* NSImage+Compatibility.m */; };
-		994E64092A13DE4486ABF8CA527191F9 /* Pods-CommitGeneratorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3F42A18F12E1035B73B41DEA25401 /* Pods-CommitGeneratorTests-dummy.m */; };
+		994E64092A13DE4486ABF8CA527191F9 /* Pods-CommitGeneratorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B00295BD8AE956A753E98B872EB3508E /* Pods-CommitGeneratorTests-dummy.m */; };
 		99709E1C4991C49EE5601FF9461B2969 /* SDImageHEICCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D2DBE7BF95EF77B305B8122E6E5908 /* SDImageHEICCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99D058E53EFEE3AC4857CDE3DBA5C004 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88905C81607AD275FA8DC286CF4346DA /* ParameterEncoder.swift */; };
 		9C096C865369C21D252A0F4F90BE21D9 /* SDWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F39538CE7758746332E3A0ECDFEE601 /* SDWeakProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -195,6 +197,7 @@
 		D6B4751CED01D53E4A1B6A571AAA2F83 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DEFCE72E735063B2BF23A1F27050D /* HTTPMethod.swift */; };
 		D7BA04ADFE3104907F100E9370184A65 /* UIImage+ExtendedCacheData.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9F0C0AC35A06C833282E455EA0B66 /* UIImage+ExtendedCacheData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7D077F0FA5CAC32ACB65372453C701F /* SDImageAWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B3D5B12F22053C69CABBA28DFE5FC3 /* SDImageAWebPCoder.m */; };
+		D7F853D737BB34719C69DC83C4641889 /* Pods-CommitGenerator-IssueWidgetExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E69D84E16941DE61509773974285FF4F /* Pods-CommitGenerator-IssueWidgetExtension-dummy.m */; };
 		D88076DA0593D2835645CA5A92FFA37C /* SDAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE104E527CEB8E740A0DFC03D004545B /* SDAnimatedImageView.m */; };
 		D975B260AB44081399BCB612916CE675 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4413EB6A236D6D9B9995C649BC761171 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA34899BEF0668D76CBCE8C4CE47B97B /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BC642E5E4EE704B5823B97AF96E8A /* RequestTaskMap.swift */; };
@@ -219,7 +222,7 @@
 		E8D519B63C2077979F799769F9A35072 /* SDImageCachesManagerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3107FBDAFCCCD891DFD83F5F360E634A /* SDImageCachesManagerOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E9B4C89E7EB3B27D46AFCA452C3D426F /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFBF08E862DA2196CED6EB9B12F5D56 /* MultipartUpload.swift */; };
 		E9CF46857D61D2A8AF4C3722C27C61C6 /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FEB6519AD1CD5CF5C094AE45B6E2 /* SDImageCoderHelper.m */; };
-		EC99DE1CF0A1287C2F852BFF12BB8E3D /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CEADF6754A48CB73126B646C361B20 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC99DE1CF0A1287C2F852BFF12BB8E3D /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C43F083748D5DD83B6EE5590B6B642 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEC150B66BCCD6C80FDA7E4D1975166B /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D0F4E42CC59ECFC6DE53C9B8E9F23 /* DispatchQueue+Alamofire.swift */; };
 		F077E74D9855D0D7FCF570F8E8ED4A1E /* SDFileAttributeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1547B6C1B4E4738F7ACADA4E48864913 /* SDFileAttributeHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F0E28CEF30861F3589A4A662CEA76D80 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E757E0E28AB8E9436082F3FC77ADAE /* SDImageGraphics.m */; };
@@ -239,6 +242,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E5BCF4CBB908836C8E5850A25B0EBDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92EBFA3E7005B4C18A9C0B44324EB80F;
+			remoteInfo = SDWebImageSwiftUI;
+		};
 		1FBA6BD6FA05C3F48C7CFE30BB4B92F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -273,6 +283,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92EBFA3E7005B4C18A9C0B44324EB80F;
 			remoteInfo = SDWebImageSwiftUI;
+		};
+		681B3D7ECBCA349E6F5B61DCF456CF9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		69FF4E7C54F98F8AD20C8E39B3AF9851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		6C5136F2DEE226C02C2FAD423383631A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
+			remoteInfo = SDWebImage;
 		};
 		6E730120EB889C76C3C205850D4B107C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -316,6 +347,13 @@
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
 		};
+		9C516C457DF5461DAAAB56079290BFD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD9F52E07CA8CCC9E5112A7D8C1CE821;
+			remoteInfo = AlertToast;
+		};
 		CE8877DB9191EDC8B61E5843B500FD8F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -334,9 +372,12 @@
 		090EE2B9358B8C9AB82BFCECABAD3EBB /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
 		092D0C0310D2A6ABEF40165A5155894C /* SDWebImageCacheKeyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheKeyFilter.h; path = SDWebImage/Core/SDWebImageCacheKeyFilter.h; sourceTree = "<group>"; };
 		0AF1FEB6519AD1CD5CF5C094AE45B6E2 /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoderHelper.m; path = SDWebImage/Core/SDImageCoderHelper.m; sourceTree = "<group>"; };
+		0D1E61CF9B3C21C20EE5C4D476B80156 /* Pods-CommitGenerator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CommitGenerator-frameworks.sh"; sourceTree = "<group>"; };
 		0EA6D1B36705381AB7F6BBE74C08CA7B /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/Core/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		10230B904A994466246C802C7443E36F /* SDWebImageOptionsProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageOptionsProcessor.m; path = SDWebImage/Core/SDWebImageOptionsProcessor.m; sourceTree = "<group>"; };
+		111F052E71EC97B5E876E3AF0D2D9AF5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGenerator-CommitGeneratorUITests-dummy.m"; sourceTree = "<group>"; };
 		116BE39B295EAF11566545924A2FA812 /* SDWebImageSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImageSwiftUI.release.xcconfig; sourceTree = "<group>"; };
+		11AD7563A9E48CE910C2EB650346208F /* Pods-CommitGenerator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGenerator.modulemap"; sourceTree = "<group>"; };
 		13B374796F203E4DF51EACE34C8B52C1 /* SDAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SDAnimatedImageView+WebCache.m"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
 		142AA3936EA65F15CB58F0D20FFB0B34 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		1547B6C1B4E4738F7ACADA4E48864913 /* SDFileAttributeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDFileAttributeHelper.h; path = SDWebImage/Private/SDFileAttributeHelper.h; sourceTree = "<group>"; };
@@ -348,20 +389,19 @@
 		1B62269CE8940F9384BDC80DEADDC793 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		1B7351A78CE6ECB82C531AAF8C53D3ED /* AlertToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlertToast.modulemap; sourceTree = "<group>"; };
 		1C3DEFCE72E735063B2BF23A1F27050D /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		1CEC17B556600AA1612608C667092AF0 /* Pods-CommitGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1E3CEE3E694B07B65CED0C952FF8A859 /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/Core/SDImageTransformer.m; sourceTree = "<group>"; };
 		1F209ECC80A0B22758CFE89BCAAA3897 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/Core/SDWebImageCompat.m; sourceTree = "<group>"; };
-		2124416B19BF7F0AAD282CDF71A81C35 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		22B093B764E91BE4794BC8A0C42CC40F /* SDImageAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAssetManager.h; path = SDWebImage/Private/SDImageAssetManager.h; sourceTree = "<group>"; };
 		230F8EE1BEAB3D73D5D3E81D9D99017E /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		23BA01DDF6D24286CFF44746A3F66787 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		2430B99A7148E75F81CE107D61B5A4C7 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		24361E38B015E2AAA2E33238DFD99E31 /* Pods-CommitGenerator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGenerator-umbrella.h"; sourceTree = "<group>"; };
 		24C30775929297708C719F4AFF52DC07 /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/Core/SDAnimatedImageView.h; sourceTree = "<group>"; };
-		258429E6DBC05BFE376F224EE280FFEA /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		24C43F083748D5DD83B6EE5590B6B642 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h"; sourceTree = "<group>"; };
 		25DF4DF922A35658FBD794F92282AF68 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
 		25E161007F37ED66FB7B68D550C45E11 /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/Core/SDImageGraphics.h; sourceTree = "<group>"; };
 		260365789ABEBF38198610DB18DC8210 /* SDImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGIFCoder.m; path = SDWebImage/Core/SDImageGIFCoder.m; sourceTree = "<group>"; };
-		2618DE489244C2D2125FB4AFC5A5C086 /* Pods-CommitGenerator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGenerator-dummy.m"; sourceTree = "<group>"; };
+		264D9A487727C2AC899ED01E31B6FDD5 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		26BE9E05B3BD50944A9D298DBABAB78C /* SDWebImageDownloaderResponseModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderResponseModifier.m; path = SDWebImage/Core/SDWebImageDownloaderResponseModifier.m; sourceTree = "<group>"; };
 		28AC75C0E474CDABB3F2313609ECB2FA /* SDAnimatedImagePlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImagePlayer.m; path = SDWebImage/Core/SDAnimatedImagePlayer.m; sourceTree = "<group>"; };
 		2A61A4A2C68663E4B8B8831BDFE98B65 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/Core/SDWebImageManager.m; sourceTree = "<group>"; };
@@ -376,19 +416,21 @@
 		3107FBDAFCCCD891DFD83F5F360E634A /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		31881ED6F5FAF37EE8496594EDD80D04 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/Core/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		32319A842371B69A8218469D72101303 /* SDImageAPNGCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAPNGCoder.m; path = SDWebImage/Core/SDImageAPNGCoder.m; sourceTree = "<group>"; };
+		32A025E835827F514C1835CC54E8E5AF /* Pods-CommitGenerator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGenerator-umbrella.h"; sourceTree = "<group>"; };
 		330EEFC6E6BC97F154FBBAF0C7533820 /* SDImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCodersManager.m; path = SDWebImage/Core/SDImageCodersManager.m; sourceTree = "<group>"; };
 		33A3C2F1581B373B4D3870F2125FBC86 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		33D55242EED0A0990DF629B191E26253 /* SDImageIOAnimatedCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOAnimatedCoder.m; path = SDWebImage/Core/SDImageIOAnimatedCoder.m; sourceTree = "<group>"; };
+		34E2D32C5DD1E562D7D6EF826DFE9CAB /* Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.plist"; sourceTree = "<group>"; };
 		35B909ED05A2C9E4B678794C36205C1A /* SDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDMemoryCache.h; path = SDWebImage/Core/SDMemoryCache.h; sourceTree = "<group>"; };
 		35F5975F707C488AC3633E7E32894975 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
-		362059DDD6FFBA7D67C3307D2369EC5D /* Pods-CommitGeneratorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		37E757E0E28AB8E9436082F3FC77ADAE /* SDImageGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGraphics.m; path = SDWebImage/Core/SDImageGraphics.m; sourceTree = "<group>"; };
-		388FB9D034593242480776E15004D688 /* Pods-CommitGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		38DF4CBD238603D63FC471C32BD39BC8 /* Pods-CommitGenerator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-acknowledgements.plist"; sourceTree = "<group>"; };
 		3A618FF2303E262B7A38015A2F344211 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		3AC0C15155627A151FE7D4057FEA34D0 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		3C9FB48475D7D1955B8FB06482ED9BD6 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/Core/SDImageCache.m; sourceTree = "<group>"; };
 		3CA852D68C5E87D3B51E7932768468EB /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/Core/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		3DA4A0E73938B9E53B4B4ADDBF2984EE /* SDImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoader.h; path = SDWebImage/Core/SDImageLoader.h; sourceTree = "<group>"; };
+		3FA25DEC4A3323CDC0226E93B578FD23 /* Pods-CommitGenerator-IssueWidgetExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGenerator-IssueWidgetExtension.modulemap"; sourceTree = "<group>"; };
 		427018444D5D1E767C312E3DB966C4D6 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		427348469226040B53255EF73402E0BD /* ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = Sources/AlertToast/ActivityIndicator.swift; sourceTree = "<group>"; };
 		43B3DD8FB3B110414D4090E834377E22 /* SDWebImageCacheSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheSerializer.h; path = SDWebImage/Core/SDWebImageCacheSerializer.h; sourceTree = "<group>"; };
@@ -396,14 +438,14 @@
 		447BC8764FBEC60B1B07077A6F9792EC /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/Core/NSImage+Compatibility.m"; sourceTree = "<group>"; };
 		4521382E4AD2EA0E3CA8301917000CAE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		4532EE51EE5650A12B26233387F19905 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
-		46BC10582FE350FAE1134D69EBCF2A05 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45B44B798FC247FA3A510B8AC1628B88 /* Pods-CommitGenerator-IssueWidgetExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGenerator-IssueWidgetExtension-umbrella.h"; sourceTree = "<group>"; };
 		475DF42AEAB88C48A4F3126C6680397F /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
 		482DFD0C24898317256BC4E815DC5722 /* SDImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGIFCoder.h; path = SDWebImage/Core/SDImageGIFCoder.h; sourceTree = "<group>"; };
 		498B7964E5732D51C46EA6B0ECCAD199 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		4AE1B558E52032D3110051A027825C88 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		4B4699EE8C73FA3D2487427BA1E8A799 /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
 		4B5336519303B5649355B4657E3F9CD0 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/Core/SDImageCachesManager.m; sourceTree = "<group>"; };
-		4DBF0F48EB3D4BD6E745BC083645E736 /* Pods-CommitGeneratorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGeneratorTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4CC8091A723BA922E42B0EC0E4D5B4BD /* Pods-CommitGeneratorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGeneratorTests-umbrella.h"; sourceTree = "<group>"; };
 		5149DB3460D10E225A790B0149E5CAAF /* SDWebImageSwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDWebImageSwiftUI.swift; path = SDWebImageSwiftUI/Classes/SDWebImageSwiftUI.swift; sourceTree = "<group>"; };
 		519C28717D4B1E4350C6BE231D283461 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		51D2925FEAB58447374CEE95752DF5E4 /* SDWebImageSwiftUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImageSwiftUI-prefix.pch"; sourceTree = "<group>"; };
@@ -415,18 +457,18 @@
 		54DD802650EEE8B7D20DA7BB312E9F6D /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		54EBDCB62D4C52BB035C7F58537042F1 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		54F461FB2FD1198D1643A110682909B8 /* AlertToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertToast.swift; path = Sources/AlertToast/AlertToast.swift; sourceTree = "<group>"; };
-		550837E5A60F4E6AA678BD07AC56A29D /* Pods-CommitGenerator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-acknowledgements.plist"; sourceTree = "<group>"; };
-		559AD10C3E99694FAEBAEF7B38D815FB /* Pods-CommitGenerator-CommitGeneratorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-CommitGeneratorUITests-Info.plist"; sourceTree = "<group>"; };
+		577157F1FAB882915ED034F3C853C32F /* Pods-CommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		57C9C4FFB0501DBD7F2E078853BE5E69 /* SDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWeakProxy.m; path = SDWebImage/Private/SDWeakProxy.m; sourceTree = "<group>"; };
 		5A46BA030BDAD9DC010A7AD80AD6889A /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
-		5C8909A9F2EBE8E1108C2933068054E2 /* Pods-CommitGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CE1219EF56C64DE6003DC011F380636 /* Pods-CommitGenerator-CommitGeneratorUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CommitGenerator-CommitGeneratorUITests"; path = Pods_CommitGenerator_CommitGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFC61153ED2DE0999438F908B0B9FE5 /* SDImageHEICCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageHEICCoder.m; path = SDWebImage/Core/SDImageHEICCoder.m; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2F6EF91563CEEABAE1E07EF4FE8540 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		5F1BD07B79FC9E3C41B1CC50BEC28EF4 /* AlertToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertToast-prefix.pch"; sourceTree = "<group>"; };
 		5F5FAA1832C332BB045812EC7D65F04A /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/Core/NSButton+WebCache.m"; sourceTree = "<group>"; };
+		5FCFAC3D45206E68CB293BF50936464E /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6292871098B95FFBF1B65934C6AA3669 /* SDDeviceHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDeviceHelper.m; path = SDWebImage/Private/SDDeviceHelper.m; sourceTree = "<group>"; };
+		63F2BB75BCA50E2A5AD6EA40339CE511 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		66D9F0C0AC35A06C833282E455EA0B66 /* UIImage+ExtendedCacheData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ExtendedCacheData.h"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.h"; sourceTree = "<group>"; };
 		69C7E5DC51F863F859320A4DE99B79F6 /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/Core/SDImageFrame.h; sourceTree = "<group>"; };
 		6B1759501E8E1F45AA5D1D514F406795 /* AlertToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlertToast-dummy.m"; sourceTree = "<group>"; };
@@ -442,11 +484,9 @@
 		7102982D84BC99E0ADD5EEA4A877B6D0 /* SDWebImageDownloaderDecryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderDecryptor.h; path = SDWebImage/Core/SDWebImageDownloaderDecryptor.h; sourceTree = "<group>"; };
 		7134AE41DA96492F4C25FE3013C4799F /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/Core/SDWebImageCompat.h; sourceTree = "<group>"; };
 		716A43F48F8CE08E2AA73F24290AECBC /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
-		71CEADF6754A48CB73126B646C361B20 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h"; sourceTree = "<group>"; };
 		759C95753BEC39479D82F03D92B4C3AF /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/Core/SDWebImageManager.h; sourceTree = "<group>"; };
 		75CB6AEAF94D435C1786666246FC620C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		7606EC0AA9E9DF7CB87C56FA95F944DA /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		77A5B301F23ECF89F378CE15D9F1C832 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		77B36D3A77965CD9793D35D64E0791D9 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
 		77C896F5EBA152FDD0BC6E9A05D37823 /* SDWebImageSwiftUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageSwiftUI.h; path = SDWebImageSwiftUI/Module/SDWebImageSwiftUI.h; sourceTree = "<group>"; };
 		78270517C03FC656BA69E66373ADDC1F /* SDWebImageSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImageSwiftUI.debug.xcconfig; sourceTree = "<group>"; };
@@ -455,25 +495,28 @@
 		7D7EB53E024F60F160DBA7981C66ED8F /* SDImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoderHelper.h; path = SDWebImage/Core/SDImageCoderHelper.h; sourceTree = "<group>"; };
 		7DF4645DBF800EF2E0E035D163394891 /* SDImageAssetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAssetManager.m; path = SDWebImage/Private/SDImageAssetManager.m; sourceTree = "<group>"; };
 		7E118FB81B0D3294FC43499FFDCE9589 /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/Core/SDImageIOCoder.h; sourceTree = "<group>"; };
-		807EC48FA084E47095968C18BAD00E8F /* Pods-CommitGenerator-CommitGeneratorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGenerator-CommitGeneratorUITests.modulemap"; sourceTree = "<group>"; };
 		8089D2234161543D70A22A790688F43A /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		80E6467BCD1BB230831544A3052335EF /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
 		816D1122A9F73CD9A0869F60B90A373B /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/Core/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		81E85228E9774BA7462566590E607EF5 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/Core/SDWebImageOperation.h; sourceTree = "<group>"; };
+		8260183E5D92A85E12571B9DA0C0775F /* Pods-CommitGenerator-CommitGeneratorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGenerator-CommitGeneratorUITests.modulemap"; sourceTree = "<group>"; };
 		82EE733C168B219128CB5158C6A73ECE /* SDWebImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.release.xcconfig; sourceTree = "<group>"; };
 		84B4DA398DB898533FE5D1A84721AA05 /* ImagePlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePlayer.swift; path = SDWebImageSwiftUI/Classes/ImagePlayer.swift; sourceTree = "<group>"; };
+		84D79BF38BB61AB5A0DCEB6D2AB53732 /* Pods-CommitGeneratorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGeneratorTests.modulemap"; sourceTree = "<group>"; };
 		85673BE428AFC4E0838CEEBC533812B1 /* SDAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDAnimatedImageView+WebCache.h"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
+		86345AEB73B7C1721D593FC2B2430BB3 /* Pods-CommitGenerator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGenerator-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8648E60EBD0C800A13B6C9ACC3E943A6 /* UIColor+SDHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SDHexString.m"; path = "SDWebImage/Private/UIColor+SDHexString.m"; sourceTree = "<group>"; };
 		87079E483F59AB0817E19A156766B320 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		88905C81607AD275FA8DC286CF4346DA /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		88BBEB1CA435CA57B9A8D4259421E382 /* Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8AA3F578C632C8AA0FCD13B9D8A6B4F1 /* UIColor+SDHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SDHexString.h"; path = "SDWebImage/Private/UIColor+SDHexString.h"; sourceTree = "<group>"; };
 		8CBE1B9B8E5BD3F79B1E43E9A3006539 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		8EDE038D007532011C66B81A0FAD7054 /* SDGraphicsImageRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDGraphicsImageRenderer.m; path = SDWebImage/Core/SDGraphicsImageRenderer.m; sourceTree = "<group>"; };
 		92B3D5B12F22053C69CABBA28DFE5FC3 /* SDImageAWebPCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAWebPCoder.m; path = SDWebImage/Core/SDImageAWebPCoder.m; sourceTree = "<group>"; };
 		93EEF14615361370C62B9E2B02283CA1 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		96095BEA363FB07BABA1C529FDE5E882 /* Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh"; sourceTree = "<group>"; };
 		966040CE331C17ABDA896F470B0A6B42 /* SDImageIOAnimatedCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoder.h; path = SDWebImage/Core/SDImageIOAnimatedCoder.h; sourceTree = "<group>"; };
 		96EB10144DC7A569165D778A1DBB2A0C /* SDWebImageSwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImageSwiftUI.modulemap; sourceTree = "<group>"; };
-		9736240B3FEF52BC6DBC74566242EC88 /* Pods-CommitGenerator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-Info.plist"; sourceTree = "<group>"; };
 		98186897799A558B664679B007917B1E /* UIImage+Transform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Transform.m"; path = "SDWebImage/Core/UIImage+Transform.m"; sourceTree = "<group>"; };
 		982E56FEB78CB910AB23C34431B682BA /* SDDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDisplayLink.m; path = SDWebImage/Private/SDDisplayLink.m; sourceTree = "<group>"; };
 		9915BD90FBC28591B8D1DDBFBFA5871B /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
@@ -488,15 +531,15 @@
 		A0225828752A118E91B06D0B4F80948A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlertToast; path = AlertToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67E0054F104FF8596BA17555627A3E5 /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
+		A7B8C1CD578795638CDCC1D5EFE9BD9E /* Pods-CommitGenerator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGenerator-dummy.m"; sourceTree = "<group>"; };
 		A8511A7C60B9483A5D7BBC4085BC1CC0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		A88879F579D9272A8A5F5FCB126D3D65 /* AlertToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlertToast-Info.plist"; sourceTree = "<group>"; };
-		A9D62D59F11714FA7D60FC0F58E8605F /* Pods-CommitGenerator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGenerator-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AAEF2018BA2CCBCB081F903D939AD9A7 /* SDAssociatedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAssociatedObject.h; path = SDWebImage/Private/SDAssociatedObject.h; sourceTree = "<group>"; };
-		ABEA2255CA001362639A474F6FB51A7E /* Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh"; sourceTree = "<group>"; };
 		AD3551628FE76F7A19081096D0CCEB36 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
 		ADF96AE5030D233B97913BB6E6DF28B6 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/Core/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		AEC7E20CDE8B670DD09B5DC976B374D8 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
 		AEE3FD8C50CAA7185A8D5D73F55E92DF /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		B00295BD8AE956A753E98B872EB3508E /* Pods-CommitGeneratorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGeneratorTests-dummy.m"; sourceTree = "<group>"; };
 		B0A738683911DCAE6013A3EEB9DD710C /* SDImageAPNGCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoder.h; path = SDWebImage/Core/SDImageAPNGCoder.h; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19ADAB8B7437B9180B9B5F7C7C61F3F /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/Core/UIView+WebCache.m"; sourceTree = "<group>"; };
@@ -513,10 +556,9 @@
 		B9FFF0FCF97EC8892475D14C4234B00B /* ImageViewWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageViewWrapper.swift; path = SDWebImageSwiftUI/Classes/ImageViewWrapper.swift; sourceTree = "<group>"; };
 		BAE2B33E6332BFA806F3F6FEC64F477C /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		BB5EEEA383ADAF66298CDA9F5E1F05AE /* ImageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageManager.swift; path = SDWebImageSwiftUI/Classes/ImageManager.swift; sourceTree = "<group>"; };
-		BB96D3684EC4DE5A13E76A7A2727625E /* Pods-CommitGeneratorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGeneratorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BEAF1C832E562B1FEEEFF81530C9706C /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		C1D64DA8CFD3143083B383A6FD1D4EE4 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
-		C1DC5CAFA445523BDA90427E9C782425 /* Pods-CommitGeneratorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGeneratorTests.modulemap"; sourceTree = "<group>"; };
+		C2006837330FDB189BC131AE88259C11 /* Pods-CommitGeneratorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGeneratorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C421840B00A11A75A767B2126CA387D4 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Sources/AlertToast/BlurView.swift; sourceTree = "<group>"; };
 		C485644DF980753473C191D6FA40F0A7 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = SDWebImageSwiftUI/Classes/Image.swift; sourceTree = "<group>"; };
 		C512B7738D5149DB532A11D82D5C95A1 /* SDAssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAssociatedObject.m; path = SDWebImage/Private/SDAssociatedObject.m; sourceTree = "<group>"; };
@@ -524,46 +566,52 @@
 		C5AA54280B5634265A6B7060CB96E04C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		C6020AEB1F36F9846CE3B2A9EE20026C /* NSBezierPath+SDRoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+SDRoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+SDRoundedCorners.h"; sourceTree = "<group>"; };
 		C67D0F5D467B0C6B134D38B4C86A67F8 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		C6C97C0A73F65864F749BD5CF3973A14 /* Pods-CommitGenerator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CommitGenerator-frameworks.sh"; sourceTree = "<group>"; };
 		C9AFA5A35A31A8C50621E0D18A79D3D9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		CA2CD9B29808212C93C03F72F389430F /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/Core/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
 		CB605445FA511B2EAEF500EE1AE8E8AB /* SDDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDisplayLink.h; path = SDWebImage/Private/SDDisplayLink.h; sourceTree = "<group>"; };
-		CB64E836DDBC6EE454688D6F71ADBC80 /* Pods-CommitGenerator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CommitGenerator.modulemap"; sourceTree = "<group>"; };
 		CCFD1D6B0E5BA452AC598707E51E956E /* SDImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoder.h; path = SDWebImage/Core/SDImageCoder.h; sourceTree = "<group>"; };
+		CD1D051E7A5CB6A5D9C1F9DCC6CB06A0 /* Pods-CommitGenerator-IssueWidgetExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CommitGenerator-IssueWidgetExtension"; path = Pods_CommitGenerator_IssueWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6905DB33A990032CA134D2245D5CDC /* SDWebImageDownloaderConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderConfig.m; path = SDWebImage/Core/SDWebImageDownloaderConfig.m; sourceTree = "<group>"; };
+		CF4E6EC0D5B746F1B4855DBAED6577F2 /* Pods-CommitGenerator-CommitGeneratorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-CommitGeneratorUITests-Info.plist"; sourceTree = "<group>"; };
 		D052A8C2495B6F8091F6A8663E9A297E /* AlertToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertToast-umbrella.h"; sourceTree = "<group>"; };
 		D1EC2F1A8D76D748701C6BFDA65F8F68 /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
+		D22C222635747079E2BBDB2700B6F257 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D33D2D2372D52EFCA5D147B8F06E5702 /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/Core/SDImageLoadersManager.h; sourceTree = "<group>"; };
-		D346E574A844486AE2F35BC5C6D783C2 /* Pods-CommitGeneratorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CommitGeneratorTests-umbrella.h"; sourceTree = "<group>"; };
 		D3F1C5A50DD34A6DDE201A2A58C0B40A /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		D4E6282DB186792CFE7C147F373174C8 /* WebImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebImage.swift; path = SDWebImageSwiftUI/Classes/WebImage.swift; sourceTree = "<group>"; };
-		D62931E2E5D3F49586A0C8DC5BA0CDC5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGenerator-CommitGeneratorUITests-dummy.m"; sourceTree = "<group>"; };
 		D7523D68EF0E92DD380C60DBD856A1C0 /* SDImageIOAnimatedCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoderInternal.h; path = SDWebImage/Private/SDImageIOAnimatedCoderInternal.h; sourceTree = "<group>"; };
 		D8098C40F31CB50C10A84D12DF26AB8E /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		D91F3677035C355CBDA24A638EB20FFE /* SDImageAWebPCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAWebPCoder.h; path = SDWebImage/Core/SDImageAWebPCoder.h; sourceTree = "<group>"; };
 		D93608EE3E6BCC63A5F4711C535BB23C /* SDWebImageDownloaderResponseModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderResponseModifier.h; path = SDWebImage/Core/SDWebImageDownloaderResponseModifier.h; sourceTree = "<group>"; };
+		D9876E9A48826AE4F9520CAE596424F7 /* Pods-CommitGeneratorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		D9F0BE372AB63D06C304E0767892A730 /* SDWebImageSwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageSwiftUI-dummy.m"; sourceTree = "<group>"; };
 		DC6024C14A1EA23CA55EB808AE6E59C2 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/Core/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		DEBE4CD6860FC7D0EB72F5F98B06EB3D /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/Core/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		DEDE67E0BD70A93AAA67FD7CBCB012BF /* SDWebImageError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageError.h; path = SDWebImage/Core/SDWebImageError.h; sourceTree = "<group>"; };
+		E0F1B5420277124C207FDC741BB8F4AE /* Pods-CommitGenerator-IssueWidgetExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-IssueWidgetExtension-Info.plist"; sourceTree = "<group>"; };
 		E1251308B9F625BEF2F695A9D16C5900 /* SDGraphicsImageRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDGraphicsImageRenderer.h; path = SDWebImage/Core/SDGraphicsImageRenderer.h; sourceTree = "<group>"; };
+		E297EC7B36BE95ADDB8D67248DABCA7C /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2C4AE101CDD721AB9072B8966049488 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/Core/SDImageCacheDefine.m; sourceTree = "<group>"; };
 		E34D30DF003CD5823D452747700B2896 /* Pods-CommitGeneratorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CommitGeneratorTests"; path = Pods_CommitGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C91A2941BEA2186627689B6D46A28B /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/Core/SDImageIOCoder.m; sourceTree = "<group>"; };
 		E47951F8A4CC3E954E0218E1EBD8934F /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
 		E63425136E8CE5334A5C57CCE70F2ADD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		E664FB9CC1CFCF8E080E022148A0CD9C /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/Core/NSImage+Compatibility.h"; sourceTree = "<group>"; };
+		E69D84E16941DE61509773974285FF4F /* Pods-CommitGenerator-IssueWidgetExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGenerator-IssueWidgetExtension-dummy.m"; sourceTree = "<group>"; };
 		E710CDA8A22506E0AB5D05AF73027D93 /* SDWebImageDownloaderRequestModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderRequestModifier.h; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.h; sourceTree = "<group>"; };
-		E7B3F42A18F12E1035B73B41DEA25401 /* Pods-CommitGeneratorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CommitGeneratorTests-dummy.m"; sourceTree = "<group>"; };
 		E833F399D2BDF320B6DDCBF6335CCB3C /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/Core/UIImage+GIF.h"; sourceTree = "<group>"; };
+		E8E2F291B27CAB5B7A6631B59F67DDFA /* Pods-CommitGeneratorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGeneratorTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E914AD3C67C91256188AF40FFA1C72F9 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		E9860404BEA3952BE1F8FE96433D2A15 /* Pods-CommitGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB14DB80AAAC32ACBF97A8828051B5C6 /* Pods-CommitGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		ECF71A920BC2398ABA86B227762C8D05 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		EE391E0FC7E426C3C05AEC8DABD8AD99 /* Pods-CommitGenerator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CommitGenerator-Info.plist"; sourceTree = "<group>"; };
 		EE4EACE77733C233E54C28F87AA1D142 /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/Core/SDWebImageTransition.h; sourceTree = "<group>"; };
 		EF079AC89FA2D31C7D6A31180A86DF62 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
 		EF1C1B4C6D46EE64B03407E75F04294D /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/Core/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
-		EF68724F5BD76F88B9A9738776987637 /* Pods-CommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8AD259A86DD91F3C14707725031A29 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/Core/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		EFFBF08E862DA2196CED6EB9B12F5D56 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		F0802C6C0DA0D4C59D104F7D266D9FDB /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		F0F4927341B5C0EE611D00B9A85FAEF6 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/Core/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		F2BE638BB7B3C8A82B0A66EAD1172D87 /* SDDeviceHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDeviceHelper.h; path = SDWebImage/Private/SDDeviceHelper.h; sourceTree = "<group>"; };
 		F2E0DB160E488AC1D051D48D8FC00938 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
@@ -572,7 +620,6 @@
 		F3B57260D9D6A980D9BA9A1CB498AD84 /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/Core/SDImageFrame.m; sourceTree = "<group>"; };
 		F5724CA127B4DEDCB28F71F7F59D805A /* SDAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImage.m; path = SDWebImage/Core/SDAnimatedImage.m; sourceTree = "<group>"; };
 		F60C97E0AA06989AF72AED67B0B3D2F3 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/Core/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
-		F71B22B3FA4D99AD1C1EF738D097384C /* Pods-CommitGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CommitGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
 		F896DFB660A0C60678DF32E3FC748ECB /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		F8BD2E80FED0946011570B17F1F52C97 /* AlertToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertToast.debug.xcconfig; sourceTree = "<group>"; };
 		F8CE1AA164D91AAE5ABEC5F6E6F54594 /* SDWebImageDownloaderRequestModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderRequestModifier.m; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.m; sourceTree = "<group>"; };
@@ -636,6 +683,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9D55F534F35709422984ED445FC2F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D21599CC394676F440A79E3AD0B17F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6FB1AC421C24D0D879B3C73D08AB0D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,20 +759,6 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		2884D5CC922435716B15184879906497 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */,
-				F35A0246288F32B0371B644F000335CD /* Pods-CommitGenerator */,
-				5CE1219EF56C64DE6003DC011F380636 /* Pods-CommitGenerator-CommitGeneratorUITests */,
-				E34D30DF003CD5823D452747700B2896 /* Pods-CommitGeneratorTests */,
-				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
-				6B1B10F952F684F6767E6903C2F5E816 /* SDWebImageSwiftUI */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		28E2AA1155B9B29A9C727187B8886B01 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,22 +766,6 @@
 			);
 			name = SwiftLint;
 			path = SwiftLint;
-			sourceTree = "<group>";
-		};
-		2BFDC352F070A93729567E097F2109B3 /* Pods-CommitGeneratorTests */ = {
-			isa = PBXGroup;
-			children = (
-				C1DC5CAFA445523BDA90427E9C782425 /* Pods-CommitGeneratorTests.modulemap */,
-				BB96D3684EC4DE5A13E76A7A2727625E /* Pods-CommitGeneratorTests-acknowledgements.markdown */,
-				4DBF0F48EB3D4BD6E745BC083645E736 /* Pods-CommitGeneratorTests-acknowledgements.plist */,
-				E7B3F42A18F12E1035B73B41DEA25401 /* Pods-CommitGeneratorTests-dummy.m */,
-				362059DDD6FFBA7D67C3307D2369EC5D /* Pods-CommitGeneratorTests-Info.plist */,
-				D346E574A844486AE2F35BC5C6D783C2 /* Pods-CommitGeneratorTests-umbrella.h */,
-				5C8909A9F2EBE8E1108C2933068054E2 /* Pods-CommitGeneratorTests.debug.xcconfig */,
-				F71B22B3FA4D99AD1C1EF738D097384C /* Pods-CommitGeneratorTests.release.xcconfig */,
-			);
-			name = "Pods-CommitGeneratorTests";
-			path = "Target Support Files/Pods-CommitGeneratorTests";
 			sourceTree = "<group>";
 		};
 		332BFF7B379B2076A715CD0160383CB6 /* Support Files */ = {
@@ -922,6 +947,51 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		628096722E93F04F4134284009A5285A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				74B3D39BBC5B3D5469AF5ADC8209E26D /* Pods-CommitGenerator */,
+				731F309A5BA59D8D13A1F584C547C95B /* Pods-CommitGenerator-CommitGeneratorUITests */,
+				8382D016847000F04EE30A1B2E24AD6D /* Pods-CommitGenerator-IssueWidgetExtension */,
+				DD53F8537CAC804FBCD294DBEF14E51A /* Pods-CommitGeneratorTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		731F309A5BA59D8D13A1F584C547C95B /* Pods-CommitGenerator-CommitGeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8260183E5D92A85E12571B9DA0C0775F /* Pods-CommitGenerator-CommitGeneratorUITests.modulemap */,
+				D22C222635747079E2BBDB2700B6F257 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown */,
+				5FCFAC3D45206E68CB293BF50936464E /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist */,
+				111F052E71EC97B5E876E3AF0D2D9AF5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */,
+				96095BEA363FB07BABA1C529FDE5E882 /* Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh */,
+				CF4E6EC0D5B746F1B4855DBAED6577F2 /* Pods-CommitGenerator-CommitGeneratorUITests-Info.plist */,
+				24C43F083748D5DD83B6EE5590B6B642 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */,
+				264D9A487727C2AC899ED01E31B6FDD5 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */,
+				E297EC7B36BE95ADDB8D67248DABCA7C /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */,
+			);
+			name = "Pods-CommitGenerator-CommitGeneratorUITests";
+			path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests";
+			sourceTree = "<group>";
+		};
+		74B3D39BBC5B3D5469AF5ADC8209E26D /* Pods-CommitGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				11AD7563A9E48CE910C2EB650346208F /* Pods-CommitGenerator.modulemap */,
+				86345AEB73B7C1721D593FC2B2430BB3 /* Pods-CommitGenerator-acknowledgements.markdown */,
+				38DF4CBD238603D63FC471C32BD39BC8 /* Pods-CommitGenerator-acknowledgements.plist */,
+				A7B8C1CD578795638CDCC1D5EFE9BD9E /* Pods-CommitGenerator-dummy.m */,
+				0D1E61CF9B3C21C20EE5C4D476B80156 /* Pods-CommitGenerator-frameworks.sh */,
+				EE391E0FC7E426C3C05AEC8DABD8AD99 /* Pods-CommitGenerator-Info.plist */,
+				32A025E835827F514C1835CC54E8E5AF /* Pods-CommitGenerator-umbrella.h */,
+				577157F1FAB882915ED034F3C853C32F /* Pods-CommitGenerator.debug.xcconfig */,
+				EB14DB80AAAC32ACBF97A8828051B5C6 /* Pods-CommitGenerator.release.xcconfig */,
+			);
+			name = "Pods-CommitGenerator";
+			path = "Target Support Files/Pods-CommitGenerator";
+			sourceTree = "<group>";
+		};
 		78A331E036E27A7885F8F3C0A43BFE88 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -949,14 +1019,20 @@
 			path = AlertToast;
 			sourceTree = "<group>";
 		};
-		860AC5B9A2BC7D9E0EE0BA00BC550839 /* Targets Support Files */ = {
+		8382D016847000F04EE30A1B2E24AD6D /* Pods-CommitGenerator-IssueWidgetExtension */ = {
 			isa = PBXGroup;
 			children = (
-				B60BA150A2FF8A92F0229512F79355B4 /* Pods-CommitGenerator */,
-				CFF7E96766981995AF36CC7E7D145C61 /* Pods-CommitGenerator-CommitGeneratorUITests */,
-				2BFDC352F070A93729567E097F2109B3 /* Pods-CommitGeneratorTests */,
+				3FA25DEC4A3323CDC0226E93B578FD23 /* Pods-CommitGenerator-IssueWidgetExtension.modulemap */,
+				88BBEB1CA435CA57B9A8D4259421E382 /* Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.markdown */,
+				34E2D32C5DD1E562D7D6EF826DFE9CAB /* Pods-CommitGenerator-IssueWidgetExtension-acknowledgements.plist */,
+				E69D84E16941DE61509773974285FF4F /* Pods-CommitGenerator-IssueWidgetExtension-dummy.m */,
+				E0F1B5420277124C207FDC741BB8F4AE /* Pods-CommitGenerator-IssueWidgetExtension-Info.plist */,
+				45B44B798FC247FA3A510B8AC1628B88 /* Pods-CommitGenerator-IssueWidgetExtension-umbrella.h */,
+				F0802C6C0DA0D4C59D104F7D266D9FDB /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */,
+				63F2BB75BCA50E2A5AD6EA40339CE511 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-CommitGenerator-IssueWidgetExtension";
+			path = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension";
 			sourceTree = "<group>";
 		};
 		89F465DACCE3C638723FEAC07FE7B9BD /* Pods */ = {
@@ -993,21 +1069,19 @@
 			path = SDWebImageSwiftUI;
 			sourceTree = "<group>";
 		};
-		B60BA150A2FF8A92F0229512F79355B4 /* Pods-CommitGenerator */ = {
+		A2AADB30E88F0F3C34002437C1945BFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB64E836DDBC6EE454688D6F71ADBC80 /* Pods-CommitGenerator.modulemap */,
-				A9D62D59F11714FA7D60FC0F58E8605F /* Pods-CommitGenerator-acknowledgements.markdown */,
-				550837E5A60F4E6AA678BD07AC56A29D /* Pods-CommitGenerator-acknowledgements.plist */,
-				2618DE489244C2D2125FB4AFC5A5C086 /* Pods-CommitGenerator-dummy.m */,
-				C6C97C0A73F65864F749BD5CF3973A14 /* Pods-CommitGenerator-frameworks.sh */,
-				9736240B3FEF52BC6DBC74566242EC88 /* Pods-CommitGenerator-Info.plist */,
-				24361E38B015E2AAA2E33238DFD99E31 /* Pods-CommitGenerator-umbrella.h */,
-				EF68724F5BD76F88B9A9738776987637 /* Pods-CommitGenerator.debug.xcconfig */,
-				388FB9D034593242480776E15004D688 /* Pods-CommitGenerator.release.xcconfig */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */,
+				F35A0246288F32B0371B644F000335CD /* Pods-CommitGenerator */,
+				5CE1219EF56C64DE6003DC011F380636 /* Pods-CommitGenerator-CommitGeneratorUITests */,
+				CD1D051E7A5CB6A5D9C1F9DCC6CB06A0 /* Pods-CommitGenerator-IssueWidgetExtension */,
+				E34D30DF003CD5823D452747700B2896 /* Pods-CommitGeneratorTests */,
+				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
+				6B1B10F952F684F6767E6903C2F5E816 /* SDWebImageSwiftUI */,
 			);
-			name = "Pods-CommitGenerator";
-			path = "Target Support Files/Pods-CommitGenerator";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CEC28ABBDC85038CB3C24913DFE310CF /* iOS */ = {
@@ -1026,26 +1100,25 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				89F465DACCE3C638723FEAC07FE7B9BD /* Pods */,
-				2884D5CC922435716B15184879906497 /* Products */,
-				860AC5B9A2BC7D9E0EE0BA00BC550839 /* Targets Support Files */,
+				A2AADB30E88F0F3C34002437C1945BFE /* Products */,
+				628096722E93F04F4134284009A5285A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		CFF7E96766981995AF36CC7E7D145C61 /* Pods-CommitGenerator-CommitGeneratorUITests */ = {
+		DD53F8537CAC804FBCD294DBEF14E51A /* Pods-CommitGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				807EC48FA084E47095968C18BAD00E8F /* Pods-CommitGenerator-CommitGeneratorUITests.modulemap */,
-				77A5B301F23ECF89F378CE15D9F1C832 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.markdown */,
-				2124416B19BF7F0AAD282CDF71A81C35 /* Pods-CommitGenerator-CommitGeneratorUITests-acknowledgements.plist */,
-				D62931E2E5D3F49586A0C8DC5BA0CDC5 /* Pods-CommitGenerator-CommitGeneratorUITests-dummy.m */,
-				ABEA2255CA001362639A474F6FB51A7E /* Pods-CommitGenerator-CommitGeneratorUITests-frameworks.sh */,
-				559AD10C3E99694FAEBAEF7B38D815FB /* Pods-CommitGenerator-CommitGeneratorUITests-Info.plist */,
-				71CEADF6754A48CB73126B646C361B20 /* Pods-CommitGenerator-CommitGeneratorUITests-umbrella.h */,
-				46BC10582FE350FAE1134D69EBCF2A05 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */,
-				258429E6DBC05BFE376F224EE280FFEA /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */,
+				84D79BF38BB61AB5A0DCEB6D2AB53732 /* Pods-CommitGeneratorTests.modulemap */,
+				C2006837330FDB189BC131AE88259C11 /* Pods-CommitGeneratorTests-acknowledgements.markdown */,
+				E8E2F291B27CAB5B7A6631B59F67DDFA /* Pods-CommitGeneratorTests-acknowledgements.plist */,
+				B00295BD8AE956A753E98B872EB3508E /* Pods-CommitGeneratorTests-dummy.m */,
+				D9876E9A48826AE4F9520CAE596424F7 /* Pods-CommitGeneratorTests-Info.plist */,
+				4CC8091A723BA922E42B0EC0E4D5B4BD /* Pods-CommitGeneratorTests-umbrella.h */,
+				1CEC17B556600AA1612608C667092AF0 /* Pods-CommitGeneratorTests.debug.xcconfig */,
+				E9860404BEA3952BE1F8FE96433D2A15 /* Pods-CommitGeneratorTests.release.xcconfig */,
 			);
-			name = "Pods-CommitGenerator-CommitGeneratorUITests";
-			path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests";
+			name = "Pods-CommitGeneratorTests";
+			path = "Target Support Files/Pods-CommitGeneratorTests";
 			sourceTree = "<group>";
 		};
 		DD9FDD27D88D05823D31919CF7EBE238 /* Support Files */ = {
@@ -1164,6 +1237,14 @@
 				0BFA90EFCD3407716FFC60D140325188 /* UIImageView+WebCache.h in Headers */,
 				D975B260AB44081399BCB612916CE675 /* UIView+WebCache.h in Headers */,
 				2F85FF5597762E2E3C6961C6DD690A60 /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D787AF8356D9BF39D16D17FA16CE634 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B78197AB6DD97913016FC0290F48303 /* Pods-CommitGenerator-IssueWidgetExtension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1320,6 +1401,29 @@
 			productReference = A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */;
 			productType = "com.apple.product-type.framework";
 		};
+		CF80C26AE3B3B8CD15200202D9C68F68 /* Pods-CommitGenerator-IssueWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76374843BD657FE839272D1BACF3057 /* Build configuration list for PBXNativeTarget "Pods-CommitGenerator-IssueWidgetExtension" */;
+			buildPhases = (
+				1D787AF8356D9BF39D16D17FA16CE634 /* Headers */,
+				C65FDFF24ADAF76413DB329F11A25982 /* Sources */,
+				D21599CC394676F440A79E3AD0B17F00 /* Frameworks */,
+				7CC7D3C44E594FEFFDA6F3EEF441CC41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09C03F795A409D41D38260E03D3DFE39 /* PBXTargetDependency */,
+				6FFA7F6339C523FF57A0C694DC302134 /* PBXTargetDependency */,
+				A3DA6295BD3B27CE7BAAAF7E76EBF0A7 /* PBXTargetDependency */,
+				B06B8A7CB9CE9A773E2619DE5C8EA3F3 /* PBXTargetDependency */,
+				15610352DA7CC83CD407FEF5CF886C1C /* PBXTargetDependency */,
+			);
+			name = "Pods-CommitGenerator-IssueWidgetExtension";
+			productName = Pods_CommitGenerator_IssueWidgetExtension;
+			productReference = CD1D051E7A5CB6A5D9C1F9DCC6CB06A0 /* Pods-CommitGenerator-IssueWidgetExtension */;
+			productType = "com.apple.product-type.framework";
+		};
 		D7A5365ED46C8E71C5FAFB59D2299CB3 /* Pods-CommitGeneratorTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB5E8E08A19C3BC3AB3E6498FED9F4A /* Build configuration list for PBXNativeTarget "Pods-CommitGeneratorTests" */;
@@ -1375,7 +1479,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2884D5CC922435716B15184879906497 /* Products */;
+			productRefGroup = A2AADB30E88F0F3C34002437C1945BFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1383,6 +1487,7 @@
 				BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */,
 				0DFCF8FA5DF254DBA77E1C706E19583C /* Pods-CommitGenerator */,
 				B18DDDF3E3C9D684A19DEA1EFED6369C /* Pods-CommitGenerator-CommitGeneratorUITests */,
+				CF80C26AE3B3B8CD15200202D9C68F68 /* Pods-CommitGenerator-IssueWidgetExtension */,
 				D7A5365ED46C8E71C5FAFB59D2299CB3 /* Pods-CommitGeneratorTests */,
 				3847153A6E5EEFB86565BA840768F429 /* SDWebImage */,
 				92EBFA3E7005B4C18A9C0B44324EB80F /* SDWebImageSwiftUI */,
@@ -1407,6 +1512,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		59FC49F4186BE3B64D14966824FEF367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CC7D3C44E594FEFFDA6F3EEF441CC41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1565,6 +1677,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C65FDFF24ADAF76413DB329F11A25982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F853D737BB34719C69DC83C4641889 /* Pods-CommitGenerator-IssueWidgetExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E433AAB9933A759630771F55C9A60EBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1635,6 +1755,18 @@
 			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
 			targetProxy = 92E257EB8F26160B9266935679016D7A /* PBXContainerItemProxy */;
 		};
+		09C03F795A409D41D38260E03D3DFE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 681B3D7ECBCA349E6F5B61DCF456CF9D /* PBXContainerItemProxy */;
+		};
+		15610352DA7CC83CD407FEF5CF886C1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 69FF4E7C54F98F8AD20C8E39B3AF9851 /* PBXContainerItemProxy */;
+		};
 		1E45EDC8F36F6A9F392995D15A0C0149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
@@ -1658,6 +1790,24 @@
 			name = AlertToast;
 			target = BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */;
 			targetProxy = 3BFD0A1B795FCDB43AD8B97B2D15319F /* PBXContainerItemProxy */;
+		};
+		6FFA7F6339C523FF57A0C694DC302134 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlertToast;
+			target = BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */;
+			targetProxy = 9C516C457DF5461DAAAB56079290BFD0 /* PBXContainerItemProxy */;
+		};
+		A3DA6295BD3B27CE7BAAAF7E76EBF0A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
+			targetProxy = 6C5136F2DEE226C02C2FAD423383631A /* PBXContainerItemProxy */;
+		};
+		B06B8A7CB9CE9A773E2619DE5C8EA3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImageSwiftUI;
+			target = 92EBFA3E7005B4C18A9C0B44324EB80F /* SDWebImageSwiftUI */;
+			targetProxy = 1E5BCF4CBB908836C8E5850A25B0EBDF /* PBXContainerItemProxy */;
 		};
 		B95942119FA364F0F2B875CFD82BB43F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1771,7 +1921,7 @@
 		};
 		0F41A5662224A1E17D8A2150FFAA1BC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 258429E6DBC05BFE376F224EE280FFEA /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */;
+			baseConfigurationReference = E297EC7B36BE95ADDB8D67248DABCA7C /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1844,7 +1994,7 @@
 		};
 		338C6685846ECD4FBC81977172FF884E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F71B22B3FA4D99AD1C1EF738D097384C /* Pods-CommitGeneratorTests.release.xcconfig */;
+			baseConfigurationReference = E9860404BEA3952BE1F8FE96433D2A15 /* Pods-CommitGeneratorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1879,6 +2029,43 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		40FE4BE7A6D34E4F14E7F12A78922B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0802C6C0DA0D4C59D104F7D266D9FDB /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1948,7 +2135,7 @@
 		};
 		42C15A647AF4FF4D4835AB348E2C8789 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46BC10582FE350FAE1134D69EBCF2A05 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */;
+			baseConfigurationReference = 264D9A487727C2AC899ED01E31B6FDD5 /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2021,7 +2208,7 @@
 		};
 		575C9E678072A0FB58C1479A3AC9D988 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C8909A9F2EBE8E1108C2933068054E2 /* Pods-CommitGeneratorTests.debug.xcconfig */;
+			baseConfigurationReference = 1CEC17B556600AA1612608C667092AF0 /* Pods-CommitGeneratorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2056,9 +2243,47 @@
 			};
 			name = Debug;
 		};
+		6DE21B4B16FECA848F31EBBEB6458DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F2BB75BCA50E2A5AD6EA40339CE511 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8426D40CFCCEFFF961171AD812A43AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 388FB9D034593242480776E15004D688 /* Pods-CommitGenerator.release.xcconfig */;
+			baseConfigurationReference = EB14DB80AAAC32ACBF97A8828051B5C6 /* Pods-CommitGenerator.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2331,7 +2556,7 @@
 		};
 		F9C07734D71ED9B42F892B941223F198 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF68724F5BD76F88B9A9738776987637 /* Pods-CommitGenerator.debug.xcconfig */;
+			baseConfigurationReference = 577157F1FAB882915ED034F3C853C32F /* Pods-CommitGenerator.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2419,6 +2644,15 @@
 			buildConfigurations = (
 				9E98C04A5FA16D8AD5D48C1861179497 /* Debug */,
 				90A4588B06F8745E7FCD1B00204D6241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A76374843BD657FE839272D1BACF3057 /* Build configuration list for PBXNativeTarget "Pods-CommitGenerator-IssueWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FE4BE7A6D34E4F14E7F12A78922B20 /* Debug */,
+				6DE21B4B16FECA848F31EBBEB6458DC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

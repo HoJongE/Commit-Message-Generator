@@ -79,7 +79,6 @@ extension SettingHost {
             PersistenceController.shared.reset()
         }
     }
-
 }
 
 struct TagSettingView_Previews: PreviewProvider {
@@ -87,7 +86,6 @@ struct TagSettingView_Previews: PreviewProvider {
         Group {
             SettingHost.TagSettingView("태그", image: "tag.fill", tint: .brand)
             SettingHost.ResetButton()
-
         }
         .previewLayout(.sizeThatFits)
         .padding()

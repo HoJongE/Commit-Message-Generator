@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2C44CC71362A30B5707C9F35 /* Pods_CommitGenerator_CommitGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */; };
 		3C362538DB9A15AD67897C2C /* Pods_CommitGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */; };
+		9202A177A19A853EF9C4D308 /* Pods_CommitGenerator_IssueWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4CA7A9F768AA0C9EC27470 /* Pods_CommitGenerator_IssueWidgetExtension.framework */; };
 		9321899F27C9BB5E007472FD /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
 		932189A127C9DB36007472FD /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
 		932189A327C9DE20007472FD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A227C9DE20007472FD /* TextField.swift */; };
 		932D888827C8DC080072B896 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888727C8DC080072B896 /* TagSelector.swift */; };
 		932D888B27C8DECA0072B896 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888A27C8DECA0072B896 /* TagList.swift */; };
 		932D888D27C8E0F80072B896 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932D888C27C8E0F80072B896 /* TagRow.swift */; };
+		934258B627D0D88400BC1FFF /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F227CD11690047043A /* GithubService.swift */; };
 		9351EF9127CC5E4000AF6F25 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */; };
 		9351EF9327CC612F00AF6F25 /* IssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9227CC612F00AF6F25 /* IssueType.swift */; };
 		9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9527CC61D300AF6F25 /* Issue.swift */; };
@@ -32,6 +34,7 @@
 		93639BB627CDBB1700D52C5C /* BottomSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */; };
 		93639BB827CDC84B00D52C5C /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */; };
 		9372F66927CDDF290077A3E0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372F66827CDDF290077A3E0 /* Image.swift */; };
+		9374202B27D0E5E600999DEC /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374202A27D0E5E600999DEC /* IssueRow.swift */; };
 		93845B9927C9FF3A00951A57 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9827C9FF3A00951A57 /* TextEditor.swift */; };
 		93845B9B27CA002F00951A57 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9A27CA002F00951A57 /* EditorType.swift */; };
 		93845B9E27CA25C100951A57 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9D27CA25C100951A57 /* MockedModel.swift */; };
@@ -50,6 +53,18 @@
 		93B7ADE027CA46E800A1EF24 /* SelectedIssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADDF27CA46E800A1EF24 /* SelectedIssueItem.swift */; };
 		93B7ADE227CA482C00A1EF24 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADE127CA482C00A1EF24 /* SelectedIssueList.swift */; };
 		93B7ADE427CA4FC600A1EF24 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7ADE327CA4FC600A1EF24 /* RootTabView.swift */; };
+		93CB945727D0CC0700140A0F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CB943E27D0CAE200140A0F /* WidgetKit.framework */; };
+		93CB945827D0CC0700140A0F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CB944027D0CAE200140A0F /* SwiftUI.framework */; };
+		93CB945B27D0CC0700140A0F /* IssueWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB945A27D0CC0700140A0F /* IssueWidget.swift */; };
+		93CB945D27D0CC0800140A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CB945C27D0CC0800140A0F /* Assets.xcassets */; };
+		93CB946127D0CC0800140A0F /* IssueWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 93CB945627D0CC0700140A0F /* IssueWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		93CB946627D0CFC000140A0F /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB946527D0CFC000140A0F /* WidgetView.swift */; };
+		93CB946727D0D0BD00140A0F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9527CC61D300AF6F25 /* Issue.swift */; };
+		93CB946827D0D0CF00140A0F /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
+		93CB946927D0D12500140A0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BB227CDB14200D52C5C /* User.swift */; };
+		93CB946D27D0D61B00140A0F /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F027CD0A670047043A /* KeyChainManager.swift */; };
+		93CB947027D0D69100140A0F /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381E427CCBCD30047043A /* Const.swift */; };
+		93CB947127D0D69B00140A0F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F827CD154D0047043A /* NetworkError.swift */; };
 		93D381E527CCBCD30047043A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381E427CCBCD30047043A /* Const.swift */; };
 		93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381E727CCBD7F0047043A /* GithubLoginView.swift */; };
 		93D381EB27CCD5BD0047043A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381EA27CCD5BD0047043A /* TokenManager.swift */; };
@@ -78,12 +93,35 @@
 			remoteGlobalIDString = 938830EE27C8828800D22C6A;
 			remoteInfo = CommitGenerator;
 		};
+		93CB945F27D0CC0800140A0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 938830E727C8828800D22C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93CB945527D0CC0700140A0F;
+			remoteInfo = IssueWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		93CB944D27D0CAE300140A0F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				93CB946127D0CC0800140A0F /* IssueWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		319F74841EC1D012A3D62C49 /* Pods-CommitGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGeneratorTests.release.xcconfig"; path = "Target Support Files/Pods-CommitGeneratorTests/Pods-CommitGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		31FF32EBE795BE673DC8E315 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5C003D0B0C9D8A8E6A1A1A8F /* Pods-CommitGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-CommitGeneratorTests/Pods-CommitGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		601E2A26098ABCFF496F5E89 /* Pods-CommitGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator.release.xcconfig"; path = "Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		68CFAFEAFB569F0E6EF18EED /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-IssueWidgetExtension/Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862C343D21BACCC78A08C529 /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +149,7 @@
 		93639BB527CDBB1700D52C5C /* BottomSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetManager.swift; sourceTree = "<group>"; };
 		93639BB727CDC84B00D52C5C /* BottomSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
 		9372F66827CDDF290077A3E0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9374202A27D0E5E600999DEC /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		93845B9827C9FF3A00951A57 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		93845B9A27CA002F00951A57 /* EditorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorType.swift; sourceTree = "<group>"; };
 		93845B9D27CA25C100951A57 /* MockedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedModel.swift; sourceTree = "<group>"; };
@@ -132,6 +171,15 @@
 		93B7ADDF27CA46E800A1EF24 /* SelectedIssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedIssueItem.swift; sourceTree = "<group>"; };
 		93B7ADE127CA482C00A1EF24 /* SelectedIssueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedIssueList.swift; sourceTree = "<group>"; };
 		93B7ADE327CA4FC600A1EF24 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		93CB943E27D0CAE200140A0F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		93CB944027D0CAE200140A0F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		93CB945627D0CC0700140A0F /* IssueWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IssueWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		93CB945A27D0CC0700140A0F /* IssueWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWidget.swift; sourceTree = "<group>"; };
+		93CB945C27D0CC0800140A0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93CB945E27D0CC0800140A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93CB946527D0CFC000140A0F /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		93CB946C27D0D4C000140A0F /* CommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommitGenerator.entitlements; sourceTree = "<group>"; };
+		93CB946F27D0D68000140A0F /* IssueWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IssueWidgetExtension.entitlements; sourceTree = "<group>"; };
 		93D381E327CCBADB0047043A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		93D381E427CCBCD30047043A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		93D381E727CCBD7F0047043A /* GithubLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLoginView.swift; sourceTree = "<group>"; };
@@ -144,6 +192,7 @@
 		93E8105527C9B639008B423A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		93EB6AB427CF465000B69672 /* EditTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagView.swift; sourceTree = "<group>"; };
 		B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator_CommitGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4CA7A9F768AA0C9EC27470 /* Pods_CommitGenerator_IssueWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitGenerator_IssueWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A2BACE5ADEFBF4709D4C9D /* Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-CommitGeneratorUITests/Pods-CommitGenerator-CommitGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +221,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93CB945327D0CC0700140A0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93CB945827D0CC0700140A0F /* SwiftUI.framework in Frameworks */,
+				93CB945727D0CC0700140A0F /* WidgetKit.framework in Frameworks */,
+				9202A177A19A853EF9C4D308 /* Pods_CommitGenerator_IssueWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -181,6 +240,9 @@
 				7E2AD0004546EB21BBB152DC /* Pods_CommitGenerator.framework */,
 				B3DBA5D12C4C687D7F60B967 /* Pods_CommitGenerator_CommitGeneratorUITests.framework */,
 				85106CB3D348BCA8E98BE295 /* Pods_CommitGeneratorTests.framework */,
+				93CB943E27D0CAE200140A0F /* WidgetKit.framework */,
+				93CB944027D0CAE200140A0F /* SwiftUI.framework */,
+				BD4CA7A9F768AA0C9EC27470 /* Pods_CommitGenerator_IssueWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,6 +327,15 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
+		9374202927D0E5D900999DEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93CB946527D0CFC000140A0F /* WidgetView.swift */,
+				9374202A27D0E5E600999DEC /* IssueRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		93845B9C27CA00AA00951A57 /* Const */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,10 +347,12 @@
 		938830E627C8828800D22C6A = {
 			isa = PBXGroup;
 			children = (
+				93CB946F27D0D68000140A0F /* IssueWidgetExtension.entitlements */,
 				93B3063127D0606700C6EC3D /* .swiftlint.yml */,
 				938830F127C8828800D22C6A /* CommitGenerator */,
 				9388310227C8828900D22C6A /* CommitGeneratorTests */,
 				9388310C27C8828900D22C6A /* CommitGeneratorUITests */,
+				93CB945927D0CC0700140A0F /* IssueWidget */,
 				938830F027C8828800D22C6A /* Products */,
 				F3003F0FAEA69B5790800926 /* Pods */,
 				183433A2B234880526F0393B /* Frameworks */,
@@ -292,6 +365,7 @@
 				938830EF27C8828800D22C6A /* CommitGenerator.app */,
 				938830FF27C8828900D22C6A /* CommitGeneratorTests.xctest */,
 				9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */,
+				93CB945627D0CC0700140A0F /* IssueWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +373,7 @@
 		938830F127C8828800D22C6A /* CommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				93CB946C27D0D4C000140A0F /* CommitGenerator.entitlements */,
 				930B967327D053F40064CF44 /* Services */,
 				93D381EC27CCD82B0047043A /* System */,
 				93D381E327CCBADB0047043A /* Info.plist */,
@@ -388,6 +463,17 @@
 			path = Issue;
 			sourceTree = "<group>";
 		};
+		93CB945927D0CC0700140A0F /* IssueWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9374202927D0E5D900999DEC /* View */,
+				93CB945A27D0CC0700140A0F /* IssueWidget.swift */,
+				93CB945C27D0CC0800140A0F /* Assets.xcassets */,
+				93CB945E27D0CC0800140A0F /* Info.plist */,
+			);
+			path = IssueWidget;
+			sourceTree = "<group>";
+		};
 		93D381E627CCBD740047043A /* Github */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +519,8 @@
 				862C343D21BACCC78A08C529 /* Pods-CommitGenerator-CommitGeneratorUITests.release.xcconfig */,
 				5C003D0B0C9D8A8E6A1A1A8F /* Pods-CommitGeneratorTests.debug.xcconfig */,
 				319F74841EC1D012A3D62C49 /* Pods-CommitGeneratorTests.release.xcconfig */,
+				68CFAFEAFB569F0E6EF18EED /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */,
+				31FF32EBE795BE673DC8E315 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -450,10 +538,12 @@
 				938830EC27C8828800D22C6A /* Frameworks */,
 				938830ED27C8828800D22C6A /* Resources */,
 				A2D869369D2A3999A8E1F8CB /* [CP] Embed Pods Frameworks */,
+				93CB944D27D0CAE300140A0F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				93CB946027D0CC0800140A0F /* PBXTargetDependency */,
 			);
 			name = CommitGenerator;
 			productName = CommitGenerator;
@@ -499,6 +589,24 @@
 			productReference = 9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		93CB945527D0CC0700140A0F /* IssueWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93CB946227D0CC0800140A0F /* Build configuration list for PBXNativeTarget "IssueWidgetExtension" */;
+			buildPhases = (
+				01F0652140C7464A3C986B0B /* [CP] Check Pods Manifest.lock */,
+				93CB945227D0CC0700140A0F /* Sources */,
+				93CB945327D0CC0700140A0F /* Frameworks */,
+				93CB945427D0CC0700140A0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IssueWidgetExtension;
+			productName = IssueWidgetExtension;
+			productReference = 93CB945627D0CC0700140A0F /* IssueWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -520,6 +628,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 938830EE27C8828800D22C6A;
 					};
+					93CB945527D0CC0700140A0F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 938830EA27C8828800D22C6A /* Build configuration list for PBXProject "CommitGenerator" */;
@@ -538,6 +649,7 @@
 				938830EE27C8828800D22C6A /* CommitGenerator */,
 				938830FE27C8828900D22C6A /* CommitGeneratorTests */,
 				9388310827C8828900D22C6A /* CommitGeneratorUITests */,
+				93CB945527D0CC0700140A0F /* IssueWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -567,9 +679,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93CB945427D0CC0700140A0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93CB945D27D0CC0800140A0F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01F0652140C7464A3C986B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommitGenerator-IssueWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8C979BAC7969316AF873245D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -760,6 +902,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93CB945227D0CC0700140A0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93CB946627D0CFC000140A0F /* WidgetView.swift in Sources */,
+				93CB946D27D0D61B00140A0F /* KeyChainManager.swift in Sources */,
+				93CB945B27D0CC0700140A0F /* IssueWidget.swift in Sources */,
+				93CB946727D0D0BD00140A0F /* Issue.swift in Sources */,
+				93CB947027D0D69100140A0F /* Const.swift in Sources */,
+				934258B627D0D88400BC1FFF /* GithubService.swift in Sources */,
+				93CB947127D0D69B00140A0F /* NetworkError.swift in Sources */,
+				93CB946927D0D12500140A0F /* User.swift in Sources */,
+				9374202B27D0E5E600999DEC /* IssueRow.swift in Sources */,
+				93CB946827D0D0CF00140A0F /* Lodable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -772,6 +931,11 @@
 			isa = PBXTargetDependency;
 			target = 938830EE27C8828800D22C6A /* CommitGenerator */;
 			targetProxy = 9388310A27C8828900D22C6A /* PBXContainerItemProxy */;
+		};
+		93CB946027D0CC0800140A0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93CB945527D0CC0700140A0F /* IssueWidgetExtension */;
+			targetProxy = 93CB945F27D0CC0800140A0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -896,8 +1060,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88F3E203F560DBF144931957 /* Pods-CommitGenerator.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommitGenerator/CommitGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Resources\"";
@@ -929,8 +1095,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 601E2A26098ABCFF496F5E89 /* Pods-CommitGenerator.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommitGenerator/CommitGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CommitGenerator/Resources\"";
@@ -1037,6 +1205,64 @@
 			};
 			name = Release;
 		};
+		93CB946327D0CC0800140A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68CFAFEAFB569F0E6EF18EED /* Pods-CommitGenerator-IssueWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IssueWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IssueWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IssueWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator.IssueWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93CB946427D0CC0800140A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31FF32EBE795BE673DC8E315 /* Pods-CommitGenerator-IssueWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IssueWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IssueWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IssueWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator.IssueWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1072,6 +1298,15 @@
 			buildConfigurations = (
 				9388311A27C8828900D22C6A /* Debug */,
 				9388311B27C8828900D22C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93CB946227D0CC0800140A0F /* Build configuration list for PBXNativeTarget "IssueWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93CB946327D0CC0800140A0F /* Debug */,
+				93CB946427D0CC0800140A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
