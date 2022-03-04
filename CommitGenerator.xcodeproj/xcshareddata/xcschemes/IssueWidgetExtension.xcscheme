@@ -43,6 +43,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9388310827C8828900D22C6A"
+               BuildableName = "CommitGeneratorUITests.xctest"
+               BlueprintName = "CommitGeneratorUITests"
+               ReferencedContainer = "container:CommitGenerator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "938830FE27C8828900D22C6A"
+               BuildableName = "CommitGeneratorTests.xctest"
+               BlueprintName = "CommitGeneratorTests"
+               ReferencedContainer = "container:CommitGenerator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

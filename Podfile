@@ -23,3 +23,7 @@ target 'CommitGenerator' do
   pod 'SwiftLint'
   end
 end
+
+target 'MacCommitGenerator' do
+ pod 'Alamofire'
+end

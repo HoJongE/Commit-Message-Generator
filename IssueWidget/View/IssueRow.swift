@@ -60,7 +60,6 @@ struct ProfileRow: View {
             Spacer()
         }
         .padding(.init(top: 8, leading: 8, bottom: 2, trailing: 8))
-        
     }
 }
 struct IssueRow_Previews: PreviewProvider {
