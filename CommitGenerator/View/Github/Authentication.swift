@@ -14,7 +14,6 @@ final class Authentication: ObservableObject {
     private let tokenManager: TokenManager
     private let githubService: GithubService
 
-    // TODO: Test 용도 릴리즈 버전엔 없애야함!
     init(tokenManager: TokenManager = TokenManager.shared, githubService: GithubService = GithubService.shared) {
         self.tokenManager = tokenManager
         self.githubService = githubService

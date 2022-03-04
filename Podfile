@@ -18,5 +18,12 @@ target 'CommitGenerator' do
   target 'CommitGeneratorUITests' do
     # Pods for testing
   end
+  target 'IssueWidgetExtension' do
+  pod 'Alamofire'
+  pod 'SwiftLint'
+  end
+end
 
+target 'MacCommitGenerator' do
+ pod 'Alamofire'
 end

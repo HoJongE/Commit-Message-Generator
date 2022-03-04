@@ -23,3 +23,11 @@ extension Issue: CustomStringConvertible {
         "Issue Number:\(number) Issue Title:\(title) maker:\(user.login)"
     }
 }
+
+extension Issue {
+    static var mocIssues: [Issue] {
+        [Issue(id: 12, title: "로그인 API 구현", number: 12, body: nil, repository_url: "/Commit Generator", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "")),Issue(id: 12, title: "코드리뷰", number: 13, body: nil, repository_url: "/Commit Generator", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "")),
+         Issue(id: 12, title: "로그인 API 구현", number: 12, body: nil, repository_url: "/Commit Generator", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "")),Issue(id: 12, title: "코드리뷰", number: 13, body: nil, repository_url: "/Commit Generator", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "")),
+         Issue(id: 12, title: "로그인 API 구현", number: 12, body: nil, repository_url: "", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "")),Issue(id: 12, title: "코드리뷰", number: 13, body: nil, repository_url: "", user: User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: ""))]
+    }
+}
