@@ -12,6 +12,11 @@
 		0000C94927D1CF98005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94827D1CF98005A7D4A /* Assets.xcassets */; };
 		0000C94C27D1CF98005A7D4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */; };
 		0000C95227D1CFC7005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
+		008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FEB27D4AF4100278EE3 /* TagList.swift */; };
+		008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FED27D4B06400278EE3 /* TagRow.swift */; };
+		008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF227D4D3B100278EE3 /* TagDetail.swift */; };
+		008C6FF527D4D5A100278EE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF427D4D5A100278EE3 /* Color.swift */; };
+		008C6FF727D4D6A600278EE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF427D4D5A100278EE3 /* Color.swift */; };
 		00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
 		00FABE0627D1D8C4004E4800 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
 		00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
@@ -66,7 +71,6 @@
 		9388310427C8828900D22C6A /* CommitGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310327C8828900D22C6A /* CommitGeneratorTests.swift */; };
 		9388310E27C8828900D22C6A /* CommitGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */; };
 		9388311027C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */; };
-		9388312227C8903000D22C6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388312127C8903000D22C6A /* Color.swift */; };
 		939A5FDF27CDE2630055E17B /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A5FDE27CDE2630055E17B /* Text.swift */; };
 		939A5FE227CDF09C0055E17B /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A5FE127CDF09C0055E17B /* IssueList.swift */; };
 		93B3063227D0606700C6EC3D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 93B3063127D0606700C6EC3D /* .swiftlint.yml */; };
@@ -145,6 +149,10 @@
 		0000C94827D1CF98005A7D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCommitGenerator.entitlements; sourceTree = "<group>"; };
+		008C6FEB27D4AF4100278EE3 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		008C6FED27D4B06400278EE3 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
+		008C6FF227D4D3B100278EE3 /* TagDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetail.swift; sourceTree = "<group>"; };
+		008C6FF427D4D5A100278EE3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		00FABE1427D22690004E4800 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		1E23843B65AB6D79BC111871 /* Pods-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-MacCommitGenerator/Pods-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		306D3BCA50BB242AA1F95FE0 /* Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-MacCommitGenerator/Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +204,6 @@
 		9388310927C8828900D22C6A /* CommitGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9388310D27C8828900D22C6A /* CommitGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITests.swift; sourceTree = "<group>"; };
 		9388310F27C8828900D22C6A /* CommitGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9388312127C8903000D22C6A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		939A5FDE27CDE2630055E17B /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		939A5FE127CDF09C0055E17B /* IssueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueList.swift; sourceTree = "<group>"; };
 		93B3063127D0606700C6EC3D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -279,9 +286,9 @@
 		0000C94327D1CF97005A7D4A /* MacCommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				008C6FEF27D4B0C000278EE3 /* Resources */,
 				00FABE1727D23E5D004E4800 /* View */,
 				0000C94427D1CF97005A7D4A /* MacCommitGeneratorApp.swift */,
-				0000C94827D1CF98005A7D4A /* Assets.xcassets */,
 				0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */,
 				0000C94A27D1CF98005A7D4A /* Preview Content */,
 			);
@@ -296,9 +303,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		008C6FE427D4AE1700278EE3 /* TagList */ = {
+			isa = PBXGroup;
+			children = (
+				008C6FEB27D4AF4100278EE3 /* TagList.swift */,
+				008C6FED27D4B06400278EE3 /* TagRow.swift */,
+				008C6FF227D4D3B100278EE3 /* TagDetail.swift */,
+			);
+			path = TagList;
+			sourceTree = "<group>";
+		};
+		008C6FEF27D4B0C000278EE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0000C94827D1CF98005A7D4A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		00FABE1727D23E5D004E4800 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				008C6FE427D4AE1700278EE3 /* TagList */,
 				0000C94627D1CF97005A7D4A /* ContentView.swift */,
 				00FABE1427D22690004E4800 /* Sidebar.swift */,
 			);
@@ -480,9 +506,9 @@
 		9388311C27C88EC000D22C6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				008C6FF427D4D5A100278EE3 /* Color.swift */,
 				938830F627C8828900D22C6A /* Assets.xcassets */,
 				938830F927C8828900D22C6A /* Preview Assets.xcassets */,
-				9388312127C8903000D22C6A /* Color.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -972,13 +998,17 @@
 				00FABE0927D1DB26004E4800 /* MockedModel.swift in Sources */,
 				00FABE1227D1DEC9004E4800 /* NetworkError.swift in Sources */,
 				00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */,
+				008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */,
 				0000C94727D1CF97005A7D4A /* ContentView.swift in Sources */,
 				00FABE0F27D1DB6A004E4800 /* CommitWriter.swift in Sources */,
+				008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */,
 				00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */,
+				008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */,
 				00FABE1327D1DED6004E4800 /* Const.swift in Sources */,
 				00FABE0D27D1DB65004E4800 /* KeyChainManager.swift in Sources */,
 				00FABE0A27D1DB5C004E4800 /* User.swift in Sources */,
 				00FABE0E27D1DB68004E4800 /* CopyType.swift in Sources */,
+				008C6FF727D4D6A600278EE3 /* Color.swift in Sources */,
 				00FABE1127D1DEC7004E4800 /* GithubService.swift in Sources */,
 				00FABE0C27D1DB60004E4800 /* Issue.swift in Sources */,
 				00FABE0827D1DB22004E4800 /* Lodable.swift in Sources */,
@@ -1002,6 +1032,7 @@
 				93B7ADE027CA46E800A1EF24 /* SelectedIssueItem.swift in Sources */,
 				9356FAF927CF055B004A59C2 /* SettingRow.swift in Sources */,
 				93E8105627C9B639008B423A /* PersistenceController.swift in Sources */,
+				008C6FF527D4D5A100278EE3 /* Color.swift in Sources */,
 				93D381F127CD0A670047043A /* KeyChainManager.swift in Sources */,
 				9351EF9E27CC6E2800AF6F25 /* CopyType.swift in Sources */,
 				93D381F927CD154D0047043A /* NetworkError.swift in Sources */,
@@ -1028,7 +1059,6 @@
 				9351EF9927CC693F00AF6F25 /* IssuePicker.swift in Sources */,
 				93D381E827CCBD7F0047043A /* GithubLoginView.swift in Sources */,
 				93639BB027CDB06000D52C5C /* Authentication.swift in Sources */,
-				9388312227C8903000D22C6A /* Color.swift in Sources */,
 				93845B9B27CA002F00951A57 /* EditorType.swift in Sources */,
 				9361E8EB27C8943B007B8740 /* Button.swift in Sources */,
 				9356FAF527CF0074004A59C2 /* SettingHost.swift in Sources */,

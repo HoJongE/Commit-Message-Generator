@@ -41,6 +41,7 @@ extension Color {
 
 }
 
+
 extension Color {
     static var random: Color {
         return Color(
@@ -49,26 +50,57 @@ extension Color {
             blue: .random(in: 0...1)
         )
     }
-
+    #if canImport(UIKit)
     var uiColor: UIColor { .init(self) }
-        typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
-        var rgba: RGBA? {
-            var (r, g, b, a): RGBA = (0, 0, 0, 0)
-            return uiColor.getRed(&r, green: &g, blue: &b, alpha: &a) ? (r, g, b, a) : nil
-        }
-        var hexaRGB: String? {
-            guard let (red, green, blue, _) = rgba else { return nil }
-            return String(format: "#%02x%02x%02x",
-                Int(red * 255),
-                Int(green * 255),
-                Int(blue * 255))
-        }
-        var hexaRGBA: String? {
-            guard let (red, green, blue, alpha) = rgba else { return nil }
-            return String(format: "#%02x%02x%02x%02x",
-                Int(red * 255),
-                Int(green * 255),
-                Int(blue * 255),
-                Int(alpha * 255))
-        }
+    typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+    var rgba: RGBA? {
+        var (r, g, b, a): RGBA = (0, 0, 0, 0)
+        return uiColor.getRed(&r, green: &g, blue: &b, alpha: &a) ? (r, g, b, a) : nil
+    }
+    var hexaRGB: String? {
+        guard let (red, green, blue, _) = rgba else { return nil }
+        return String(format: "#%02x%02x%02x",
+                      Int(red * 255),
+                      Int(green * 255),
+                      Int(blue * 255))
+    }
+    var hexaRGBA: String? {
+        guard let (red, green, blue, alpha) = rgba else { return nil }
+        return String(format: "#%02x%02x%02x%02x",
+                      Int(red * 255),
+                      Int(green * 255),
+                      Int(blue * 255),
+                      Int(alpha * 255))
+    }
+    #endif
 }
+
+#if canImport(AppKit)
+extension NSColor {
+    func toHex(alpha: Bool = false) -> String? {
+        guard let components = cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        var a = Float(1.0)
+        
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        if alpha {
+            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+        } else {
+            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+        }
+    }
+}
+extension Color {
+    var hexaRGB: String? {
+        NSColor(self).toHex()
+    }
+}
+#endif

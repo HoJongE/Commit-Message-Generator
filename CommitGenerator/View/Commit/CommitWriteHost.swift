@@ -79,17 +79,7 @@ struct CommitWriteHost: View {
 
         }
         .navigationTitle("커밋 작성")
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                SaveButton {
-                    showCopyResult(commitViewModel.copyToClipboard($0))
-                }
-            }
-
-            ToolbarItem(placement: .cancellationAction) {
-                ResetButton(onClick: {showingResetAlert = true})
-            }
-        }
+        .toolbar(content: toolbar)
         .alert("변경 내용이 초기화됩니다.", isPresented: $showingResetAlert) {
             Button("초기화", role: .destructive) {
                 commitViewModel.reset()
@@ -105,6 +95,18 @@ struct CommitWriteHost: View {
         }
         .toast(isPresenting: $showError) {
             AlertToast(type: .error(.error), title: "복사 실패!\n양식을 지켜주세요")
+        }
+    }
+    @ToolbarContentBuilder
+    func toolbar() -> some ToolbarContent {
+        ToolbarItem(placement: .primaryAction) {
+            SaveButton {
+                showCopyResult(commitViewModel.copyToClipboard($0))
+            }
+        }
+
+        ToolbarItem(placement: .cancellationAction) {
+            ResetButton(onClick: {showingResetAlert = true})
         }
     }
 }
