@@ -38,7 +38,7 @@ struct Sidebar: View {
             }
         }
         .listStyle(SidebarListStyle())
-        .frame(minWidth: 200)
+        .frame(width: 200)
     }
 }
 
@@ -47,7 +47,7 @@ struct SidebarLabel: View {
     let image: Image
     let color: Color
     var body: some View {
-        Label(title: {Text(title).padding(.leading,6).foregroundColor(.primary)}, icon: {image.resizable().frame(width: 16, height: 16, alignment: .center).foregroundColor(color)})
+        Label(title: {Text(title).padding(.leading, 6).foregroundColor(.primary)}, icon: {image.resizable().frame(width: 16, height: 16, alignment: .center).foregroundColor(color)})
     }
 }
 

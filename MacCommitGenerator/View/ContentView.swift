@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var viewType: ViewType? = nil
+    @State private var viewType: ViewType? = .editTag
     
     enum ViewType: String {
         case commitWrite
@@ -23,31 +23,21 @@ struct ContentView: View {
             Sidebar(viewType: $viewType)
             mainView
         }
-        .toolbar {
-            ToolbarItem(placement: .navigation) {
-                Button(action: toggleSidebar, label: { // 1
-                    Image(systemName: "sidebar.leading")
-                })
-            }
-        }
     }
     
-    private func toggleSidebar() {
-        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
-    }
-    
+    @ViewBuilder
     var mainView: some View {
         switch self.viewType {
         case .none:
-            return Text("")
+            Text("")
         case .some(.commitWrite):
-            return Text("commitWrite")
+            Text("commitWrite")
         case .some(.editTag):
-            return Text("editTag")
+            TagList(category: "태그")
         case .some(.editFunction):
-            return Text("editFunction")
+            TagList(category: "기능")
         case .some(.githubSetting):
-            return Text("githubSetting")
+            Text("githubSetting")
         }
     }
 }
