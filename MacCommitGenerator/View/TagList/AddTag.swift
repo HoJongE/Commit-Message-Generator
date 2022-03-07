@@ -14,12 +14,12 @@ struct AddTag: View {
     @State private var color: Color = .brand
     @State private var category: Category = .tag
     @State private var showAlert: Bool = false
-    enum Category:String, CaseIterable {
+    enum Category: String, CaseIterable {
         case tag = "태그"
         case function = "기능"
     }
     var body: some View {
-        VStack(alignment:.leading) {
+        VStack(alignment: .leading) {
             HStack(spacing: 24) {
                 Text("이름")
                     .font(.title).bold()
@@ -45,7 +45,7 @@ struct AddTag: View {
         }
         .navigationTitle("태그 추가")
         .padding()
-        .frame(width:350 ,alignment: .topLeading)
+        .frame(width: 350, alignment: .topLeading)
     }
     
     private var saveButton: some View {
@@ -62,16 +62,16 @@ struct AddTag: View {
             showAlert = true
             return
         }
-        
-        let tag: Tag = Tag(context: PersistenceController.shared.container.viewContext)
-        
-        tag.name = name
-        tag.tagDescription = tagDescription.isEmpty ? nil : tagDescription
-        tag.category = category.rawValue
-        tag.colorHex = color.hexaRGB
-        
-        PersistenceController.shared.save()
-        
+        withAnimation {
+            let tag: Tag = Tag(context: PersistenceController.shared.container.viewContext)
+            
+            tag.name = name
+            tag.tagDescription = tagDescription.isEmpty ? nil : tagDescription
+            tag.category = category.rawValue
+            tag.colorHex = color.hexaRGB
+            
+            PersistenceController.shared.save()
+        }
         presentationMode.wrappedValue.dismiss()
     }
 }

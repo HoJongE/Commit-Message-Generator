@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "05DF10A0631C08A3E6D7BD08BDF4005D"
-               BuildableName = "libPods-MacCommitGenerator.a"
+               BuildableName = "Pods_MacCommitGenerator.framework"
                BlueprintName = "Pods-MacCommitGenerator"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

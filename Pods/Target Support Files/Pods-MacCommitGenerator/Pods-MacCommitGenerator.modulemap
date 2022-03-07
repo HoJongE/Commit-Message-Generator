@@ -1,4 +1,4 @@
-module Pods_MacCommitGenerator {
+framework module Pods_MacCommitGenerator {
   umbrella header "Pods-MacCommitGenerator-umbrella.h"
 
   export *
