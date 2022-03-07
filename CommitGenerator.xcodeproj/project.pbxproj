@@ -12,6 +12,7 @@
 		0000C94927D1CF98005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94827D1CF98005A7D4A /* Assets.xcassets */; };
 		0000C94C27D1CF98005A7D4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */; };
 		0000C95227D1CFC7005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
+		0036434F27D58B59003AC248 /* AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036434E27D58B59003AC248 /* AddTag.swift */; };
 		008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FEB27D4AF4100278EE3 /* TagList.swift */; };
 		008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FED27D4B06400278EE3 /* TagRow.swift */; };
 		008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF227D4D3B100278EE3 /* TagDetail.swift */; };
@@ -149,6 +150,8 @@
 		0000C94827D1CF98005A7D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCommitGenerator.entitlements; sourceTree = "<group>"; };
+		0036434D27D58ACE003AC248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0036434E27D58B59003AC248 /* AddTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTag.swift; sourceTree = "<group>"; };
 		008C6FEB27D4AF4100278EE3 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		008C6FED27D4B06400278EE3 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
 		008C6FF227D4D3B100278EE3 /* TagDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetail.swift; sourceTree = "<group>"; };
@@ -286,6 +289,7 @@
 		0000C94327D1CF97005A7D4A /* MacCommitGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				0036434D27D58ACE003AC248 /* Info.plist */,
 				008C6FEF27D4B0C000278EE3 /* Resources */,
 				00FABE1727D23E5D004E4800 /* View */,
 				0000C94427D1CF97005A7D4A /* MacCommitGeneratorApp.swift */,
@@ -309,6 +313,7 @@
 				008C6FEB27D4AF4100278EE3 /* TagList.swift */,
 				008C6FED27D4B06400278EE3 /* TagRow.swift */,
 				008C6FF227D4D3B100278EE3 /* TagDetail.swift */,
+				0036434E27D58B59003AC248 /* AddTag.swift */,
 			);
 			path = TagList;
 			sourceTree = "<group>";
@@ -1002,6 +1007,7 @@
 				0000C94727D1CF97005A7D4A /* ContentView.swift in Sources */,
 				00FABE0F27D1DB6A004E4800 /* CommitWriter.swift in Sources */,
 				008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */,
+				0036434F27D58B59003AC248 /* AddTag.swift in Sources */,
 				00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */,
 				008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */,
 				00FABE1327D1DED6004E4800 /* Const.swift in Sources */,
@@ -1143,6 +1149,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacCommitGenerator/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1175,6 +1182,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacCommitGenerator/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
