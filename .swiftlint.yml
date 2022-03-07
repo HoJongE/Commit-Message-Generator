@@ -7,7 +7,7 @@ disabled_rules:
 included:
 excluded:
 - Pods
-- /Users/jonghopark/Desktop/Personnal_Project/Commit-Message-Generator/CommitGenerator/Resources/Color.swift
+- /Users/jonghopark/Desktop/Personnal_Project/Commit-Message-Generator/Shared/Resources/Color.swift
 - /Users/jongho/Desktop/Personal_Project/CommitGenerator/CommitGenerator/View/ViewExtension.swift
 
 type_name:

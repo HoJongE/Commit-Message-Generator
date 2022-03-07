@@ -12,7 +12,7 @@ struct MacCommitGeneratorApp: App {
     private let persistenceController: PersistenceController = PersistenceController.shared
 
     init() {
-        if UserDefaults.standard.bool(forKey: "first_time") {
+        if !UserDefaults.standard.bool(forKey: "first_time") {
             print("리셋!!")
             persistenceController.reset()
             UserDefaults.standard.set(true, forKey: "first_time")
