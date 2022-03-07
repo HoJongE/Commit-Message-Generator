@@ -37,6 +37,15 @@ struct TagRow: View {
                 Divider()
             }
         }
+        .contextMenu {
+            Button {
+                withAnimation {
+                    PersistenceController.shared.delete(tag)
+                }
+            } label: {
+                Label("삭제하기", systemImage: "trash.fill")
+            }
+        }
         .frame(height: 80)
     }
 }

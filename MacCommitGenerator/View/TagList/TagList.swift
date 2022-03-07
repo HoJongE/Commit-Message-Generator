@@ -46,10 +46,11 @@ struct TagList: View {
     }
 
     var plusButton: some View {
-        Button(action: {}) {
+        Button(action: {
+            Window.addTagView.open()
+        }) {
             Image(systemName: "plus.circle.fill")
                 .imageScale(.large)
-                .foregroundColor(.brand)
         }
     }
 }

@@ -43,6 +43,9 @@ struct TagDetail: View {
             ToolbarItem(placement: .automatic) {
                 saveButton
             }
+            ToolbarItem(placement: .destructiveAction) {
+                deleteButton
+            }
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("변경사항 저장이\n완료되었습니다."), message: nil, dismissButton: .default(Text("닫기")))
@@ -53,13 +56,20 @@ struct TagDetail: View {
         Button(action: saveChange) {
             HStack {
                 Image("save")
-                    .foregroundColor(.purple)
                 Text("변경사항 저장")
-                    .foregroundColor(.white)
             }
         }
     }
 
+    private var deleteButton: some View {
+        Button {
+            withAnimation {
+                PersistenceController.shared.delete(tag)
+            }
+        } label: {
+            Label("삭제", systemImage: "trash.fill")
+        }
+    }
     private func saveChange() {
         showAlert = true
         tag.colorHex = color.hexaRGB
