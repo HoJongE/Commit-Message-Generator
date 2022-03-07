@@ -67,9 +67,13 @@ struct TagDetail: View {
                 PersistenceController.shared.delete(tag)
             }
         } label: {
-            Label("삭제", systemImage: "trash.fill")
+            HStack {
+                Image(systemName: "trash.fill")
+                Text("삭제")
+            }
         }
     }
+    
     private func saveChange() {
         showAlert = true
         tag.colorHex = color.hexaRGB
@@ -81,6 +85,11 @@ struct TagDetail: View {
 
 struct TagDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TagDetail(MockedCoreData.shared.tag())
+        Group {
+            TagDetail(MockedCoreData.shared.tag())
+                .preferredColorScheme(.light)
+            TagDetail(MockedCoreData.shared.tag())
+                .preferredColorScheme(.dark)
+        }
     }
 }

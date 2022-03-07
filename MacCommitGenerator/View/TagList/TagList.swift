@@ -11,7 +11,7 @@ struct TagList: View {
     let category: String
     
     @Environment(\.managedObjectContext) private var managedObjectContext
-    @FetchRequest(sortDescriptors: []) private var tags: FetchedResults<Tag>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) private var tags: FetchedResults<Tag>
 
     var filteredList: [Tag] {
         tags.filter { tag in
@@ -28,7 +28,7 @@ struct TagList: View {
                 }
             }
             .listStyle(.plain)
-            .frame(width: 300)
+            .frame(width: 300, alignment: .topLeading)
             notSelectedView
         }
         .navigationTitle(category)
@@ -49,15 +49,23 @@ struct TagList: View {
         Button(action: {
             Window.addTagView.open()
         }) {
-            Image(systemName: "plus.circle.fill")
-                .imageScale(.large)
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                Text("태그 추가")
+            }
         }
     }
 }
 
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
-        TagList(category: "태그")
-            .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
+        Group {
+            TagList(category: "태그")
+                .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
+                .preferredColorScheme(.dark)
+            TagList(category: "태그")
+                .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
+                .preferredColorScheme(.light)
+        }
     }
 }

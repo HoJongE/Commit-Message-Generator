@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct MacCommitGeneratorApp: App {
     private let persistenceController: PersistenceController = PersistenceController.shared
-
+    @StateObject private var commitViewModel: CommitViewModel = CommitViewModel()
+    
     init() {
         if !UserDefaults.standard.bool(forKey: "first_time") {
             print("리셋!!")
@@ -23,6 +24,7 @@ struct MacCommitGeneratorApp: App {
             ContentView()
                 .environment(\.managedObjectContext,
                               persistenceController.container.viewContext)
+                .environmentObject(commitViewModel)
         }
         .commands {
             SidebarCommands()

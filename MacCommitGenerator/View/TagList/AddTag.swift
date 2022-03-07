@@ -14,6 +14,7 @@ struct AddTag: View {
     @State private var color: Color = .brand
     @State private var category: Category = .tag
     @State private var showAlert: Bool = false
+    
     enum Category: String, CaseIterable {
         case tag = "태그"
         case function = "기능"
@@ -53,31 +54,26 @@ struct AddTag: View {
             addTag()
         } label: {
             Image("save")
+                .offset(x: 0, y: 8)
         }
-        .offset(y: 8)
     }
     
     private func addTag() {
-        guard !name.isEmpty else {
-            showAlert = true
-            return
-        }
         withAnimation {
-            let tag: Tag = Tag(context: PersistenceController.shared.container.viewContext)
-            
-            tag.name = name
-            tag.tagDescription = tagDescription.isEmpty ? nil : tagDescription
-            tag.category = category.rawValue
-            tag.colorHex = color.hexaRGB
-            
-            PersistenceController.shared.save()
+            _ = PersistenceController.shared.addTag(name: name, description: tagDescription, category: category.rawValue, color: color)
+            presentationMode.wrappedValue.dismiss()
         }
-        presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct AddTag_Previews: PreviewProvider {
     static var previews: some View {
-        AddTag()
+        Group {
+            AddTag()
+                .preferredColorScheme(.light)
+            AddTag()
+                .preferredColorScheme(.dark)
+        }
+        
     }
 }

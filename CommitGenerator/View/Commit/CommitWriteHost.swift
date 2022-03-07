@@ -126,7 +126,7 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView {
             CommitWriteHost()
                 .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
-                .environmentObject(CommitWriteHost.CommitViewModel())
+                .environmentObject(CommitViewModel())
         }
     }
 }

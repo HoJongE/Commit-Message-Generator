@@ -48,6 +48,19 @@ struct PersistenceController {
         container.viewContext.insert(object)
         save(completion: completion)
     }
+    
+    func addTag(name tagName: String, description tagDescription: String, category: String, color: Color) -> Bool {
+        guard !tagName.isEmpty else {
+            return false
+        }
+        let tag: Tag = Tag(context: container.viewContext)
+        tag.name = tagName
+        tag.tagDescription = tagDescription.isEmpty ? nil : tagDescription
+        tag.category = category
+        tag.colorHex = color.hexaRGB
+        save()
+        return true
+    }
 }
 
 extension PersistenceController {

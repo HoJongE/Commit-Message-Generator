@@ -11,7 +11,7 @@ struct IssuePicker: View {
 
     let issueType: IssueType
     let issueAdd: (Issue) -> Void
-    @EnvironmentObject private var commitViewModel: CommitWriteHost.CommitViewModel
+    @EnvironmentObject private var commitViewModel: CommitViewModel
     @EnvironmentObject private var authentication: Authentication
     @EnvironmentObject private var bottomSheetManager: BottomSheetManager
 
@@ -70,7 +70,7 @@ struct IssuePicker_Previews: PreviewProvider {
         NavigationView {
             IssuePicker(issueType: .ref) {_ in}
         }
-        .environmentObject(CommitWriteHost.CommitViewModel())
+        .environmentObject(CommitViewModel())
         .environmentObject(BottomSheetManager())
         .environmentObject(Authentication())
         .preferredColorScheme(.dark)
