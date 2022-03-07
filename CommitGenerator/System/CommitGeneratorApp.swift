@@ -12,8 +12,9 @@ struct CommitGeneratorApp: App {
 
     private let persistenceController: PersistenceController = PersistenceController.shared
     @StateObject private var authentication: Authentication = Authentication()
-    @StateObject private var commitViewModel: CommitWriteHost.CommitViewModel = CommitWriteHost.CommitViewModel()
+    @StateObject private var commitViewModel: CommitViewModel = CommitViewModel()
     @StateObject private var bottomSheetManager: BottomSheetManager = BottomSheetManager()
+    
     @Environment(\.scenePhase) private var scenePhase
 
     init() {

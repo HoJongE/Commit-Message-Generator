@@ -20,6 +20,14 @@
 		008C6FF527D4D5A100278EE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF427D4D5A100278EE3 /* Color.swift */; };
 		008C6FF727D4D6A600278EE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF427D4D5A100278EE3 /* Color.swift */; };
 		00EA159F27D5A9B7002876E7 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
+		00EA15A227D5C815002876E7 /* GithubConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15A127D5C815002876E7 /* GithubConnect.swift */; };
+		00EA15A427D5C887002876E7 /* CommitWriteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15A327D5C887002876E7 /* CommitWriteHost.swift */; };
+		00EA15A727D5CBC8002876E7 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */; };
+		00EA15A827D5CEA3002876E7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93639BAF27CDB06000D52C5C /* Authentication.swift */; };
+		00EA15AB27D5D21C002876E7 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15AA27D5D21C002876E7 /* TagSelector.swift */; };
+		00EA15AE27D5D483002876E7 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15AD27D5D483002876E7 /* TextEditor.swift */; };
+		00EA15AF27D5D6A3002876E7 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9A27CA002F00951A57 /* EditorType.swift */; };
+		00EA15B127D61A2F002876E7 /* TagSelectorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15B027D61A2F002876E7 /* TagSelectorList.swift */; };
 		00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
 		00FABE0627D1D8C4004E4800 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
 		00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
@@ -158,6 +166,11 @@
 		008C6FED27D4B06400278EE3 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
 		008C6FF227D4D3B100278EE3 /* TagDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetail.swift; sourceTree = "<group>"; };
 		008C6FF427D4D5A100278EE3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		00EA15A127D5C815002876E7 /* GithubConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubConnect.swift; sourceTree = "<group>"; };
+		00EA15A327D5C887002876E7 /* CommitWriteHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteHost.swift; sourceTree = "<group>"; };
+		00EA15AA27D5D21C002876E7 /* TagSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
+		00EA15AD27D5D483002876E7 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		00EA15B027D61A2F002876E7 /* TagSelectorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorList.swift; sourceTree = "<group>"; };
 		00FABE1427D22690004E4800 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		1E23843B65AB6D79BC111871 /* Pods-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-MacCommitGenerator/Pods-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		306D3BCA50BB242AA1F95FE0 /* Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-MacCommitGenerator/Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +352,7 @@
 		00EA159B27D5A864002876E7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				00EA15A627D5CBBC002876E7 /* ViewModel */,
 				9388311C27C88EC000D22C6A /* Resources */,
 				93E8105127C9B4E6008B423A /* CoreData */,
 				93845B9C27CA00AA00951A57 /* Const */,
@@ -351,6 +365,7 @@
 		00EA159D27D5A870002876E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				93845B9A27CA002F00951A57 /* EditorType.swift */,
 				93845B9D27CA25C100951A57 /* MockedModel.swift */,
 				93D381F427CD13C40047043A /* Lodable.swift */,
 				9351EF9A27CC6D0B00AF6F25 /* Commit */,
@@ -360,9 +375,55 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		00EA15A027D5C7E9002876E7 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				00EA15A127D5C815002876E7 /* GithubConnect.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		00EA15A527D5C88C002876E7 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				00EA15A327D5C887002876E7 /* CommitWriteHost.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		00EA15A627D5CBBC002876E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */,
+				93639BAF27CDB06000D52C5C /* Authentication.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00EA15A927D5D213002876E7 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				00EA15AA27D5D21C002876E7 /* TagSelector.swift */,
+				00EA15B027D61A2F002876E7 /* TagSelectorList.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		00EA15AC27D5D47D002876E7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00EA15AD27D5D483002876E7 /* TextEditor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		00FABE1727D23E5D004E4800 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00EA15AC27D5D47D002876E7 /* Helpers */,
+				00EA15A927D5D213002876E7 /* Tag */,
+				00EA15A527D5C88C002876E7 /* Commit */,
+				00EA15A027D5C7E9002876E7 /* Github */,
 				0018512227D5A69B00CFBD57 /* Issue */,
 				008C6FE427D4AE1700278EE3 /* TagList */,
 				0000C94627D1CF97005A7D4A /* ContentView.swift */,
@@ -419,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				938830F427C8828800D22C6A /* CommitWriteHost.swift */,
-				9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */,
 			);
 			path = Commit;
 			sourceTree = "<group>";
@@ -436,7 +496,6 @@
 		9361E8E927C89434007B8740 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				93845B9A27CA002F00951A57 /* EditorType.swift */,
 				9361E8EA27C8943B007B8740 /* Button.swift */,
 				932189A227C9DE20007472FD /* TextField.swift */,
 				93845B9827C9FF3A00951A57 /* TextEditor.swift */,
@@ -602,7 +661,6 @@
 			isa = PBXGroup;
 			children = (
 				93D381E727CCBD7F0047043A /* GithubLoginView.swift */,
-				93639BAF27CDB06000D52C5C /* Authentication.swift */,
 			);
 			path = Github;
 			sourceTree = "<group>";
@@ -1020,11 +1078,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FABE0927D1DB26004E4800 /* MockedModel.swift in Sources */,
+				00EA15A727D5CBC8002876E7 /* CommitViewModel.swift in Sources */,
+				00EA15AB27D5D21C002876E7 /* TagSelector.swift in Sources */,
 				00FABE1227D1DEC9004E4800 /* NetworkError.swift in Sources */,
 				0018512427D5A6A400CFBD57 /* IssueRow.swift in Sources */,
 				00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */,
+				00EA15AF27D5D6A3002876E7 /* EditorType.swift in Sources */,
 				008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */,
+				00EA15AE27D5D483002876E7 /* TextEditor.swift in Sources */,
+				00EA15B127D61A2F002876E7 /* TagSelectorList.swift in Sources */,
 				0000C94727D1CF97005A7D4A /* ContentView.swift in Sources */,
+				00EA15A827D5CEA3002876E7 /* Authentication.swift in Sources */,
 				00FABE0F27D1DB6A004E4800 /* CommitWriter.swift in Sources */,
 				008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */,
 				0036434F27D58B59003AC248 /* AddTag.swift in Sources */,
@@ -1033,8 +1097,10 @@
 				00FABE1327D1DED6004E4800 /* Const.swift in Sources */,
 				00FABE0D27D1DB65004E4800 /* KeyChainManager.swift in Sources */,
 				00FABE0A27D1DB5C004E4800 /* User.swift in Sources */,
+				00EA15A427D5C887002876E7 /* CommitWriteHost.swift in Sources */,
 				00FABE0E27D1DB68004E4800 /* CopyType.swift in Sources */,
 				008C6FF727D4D6A600278EE3 /* Color.swift in Sources */,
+				00EA15A227D5C815002876E7 /* GithubConnect.swift in Sources */,
 				00FABE1127D1DEC7004E4800 /* GithubService.swift in Sources */,
 				00FABE0C27D1DB60004E4800 /* Issue.swift in Sources */,
 				00FABE0827D1DB22004E4800 /* Lodable.swift in Sources */,

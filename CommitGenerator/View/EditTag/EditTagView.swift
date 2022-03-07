@@ -79,15 +79,7 @@ struct EditTagView: View {
     }
 
     private func addTag() {
-        guard name.count > 0 else {
-            return
-        }
-        let tag: Tag = Tag(context: PersistenceController.shared.container.viewContext)
-        tag.name = name
-        tag.tagDescription = tagDescription.count > 0 ? tagDescription : nil
-        tag.category = category
-        tag.colorHex = color.hexaRGB
-        PersistenceController.shared.save()
+        _ = PersistenceController.shared.addTag(name: name, description: tagDescription, category: category, color: color)
         dismiss()
     }
 }

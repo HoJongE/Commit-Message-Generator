@@ -19,7 +19,6 @@ struct TagRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
                     Text(tag.name ?? "")
-                        .foregroundColor(.white)
                         .font(.title3)
                         .fontWeight(.semibold)
                     Circle().fill(Color(hex: tag.colorHex ?? "#123456")).frame(width: 16, height: 16, alignment: .center).padding(.horizontal, 8)
