@@ -13,3 +13,9 @@ struct User: Codable, Hashable {
     let gravatar_id: String
     let html_url: String
 }
+
+extension User: CustomStringConvertible {
+    var description: String {
+        "login:\(login), avatar_url:\(avatar_url)"
+    }
+}

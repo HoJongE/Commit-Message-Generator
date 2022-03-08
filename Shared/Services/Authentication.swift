@@ -10,7 +10,8 @@ import SwiftUI
 
 final class Authentication: ObservableObject {
     @Published var user: Lodable<User> = Lodable.empty
-
+    @Published var deviceflowResult: Lodable<DeviceflowResult> = Lodable.empty
+    
     private let tokenManager: TokenManager
     private let githubService: GithubService
 
@@ -44,7 +45,6 @@ final class Authentication: ObservableObject {
         user = Lodable.loading
         tokenManager.requestAccessToken(with: code) { result in
             switch result {
-
                 case .success(data: let data):
                     _ = KeyChainManager.shared.deleteToken()
                     _ = KeyChainManager.shared.saveToken(data)
@@ -68,4 +68,42 @@ final class Authentication: ObservableObject {
         _ = KeyChainManager.shared.deleteToken()
         user = Lodable.empty
     }
+    
+    #if os(macOS)
+    func deviceflow() {
+        githubService.deviceflow { result in
+            self.deviceflowResult = result
+        }
+    }
+    
+    func copyCode() {
+        guard case Lodable.success(data: let data) = deviceflowResult else {
+            return
+        }
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(data.user_code, forType: .string)
+        if let url = URL(string: data.verification_uri) {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    func requestAccessTokenWithDeviceCode() {
+        guard case Lodable.success(data: let data) = deviceflowResult else {
+            return
+        }
+        user = Lodable.loading
+        tokenManager.requestAccessTokenWithDeviceflow(with: data.device_code) { result in
+            switch result {
+                case .success(data: let data):
+                    _ = KeyChainManager.shared.deleteToken()
+                    _ = KeyChainManager.shared.saveToken(data)
+                    self.getUser()
+                case .error(error: let error):
+                    self.user = Lodable.error(error: error)
+                default:
+                    self.user = Lodable.error(error: NetworkError.authenticationError)
+            }
+        }
+    }
+    #endif
 }

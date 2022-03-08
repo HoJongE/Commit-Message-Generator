@@ -9,11 +9,10 @@ import SwiftUI
 
 struct RoundedTextEditor: View {
     
-    private let type: EditorType
-    @Binding private var text: String
-    private let height: CGFloat
-    
     @State private var showGuide: Bool = false
+    @Binding private var text: String
+    private let type: EditorType
+    private let height: CGFloat
     
     init(_ type: EditorType,_ string: Binding<String>, _ height: CGFloat = 70) {
         self.type = type

@@ -18,6 +18,7 @@ extension Const {
         static let URL_TYPE: String = "commitgenerator://"
         static let GITHUB_ISSUE: String = "https://api.github.com/issues"
         static let GITHUB_USER: String = "https://api.github.com/user"
+        static let GITHUB_DEVICE_FLOW: String = "https://github.com/login/device/code"
     }
 }
 

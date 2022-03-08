@@ -96,4 +96,34 @@ final class GithubService {
             default: return NetworkError.responseNotExist
         }
     }
+    
+    func deviceflow(completion: @escaping (Lodable<DeviceflowResult>) -> Void) {
+        let url: String = Const.URL.GITHUB_DEVICE_FLOW
+        let headers: HTTPHeaders = ["Accept": "application/json"]
+        let paramteters: Parameters = ["client_id": Const.GitHub.CLIEND_ID,
+                                       "scope": "repo,user"]
+        AF.request(url,
+                   method: .post,
+                   parameters: paramteters
+                   ,headers: headers).responseData { result in
+            print(result.description)
+            guard let response = result.response, let value = result.value else {
+                completion(Lodable.error(error: NetworkError.responseNotExist))
+                return
+            }
+            
+            if let error = self.judgeStatus(response.statusCode) {
+                completion(Lodable.error(error: error))
+                return
+            }
+            
+            do {
+                let deviceflowResult: DeviceflowResult = try JSONDecoder().decode(DeviceflowResult.self, from: value)
+                completion(Lodable.success(data: deviceflowResult))
+            } catch {
+                completion(Lodable.error(error: error))
+            }
+        }
+        
+    }
 }
