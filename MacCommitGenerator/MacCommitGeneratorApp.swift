@@ -11,7 +11,7 @@ import SwiftUI
 struct MacCommitGeneratorApp: App {
     private let persistenceController: PersistenceController = PersistenceController.shared
     @StateObject private var commitViewModel: CommitViewModel = CommitViewModel()
-    
+    @StateObject private var authenticaton: Authentication = Authentication()
     init() {
         if !UserDefaults.standard.bool(forKey: "first_time") {
             print("리셋!!")
@@ -25,6 +25,10 @@ struct MacCommitGeneratorApp: App {
                 .environment(\.managedObjectContext,
                               persistenceController.container.viewContext)
                 .environmentObject(commitViewModel)
+                .environmentObject(authenticaton)
+                .onOpenURL { url in
+                    DeepLinkHandler().openLink(with: url, authentication: authenticaton)
+                }
         }
         .commands {
             SidebarCommands()

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GithubConnect: View {
+    @EnvironmentObject private var authentication: Authentication
+
     var body: some View {
        Text("하이")
             .navigationTitle("깃허브 설정")

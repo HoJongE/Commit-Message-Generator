@@ -23,4 +23,10 @@ extension Issue {
     }
 }
 
+extension User {
+    static func mocUser() -> User {
+        User(login: "HoJongPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: "https://github.com/HoJongPARK")
+    }
+}
+
 #endif

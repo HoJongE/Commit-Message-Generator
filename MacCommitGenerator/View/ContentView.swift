@@ -50,8 +50,7 @@ struct ContentView: View {
         case .some(.editFunction):
             TagList(category: "기능")
         case .some(.githubSetting):
-            Text("githubSetting")
-                .navigationTitle("깃허브 설정")
+            GithubConnect()
         }
     }
 }
