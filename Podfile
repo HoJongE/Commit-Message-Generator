@@ -28,5 +28,6 @@ target 'MacCommitGenerator' do
  pod 'Alamofire'
  pod 'SDWebImageSwiftUI'
  pod 'SwiftLint'
+ pod 'AlertToast'
 end
 

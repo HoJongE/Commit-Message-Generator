@@ -14,7 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AlertToast.xcscheme</key>
+		<key>AlertToast-dynamic.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlertToast-static.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

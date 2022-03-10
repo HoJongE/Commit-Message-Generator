@@ -30,16 +30,6 @@ final class Authentication: ObservableObject {
         }
     }
     #endif
-    
-    #if os(macOS)
-    func requestCode() {
-        let scope: String = "repo,user"
-        let urlString: String = "https://github.com/login/oauth/authorize?client_id=\(Const.GitHub.CLIEND_ID)&scope=\(scope)"
-        if let url = URL(string: urlString) {
-            NSWorkspace.shared.open(url)
-        }
-    }
-    #endif
 
     func requestAccessToken(with code: String) {
         user = Lodable.loading

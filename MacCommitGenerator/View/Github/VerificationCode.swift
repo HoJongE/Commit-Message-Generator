@@ -13,28 +13,13 @@ struct VerificationCode: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Image(systemName: "xmark")
-                        .imageScale(.large)
-                }
-                .padding()
-                .buttonStyle(PlainButtonStyle())
-            }
+            closeButton
             Text("깃허브 연동")
                 .font(.largeTitle)
             GithubImage()
                 .padding()
             codeList
-            Button(action: authentication.copyCode) {
-                Text("복사 후 열기")
-            }
-            .buttonStyle(LinkButtonStyle())
-            .padding()
-            
+            copyButton
             Text("권한을 부여했으면\n인증 확인을 눌러주세요")
                 .multilineTextAlignment(.center)
                 .font(.headline)
@@ -65,26 +50,46 @@ struct VerificationCode: View {
             EmptyView()
         }
     }
-}
-
-struct CodeColumn: View {
-    let code: String
-    var body: some View {
-        Text(code)
-            .font(.title)
-            .foregroundColor(.black)
+    
+    private var closeButton: some View {
+        HStack {
+            Spacer()
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Image(systemName: "xmark")
+                    .imageScale(.large)
+            }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 6).fill(.white))
+            .buttonStyle(PlainButtonStyle())
+        }
+    }
+    
+    private var copyButton: some View {
+        Button(action: authentication.copyCode) {
+            Text("복사 후 열기")
+        }
+        .buttonStyle(LinkButtonStyle())
+        .padding()
     }
 }
+// MARK: - 코드 글자 데코레이터
+extension VerificationCode {
+    struct CodeColumn: View {
+        let code: String
+        var body: some View {
+            Text(code)
+                .font(.title)
+                .foregroundColor(.black)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 6).fill(.white))
+        }
+    }
+}
+// MARK: - 인증 코드 프리뷰
 struct VerificationCode_Previews: PreviewProvider {
     static var previews: some View {
         VerificationCode()
             .environmentObject(Authentication())
-    }
-}
-extension String {
-    func getChar(at index: Int) -> Character {
-        return self[self.index(self.startIndex, offsetBy: index)]
     }
 }

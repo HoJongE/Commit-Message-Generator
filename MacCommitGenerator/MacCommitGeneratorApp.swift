@@ -26,9 +26,6 @@ struct MacCommitGeneratorApp: App {
                               persistenceController.container.viewContext)
                 .environmentObject(commitViewModel)
                 .environmentObject(authenticaton)
-                .onOpenURL { url in
-                    DeepLinkHandler().openLink(with: url, authentication: authenticaton)
-                }
         }
         .commands {
             SidebarCommands()

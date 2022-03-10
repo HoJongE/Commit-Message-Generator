@@ -21,7 +21,7 @@ struct GithubConnect: View {
         }
     }
 }
-
+// MARK: - 깃허브 인증 완료 뷰
 extension GithubConnect {
     struct GithubProfile: View {
         let user: User
@@ -48,7 +48,7 @@ extension GithubConnect {
         }
     }
 }
-
+// MARK: 깃허브 인증 X 뷰
 extension GithubConnect {
     struct EmptyUser: View {
         @EnvironmentObject private var authentication: Authentication
@@ -64,7 +64,7 @@ extension GithubConnect {
                 }
             }
             .navigationTitle("깃허브 설정")
-            .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .onChange(of: authentication.deviceflowResult) {
                 if case Lodable.success(data: _) = $0 {
                     showCode = true
@@ -80,6 +80,7 @@ extension GithubConnect {
         }
     }
 }
+// MARK: - 깃허브 인증 프리뷰
 struct GithubProfile_Previews: PreviewProvider {
     static var previews: some View {
         Group {

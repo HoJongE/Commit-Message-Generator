@@ -1,5 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-CommitGenerator/Pods-CommitGenerator-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire-dynamic/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework
+${BUILT_PRODUCTS_DIR}/AlertToast-dynamic/AlertToast.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage-dynamic/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI-dynamic/SDWebImageSwiftUI.framework

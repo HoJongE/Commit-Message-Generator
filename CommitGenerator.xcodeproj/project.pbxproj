@@ -12,8 +12,11 @@
 		0000C94927D1CF98005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94827D1CF98005A7D4A /* Assets.xcassets */; };
 		0000C94C27D1CF98005A7D4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */; };
 		0000C95227D1CFC7005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
-		0018512427D5A6A400CFBD57 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018512327D5A6A400CFBD57 /* IssueRow.swift */; };
+		0025A6E627D99AA700493959 /* CommitWriteIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */; };
 		0036434F27D58B59003AC248 /* AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036434E27D58B59003AC248 /* AddTag.swift */; };
+		004752BC27D8292F004D1013 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BB27D8292F004D1013 /* IssuePicker.swift */; };
+		004752BE27D83337004D1013 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BD27D83337004D1013 /* SelectedIssueList.swift */; };
+		004752BF27D8334C004D1013 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A5FE127CDF09C0055E17B /* IssueList.swift */; };
 		008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FEB27D4AF4100278EE3 /* TagList.swift */; };
 		008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FED27D4B06400278EE3 /* TagRow.swift */; };
 		008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF227D4D3B100278EE3 /* TagDetail.swift */; };
@@ -22,6 +25,9 @@
 		00B1066527D6E4370008B4FB /* DeviceflowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066427D6E4370008B4FB /* DeviceflowResult.swift */; };
 		00B1066627D6E4390008B4FB /* DeviceflowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066427D6E4370008B4FB /* DeviceflowResult.swift */; };
 		00B1066A27D777BD0008B4FB /* VerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066927D777BD0008B4FB /* VerificationCode.swift */; };
+		00B1067027D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
+		00B1067127D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
+		00B1067227D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
 		00EA159F27D5A9B7002876E7 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
 		00EA15A427D5C887002876E7 /* CommitWriteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15A327D5C887002876E7 /* CommitWriteHost.swift */; };
 		00EA15A727D5CBC8002876E7 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */; };
@@ -164,15 +170,18 @@
 		0000C94827D1CF98005A7D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCommitGenerator.entitlements; sourceTree = "<group>"; };
-		0018512327D5A6A400CFBD57 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
+		0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteIndicator.swift; sourceTree = "<group>"; };
 		0036434D27D58ACE003AC248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0036434E27D58B59003AC248 /* AddTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTag.swift; sourceTree = "<group>"; };
+		004752BB27D8292F004D1013 /* IssuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
+		004752BD27D83337004D1013 /* SelectedIssueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedIssueList.swift; sourceTree = "<group>"; };
 		008C6FEB27D4AF4100278EE3 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		008C6FED27D4B06400278EE3 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
 		008C6FF227D4D3B100278EE3 /* TagDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetail.swift; sourceTree = "<group>"; };
 		008C6FF427D4D5A100278EE3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		00B1066427D6E4370008B4FB /* DeviceflowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceflowResult.swift; sourceTree = "<group>"; };
 		00B1066927D777BD0008B4FB /* VerificationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
+		00B1066F27D792990008B4FB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		00EA15A327D5C887002876E7 /* CommitWriteHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteHost.swift; sourceTree = "<group>"; };
 		00EA15AA27D5D21C002876E7 /* TagSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
 		00EA15AD27D5D483002876E7 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
@@ -329,10 +338,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0018512227D5A69B00CFBD57 /* Issue */ = {
+		004752BA27D82913004D1013 /* Issue */ = {
 			isa = PBXGroup;
 			children = (
-				0018512327D5A6A400CFBD57 /* IssueRow.swift */,
+				004752BB27D8292F004D1013 /* IssuePicker.swift */,
+				004752BD27D83337004D1013 /* SelectedIssueList.swift */,
 			);
 			path = Issue;
 			sourceTree = "<group>";
@@ -366,6 +376,7 @@
 				93845B9C27CA00AA00951A57 /* Const */,
 				930B967327D053F40064CF44 /* Services */,
 				00EA159D27D5A870002876E7 /* Model */,
+				00B1066F27D792990008B4FB /* Extension.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -380,7 +391,6 @@
 				9351EF9A27CC6D0B00AF6F25 /* Commit */,
 				93D381EF27CD0A490047043A /* KeyChain */,
 				93639BB127CDB13E00D52C5C /* Github */,
-				00B1066427D6E4370008B4FB /* DeviceflowResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				00EA15A327D5C887002876E7 /* CommitWriteHost.swift */,
+				0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */,
 			);
 			path = Commit;
 			sourceTree = "<group>";
@@ -430,6 +441,7 @@
 		00EA15B527D63185002876E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93B7ADDE27CA46DC00A1EF24 /* Issue */,
 				9372F66827CDDF290077A3E0 /* Image.swift */,
 			);
 			path = View;
@@ -438,11 +450,11 @@
 		00FABE1727D23E5D004E4800 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				004752BA27D82913004D1013 /* Issue */,
 				00EA15AC27D5D47D002876E7 /* Helpers */,
 				00EA15A927D5D213002876E7 /* Tag */,
 				00EA15A527D5C88C002876E7 /* Commit */,
 				00EA15A027D5C7E9002876E7 /* Github */,
-				0018512227D5A69B00CFBD57 /* Issue */,
 				008C6FE427D4AE1700278EE3 /* TagList */,
 				0000C94627D1CF97005A7D4A /* ContentView.swift */,
 				00FABE1427D22690004E4800 /* Sidebar.swift */,
@@ -529,6 +541,7 @@
 				93639BB227CDB14200D52C5C /* User.swift */,
 				9351EF9227CC612F00AF6F25 /* IssueType.swift */,
 				9351EF9527CC61D300AF6F25 /* Issue.swift */,
+				00B1066427D6E4370008B4FB /* DeviceflowResult.swift */,
 			);
 			path = Github;
 			sourceTree = "<group>";
@@ -629,11 +642,11 @@
 		9388311D27C88F0800D22C6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9351EF9827CC693F00AF6F25 /* IssuePicker.swift */,
 				930B967127D044030064CF44 /* EditTag */,
 				93639BB427CDBB0A00D52C5C /* BottomSheet */,
 				93D381E627CCBD740047043A /* Github */,
 				9351EF8F27CC5E2C00AF6F25 /* Commit */,
-				93B7ADDE27CA46DC00A1EF24 /* Issue */,
 				932D888927C8DEBA0072B896 /* Tag */,
 				9361E8E927C89434007B8740 /* Helpers */,
 				9388311F27C88F1700D22C6A /* Setting */,
@@ -658,7 +671,6 @@
 			children = (
 				93B7ADDF27CA46E800A1EF24 /* SelectedIssueItem.swift */,
 				93B7ADE127CA482C00A1EF24 /* SelectedIssueList.swift */,
-				9351EF9827CC693F00AF6F25 /* IssuePicker.swift */,
 				939A5FE127CDF09C0055E17B /* IssueList.swift */,
 			);
 			path = Issue;
@@ -1099,14 +1111,16 @@
 				00EA15AB27D5D21C002876E7 /* TagSelector.swift in Sources */,
 				00B1066A27D777BD0008B4FB /* VerificationCode.swift in Sources */,
 				00FABE1227D1DEC9004E4800 /* NetworkError.swift in Sources */,
-				0018512427D5A6A400CFBD57 /* IssueRow.swift in Sources */,
 				00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */,
 				00EA15AF27D5D6A3002876E7 /* EditorType.swift in Sources */,
 				00B1066627D6E4390008B4FB /* DeviceflowResult.swift in Sources */,
 				008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */,
 				00EA15AE27D5D483002876E7 /* TextEditor.swift in Sources */,
+				004752BE27D83337004D1013 /* SelectedIssueList.swift in Sources */,
+				004752BC27D8292F004D1013 /* IssuePicker.swift in Sources */,
 				00EA15B127D61A2F002876E7 /* TagSelectorList.swift in Sources */,
 				0000C94727D1CF97005A7D4A /* ContentView.swift in Sources */,
+				00B1067227D792990008B4FB /* Extension.swift in Sources */,
 				00EA15B427D6316F002876E7 /* Image.swift in Sources */,
 				00EA15A827D5CEA3002876E7 /* Authentication.swift in Sources */,
 				00EA15B627D635E1002876E7 /* DeepLinkHandler.swift in Sources */,
@@ -1114,6 +1128,7 @@
 				00FABE0F27D1DB6A004E4800 /* CommitWriter.swift in Sources */,
 				008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */,
 				0036434F27D58B59003AC248 /* AddTag.swift in Sources */,
+				0025A6E627D99AA700493959 /* CommitWriteIndicator.swift in Sources */,
 				00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */,
 				008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */,
 				00FABE1327D1DED6004E4800 /* Const.swift in Sources */,
@@ -1125,6 +1140,7 @@
 				00FABE1127D1DEC7004E4800 /* GithubService.swift in Sources */,
 				00FABE0C27D1DB60004E4800 /* Issue.swift in Sources */,
 				00FABE0827D1DB22004E4800 /* Lodable.swift in Sources */,
+				004752BF27D8334C004D1013 /* IssueList.swift in Sources */,
 				0000C94527D1CF97005A7D4A /* MacCommitGeneratorApp.swift in Sources */,
 				00FABE0627D1D8C4004E4800 /* PersistenceController.swift in Sources */,
 				00FABE0B27D1DB5E004E4800 /* IssueType.swift in Sources */,
@@ -1139,6 +1155,7 @@
 			files = (
 				9351EF9127CC5E4000AF6F25 /* CommitViewModel.swift in Sources */,
 				932189A127C9DB36007472FD /* MockedData.swift in Sources */,
+				00B1067027D792990008B4FB /* Extension.swift in Sources */,
 				9351EFA027CC6E8E00AF6F25 /* CommitWriter.swift in Sources */,
 				93B7ADE227CA482C00A1EF24 /* SelectedIssueList.swift in Sources */,
 				932189A327C9DE20007472FD /* TextField.swift in Sources */,
@@ -1211,6 +1228,7 @@
 				00EA159F27D5A9B7002876E7 /* Lodable.swift in Sources */,
 				93CB946D27D0D61B00140A0F /* KeyChainManager.swift in Sources */,
 				93CB945B27D0CC0700140A0F /* IssueWidget.swift in Sources */,
+				00B1067127D792990008B4FB /* Extension.swift in Sources */,
 				93CB946727D0D0BD00140A0F /* Issue.swift in Sources */,
 				93CB947027D0D69100140A0F /* Const.swift in Sources */,
 				934258B627D0D88400BC1FFF /* GithubService.swift in Sources */,

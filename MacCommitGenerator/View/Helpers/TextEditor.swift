@@ -14,7 +14,7 @@ struct RoundedTextEditor: View {
     private let type: EditorType
     private let height: CGFloat
     
-    init(_ type: EditorType,_ string: Binding<String>, _ height: CGFloat = 70) {
+    init(_ type: EditorType, _ string: Binding<String>, _ height: CGFloat = 70) {
         self.type = type
         self._text = string
         self.height = height
@@ -25,7 +25,9 @@ struct RoundedTextEditor: View {
             HStack {
                 Text(type.title)
                     .foregroundColor(.text3)
-                    .font(.subheadline)
+                    .font(.body)
+                    .fontWeight(.semibold)
+                
                 Button(action: toggleHelperBox) {
                     Image(systemName: "questionmark.circle.fill")
                         .imageScale(.large)
@@ -64,7 +66,7 @@ struct RoundedTextEditor: View {
     private var helperBox: some View {
         Text(type.guideText)
             .padding()
-            .frame(minWidth: 200, maxWidth:250,minHeight: 50, maxHeight: 150 ,alignment: .topLeading)
+            .frame(minWidth: 200, maxWidth: 250, minHeight: 50, maxHeight: 150, alignment: .topLeading)
             .multilineTextAlignment(.leading)
             .background(RoundedRectangle(cornerRadius: 6).fill(Color.brand))
             .foregroundColor(.white)
@@ -85,14 +87,12 @@ extension AnyTransition {
         .scale.combined(with: .opacity).combined(with: .offset(x: -50, y: 50))
     }
 }
-
-
 struct TextEditor_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            RoundedTextEditor(.body,.constant("하이ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ"))
+            RoundedTextEditor(.body, .constant("하이"))
                 .preferredColorScheme(.light)
-            RoundedTextEditor(.body,.constant("하이"))
+            RoundedTextEditor(.body, .constant("하이"))
                 .preferredColorScheme(.dark)
         }
     }
