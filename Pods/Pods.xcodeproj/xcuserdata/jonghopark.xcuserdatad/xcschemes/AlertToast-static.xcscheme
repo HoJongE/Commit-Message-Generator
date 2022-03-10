@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD9F52E07CA8CCC9E5112A7D8C1CE821"
+               BlueprintIdentifier = "A250C2697A9BE1D25212745DD644229B"
                BuildableName = "AlertToast.framework"
-               BlueprintName = "AlertToast"
+               BlueprintName = "AlertToast-static"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

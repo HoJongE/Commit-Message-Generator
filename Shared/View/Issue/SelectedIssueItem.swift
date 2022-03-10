@@ -43,6 +43,7 @@ struct IssuePlusButton: View {
                 .background(Color.white)
                 .cornerRadius(6)
         }
+        .buttonStyle(.plain)
     }
 }
 

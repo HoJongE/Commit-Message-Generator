@@ -11,7 +11,7 @@ struct SelectedIssueList: View {
 
     let issueType: IssueType
     @Binding var issues: [Issue]
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {

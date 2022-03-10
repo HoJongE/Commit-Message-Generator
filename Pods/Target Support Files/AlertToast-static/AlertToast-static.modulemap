@@ -1,5 +1,5 @@
 framework module AlertToast {
-  umbrella header "AlertToast-umbrella.h"
+  umbrella header "AlertToast-static-umbrella.h"
 
   export *
   module * { export * }

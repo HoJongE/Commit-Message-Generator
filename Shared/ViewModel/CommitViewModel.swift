@@ -62,7 +62,6 @@ final class CommitViewModel: ObservableObject {
         }
     }
     
-    
     func copyToClipboard(_ copyType: CopyType) -> Bool {
       
         do {

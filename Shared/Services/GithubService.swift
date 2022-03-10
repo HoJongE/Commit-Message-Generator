@@ -97,15 +97,13 @@ final class GithubService {
         }
     }
     
+    #if os(macOS)
     func deviceflow(completion: @escaping (Lodable<DeviceflowResult>) -> Void) {
         let url: String = Const.URL.GITHUB_DEVICE_FLOW
         let headers: HTTPHeaders = ["Accept": "application/json"]
         let paramteters: Parameters = ["client_id": Const.GitHub.CLIEND_ID,
                                        "scope": "repo,user"]
-        AF.request(url,
-                   method: .post,
-                   parameters: paramteters
-                   ,headers: headers).responseData { result in
+        AF.request(url, method: .post, parameters: paramteters, headers: headers).responseData { result in
             print(result.description)
             guard let response = result.response, let value = result.value else {
                 completion(Lodable.error(error: NetworkError.responseNotExist))
@@ -124,6 +122,6 @@ final class GithubService {
                 completion(Lodable.error(error: error))
             }
         }
-        
     }
+    #endif
 }

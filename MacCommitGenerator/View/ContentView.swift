@@ -18,11 +18,11 @@ struct ContentView: View {
         case githubSetting
         
         static func == (lhs: ViewType, rhs: ViewType) -> Bool {
-            switch (lhs,rhs) {
-            case (commitWrite,commitWrite),
-                (editTag,editTag),
-                (editFunction,editFunction),
-                (githubSetting,githubSetting):
+            switch (lhs, rhs) {
+            case (commitWrite, commitWrite),
+                (editTag, editTag),
+                (editFunction, editFunction),
+                (githubSetting, githubSetting):
                 return true
             default:
                 return false

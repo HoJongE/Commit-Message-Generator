@@ -177,13 +177,13 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-dynamic/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast-dynamic/AlertToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage-dynamic/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI-dynamic/SDWebImageSwiftUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-dynamic/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast-dynamic/AlertToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage-dynamic/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI-dynamic/SDWebImageSwiftUI.framework"
 fi
