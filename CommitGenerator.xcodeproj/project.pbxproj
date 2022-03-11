@@ -39,6 +39,8 @@
 		00EA15B327D6300C002876E7 /* GithubProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15B227D6300C002876E7 /* GithubProfile.swift */; };
 		00EA15B427D6316F002876E7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372F66827CDDF290077A3E0 /* Image.swift */; };
 		00EA15B627D635E1002876E7 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381ED27CCD8330047043A /* DeepLinkHandler.swift */; };
+		00F7CD5D27DADF9000EC0749 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7CD5C27DADF9000EC0749 /* Setting.swift */; };
+		00F7CD6027DB534500EC0749 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93845B9D27CA25C100951A57 /* MockedModel.swift */; };
 		00FABE0527D1D8C2004E4800 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9321899D27C9BB5E007472FD /* Database.xcdatamodeld */; };
 		00FABE0627D1D8C4004E4800 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8105527C9B639008B423A /* PersistenceController.swift */; };
 		00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932189A027C9DB36007472FD /* MockedData.swift */; };
@@ -187,6 +189,7 @@
 		00EA15AD27D5D483002876E7 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		00EA15B027D61A2F002876E7 /* TagSelectorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorList.swift; sourceTree = "<group>"; };
 		00EA15B227D6300C002876E7 /* GithubProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProfile.swift; sourceTree = "<group>"; };
+		00F7CD5C27DADF9000EC0749 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		00FABE1427D22690004E4800 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		1E23843B65AB6D79BC111871 /* Pods-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-MacCommitGenerator/Pods-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		306D3BCA50BB242AA1F95FE0 /* Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; path = "Target Support Files/Pods-CommitGenerator-MacCommitGenerator/Pods-CommitGenerator-MacCommitGenerator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -400,6 +403,7 @@
 			children = (
 				00EA15B227D6300C002876E7 /* GithubProfile.swift */,
 				00B1066927D777BD0008B4FB /* VerificationCode.swift */,
+				00F7CD5C27DADF9000EC0749 /* Setting.swift */,
 			);
 			path = Github;
 			sourceTree = "<group>";
@@ -1109,6 +1113,7 @@
 				00FABE0927D1DB26004E4800 /* MockedModel.swift in Sources */,
 				00EA15A727D5CBC8002876E7 /* CommitViewModel.swift in Sources */,
 				00EA15AB27D5D21C002876E7 /* TagSelector.swift in Sources */,
+				00F7CD5D27DADF9000EC0749 /* Setting.swift in Sources */,
 				00B1066A27D777BD0008B4FB /* VerificationCode.swift in Sources */,
 				00FABE1227D1DEC9004E4800 /* NetworkError.swift in Sources */,
 				00FABE0727D1D8C8004E4800 /* MockedData.swift in Sources */,
@@ -1224,6 +1229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F7CD6027DB534500EC0749 /* MockedModel.swift in Sources */,
 				93CB946627D0CFC000140A0F /* WidgetView.swift in Sources */,
 				00EA159F27D5A9B7002876E7 /* Lodable.swift in Sources */,
 				93CB946D27D0D61B00140A0F /* KeyChainManager.swift in Sources */,
@@ -1376,7 +1382,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1431,7 +1438,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

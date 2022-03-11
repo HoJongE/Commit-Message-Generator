@@ -13,6 +13,7 @@ import AppKit
 #if canImport(UIKit)
 import UIKit
 #endif
+import SwiftUI
 
 final class CommitViewModel: ObservableObject {
     
@@ -63,7 +64,6 @@ final class CommitViewModel: ObservableObject {
     }
     
     func copyToClipboard(_ copyType: CopyType) -> Bool {
-      
         do {
             #if canImport(UIKit)
             try UIPasteboard.general.string = commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
@@ -74,13 +74,21 @@ final class CommitViewModel: ObservableObject {
             pasteboard.clearContents()
             try pasteboard.setString(commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues), forType: .string)
             #endif
+            closeResolvedIssue()
             return true
         } catch {
             return false
         }
-        
     }
-    
+    private func closeResolvedIssue() {
+        guard UserDefaults.standard.bool(forKey: "autoClose") else {
+            return
+        }
+        
+        for issue in resolvedIssues {
+            githubService.closeIssue(issue)
+        }
+    }
     func reset() {
         title = ""
         body = ""
@@ -94,7 +102,9 @@ final class CommitViewModel: ObservableObject {
     
     func getIssues(_ page: Int) {
         githubService.getIssues(page) { result in
-            self.issues = result
+            withAnimation {
+                self.issues = result
+            }
         }
     }
 }

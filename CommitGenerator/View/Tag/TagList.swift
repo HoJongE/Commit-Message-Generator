@@ -27,16 +27,19 @@ struct TagList: View {
                 Button(action: {
                     dismiss()
                     selected = tag
-                }, label: {TagRow(tag: tag, selected: selected != nil &&
-                                 selected! == tag)
-                              .padding(.horizontal)
-                              .padding(.vertical, 4)})
+                }, label: {
+                    TagRow(tag: tag, selected: isSelected(tag))
+                        .padding(.horizontal)
+                        .padding(.vertical, 4)})
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .navigationTitle("\(placeholder) 선택")
-        .preferredColorScheme(.dark)
+    }
+    
+    private func isSelected(_ tag: Tag) -> Bool {
+        selected != nil && selected == tag
     }
 }
 
@@ -45,5 +48,6 @@ struct TagList_Previews: PreviewProvider {
         NavigationView {
             TagList("기능", .constant(MockedCoreData.shared.tag()), MockedCoreData.shared.tags())
         }
+        .preferredColorScheme(.dark)
     }
 }

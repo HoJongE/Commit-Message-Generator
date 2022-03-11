@@ -17,7 +17,7 @@ struct IssueRow: View {
             Text("#\(issue.number)").foregroundColor(.gray).font(.caption)
             Text(issue.title).foregroundColor(.white).font(.subheadline).fontWeight(.semibold).lineLimit(1)
             if family == .systemMedium {
-                Text(issue.repository_url.split(separator: "/").last ?? "")
+                Text(issue.repository)
                     .font(.caption).foregroundColor(.gray)
                     .lineLimit(1)
             }
@@ -64,11 +64,11 @@ struct ProfileRow: View {
 }
 struct IssueRow_Previews: PreviewProvider {
     static var previews: some View {
-        IssueRow(issue: Issue.mocIssues[0])
+        IssueRow(issue: Issue.mocIssue[0])
             .background(.black)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
             .previewLayout(.sizeThatFits)
-        ProfileRow(user: Issue.mocIssues[0].user)
+        ProfileRow(user: Issue.mocIssue[0].user)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
             .background(.black)
     }

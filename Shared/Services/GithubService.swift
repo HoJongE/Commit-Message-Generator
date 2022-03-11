@@ -88,6 +88,9 @@ final class GithubService {
     }
 
     private func judgeStatus(_ statusCode: Int) -> Error? {
+        #if DEBUG
+        print(statusCode)
+        #endif
         switch statusCode {
             case 200: return nil
             case 304: return NetworkError.error304
@@ -124,4 +127,30 @@ final class GithubService {
         }
     }
     #endif
+    
+    func closeIssue(_ issue: Issue) {
+        let accessToken: String? = KeyChainManager.shared.readToken()
+
+        guard let accessToken = accessToken else {
+            return
+        }
+        let url: String = Const.URL.GITHUB_BASE_URL + "/repos/\(issue.user.login)/\(issue.repository.lowercased())/issues/\(issue.number)"
+        
+        let headers: HTTPHeaders = ["accept": "application/vnd.github.v3+json",
+                                    "Authorization": "token \(accessToken)"]
+        
+        let parameters: Parameters = ["state": "closed"]
+        
+        AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding() ,headers: headers).responseData { result in
+            guard let response = result.response else {
+                return
+            }
+            
+            if let error = self.judgeStatus(response.statusCode) {
+                print(error)
+                return
+            }
+            
+        }
+    }
 }

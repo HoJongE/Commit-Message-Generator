@@ -8,7 +8,6 @@
 import SwiftUI
 
 // MARK: - EditTagRow
-
 struct EditTagRow: View {
     @ObservedObject var tag: Tag
 

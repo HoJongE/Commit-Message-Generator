@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - 이슈 row
 struct IssueItem: View {
     private let issue: Issue
     private let deleteIssue: (Issue) -> Void
@@ -28,7 +29,7 @@ struct IssueItem: View {
             }
     }
 }
-
+// MARK: - 이슈 더하기 버튼
 struct IssuePlusButton: View {
 
     let issueType: IssueType
@@ -46,7 +47,7 @@ struct IssuePlusButton: View {
         .buttonStyle(.plain)
     }
 }
-
+// MARK: - 이슈 row, 더하기 버튼 프리뷰
 struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {

@@ -36,11 +36,8 @@ extension Color {
         let b: Double = Double((rgb >>  0) & 0xFF) / 255.0
 
         self.init(red: r, green: g, blue: b)
-
     }
-
 }
-
 
 extension Color {
     static var random: Color {

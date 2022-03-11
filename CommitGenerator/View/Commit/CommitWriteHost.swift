@@ -8,6 +8,7 @@
 import SwiftUI
 import AlertToast
 
+// MARK: - 커밋 작성 뷰
 struct CommitWriteHost: View {
 
     @Environment(\.managedObjectContext) private var managedObjectContext
@@ -97,20 +98,23 @@ struct CommitWriteHost: View {
             AlertToast(type: .error(.error), title: "복사 실패!\n양식을 지켜주세요")
         }
     }
+    
+}
+// MARK: - 툴바 모음
+extension CommitWriteHost {
     @ToolbarContentBuilder
-    func toolbar() -> some ToolbarContent {
+    private func toolbar() -> some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
             SaveButton {
                 showCopyResult(commitViewModel.copyToClipboard($0))
             }
         }
-
         ToolbarItem(placement: .cancellationAction) {
             ResetButton(onClick: {showingResetAlert = true})
         }
     }
 }
-
+// MARK: - 토스트 함수
 extension CommitWriteHost {
     private func showCopyResult(_ result: Bool) {
         if result {
@@ -120,7 +124,7 @@ extension CommitWriteHost {
         }
     }
 }
-
+// MARK: - 커밋 작성 프리뷰
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

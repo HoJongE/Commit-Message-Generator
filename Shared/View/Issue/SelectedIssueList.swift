@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - 선택된 이슈 리스트
 struct SelectedIssueList: View {
 
     let issueType: IssueType
@@ -14,25 +15,33 @@ struct SelectedIssueList: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text(issueType.korTitle)
-                    .font(.system(size: 16)).fontWeight(.semibold)
-                    .foregroundColor(.white)
-                Spacer()
-                Button(action: {issues.removeAll()}, label: {
-                    Image(systemName: "trash")
-                        .foregroundColor(.brand)
-                        .padding(.horizontal)
-                        .padding(.vertical, 4)})
-            }
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 16) {
-                    IssuePlusButton(issueType: issueType, onIssueAdded: {issues.append($0)})
-                    ForEach(issues, id: \.self) {
-                        IssueItem($0) { issue in
-                            issues.removeAll { iter in
-                                issue.number == iter.number
-                            }
+            title
+            selectedList
+        }
+    }
+    
+    private var title: some View {
+        HStack {
+            Text(issueType.korTitle)
+                .font(.system(size: 16)).fontWeight(.semibold)
+                .foregroundColor(.white)
+            Spacer()
+            Button(action: {issues.removeAll()}, label: {
+                Image(systemName: "trash")
+                    .foregroundColor(.brand)
+                    .padding(.horizontal)
+                    .padding(.vertical, 4)})
+        }
+    }
+    
+    private var selectedList: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 16) {
+                IssuePlusButton(issueType: issueType, onIssueAdded: {issues.append($0)})
+                ForEach(issues, id: \.self) {
+                    IssueItem($0) { issue in
+                        issues.removeAll { iter in
+                            issue.number == iter.number
                         }
                     }
                 }
@@ -40,7 +49,7 @@ struct SelectedIssueList: View {
         }
     }
 }
-
+// MARK: - 이슈 리스트 프리뷰
 struct IssueList_Previews: PreviewProvider {
     static var previews: some View {
         SelectedIssueList(issueType: .ref, issues: .constant(Issue.mocIssue))

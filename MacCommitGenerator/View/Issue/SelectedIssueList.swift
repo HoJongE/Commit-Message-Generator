@@ -17,30 +17,29 @@ struct SelectedIssueList: View {
                 Text(issueType.korTitle)
                     .font(.body).fontWeight(.semibold).foregroundColor(.text3)
                 Spacer()
-                Button(action: removeAll) {
-                    Image(systemName: "trash")
-                        .foregroundColor(.brand)
-                }
             }
             .imageScale(.large)
             .buttonStyle(PlainButtonStyle())
             
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack {
-                    ForEach(issues, id: \.self) {
-                        SelectedIssue($0)
+                    ForEach(issues, id: \.self) { current in
+                        SelectedIssue(current) {
+                            delete(of: current)
+                        }
                     }
                 }
-                .padding(.bottom,4)
+                .padding(.bottom, 4)
             }
         }
         .padding(.init(top: 2, leading: 4, bottom: 2, trailing: 4))
         .contentShape(Rectangle())
     }
-    
-    private func removeAll() {
+    private func delete(of issue: Issue) {
         withAnimation {
-            issues.removeAll()
+            issues.removeAll {
+                $0.id == issue.id
+            }
         }
     }
 }
@@ -48,8 +47,10 @@ struct SelectedIssueList: View {
 extension SelectedIssueList {
     struct SelectedIssue: View {
         private let issue: Issue
-        init(_ issue: Issue) {
+        private let delete: () -> Void
+        init(_ issue: Issue, delete: @escaping () -> Void) {
             self.issue = issue
+            self.delete = delete
         }
         var body: some View {
             Text("#\(issue.number)")
@@ -57,13 +58,14 @@ extension SelectedIssueList {
                 .background(RoundedRectangle(cornerRadius: 6)
                                 .fill(Color.brand))
                 .foregroundColor(.white)
+                .onTapGesture(perform: delete)
         }
     }
 }
 // MARK: - 이슈 선택기 프리뷰
 struct SelectedIssueList_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedIssueList(issueType: .ref, issues: .constant(Issue.mocIssues))
+        SelectedIssueList(issueType: .ref, issues: .constant(Issue.mocIssue))
             .selectIndicator(sameWith: .tag, current: .tag)
     }
 }

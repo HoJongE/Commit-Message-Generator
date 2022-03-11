@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// MARK: - 편집 태그 뷰
 struct EditTagView: View {
     @Environment(\.dismiss) private var dismiss: DismissAction
     private var tag: Tag?
@@ -27,7 +27,6 @@ struct EditTagView: View {
     }
 
     var body: some View {
-
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .lastTextBaseline) {
                 Text("이름")
@@ -47,26 +46,33 @@ struct EditTagView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                if nil == tag {
-                    Button(action: addTag) {
-                        Label("추가", systemImage: "plus")
-                            .labelStyle(.titleAndIcon)
-                            .foregroundColor(.brand)
-                    }
-                } else {
-                    Button(action: modifyTag) {
-                        Label("수정", systemImage: "pencil")
-                            .labelStyle(.titleAndIcon)
-                            .foregroundColor(.brand)
-                    }
+        .navigationTitle(tag == nil ? "\(category) 추가" : "\(category) 편집")
+        .toolbar(content: toolbar)
+    }
+}
+// MARK: - 툴바 모음
+extension EditTagView {
+    @ToolbarContentBuilder
+    private func toolbar() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            if nil == tag {
+                Button(action: addTag) {
+                    Label("추가", systemImage: "plus")
+                        .labelStyle(.titleAndIcon)
+                        .foregroundColor(.brand)
+                }
+            } else {
+                Button(action: modifyTag) {
+                    Label("수정", systemImage: "pencil")
+                        .labelStyle(.titleAndIcon)
+                        .foregroundColor(.brand)
                 }
             }
         }
-        .navigationTitle(tag == nil ? "\(category) 추가" : "\(category) 편집")
     }
-
+}
+// MARK: - 태그 편집, 추가 기능
+extension EditTagView {
     private func modifyTag() {
         guard let tag = tag else {
             return
@@ -83,7 +89,7 @@ struct EditTagView: View {
         dismiss()
     }
 }
-
+// MARK: - 태그 편집 프리뷰
 struct EditTagView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
