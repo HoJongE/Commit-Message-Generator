@@ -45,6 +45,7 @@ struct RoundedTextEditor: View {
                 .buttonStyle(.plain)
             }
             TextEditor(text: $text)
+                .font(.body)
                 .border(.gray, width: 1)
                 .frame(height: height)
                 .onChange(of: text) { newValue in

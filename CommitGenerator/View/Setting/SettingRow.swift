@@ -80,12 +80,31 @@ extension SettingHost {
         }
     }
 }
-
+// MARK: - 이슈 자동 닫기 뷰
+extension SettingHost {
+    struct CloseResovledIssue: View {
+        @AppStorage("autoClose") private var autoClose: Bool = UserDefaults.standard.bool(forKey: "autoClose")
+        
+        var body: some View {
+            HStack(alignment: .center) {
+                Image(systemName: "icloud.and.arrow.up.fill")
+                    .imageScale(.large)
+                    .foregroundColor(.brand)
+                Toggle("커밋 복사 시 이슈 자동 닫기", isOn: $autoClose)
+                    .foregroundColor(.white)
+                    .padding(.leading, 8)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
+        }
+    }
+}
 struct TagSettingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SettingHost.TagSettingView("태그", image: "tag.fill", tint: .brand)
             SettingHost.ResetButton()
+            SettingHost.CloseResovledIssue()
         }
         .previewLayout(.sizeThatFits)
         .padding()

@@ -35,10 +35,13 @@ struct CommitWriteHost: View {
                 .padding()
                 .frame(width: 300, alignment: .topLeading)
             }
-            secondView
+            GeometryReader { _ in
+                secondView
+            }
         }
         .toolbar(content: toolbar)
         .navigationTitle("커밋 작성")
+        .navigationSubtitle("쉽게 커밋을 작성해보세요")
         .toast(isPresenting: $showSuccess) {
             AlertToast(type: .systemImage("doc.on.clipboard.fill", .gray), title: "클립보드\n복사완료")
         }
@@ -87,7 +90,7 @@ extension CommitWriteHost {
 extension CommitWriteHost {
     
     @ToolbarContentBuilder
-    func toolbar() -> some ToolbarContent {
+    private func toolbar() -> some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
             copyButton
         }

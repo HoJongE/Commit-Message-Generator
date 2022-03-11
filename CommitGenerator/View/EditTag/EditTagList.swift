@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// MARK: - 이슈 편집 리스트
 struct EditTagList: View {
     private let title: String
     private let onDelete: (Tag) -> Void
@@ -59,7 +59,7 @@ struct EditTagList: View {
         }
     }
 }
-
+// MARK: - 이슈 편집 프리뷰
 struct EditTagList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

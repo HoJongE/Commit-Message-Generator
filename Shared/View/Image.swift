@@ -9,13 +9,17 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct GithubImage: View {
+    private let width: CGFloat
+    init(width: CGFloat = 50) {
+        self.width = width
+    }
     var body: some View {
         Image("github")
             .resizable()
-            .frame(width: 50, height: 50, alignment: .center)
+            .foregroundColor(.black)
+            .frame(width: width, height: width, alignment: .center)
             .shadow(color: .white, radius: 3)
             .background(Circle().foregroundColor(.white).padding(1))
-
     }
 }
 
@@ -28,6 +32,7 @@ struct CircleWebImage: View {
             .clipShape(Circle())
             .frame(width: width, height: width)
             .shadow(color: .white, radius: 1)
+            .background(Circle().fill(.black))
             .overlay(Circle().stroke(.gray, lineWidth: width/40))
     }
 }

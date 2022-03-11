@@ -15,9 +15,9 @@ extension PreviewDevice {
 
 extension Issue {
     static var mocIssue: [Issue] {
-        var ret = [Issue]()
+        var ret: [Issue] = [Issue]()
         for _ in 0...10 {
-            ret.append(Issue(id: 18, title: "Github 로그인 flow 수정", number: 5, body: "안녕하세요 이것은 이슈입니다.", repository_url: "/Commit-Generator", user: User(login: "HoJongPARK", avatar_url: "", gravatar_id: "", html_url: "")))
+            ret.append(Issue(id: 12, title: "로그인 API 구현", number: 12, body: "", repository_url: "Commit Generator", user: User(login: "HoJonsPARK", avatar_url: "https://avatars.githubusercontent.com/u/57793298?v=4", gravatar_id: "", html_url: ""), milestone: nil, labels: nil, assignee: nil, assignees: nil))
         }
         return ret
     }

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// MARK: - 이슈 리스트
 struct IssueList: View {
     @Environment(\.presentationMode) private var dismiss
     let issues: [Issue]
@@ -54,7 +55,8 @@ struct DetailIssueItem: View {
                     Text(issue.title)
                         .font(.body)
                         .fontWeight(.bold)
-                    Text(String(issue.repository_url.split(separator: "/").last ?? "") + "  #\(issue.number)")
+                        .lineLimit(showBody ? 4 : 1)
+                    Text(issue.repository + "  #\(issue.number)")
                         .font(.subheadline)
                         .foregroundColor(.text3)
                 }
@@ -68,7 +70,8 @@ struct DetailIssueItem: View {
                 }, label: {
                     Image(systemName: "arrowtriangle.down.circle")
                         .imageScale(.large)
-                        .padding(.horizontal, 8)
+                        .padding(.init(top: 4, leading: 12, bottom: 4, trailing: 12))
+                        .contentShape(Rectangle())
                         .foregroundColor(.brand)
                         .rotationEffect(.degrees(showBody ? 0 : 180))
                 })
@@ -109,6 +112,7 @@ extension AnyTransition {
     }
 }
 
+// MARK: - 이슈 리스트 프리뷰
 struct Previews_IssueList_Previews: PreviewProvider {
     static var previews: some View {
         Group {

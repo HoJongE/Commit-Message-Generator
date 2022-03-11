@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+// MARK: - 이슈 선택 뷰
 struct IssuePicker: View {
-
     let issueType: IssueType
     let issueAdd: (Issue) -> Void
     @EnvironmentObject private var commitViewModel: CommitViewModel
@@ -25,7 +25,6 @@ struct IssuePicker: View {
                 default:
                     ProgressView()
             }
-            Spacer()
         }
         .onAppear {
             commitViewModel.getIssues(1)
@@ -41,11 +40,12 @@ struct IssuePicker: View {
             }
         }
         .padding(.vertical)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .init(horizontal: .center, vertical: .top))
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .navigationTitle(issueType.korTitle)
     }
 }
+// MARK: - 이슈 로딩 실패
 extension IssuePicker {
     private struct ErrorView: View {
         let error: Error
@@ -65,6 +65,7 @@ extension IssuePicker {
         }
     }
 }
+// MARK: - 이슈 선택 프리뷰
 struct IssuePicker_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

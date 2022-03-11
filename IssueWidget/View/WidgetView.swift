@@ -58,9 +58,9 @@ struct IssueErrorView: View {
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssues))
+            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssue))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssues))
+            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssue))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }

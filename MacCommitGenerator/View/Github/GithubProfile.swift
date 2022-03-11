@@ -15,9 +15,11 @@ struct GithubConnect: View {
         case .empty, .loading, .error(error: _):
             EmptyUser()
                 .navigationTitle("깃허브 계정 연동")
+                .navigationSubtitle("이슈를 불러오기 위해 계정을 연동하세요")
         case .success(data: let user):
             GithubProfile(user: user, logout: authentication.logout)
                 .navigationTitle("깃허브 계정 연동")
+                .navigationSubtitle("이슈를 불러오기 위해 계정을 연동하세요")
         }
     }
 }
@@ -55,16 +57,14 @@ extension GithubConnect {
         @State private var showCode: Bool = false
         
         var body: some View {
-            VStack(spacing: 16) {
-                GithubImage()
-                Text("이슈를 불러오기 위해선\n깃허브에 연결해야 합니다.")
-                    .multilineTextAlignment(.center)
+            HStack(spacing: 16) {
+                GithubImage(width: 32)
+                Text("이슈를 조회하기 위해 계정을 연동해주세요")
                 Button(action: requestCode) {
                     Text("깃허브 계정 연결하기")
                 }
             }
             .navigationTitle("깃허브 설정")
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .onChange(of: authentication.deviceflowResult) {
                 if case Lodable.success(data: _) = $0 {
                     showCode = true

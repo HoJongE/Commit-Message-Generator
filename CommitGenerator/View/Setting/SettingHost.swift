@@ -18,7 +18,10 @@ struct SettingHost: View {
         VStack(spacing: 0) {
             ProfileView(of: authentication.user.value)
             Group {
-                Divider().background(.gray).padding(.top)
+                Text("태그 편집").foregroundColor(.text3)
+                    .padding()
+                    .font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
+                Divider().background(.gray)
                 NavigationLink(destination: EditTagList(title: "태그", onDelete: deleteTag(tag:))) {
                     TagSettingView("태그", image: "tag.fill", tint: .brand)
                 }
@@ -30,8 +33,16 @@ struct SettingHost: View {
                 ResetButton()
                 Divider().background(.gray)
             }
-            Spacer()
+            Group {
+                Text("기타 설정").foregroundColor(.text3)
+                    .padding()
+                    .font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
+                Divider().background(.gray)
+                CloseResovledIssue()
+                Divider().background(.gray)
+            }
         }
+        .frame(maxHeight:. infinity, alignment: .topLeading)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 LoginButton(of: authentication.user.value, onClick: onLoginButtonClick)

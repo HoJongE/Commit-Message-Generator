@@ -32,6 +32,7 @@ struct TagList: View {
             notSelectedView
         }
         .navigationTitle(category)
+        .navigationSubtitle("\(category)를 편집합니다")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 plusButton

@@ -24,7 +24,7 @@ struct IssuePicker: View {
                 ProgressView()
             }
         }
-        .frame(maxWidth:.infinity, alignment: .init(horizontal: .center, vertical: .top))
+        .frame(maxWidth: .infinity, alignment: .init(horizontal: .center, vertical: .top))
         .onAppear {
             commitViewModel.getIssues(1)
         }
