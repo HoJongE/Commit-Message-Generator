@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+  <g id="그룹_67" data-name="그룹 67" transform="translate(332 -1521)">
+    <g id="그룹_65" data-name="그룹 65" transform="translate(-332 1521)">
+      <g id="그룹_66" data-name="그룹 66">
+        <path id="빼기_10" data-name="빼기 10" d="M2.666,5.333A2.667,2.667,0,1,1,5.333,2.666,2.67,2.67,0,0,1,2.666,5.333Zm0-4A1.333,1.333,0,1,0,4,2.666,1.335,1.335,0,0,0,2.666,1.333Z" transform="translate(0 0)" fill="#fff"/>
+        <path id="빼기_11" data-name="빼기 11" d="M2.666,5.333A2.667,2.667,0,1,1,5.333,2.666,2.67,2.67,0,0,1,2.666,5.333Zm0-4A1.333,1.333,0,1,0,4,2.666,1.335,1.335,0,0,0,2.666,1.333Z" transform="translate(8.667 0)" fill="#fff"/>
+        <path id="빼기_12" data-name="빼기 12" d="M2.666,5.333A2.667,2.667,0,1,1,5.333,2.666,2.67,2.67,0,0,1,2.666,5.333Zm0-4A1.333,1.333,0,1,0,4,2.666,1.335,1.335,0,0,0,2.666,1.333Z" transform="translate(8.667 7.333)" fill="#fff"/>
+        <path id="빼기_13" data-name="빼기 13" d="M2.666,5.333A2.667,2.667,0,1,1,5.333,2.666,2.67,2.67,0,0,1,2.666,5.333Zm0-4A1.333,1.333,0,1,0,4,2.666,1.335,1.335,0,0,0,2.666,1.333Z" transform="translate(0 10.667)" fill="#fff"/>
+        <rect id="사각형_21" data-name="사각형 21" width="1.333" height="6.667" transform="translate(2 4.667)" fill="#fff"/>
+        <rect id="사각형_23" data-name="사각형 23" width="1.333" height="3.333" transform="translate(10.667 4.667)" fill="#fff"/>
+        <rect id="사각형_22" data-name="사각형 22" width="1.333" height="2.667" transform="translate(10 2) rotate(90)" fill="#fff"/>
+        <path id="다각형_3" data-name="다각형 3" d="M1.333,0,2.667,2H0Z" transform="translate(6 4) rotate(-90)" fill="#fff"/>
+        <path id="패스_9" data-name="패스 9" d="M-324.967,1541.148h-.471l.008-1.333a32.968,32.968,0,0,0,5-.245c1.15-.183,1.434-.425,1.494-.5.018-.021.036-.042.018-.157l1.316-.215a1.461,1.461,0,0,1-.32,1.239,3.675,3.675,0,0,1-2.3.946A32.036,32.036,0,0,1-324.967,1541.148Z" transform="translate(329.581 -1526.978)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
