@@ -51,11 +51,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let menuButton = statusItem?.button {
             menuButton.image = #imageLiteral(resourceName: "StatusBarIcon")
-            menuButton.action = #selector(MenuButtonToggle)
+            menuButton.action = #selector(menuButtonToggle)
         }
     }
     
-    @objc func MenuButtonToggle() {
+    @objc func menuButtonToggle() {
         Window.mainView.openOrActivate()
     }
 }

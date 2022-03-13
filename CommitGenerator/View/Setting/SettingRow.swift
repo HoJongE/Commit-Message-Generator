@@ -38,9 +38,7 @@ extension SettingHost {
                     .imageScale(.large)
                     .foregroundColor(.white)
             }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
-
+            .settingRow()
         }
     }
 }
@@ -64,16 +62,14 @@ extension SettingHost {
                     .padding(.leading, 8)
                 Spacer()
             }
-            .padding()
             .alert("태그를 리셋하시겠습니까?", isPresented: $showResetAlert) {
                 Button("리셋", role: .destructive, action: resetTags)
             }
-            .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
             .contentShape(Rectangle())
             .onTapGesture {
                 showResetAlert = true
             }
-
+            .settingRow()
         }
         private func resetTags() {
             PersistenceController.shared.reset()
@@ -94,9 +90,38 @@ extension SettingHost {
                     .foregroundColor(.white)
                     .padding(.leading, 8)
             }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
+            .settingRow()
         }
+    }
+}
+// MARK: - 커밋 스타일
+extension SettingHost {
+    struct CommitStyle: View {
+        var body: some View {
+            NavigationLink(destination: CommitStyleGuide()) {
+                HStack {
+                    Image(systemName: "pencil.and.outline")
+                        .imageScale(.large)
+                        .foregroundColor(.blue)
+                    Text("커밋 스타일")
+                        .foregroundColor(.white)
+                        .padding(.leading, 8)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .imageScale(.large)
+                        .foregroundColor(.white)
+                }
+                .settingRow()
+            }
+        }
+    }
+}
+// MARK: - Setting row 사이즈 세팅
+extension View {
+    fileprivate func settingRow() -> some View {
+        self
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: 55, alignment: .leading)
     }
 }
 struct TagSettingView_Previews: PreviewProvider {
@@ -105,6 +130,7 @@ struct TagSettingView_Previews: PreviewProvider {
             SettingHost.TagSettingView("태그", image: "tag.fill", tint: .brand)
             SettingHost.ResetButton()
             SettingHost.CloseResovledIssue()
+            SettingHost.CommitStyle()
         }
         .previewLayout(.sizeThatFits)
         .padding()

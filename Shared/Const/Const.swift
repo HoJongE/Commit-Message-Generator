@@ -29,3 +29,10 @@ extension Const {
         static let CLIENT_SECRET: String = "3ea9b462a5bcc08c75e6664e43929c58a9738d3a"
     }
 }
+
+extension Const {
+    struct Setting {
+        static let AUTO_CLOSE: String = "autoClose"
+        static let OPENING_AT_LOGIN: String = "openingAtLogin"
+    }
+}

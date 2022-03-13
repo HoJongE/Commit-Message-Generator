@@ -18,9 +18,7 @@ struct SettingHost: View {
         VStack(spacing: 0) {
             ProfileView(of: authentication.user.value)
             Group {
-                Text("태그 편집").foregroundColor(.text3)
-                    .padding()
-                    .font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
+                Text("태그 편집").sectionText()
                 Divider().background(.gray)
                 NavigationLink(destination: EditTagList(title: "태그", onDelete: deleteTag(tag:))) {
                     TagSettingView("태그", image: "tag.fill", tint: .brand)
@@ -34,15 +32,19 @@ struct SettingHost: View {
                 Divider().background(.gray)
             }
             Group {
-                Text("기타 설정").foregroundColor(.text3)
-                    .padding()
-                    .font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
+                Text("기타").sectionText()
                 Divider().background(.gray)
                 CloseResovledIssue()
                 Divider().background(.gray)
             }
+            Group {
+                Text("도움말").sectionText()
+                Divider().background(.gray)
+                CommitStyle()
+                Divider().background(.gray)
+            }
         }
-        .frame(maxHeight:. infinity, alignment: .topLeading)
+        .frame(maxHeight: .infinity, alignment: .topLeading)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 LoginButton(of: authentication.user.value, onClick: onLoginButtonClick)
@@ -100,5 +102,14 @@ struct SettingHost_Previews: PreviewProvider {
                 .environmentObject(BottomSheetManager())
         }
         .preferredColorScheme(.dark)
+    }
+}
+// MARK: - 섹션 텍스트 Extension
+extension View {
+    fileprivate func sectionText() -> some View {
+        self
+            .foregroundColor(.text3)
+                .padding()
+                .font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
     }
 }

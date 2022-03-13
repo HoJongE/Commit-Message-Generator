@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  CommitGenerator
+
+  Created by JongHo Park on 2022/03/12.
+  
+*/
+"CFBundleName" = "커밋 생성기";
+"CFBundleDisplayName" = "커밋 생성기";
+"CBBundleDisplayName" = "커밋 생성기";

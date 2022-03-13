@@ -32,6 +32,8 @@ struct ContentView: View {
             TagList(category: "기능")
         case .some(.githubSetting):
             Setting()
+        case .some(.commitStyleGuide):
+            CommitStyleGuide()
         }
     }
 }
@@ -42,13 +44,15 @@ extension ContentView {
         case editTag
         case editFunction
         case githubSetting
+        case commitStyleGuide
         
         static func == (lhs: ViewType, rhs: ViewType) -> Bool {
             switch (lhs, rhs) {
             case (commitWrite, commitWrite),
                 (editTag, editTag),
                 (editFunction, editFunction),
-                (githubSetting, githubSetting):
+                (githubSetting, githubSetting),
+                (commitStyleGuide, commitStyleGuide):
                 return true
             default:
                 return false
@@ -65,6 +69,8 @@ extension ContentView {
                 return 480
             case .githubSetting:
                 return 300
+            case .commitStyleGuide:
+                return 300
             }
         }
         
@@ -78,11 +84,14 @@ extension ContentView {
                 return 800
             case .githubSetting:
                 return 650
+            case .commitStyleGuide:
+                return 650
             }
         }
     }
 }
 // MARK: - 루트뷰 프리뷰
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -95,3 +104,4 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
+#endif

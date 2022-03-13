@@ -48,6 +48,7 @@ struct IssuePicker: View {
 // MARK: - 이슈 로딩 실패
 extension IssuePicker {
     private struct ErrorView: View {
+        @EnvironmentObject private var sheetManager: BottomSheetManager
         let error: Error
         let retry: (Int) -> Void
         var body: some View {
@@ -55,8 +56,12 @@ extension IssuePicker {
                 Text("이슈를 불러오는데 에러가 발생했습니다.\n\(error.localizedDescription)")
                     .foregroundColor(.error)
                     .padding()
-                Button("다시 시도", action: {retry(1)})
-                    .padding()
+                if case NetworkError.authenticationError = error {
+                    Button("깃허브 로그인", action: sheetManager.openGithubLogin)
+                } else {
+                    Button("다시 시도", action: {retry(1)})
+                        .padding()
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

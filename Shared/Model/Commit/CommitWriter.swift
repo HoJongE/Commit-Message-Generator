@@ -6,25 +6,46 @@
 //
 
 import Foundation
+#if canImport(Appkit)
+import AppKit
+#endif
+
+#if canImport(UIKit)
+import UIKit
+#endif
 
 struct CommitWriter {
-    func write(copyType: CopyType, tag: Tag?, function: Tag?, title: String, body: String, resolved: [Issue], fixing: [Issue], ref: [Issue], related: [Issue]) throws -> String {
+    func write(copyType: CopyType, tag: Tag, function: Tag, title: String, body: String, resolved: [Issue], fixing: [Issue], ref: [Issue], related: [Issue]) -> Bool {
 
-        switch copyType {
+        do {
+            switch copyType {
             case .titleOnly:
-                return try writeTitle(tag: tag, function: function, title: title)
+                try copyToClipboard(writeTitle(tag: tag, function: function, title: title))
             case .bodyOnly:
-                return writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related)
+                try copyToClipboard(writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related))
             case .all:
-                return try writeTitle(tag: tag, function: function, title: title) + "\n" + writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related)
+                try copyToClipboard(writeTitle(tag: tag, function: function, title: title) + "\n\n" + writeBody(body: body, resolved: resolved, fixing: fixing, ref: ref, related: related))
+            }
+            return true
+        } catch {
+            return false
         }
     }
 
-    private func writeTitle(tag: Tag?, function: Tag?, title: String) throws -> String {
-
-        guard let tag = tag, let function = function else {
-            throw CommitError.invalidForm
-        }
+    private func copyToClipboard(_ value: String) throws {
+#if canImport(UIKit)
+        try UIPasteboard.general.string = value
+#endif
+        
+#if canImport(AppKit)
+        let pasteboard: NSPasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(value, forType: .string)
+        #endif
+    }
+    
+    
+    private func writeTitle(tag: Tag, function: Tag, title: String) throws -> String {
 
         guard let tagName = tag.name, let functionName = function.name else {
             throw CommitError.invalidForm

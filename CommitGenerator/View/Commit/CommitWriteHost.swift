@@ -108,6 +108,7 @@ extension CommitWriteHost {
             SaveButton {
                 showCopyResult(commitViewModel.copyToClipboard($0))
             }
+            .disabled(!commitViewModel.correctForm)
         }
         ToolbarItem(placement: .cancellationAction) {
             ResetButton(onClick: {showingResetAlert = true})

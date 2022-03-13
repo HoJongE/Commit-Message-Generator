@@ -37,6 +37,9 @@ struct Sidebar: View {
             SidebarLabel(title: "설정", image: Image(systemName: "gear"), selected: viewType == .githubSetting) {
                 changeView(.githubSetting)
             }
+            SidebarLabel(title: "커밋 스타일", image: Image(systemName: "pencil.and.outline"), selected: viewType == .commitStyleGuide) {
+                changeView(.commitStyleGuide)
+            }
         }
         .alert(isPresented: $showResetAlert) {
             Alert(title: Text("태그를\n리셋하시겠습니까?"), message: nil, primaryButton: .destructive(Text("리셋"), action: reset), secondaryButton: .cancel())

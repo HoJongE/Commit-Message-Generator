@@ -67,6 +67,7 @@ struct TagSelectorRow: View {
         .contentShape(Rectangle())
     }
 }
+#if DEBUG
 struct TagSelectorList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -77,3 +78,4 @@ struct TagSelectorList_Previews: PreviewProvider {
         .padding()
     }
 }
+#endif
