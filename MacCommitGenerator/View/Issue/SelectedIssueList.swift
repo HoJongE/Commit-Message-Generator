@@ -63,9 +63,11 @@ extension SelectedIssueList {
     }
 }
 // MARK: - 이슈 선택기 프리뷰
+#if DEBUG
 struct SelectedIssueList_Previews: PreviewProvider {
     static var previews: some View {
         SelectedIssueList(issueType: .ref, issues: .constant(Issue.mocIssue))
             .selectIndicator(sameWith: .tag, current: .tag)
     }
 }
+#endif

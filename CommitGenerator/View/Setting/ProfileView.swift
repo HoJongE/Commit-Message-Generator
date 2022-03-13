@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject private var sheetManager: BottomSheetManager
     private let user: User?
 
     init(of user: User?) {
@@ -31,7 +32,15 @@ struct ProfileView: View {
             .padding(.leading, 8)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .contentShape(Rectangle())
+        .onTapGesture(perform: login)
         .padding()
+    }
+    
+    private func login() {
+        if user == nil {
+            sheetManager.openGithubLogin()
+        }
     }
 }
 

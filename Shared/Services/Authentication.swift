@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 final class Authentication: ObservableObject {
     @Published var user: Lodable<User> = Lodable.empty
@@ -15,6 +16,8 @@ final class Authentication: ObservableObject {
     private let tokenManager: TokenManager
     private let githubService: GithubService
 
+    private var cancellableSet: Set<AnyCancellable> = []
+    
     init(tokenManager: TokenManager = TokenManager.shared, githubService: GithubService = GithubService.shared) {
         self.tokenManager = tokenManager
         self.githubService = githubService
@@ -49,9 +52,16 @@ final class Authentication: ObservableObject {
 
     func getUser() {
         user = Lodable.loading
-        githubService.getUser { result in
-            self.user = result
-        }
+        githubService.getUser().sink(receiveCompletion: {
+            switch $0 {
+            case .failure(let error):
+                self.user = Lodable.error(error: error)
+            default:
+                print("유저 발행 완료")
+            }
+        }, receiveValue: {
+            self.user = Lodable.success(data: $0)
+        }).store(in: &cancellableSet)
     }
 
     func logout() {
@@ -61,9 +71,18 @@ final class Authentication: ObservableObject {
     
     #if os(macOS)
     func deviceflow() {
-        githubService.deviceflow { result in
-            self.deviceflowResult = result
-        }
+        githubService.deviceflow()
+            .sink(receiveCompletion: {
+                switch $0 {
+                case .failure(let error):
+                    self.deviceflowResult = Lodable.error(error: error)
+                default:
+                    print("디바이스 플로우 발행 완료")
+                }
+            }, receiveValue: {
+                self.deviceflowResult = Lodable.success(data: $0)
+            })
+            .store(in: &cancellableSet)
     }
     
     func copyCode() {

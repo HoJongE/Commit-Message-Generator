@@ -82,7 +82,7 @@ struct TagDetail: View {
         PersistenceController.shared.save()
     }
 }
-
+#if DEBUG
 struct TagDetail_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -93,3 +93,4 @@ struct TagDetail_Previews: PreviewProvider {
         }
     }
 }
+#endif

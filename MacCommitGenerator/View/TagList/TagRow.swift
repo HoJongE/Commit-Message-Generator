@@ -48,10 +48,11 @@ struct TagRow: View {
         .frame(height: 80)
     }
 }
-
+#if DEBUG
 struct TagRow_Previews: PreviewProvider {
     static var previews: some View {
         TagRow(MockedCoreData.shared.tag())
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

@@ -12,11 +12,14 @@
 		0000C94927D1CF98005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94827D1CF98005A7D4A /* Assets.xcassets */; };
 		0000C94C27D1CF98005A7D4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */; };
 		0000C95227D1CFC7005A7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938830F627C8828900D22C6A /* Assets.xcassets */; };
+		000D01EC27DD7D2A00339EBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CB3CFF27DCDDCD00394194 /* InfoPlist.strings */; };
+		000D01EE27DD8B8600339EBE /* CommitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D01ED27DD8B8600339EBE /* CommitStyle.swift */; };
 		0025A6E627D99AA700493959 /* CommitWriteIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */; };
 		0036434F27D58B59003AC248 /* AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036434E27D58B59003AC248 /* AddTag.swift */; };
 		004752BC27D8292F004D1013 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BB27D8292F004D1013 /* IssuePicker.swift */; };
 		004752BE27D83337004D1013 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BD27D83337004D1013 /* SelectedIssueList.swift */; };
 		004752BF27D8334C004D1013 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A5FE127CDF09C0055E17B /* IssueList.swift */; };
+		005135C927DDFFF200ED473F /* CommitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D01ED27DD8B8600339EBE /* CommitStyle.swift */; };
 		008C6FEC27D4AF4100278EE3 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FEB27D4AF4100278EE3 /* TagList.swift */; };
 		008C6FEE27D4B06400278EE3 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FED27D4B06400278EE3 /* TagRow.swift */; };
 		008C6FF327D4D3B100278EE3 /* TagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6FF227D4D3B100278EE3 /* TagDetail.swift */; };
@@ -28,6 +31,8 @@
 		00B1067027D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
 		00B1067127D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
 		00B1067227D792990008B4FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1066F27D792990008B4FB /* Extension.swift */; };
+		00CB3CFC27DCDDCD00394194 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CB3CFF27DCDDCD00394194 /* InfoPlist.strings */; };
+		00CB3D0527DCDF1C00394194 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 00CB3D0427DCDF1C00394194 /* LaunchAtLogin */; };
 		00EA159F27D5A9B7002876E7 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D381F427CD13C40047043A /* Lodable.swift */; };
 		00EA15A427D5C887002876E7 /* CommitWriteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA15A327D5C887002876E7 /* CommitWriteHost.swift */; };
 		00EA15A727D5CBC8002876E7 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351EF9027CC5E4000AF6F25 /* CommitViewModel.swift */; };
@@ -172,6 +177,7 @@
 		0000C94827D1CF98005A7D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0000C94B27D1CF98005A7D4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCommitGenerator.entitlements; sourceTree = "<group>"; };
+		000D01ED27DD8B8600339EBE /* CommitStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitStyle.swift; sourceTree = "<group>"; };
 		0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteIndicator.swift; sourceTree = "<group>"; };
 		0036434D27D58ACE003AC248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0036434E27D58B59003AC248 /* AddTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTag.swift; sourceTree = "<group>"; };
@@ -184,6 +190,8 @@
 		00B1066427D6E4370008B4FB /* DeviceflowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceflowResult.swift; sourceTree = "<group>"; };
 		00B1066927D777BD0008B4FB /* VerificationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
 		00B1066F27D792990008B4FB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		00CB3CFE27DCDDCD00394194 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		00CB3D0027DCDE6300394194 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00EA15A327D5C887002876E7 /* CommitWriteHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteHost.swift; sourceTree = "<group>"; };
 		00EA15AA27D5D21C002876E7 /* TagSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
 		00EA15AD27D5D483002876E7 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
@@ -279,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CB3D0527DCDF1C00394194 /* LaunchAtLogin in Frameworks */,
 				893BBFE875F982B862ED351F /* Pods_MacCommitGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,14 +407,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		00EA15A027D5C7E9002876E7 /* Github */ = {
+		00EA15A027D5C7E9002876E7 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				00EA15B227D6300C002876E7 /* GithubProfile.swift */,
 				00B1066927D777BD0008B4FB /* VerificationCode.swift */,
 				00F7CD5C27DADF9000EC0749 /* Setting.swift */,
 			);
-			path = Github;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		00EA15A527D5C88C002876E7 /* Commit */ = {
@@ -458,7 +467,7 @@
 				00EA15AC27D5D47D002876E7 /* Helpers */,
 				00EA15A927D5D213002876E7 /* Tag */,
 				00EA15A527D5C88C002876E7 /* Commit */,
-				00EA15A027D5C7E9002876E7 /* Github */,
+				00EA15A027D5C7E9002876E7 /* Setting */,
 				008C6FE427D4AE1700278EE3 /* TagList */,
 				0000C94627D1CF97005A7D4A /* ContentView.swift */,
 				00FABE1427D22690004E4800 /* Sidebar.swift */,
@@ -579,6 +588,7 @@
 		938830E627C8828800D22C6A = {
 			isa = PBXGroup;
 			children = (
+				00CB3CFF27DCDDCD00394194 /* InfoPlist.strings */,
 				93CB946F27D0D68000140A0F /* IssueWidgetExtension.entitlements */,
 				93B3063127D0606700C6EC3D /* .swiftlint.yml */,
 				00EA159B27D5A864002876E7 /* Shared */,
@@ -666,6 +676,7 @@
 				9356FAF427CF0074004A59C2 /* SettingHost.swift */,
 				9356FAF627CF007F004A59C2 /* ProfileView.swift */,
 				9356FAF827CF055B004A59C2 /* SettingRow.swift */,
+				000D01ED27DD8B8600339EBE /* CommitStyle.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -755,12 +766,16 @@
 				0000C93E27D1CF97005A7D4A /* Sources */,
 				0000C93F27D1CF97005A7D4A /* Frameworks */,
 				0000C94027D1CF97005A7D4A /* Resources */,
+				0047889227DCD9A400548234 /* Copy "Launch at Login Helper" */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MacCommitGenerator;
+			packageProductDependencies = (
+				00CB3D0427DCDF1C00394194 /* LaunchAtLogin */,
+			);
 			productName = MacCommitGenerator;
 			productReference = 0000C94227D1CF97005A7D4A /* MacCommitGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -783,6 +798,8 @@
 				93CB946027D0CC0800140A0F /* PBXTargetDependency */,
 			);
 			name = CommitGenerator;
+			packageProductDependencies = (
+			);
 			productName = CommitGenerator;
 			productReference = 938830EF27C8828800D22C6A /* CommitGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -880,8 +897,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 938830E627C8828800D22C6A;
+			packageReferences = (
+				00CB3D0127DCDF1400394194 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = 938830F027C8828800D22C6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -901,6 +922,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0000C94C27D1CF98005A7D4A /* Preview Assets.xcassets in Resources */,
+				000D01EC27DD7D2A00339EBE /* InfoPlist.strings in Resources */,
 				0000C95227D1CFC7005A7D4A /* Assets.xcassets in Resources */,
 				0000C94927D1CF98005A7D4A /* Assets.xcassets in Resources */,
 			);
@@ -911,6 +933,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B3063227D0606700C6EC3D /* .swiftlint.yml in Resources */,
+				00CB3CFC27DCDDCD00394194 /* InfoPlist.strings in Resources */,
 				938830FA27C8828900D22C6A /* Preview Assets.xcassets in Resources */,
 				938830F727C8828900D22C6A /* Assets.xcassets in Resources */,
 			);
@@ -941,6 +964,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0047889227DCD9A400548234 /* Copy "Launch at Login Helper" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy \"Launch at Login Helper\"";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
 		01F0652140C7464A3C986B0B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1143,6 +1184,7 @@
 				00FABE0E27D1DB68004E4800 /* CopyType.swift in Sources */,
 				008C6FF727D4D6A600278EE3 /* Color.swift in Sources */,
 				00FABE1127D1DEC7004E4800 /* GithubService.swift in Sources */,
+				005135C927DDFFF200ED473F /* CommitStyle.swift in Sources */,
 				00FABE0C27D1DB60004E4800 /* Issue.swift in Sources */,
 				00FABE0827D1DB22004E4800 /* Lodable.swift in Sources */,
 				004752BF27D8334C004D1013 /* IssueList.swift in Sources */,
@@ -1180,6 +1222,7 @@
 				939A5FE227CDF09C0055E17B /* IssueList.swift in Sources */,
 				9351EF9627CC61D300AF6F25 /* Issue.swift in Sources */,
 				93EB6AB527CF465000B69672 /* EditTagView.swift in Sources */,
+				000D01EE27DD8B8600339EBE /* CommitStyle.swift in Sources */,
 				932D888D27C8E0F80072B896 /* TagRow.swift in Sources */,
 				9351EF9327CC612F00AF6F25 /* IssueType.swift in Sources */,
 				9356FB0127CF249B004A59C2 /* EditTagRow.swift in Sources */,
@@ -1264,6 +1307,18 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		00CB3CFF27DCDDCD00394194 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00CB3CFE27DCDDCD00394194 /* en */,
+				00CB3D0027DCDE6300394194 /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		0000C94E27D1CF98005A7D4A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1335,6 +1390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1397,6 +1453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1716,6 +1773,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00CB3D0127DCDF1400394194 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00CB3D0427DCDF1C00394194 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00CB3D0127DCDF1400394194 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9321899D27C9BB5E007472FD /* Database.xcdatamodeld */ = {

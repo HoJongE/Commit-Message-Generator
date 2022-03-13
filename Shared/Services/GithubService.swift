@@ -7,126 +7,90 @@
 
 import Foundation
 import Alamofire
-
+import Combine
+// MARK: - 프로토콜 선언 부분
+protocol GithubServiceProtocol {
+    func getIssues(_ page: Int) -> AnyPublisher<[Issue], Error>
+    func getUser() -> AnyPublisher<User, Error>
+    func deviceflow() -> AnyPublisher<DeviceflowResult, Error>
+    func closeIssue(_ issue: Issue)
+    
+}
+// MARK: - 깃허브 인스턴스
 final class GithubService {
     static let shared: GithubService = GithubService()
 
     private init() {}
-
-    func getIssues(_ page: Int, _ completion : @escaping (Lodable<[Issue]>) -> Void = {_ in}) {
-        let url: String = Const.URL.GITHUB_ISSUE
-        let accessToken: String? = KeyChainManager.shared.readToken()
-
-        guard let accessToken = accessToken else {
-            completion(Lodable.error(error: NetworkError.authenticationError))
-            return
-        }
-
-        let headers: HTTPHeaders = ["Accept": "application/vnd.github.v3+json",
-                                    "Authorization": "token \(accessToken)"]
-        let parameters: Parameters = ["state": "open", "per_page": 100, "page": page]
-
-        AF.request(url,
-                   method: .get,
-                   parameters: parameters,
-                   headers: headers).responseData { result in
-
-            guard let response = result.response, let value = result.value else {
-                completion(Lodable.error(error: NetworkError.responseNotExist))
-                return
+}
+// MARK: - 깃허브 서비스 프로토콜 구현 부분
+extension GithubService : GithubServiceProtocol {
+    
+    func deviceflow() -> AnyPublisher<DeviceflowResult, Error> {
+        let url: String = Const.URL.GITHUB_DEVICE_FLOW
+        let headers: HTTPHeaders = ["Accept": "application/json"]
+        let paramteters: Parameters = ["client_id": Const.GitHub.CLIEND_ID,
+                                       "scope": "repo,user"]
+        
+        return AF.request(url, method: .post, parameters: paramteters, headers: headers)
+            .publishDecodable()
+            .value()
+            .mapError {
+                return NetworkError.afError(error: $0)
             }
-
-            if let error = self.judgeStatus(response.statusCode) {
-                completion(Lodable.error(error: error))
-                return
-            }
-
-            do {
-                let issues: [Issue] = try JSONDecoder().decode([Issue].self, from: value)
-                completion(Lodable.success(data: issues))
-
-            } catch {
-                completion(Lodable.error(error: error))
-            }
-        }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
-
-    func getUser(completion :@escaping (Lodable<User>) -> Void = {_ in}) {
+    
+    func getUser() -> AnyPublisher<User, Error> {
+        
         let url: String = Const.URL.GITHUB_USER
         let accessToken: String? = KeyChainManager.shared.readToken()
+        
         guard let accessToken = accessToken else {
-            completion(Lodable.error(error: NetworkError.authenticationError))
-            return
+            return Fail(error: NetworkError.authenticationError)
+                .eraseToAnyPublisher()
         }
 
         let headers: HTTPHeaders = ["accept": "application/vnd.github.v3+json",
                                      "Authorization": "token \(accessToken)"]
 
-        AF.request(url,
+        return AF.request(url,
                    method: .get,
-                   headers: headers).responseData { result in
-
-            guard let response = result.response, let value = result.value else {
-                completion(Lodable.error(error: NetworkError.responseNotExist))
-                return
+                   headers: headers)
+            .publishDecodable(type: User.self)
+            .value()
+            .mapError { error in
+                NetworkError.afError(error: error)
             }
-
-            if let error = self.judgeStatus(response.statusCode) {
-                completion(Lodable.error(error: error))
-                return
-            }
-
-            do {
-                let user: User = try JSONDecoder().decode(User.self, from: value)
-                completion(Lodable.success(data: user))
-            } catch {
-                completion(Lodable.error(error: error))
-            }
-
-        }
-
-    }
-
-    private func judgeStatus(_ statusCode: Int) -> Error? {
-        #if DEBUG
-        print(statusCode)
-        #endif
-        switch statusCode {
-            case 200: return nil
-            case 304: return NetworkError.error304
-            case 404: return NetworkError.error404
-            case 422: return NetworkError.error422
-            default: return NetworkError.responseNotExist
-        }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
     
-    #if os(macOS)
-    func deviceflow(completion: @escaping (Lodable<DeviceflowResult>) -> Void) {
-        let url: String = Const.URL.GITHUB_DEVICE_FLOW
-        let headers: HTTPHeaders = ["Accept": "application/json"]
-        let paramteters: Parameters = ["client_id": Const.GitHub.CLIEND_ID,
-                                       "scope": "repo,user"]
-        AF.request(url, method: .post, parameters: paramteters, headers: headers).responseData { result in
-            print(result.description)
-            guard let response = result.response, let value = result.value else {
-                completion(Lodable.error(error: NetworkError.responseNotExist))
-                return
-            }
-            
-            if let error = self.judgeStatus(response.statusCode) {
-                completion(Lodable.error(error: error))
-                return
-            }
-            
-            do {
-                let deviceflowResult: DeviceflowResult = try JSONDecoder().decode(DeviceflowResult.self, from: value)
-                completion(Lodable.success(data: deviceflowResult))
-            } catch {
-                completion(Lodable.error(error: error))
-            }
+    func getIssues(_ page: Int) -> AnyPublisher<[Issue], Error> {
+        let url: String = Const.URL.GITHUB_ISSUE
+        let accessToken: String? = KeyChainManager.shared.readToken()
+
+        guard let accessToken = accessToken else {
+            return Fail(error: NetworkError.authenticationError)
+                .eraseToAnyPublisher()
         }
+
+        let headers: HTTPHeaders = ["Accept": "application/vnd.github.v3+json",
+                                    "Authorization": "token \(accessToken)"]
+        let parameters: Parameters = ["state": "open", "per_page": 100, "page": page]
+        
+        return AF.request(url,
+                   method: .get,
+                   parameters: parameters,
+                   headers: headers)
+            .publishDecodable(type: [Issue].self)
+            .value()
+            .mapError { error in
+                NetworkError.afError(error: error)
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
-    #endif
     
     func closeIssue(_ issue: Issue) {
         let accessToken: String? = KeyChainManager.shared.readToken()
@@ -141,16 +105,7 @@ final class GithubService {
         
         let parameters: Parameters = ["state": "closed"]
         
-        AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding() ,headers: headers).responseData { result in
-            guard let response = result.response else {
-                return
-            }
-            
-            if let error = self.judgeStatus(response.statusCode) {
-                print(error)
-                return
-            }
-            
-        }
+        _ = AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding(), headers: headers)
     }
+    
 }

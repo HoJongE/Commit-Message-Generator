@@ -93,6 +93,7 @@ extension CommitWriteHost {
     private func toolbar() -> some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
             copyButton
+                .disabled(!commitViewModel.correctForm)
         }
         ToolbarItem(placement: .primaryAction) {
             resetButton

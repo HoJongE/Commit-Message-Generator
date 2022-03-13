@@ -7,13 +7,12 @@
 
 import Foundation
 import SwiftUI
-
 // MARK: - 이슈 리스트
 struct IssueList: View {
     @Environment(\.presentationMode) private var dismiss
+    @EnvironmentObject private var commitViewModel: CommitViewModel
     let issues: [Issue]
     let addIssue: (Issue) -> Void
-    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack {
@@ -111,7 +110,7 @@ extension AnyTransition {
         .opacity.animation(.easeInOut).combined(with: .move(edge: .top))
     }
 }
-
+#if DEBUG
 // MARK: - 이슈 리스트 프리뷰
 struct Previews_IssueList_Previews: PreviewProvider {
     static var previews: some View {
@@ -120,7 +119,8 @@ struct Previews_IssueList_Previews: PreviewProvider {
                 .previewLayout(.sizeThatFits)
             IssueList(issues: Issue.mocIssue) {_ in}
         }
+        .preferredColorScheme(.dark)
         .background(Color.background1)
     }
-    
 }
+#endif

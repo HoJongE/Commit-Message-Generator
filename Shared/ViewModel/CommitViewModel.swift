@@ -6,15 +6,8 @@
 //
 
 import Foundation
-#if canImport(Appkit)
-import AppKit
-#endif
-
-#if canImport(UIKit)
-import UIKit
-#endif
 import SwiftUI
-
+import Combine
 final class CommitViewModel: ObservableObject {
     
     @Published var title: String = ""
@@ -29,6 +22,12 @@ final class CommitViewModel: ObservableObject {
     @Published var selectedFunction: Tag?
     
     @Published var issues: Lodable<[Issue]> = Lodable.empty
+    
+    private var cancellableSet: Set<AnyCancellable> = []
+    
+    var correctForm: Bool {
+        selectedTag != nil && selectedFunction != nil && !title.isEmpty
+    }
     
     var filteredIssues: [Issue] {
         switch self.issues {
@@ -52,7 +51,6 @@ final class CommitViewModel: ObservableObject {
     }
     
     func selectTag(_ tag: Tag) {
-        
         switch tag.category {
         case "태그" :
             selectedTag = tag
@@ -64,21 +62,9 @@ final class CommitViewModel: ObservableObject {
     }
     
     func copyToClipboard(_ copyType: CopyType) -> Bool {
-        do {
-            #if canImport(UIKit)
-            try UIPasteboard.general.string = commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
-            #endif
-            
-            #if canImport(AppKit)
-            let pasteboard: NSPasteboard = NSPasteboard.general
-            pasteboard.clearContents()
-            try pasteboard.setString(commitWriter.write(copyType: copyType, tag: selectedTag, function: selectedFunction, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues), forType: .string)
-            #endif
-            closeResolvedIssue()
-            return true
-        } catch {
-            return false
-        }
+        closeResolvedIssue()
+        return commitWriter.write(copyType: copyType, tag: selectedTag!, function: selectedFunction!, title: title, body: body, resolved: resolvedIssues, fixing: fixingIssues, ref: refIssues, related: relatedIssues)
+        
     }
     private func closeResolvedIssue() {
         guard UserDefaults.standard.bool(forKey: "autoClose") else {
@@ -101,10 +87,15 @@ final class CommitViewModel: ObservableObject {
     }
     
     func getIssues(_ page: Int) {
-        githubService.getIssues(page) { result in
-            withAnimation {
-                self.issues = result
-            }
-        }
+        githubService.getIssues(page)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    self.issues = Lodable.error(error: error)
+                default: print("이슈 발행 완료")
+                }
+            }, receiveValue: {
+                self.issues = Lodable.success(data: $0)
+            }).store(in: &cancellableSet)
     }
 }

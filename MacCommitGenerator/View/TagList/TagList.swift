@@ -57,7 +57,7 @@ struct TagList: View {
         }
     }
 }
-
+#if DEBUG
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -70,3 +70,4 @@ struct TagList_Previews: PreviewProvider {
         }
     }
 }
+#endif
