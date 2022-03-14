@@ -52,16 +52,11 @@ final class Authentication: ObservableObject {
 
     func getUser() {
         user = Lodable.loading
-        githubService.getUser().sink(receiveCompletion: {
-            switch $0 {
-            case .failure(let error):
-                self.user = Lodable.error(error: error)
-            default:
-                print("유저 발행 완료")
-            }
-        }, receiveValue: {
-            self.user = Lodable.success(data: $0)
-        }).store(in: &cancellableSet)
+        githubService.getUser()
+            .sink {
+            self.user = $0
+        }
+            .store(in: &cancellableSet)
     }
 
     func logout() {
@@ -72,16 +67,9 @@ final class Authentication: ObservableObject {
     #if os(macOS)
     func deviceflow() {
         githubService.deviceflow()
-            .sink(receiveCompletion: {
-                switch $0 {
-                case .failure(let error):
-                    self.deviceflowResult = Lodable.error(error: error)
-                default:
-                    print("디바이스 플로우 발행 완료")
-                }
-            }, receiveValue: {
-                self.deviceflowResult = Lodable.success(data: $0)
-            })
+            .sink {
+                self.deviceflowResult = $0
+            }
             .store(in: &cancellableSet)
     }
     
