@@ -27,7 +27,6 @@ struct MockedCoreData {
             }
         }
         initTags()
-
     }
 
     func save(completion: @escaping (Error?) -> Void = {_ in}) {

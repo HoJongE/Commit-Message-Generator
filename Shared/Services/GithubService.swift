@@ -22,16 +22,73 @@ final class GithubService {
 
     private init() {}
 }
+// MARK: - 깃허브 서비스 API CALL 구현
+extension GithubService {
+    enum API {
+        case issues(code: String)
+        case user(code: String)
+        case deviceflow
+        case closeIssue(issue: Issue, code: String)
+    }
+}
+
+extension GithubService.API: APICall {
+    var method: HTTPMethod {
+        switch self {
+        case .issues: return .get
+        case .user: return .get
+        case .deviceflow: return .post
+        case .closeIssue: return .patch
+        }
+    }
+    var path: String {
+        switch self {
+        case .closeIssue(issue: let issue, _):
+            return "/repos/\(issue.organization)/\(issue.repository)/issues/\(issue.number)"
+        case .deviceflow:
+            return Const.URL.GITHUB_DEVICE_FLOW
+        case .issues:
+            return Const.URL.GITHUB_ISSUE
+        case .user:
+            return Const.URL.GITHUB_USER
+        }
+    }
+    
+    var parameters: Parameters? {
+        switch self {
+        case .user:
+            return nil
+        case .issues:
+            return ["state": "open", "per_page": 100, "page": 1]
+        case .deviceflow:
+            return ["client_id": Const.GitHub.CLIEND_ID,
+                    "scope": "repo,user"]
+        case .closeIssue:
+            return ["state": "closed"]
+        }
+    }
+    
+    var headers: HTTPHeaders? {
+        switch self {
+        case .closeIssue(_, let code):
+            return ["accept": "application/vnd.github.v3+json",
+                                        "Authorization": "token \(code)"]
+        case .deviceflow:
+            return  ["Accept": "application/json"]
+        case .user(let code):
+            return ["accept": "application/vnd.github.v3+json",
+                                         "Authorization": "token \(code)"]
+        case .issues(let code):
+            return ["Accept": "application/vnd.github.v3+json",
+                                        "Authorization": "token \(code)"]
+        }
+    }
+}
 // MARK: - 깃허브 서비스 프로토콜 구현 부분
-extension GithubService : GithubServiceProtocol {
+extension GithubService: GithubServiceProtocol {
     
     func deviceflow() -> AnyPublisher<Lodable<DeviceflowResult>, Never> {
-        let url: String = Const.URL.GITHUB_DEVICE_FLOW
-        let headers: HTTPHeaders = ["Accept": "application/json"]
-        let paramteters: Parameters = ["client_id": Const.GitHub.CLIEND_ID,
-                                       "scope": "repo,user"]
-        
-        return AF.request(url, method: .post, parameters: paramteters, headers: headers)
+        return GithubService.API.deviceflow.afRequest(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
             .publishDecodable(type: DeviceflowResult.self)
             .value()
             .map {
@@ -45,7 +102,6 @@ extension GithubService : GithubServiceProtocol {
     }
     
     func getUser() -> AnyPublisher<Lodable<User>, Never> {
-        let url: String = Const.URL.GITHUB_USER
         let accessToken: String? = KeyChainManager.shared.readToken()
         
         guard let accessToken = accessToken else {
@@ -53,12 +109,7 @@ extension GithubService : GithubServiceProtocol {
                 .eraseToAnyPublisher()
         }
 
-        let headers: HTTPHeaders = ["accept": "application/vnd.github.v3+json",
-                                     "Authorization": "token \(accessToken)"]
-
-        return AF.request(url,
-                   method: .get,
-                   headers: headers)
+        return GithubService.API.user(code: accessToken).afRequest(baseURL: Const.URL.GITHUB_BASE_URL)
             .publishDecodable(type: User.self)
             .value()
             .map {
@@ -73,22 +124,15 @@ extension GithubService : GithubServiceProtocol {
     }
     
     func getIssues(_ page: Int) -> AnyPublisher<Lodable<[Issue]>, Never> {
-        let url: String = Const.URL.GITHUB_ISSUE
         let accessToken: String? = KeyChainManager.shared.readToken()
 
         guard let accessToken = accessToken else {
             return Just(Lodable.error(error: NetworkError.authenticationError))
                 .eraseToAnyPublisher()
         }
-
-        let headers: HTTPHeaders = ["Accept": "application/vnd.github.v3+json",
-                                    "Authorization": "token \(accessToken)"]
-        let parameters: Parameters = ["state": "open", "per_page": 100, "page": page]
         
-        return AF.request(url,
-                   method: .get,
-                   parameters: parameters,
-                   headers: headers)
+        return GithubService.API.issues(code: accessToken)
+            .afRequest(baseURL: Const.URL.GITHUB_BASE_URL)
             .publishDecodable(type: [Issue].self)
             .value()
             .map {
@@ -104,17 +148,14 @@ extension GithubService : GithubServiceProtocol {
     
     func closeIssue(_ issue: Issue) {
         let accessToken: String? = KeyChainManager.shared.readToken()
-
         guard let accessToken = accessToken else {
             return
         }
-        let url: String = Const.URL.GITHUB_BASE_URL + "/repos/\(issue.user.login)/\(issue.repository.lowercased())/issues/\(issue.number)"
-        
-        let headers: HTTPHeaders = ["accept": "application/vnd.github.v3+json",
-                                    "Authorization": "token \(accessToken)"]
-        
-        let parameters: Parameters = ["state": "closed"]
-        
-        _ = AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding(), headers: headers)
+        GithubService.API.closeIssue(issue: issue, code: accessToken).afRequest(baseURL: Const.URL.GITHUB_BASE_URL, encoding: JSONEncoding())
+            .responseData { data in
+                print(data.result)
+                print(data)
+                print(data.debugDescription)
+            }
     }
 }

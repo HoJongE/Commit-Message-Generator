@@ -13,12 +13,12 @@ final class Authentication: ObservableObject {
     @Published var user: Lodable<User> = Lodable.empty
     @Published var deviceflowResult: Lodable<DeviceflowResult> = Lodable.empty
     
-    private let tokenManager: TokenManager
+    private let tokenManager: TokenService
     private let githubService: GithubService
 
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(tokenManager: TokenManager = TokenManager.shared, githubService: GithubService = GithubService.shared) {
+    init(tokenManager: TokenService = TokenService.shared, githubService: GithubService = GithubService.shared) {
         self.tokenManager = tokenManager
         self.githubService = githubService
         getUser()
@@ -36,18 +36,19 @@ final class Authentication: ObservableObject {
 
     func requestAccessToken(with code: String) {
         user = Lodable.loading
-        tokenManager.requestAccessToken(with: code) { result in
-            switch result {
-                case .success(data: let data):
+        tokenManager.requestAccessToken(with: code)
+            .sink {
+                switch $0 {
+                case .success(data: let code):
                     _ = KeyChainManager.shared.deleteToken()
-                    _ = KeyChainManager.shared.saveToken(data)
-                    self.getUser()
+                   _ = KeyChainManager.shared.saveToken(code)
+                   self.getUser()
                 case .error(error: let error):
                     self.user = Lodable.error(error: error)
                 default:
                     self.user = Lodable.error(error: NetworkError.authenticationError)
-            }
-        }
+                }
+            }.store(in: &cancellableSet)
     }
 
     func getUser() {
@@ -89,18 +90,19 @@ final class Authentication: ObservableObject {
             return
         }
         user = Lodable.loading
-        tokenManager.requestAccessTokenWithDeviceflow(with: data.device_code) { result in
-            switch result {
-                case .success(data: let data):
+        tokenManager.requestAccessTokenWithDeviceflow(with: data.device_code)
+            .sink {
+                switch $0 {
+                case .success(data: let code):
                     _ = KeyChainManager.shared.deleteToken()
-                    _ = KeyChainManager.shared.saveToken(data)
-                    self.getUser()
+                   _ = KeyChainManager.shared.saveToken(code)
+                   self.getUser()
                 case .error(error: let error):
                     self.user = Lodable.error(error: error)
                 default:
                     self.user = Lodable.error(error: NetworkError.authenticationError)
-            }
-        }
+                }
+            }.store(in: &cancellableSet)
     }
     #endif
 }

@@ -30,6 +30,10 @@ extension Issue {
     var repository: String {
         String(repository_url.split(separator: "/").last ?? "")
     }
+    
+    var organization: String {
+        String(repository_url.split(separator: "/").dropLast().last ?? "")
+    }
 }
 
 extension Issue {
