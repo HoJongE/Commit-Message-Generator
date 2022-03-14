@@ -34,7 +34,7 @@ struct CommitWriter {
 
     private func copyToClipboard(_ value: String) throws {
 #if canImport(UIKit)
-        try UIPasteboard.general.string = value
+        UIPasteboard.general.string = value
 #endif
         
 #if canImport(AppKit)
@@ -43,7 +43,6 @@ struct CommitWriter {
         pasteboard.setString(value, forType: .string)
         #endif
     }
-    
     
     private func writeTitle(tag: Tag, function: Tag, title: String) throws -> String {
 
