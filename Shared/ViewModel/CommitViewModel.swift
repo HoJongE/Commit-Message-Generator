@@ -88,14 +88,9 @@ final class CommitViewModel: ObservableObject {
     
     func getIssues(_ page: Int) {
         githubService.getIssues(page)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error):
-                    self.issues = Lodable.error(error: error)
-                default: print("이슈 발행 완료")
-                }
-            }, receiveValue: {
-                self.issues = Lodable.success(data: $0)
-            }).store(in: &cancellableSet)
+            .sink {
+                self.issues = $0
+            }
+            .store(in: &cancellableSet)
     }
 }
