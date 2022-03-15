@@ -10,6 +10,7 @@ import AlertToast
 // MARK: - 커밋 작성 화면
 struct CommitWriteHost: View {
     @EnvironmentObject private var commitViewModel: CommitViewModel
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @State private var secondViewType: SecondView = .empty
     @State private var showSuccess: Bool = false
     @State private var showError: Bool = false
@@ -59,11 +60,11 @@ extension CommitWriteHost {
         case .empty:
             EmptyView()
         case .tag:
-            TagSelectorList(category: "태그") {
+            TagSelectorList(tags: tagViewModel.tags, category: "태그") {
                 commitViewModel.selectedTag = $0
             }
         case .function:
-            TagSelectorList(category: "기능") {
+            TagSelectorList(tags: tagViewModel.functions, category: "기능") {
                 commitViewModel.selectedFunction = $0
             }
         case .resolved:
@@ -215,6 +216,7 @@ extension CommitWriteHost {
 struct CommitWriteHost_Previews: PreviewProvider {
     static var previews: some View {
         CommitWriteHost()
+            .environmentObject(TagViewModel())
             .environmentObject(CommitViewModel())
     }
 }

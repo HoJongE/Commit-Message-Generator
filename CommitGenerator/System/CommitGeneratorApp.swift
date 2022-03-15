@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CommitGeneratorApp: App {
 
-    private let persistenceController: PersistenceController = PersistenceController.shared
+    @StateObject private var tagViewModel: TagViewModel = TagViewModel()
     @StateObject private var authentication: Authentication = Authentication()
     @StateObject private var commitViewModel: CommitViewModel = CommitViewModel()
     @StateObject private var bottomSheetManager: BottomSheetManager = BottomSheetManager()
@@ -19,7 +19,7 @@ struct CommitGeneratorApp: App {
 
     init() {
         if !UserDefaults.standard.bool(forKey: "first_time") {
-            persistenceController.reset()
+            DefaultTagRepository.shared.reset()
             UserDefaults.standard.set(true, forKey: "first_time")
         }
     }
@@ -27,11 +27,10 @@ struct CommitGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
             RootTabView()
-                .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext)
                 .environmentObject(authentication)
                 .environmentObject(commitViewModel)
                 .environmentObject(bottomSheetManager)
+                .environmentObject(tagViewModel)
                 .fullScreenCover(isPresented: $bottomSheetManager.isPresent) {
                     BottomSheetContainer()
                         .environmentObject(authentication)
@@ -46,7 +45,6 @@ struct CommitGeneratorApp: App {
             switch newScenePhase {
                 case .background:
                     print("Scene is background")
-                    persistenceController.save()
                 case .inactive:
                     print("Scene is inactive")
                 case .active:

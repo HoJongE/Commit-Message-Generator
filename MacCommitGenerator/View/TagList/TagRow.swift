@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TagRow: View {
     @ObservedObject private var tag: Tag
+    @EnvironmentObject private var tagViewModel: TagViewModel
     
     init(_ tag: Tag) {
         self.tag = tag
@@ -39,7 +40,7 @@ struct TagRow: View {
         .contextMenu {
             Button {
                 withAnimation {
-                    PersistenceController.shared.delete(tag)
+                    tagViewModel.deleteTag(tag)
                 }
             } label: {
                 Label("삭제하기", systemImage: "trash.fill")

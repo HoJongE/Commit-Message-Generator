@@ -50,7 +50,7 @@ extension SettingHost {
     struct ResetButton: View {
 
         @State private var showResetAlert = false
-
+        let reset: () -> Void
         var body: some View {
             HStack(alignment: .center) {
                 Image("reset")
@@ -63,16 +63,13 @@ extension SettingHost {
                 Spacer()
             }
             .alert("태그를 리셋하시겠습니까?", isPresented: $showResetAlert) {
-                Button("리셋", role: .destructive, action: resetTags)
+                Button("리셋", role: .destructive, action: reset)
             }
             .contentShape(Rectangle())
             .onTapGesture {
                 showResetAlert = true
             }
             .settingRow()
-        }
-        private func resetTags() {
-            PersistenceController.shared.reset()
         }
     }
 }
@@ -128,7 +125,7 @@ struct TagSettingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SettingHost.TagSettingView("태그", image: "tag.fill", tint: .brand)
-            SettingHost.ResetButton()
+            SettingHost.ResetButton {}
             SettingHost.CloseResovledIssue()
             SettingHost.CommitStyle()
         }

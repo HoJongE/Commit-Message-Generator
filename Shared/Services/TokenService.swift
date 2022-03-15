@@ -10,8 +10,8 @@ import Alamofire
 import Combine
 // MARK: - 토큰 서비스 프로토콜
 protocol TokenServiceProtocol {
-    func requestAccessToken(with code: String) -> AnyPublisher<Lodable<String>, Never>
-    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Lodable<String>, Never>
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<String>, Never>
+    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Loadable<String>, Never>
 }
 // MARK: - 토큰 서비스 인스턴스
 final class TokenService {
@@ -51,33 +51,32 @@ extension TokenService.API: APICall {
 }
 // MARK: - 토큰 서비스 프로토콜 구현부분
 extension TokenService: TokenServiceProtocol {
-    
-    func requestAccessToken(with code: String) -> AnyPublisher<Lodable<String>, Never> {
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<String>, Never> {
         return TokenService.API.accessToken(code: code)
-            .afRequest(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
+            .request(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
             .publishResponse(using: DecodableResponseSerializer<[String: String]>())
             .map {
                 switch $0.result {
                 case let .success(dic):
-                    return Lodable.success(data: dic["access_token"]!)
+                    return Loadable.success(data: dic["access_token"]!)
                 case let .failure(error):
-                    return Lodable.error(error: error)
+                    return Loadable.error(error: error)
                 }
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
-    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Lodable<String>, Never> {
+    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Loadable<String>, Never> {
         return TokenService.API.accessTokenWithDeviceflow(code: code)
-            .afRequest(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
+            .request(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
             .publishResponse(using: DecodableResponseSerializer<[String: String]>())
             .map {
                 switch $0.result {
                 case let .success(dic):
-                    return Lodable.success(data: dic["access_token"]!)
+                    return Loadable.success(data: dic["access_token"]!)
                 case let .failure(error):
-                    return Lodable.error(error: error)
+                    return Loadable.error(error: error)
                 }
             }
             .receive(on: DispatchQueue.main)

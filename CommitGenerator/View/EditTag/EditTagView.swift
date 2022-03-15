@@ -8,6 +8,7 @@
 import SwiftUI
 // MARK: - 편집 태그 뷰
 struct EditTagView: View {
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @Environment(\.dismiss) private var dismiss: DismissAction
     private var tag: Tag?
 
@@ -77,15 +78,12 @@ extension EditTagView {
         guard let tag = tag else {
             return
         }
-        tag.name = name
-        tag.tagDescription = tagDescription.count == 0 ? nil : tagDescription
-        tag.colorHex = color.hexaRGB
-        PersistenceController.shared.save()
+        tagViewModel.modifyTag(change: tag, name: name, color: color.hexaRGB ?? "#123456", description: tagDescription)
         dismiss()
     }
 
     private func addTag() {
-        _ = PersistenceController.shared.addTag(name: name, description: tagDescription, category: category, color: color)
+        tagViewModel.addTag(name: name, colorHex: color.hexaRGB ?? "#123456", tagDescription: tagDescription, category: category)
         dismiss()
     }
 }

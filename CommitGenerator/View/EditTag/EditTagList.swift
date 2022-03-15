@@ -8,19 +8,11 @@
 import SwiftUI
 // MARK: - 이슈 편집 리스트
 struct EditTagList: View {
+    private let tags: [Tag]
     private let title: String
     private let onDelete: (Tag) -> Void
-
-    @Environment(\.managedObjectContext) private var managedObjectContext
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var tags: FetchedResults<Tag>
-
-    private var filteredTag: [Tag] {
-        tags.filter { tag in
-            tag.category == title
-        }
-    }
-
-    init(title: String, onDelete : @escaping (Tag) -> Void) {
+    init(tags: [Tag], title: String, onDelete : @escaping (Tag) -> Void) {
+        self.tags = tags
         self.title = title
         self.onDelete = onDelete
     }
@@ -28,13 +20,13 @@ struct EditTagList: View {
     var body: some View {
         List {
             Section(content: {
-                ForEach(filteredTag, id: \.self) { tag in
+                ForEach(tags, id: \.self) { tag in
                     EditTagRow(tag: tag)
                         .listRowInsets(.init())
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        onDelete(filteredTag[index])
+                        onDelete(tags[index])
                     }
                 }
             }, header: {listheader})
@@ -63,7 +55,7 @@ struct EditTagList: View {
 struct EditTagList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EditTagList(title: "태그") { tag in
+            EditTagList(tags: [], title: "태그") { tag in
                 MockedCoreData.shared.delete(tag)
             }
         }

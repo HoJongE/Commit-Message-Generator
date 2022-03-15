@@ -11,7 +11,7 @@ struct SettingHost: View {
 
     @EnvironmentObject private var authentication: Authentication
     @EnvironmentObject private var bottomSheetManager: BottomSheetManager
-
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @State private var showingLogoutAlert: Bool = false
 
     var body: some View {
@@ -20,15 +20,15 @@ struct SettingHost: View {
             Group {
                 Text("태그 편집").sectionText()
                 Divider().background(.gray)
-                NavigationLink(destination: EditTagList(title: "태그", onDelete: deleteTag(tag:))) {
+                NavigationLink(destination: EditTagList(tags: tagViewModel.tags, title: "태그", onDelete: deleteTag(tag:))) {
                     TagSettingView("태그", image: "tag.fill", tint: .brand)
                 }
                 Divider().background(.gray)
-                NavigationLink(destination: EditTagList(title: "기능", onDelete: deleteTag(tag:))) {
+                NavigationLink(destination: EditTagList(tags: tagViewModel.functions, title: "기능", onDelete: deleteTag(tag:))) {
                     TagSettingView("기능", image: "square.and.pencil", tint: .orange)
                 }
                 Divider().background(.gray)
-                ResetButton()
+                ResetButton(reset: tagViewModel.reset)
                 Divider().background(.gray)
             }
             Group {
@@ -70,8 +70,7 @@ struct SettingHost: View {
 
     // MARK: - 태그 삭제 이벤트
     private func deleteTag(tag: Tag) {
-        print("삭제 " + tag.description)
-        PersistenceController.shared.delete(tag)
+        tagViewModel.deleteTag(tag)
     }
 }
 

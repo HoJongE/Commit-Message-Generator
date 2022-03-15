@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddTag: View {
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @Environment(\.presentationMode) private var presentationMode
     @State private var name: String = ""
     @State private var tagDescription: String = ""
@@ -60,7 +61,7 @@ struct AddTag: View {
     
     private func addTag() {
         withAnimation {
-            _ = PersistenceController.shared.addTag(name: name, description: tagDescription, category: category.rawValue, color: color)
+            tagViewModel.addTag(name: name, colorHex: color.hexaRGB ?? "#123456", tagDescription: tagDescription, category: category.rawValue)
             presentationMode.wrappedValue.dismiss()
         }
     }

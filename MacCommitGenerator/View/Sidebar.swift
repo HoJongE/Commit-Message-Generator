@@ -10,6 +10,7 @@ import Foundation
 
 struct Sidebar: View {
     
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @Binding var viewType: ContentView.ViewType?
     @State private var showResetAlert: Bool = false
     
@@ -53,7 +54,7 @@ struct Sidebar: View {
     }
     
     private func reset() {
-        PersistenceController.shared.reset()
+        tagViewModel.reset()
     }
 }
 // MARK: - 사이드바 아이템

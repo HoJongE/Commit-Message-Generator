@@ -33,7 +33,7 @@ struct VerificationCode: View {
     
     @ViewBuilder
     private var codeList: some View {
-        if case let Lodable.success(data: data) = authentication.deviceflowResult {
+        if case let Loadable.success(data: data) = authentication.deviceflowResult {
             HStack(spacing: 8) {
                 ForEach(0..<4) {
                     CodeColumn(code: String(data.user_code.getChar(at: $0)))
