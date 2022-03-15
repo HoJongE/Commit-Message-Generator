@@ -10,25 +10,23 @@ import Foundation
 
  @main
 struct MacCommitGeneratorApp: App {
-    private let persistenceController: PersistenceController = PersistenceController.shared
     @StateObject private var commitViewModel: CommitViewModel = CommitViewModel()
     @StateObject private var authenticaton: Authentication = Authentication()
+    @StateObject private var tagViewModel: TagViewModel = TagViewModel()
     
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init() {
         if !UserDefaults.standard.bool(forKey: "first_time") {
-            print("리셋!!")
-            persistenceController.reset()
+            DefaultTagRepository.shared.reset()
             UserDefaults.standard.set(true, forKey: "first_time")
         }
     }
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext)
                 .environmentObject(commitViewModel)
                 .environmentObject(authenticaton)
+                .environmentObject(tagViewModel)
         }
         .commands {
             SidebarCommands()
@@ -37,8 +35,8 @@ struct MacCommitGeneratorApp: App {
         
         WindowGroup {
             AddTag()
-                .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext)
+                .environmentObject(tagViewModel)
+
         }
         .handlesExternalEvents(matching: Set(arrayLiteral: Window.addTagView.rawValue))
     }

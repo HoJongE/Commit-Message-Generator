@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @State private var viewType: ViewType? = .commitWrite
-    
+    @EnvironmentObject private var tagViewModel: TagViewModel
     var body: some View {
         NavigationView {
             Sidebar(viewType: $viewType)
@@ -27,9 +27,9 @@ struct ContentView: View {
         case .some(.commitWrite):
             CommitWriteHost()
         case .some(.editTag):
-            TagList(category: "태그")
+            TagList(tags: tagViewModel.tags, category: "태그")
         case .some(.editFunction):
-            TagList(category: "기능")
+            TagList(tags: tagViewModel.functions, category: "기능")
         case .some(.githubSetting):
             Setting()
         case .some(.commitStyleGuide):

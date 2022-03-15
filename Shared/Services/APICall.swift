@@ -16,7 +16,7 @@ protocol APICall {
 }
 
 extension APICall {
-    func afRequest(baseURL: String, encoding: ParameterEncoding? = nil) -> DataRequest {
+    func request(baseURL: String, encoding: ParameterEncoding? = nil) -> DataRequest {
         if let encoding = encoding {
             return AF.request(baseURL + path, method: method, parameters: parameters, encoding: encoding, headers: headers)
         } else {

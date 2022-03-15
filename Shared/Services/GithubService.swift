@@ -10,9 +10,8 @@ import Alamofire
 import Combine
 // MARK: - 프로토콜 선언 부분
 protocol GithubServiceProtocol {
-    func getIssues(_ page: Int) -> AnyPublisher<Lodable<[Issue]>, Never>
-    func getUser() -> AnyPublisher<Lodable<User>, Never>
-    func deviceflow() -> AnyPublisher<Lodable<DeviceflowResult>, Never>
+    func getIssues(_ page: Int) -> AnyPublisher<Loadable<[Issue]>, Never>
+    func getUser() -> AnyPublisher<Loadable<User>, Never>
     func closeIssue(_ issue: Issue)
     
 }
@@ -86,60 +85,46 @@ extension GithubService.API: APICall {
 }
 // MARK: - 깃허브 서비스 프로토콜 구현 부분
 extension GithubService: GithubServiceProtocol {
-    
-    func deviceflow() -> AnyPublisher<Lodable<DeviceflowResult>, Never> {
-        return GithubService.API.deviceflow.afRequest(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
-            .publishDecodable(type: DeviceflowResult.self)
-            .value()
-            .map {
-                Lodable.success(data: $0)
-            }
-            .catch { (error) -> AnyPublisher<Lodable<DeviceflowResult>, Never> in
-                Just(Lodable.error(error: error)).eraseToAnyPublisher()
-            }
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
-    }
-    
-    func getUser() -> AnyPublisher<Lodable<User>, Never> {
+
+    func getUser() -> AnyPublisher<Loadable<User>, Never> {
         let accessToken: String? = KeyChainManager.shared.readToken()
         
         guard let accessToken = accessToken else {
-            return Just(Lodable.error(error: NetworkError.authenticationError))
+            return Just(Loadable.error(error: NetworkError.authenticationError))
                 .eraseToAnyPublisher()
         }
 
-        return GithubService.API.user(code: accessToken).afRequest(baseURL: Const.URL.GITHUB_BASE_URL)
+        return GithubService.API.user(code: accessToken).request(baseURL: Const.URL.GITHUB_BASE_URL)
             .publishDecodable(type: User.self)
             .value()
             .map {
-                Lodable.success(data: $0)
+                Loadable.success(data: $0)
             }
             .catch {
-                Just(Lodable.error(error: $0))
+                Just(Loadable.error(error: $0))
                     .eraseToAnyPublisher()
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
-    func getIssues(_ page: Int) -> AnyPublisher<Lodable<[Issue]>, Never> {
+    func getIssues(_ page: Int) -> AnyPublisher<Loadable<[Issue]>, Never> {
         let accessToken: String? = KeyChainManager.shared.readToken()
 
         guard let accessToken = accessToken else {
-            return Just(Lodable.error(error: NetworkError.authenticationError))
+            return Just(Loadable.error(error: NetworkError.authenticationError))
                 .eraseToAnyPublisher()
         }
         
         return GithubService.API.issues(code: accessToken)
-            .afRequest(baseURL: Const.URL.GITHUB_BASE_URL)
+            .request(baseURL: Const.URL.GITHUB_BASE_URL)
             .publishDecodable(type: [Issue].self)
             .value()
             .map {
-                Lodable.success(data: $0)
+                Loadable.success(data: $0)
             }
             .catch {
-                Just(Lodable.error(error: $0))
+                Just(Loadable.error(error: $0))
                     .eraseToAnyPublisher()
             }
             .receive(on: DispatchQueue.main)
@@ -151,7 +136,7 @@ extension GithubService: GithubServiceProtocol {
         guard let accessToken = accessToken else {
             return
         }
-        GithubService.API.closeIssue(issue: issue, code: accessToken).afRequest(baseURL: Const.URL.GITHUB_BASE_URL, encoding: JSONEncoding())
+        GithubService.API.closeIssue(issue: issue, code: accessToken).request(baseURL: Const.URL.GITHUB_BASE_URL, encoding: JSONEncoding())
             .responseData { data in
                 print(data.result)
                 print(data)

@@ -10,17 +10,15 @@ import SwiftUI
 import Combine
 
 final class Authentication: ObservableObject {
-    @Published var user: Lodable<User> = Lodable.empty
-    @Published var deviceflowResult: Lodable<DeviceflowResult> = Lodable.empty
+    @Published var user: Loadable<User> = Loadable.empty
+    @Published var deviceflowResult: Loadable<DeviceflowResult> = Loadable.empty
     
-    private let tokenManager: TokenService
-    private let githubService: GithubService
+    private let userRepository: UserRepository
 
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(tokenManager: TokenService = TokenService.shared, githubService: GithubService = GithubService.shared) {
-        self.tokenManager = tokenManager
-        self.githubService = githubService
+    init(userRepository: UserRepository = DefaultUserRepository.shared) {
+        self.userRepository = userRepository
         getUser()
     }
 
@@ -35,8 +33,8 @@ final class Authentication: ObservableObject {
     #endif
 
     func requestAccessToken(with code: String) {
-        user = Lodable.loading
-        tokenManager.requestAccessToken(with: code)
+        user = Loadable.loading
+        userRepository.requestAccessToken(with: code)
             .sink {
                 switch $0 {
                 case .success(data: let code):
@@ -44,16 +42,16 @@ final class Authentication: ObservableObject {
                    _ = KeyChainManager.shared.saveToken(code)
                    self.getUser()
                 case .error(error: let error):
-                    self.user = Lodable.error(error: error)
+                    self.user = Loadable.error(error: error)
                 default:
-                    self.user = Lodable.error(error: NetworkError.authenticationError)
+                    self.user = Loadable.error(error: NetworkError.authenticationError)
                 }
             }.store(in: &cancellableSet)
     }
 
     func getUser() {
-        user = Lodable.loading
-        githubService.getUser()
+        user = Loadable.loading
+        userRepository.getUser()
             .sink {
             self.user = $0
         }
@@ -62,12 +60,12 @@ final class Authentication: ObservableObject {
 
     func logout() {
         _ = KeyChainManager.shared.deleteToken()
-        user = Lodable.empty
+        user = Loadable.empty
     }
     
     #if os(macOS)
     func deviceflow() {
-        githubService.deviceflow()
+        userRepository.deviceflow()
             .sink {
                 self.deviceflowResult = $0
             }
@@ -75,7 +73,7 @@ final class Authentication: ObservableObject {
     }
     
     func copyCode() {
-        guard case Lodable.success(data: let data) = deviceflowResult else {
+        guard case Loadable.success(data: let data) = deviceflowResult else {
             return
         }
         NSPasteboard.general.clearContents()
@@ -86,11 +84,11 @@ final class Authentication: ObservableObject {
     }
     
     func requestAccessTokenWithDeviceCode() {
-        guard case Lodable.success(data: let data) = deviceflowResult else {
+        guard case Loadable.success(data: let data) = deviceflowResult else {
             return
         }
-        user = Lodable.loading
-        tokenManager.requestAccessTokenWithDeviceflow(with: data.device_code)
+        user = Loadable.loading
+        userRepository.requestAccessToken(with: data.device_code)
             .sink {
                 switch $0 {
                 case .success(data: let code):
@@ -98,9 +96,9 @@ final class Authentication: ObservableObject {
                    _ = KeyChainManager.shared.saveToken(code)
                    self.getUser()
                 case .error(error: let error):
-                    self.user = Lodable.error(error: error)
+                    self.user = Loadable.error(error: error)
                 default:
-                    self.user = Lodable.error(error: NetworkError.authenticationError)
+                    self.user = Loadable.error(error: NetworkError.authenticationError)
                 }
             }.store(in: &cancellableSet)
     }

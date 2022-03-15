@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Lodable<T> {
+enum Loadable<T> {
     case empty
     case loading
     case success(data: T)
@@ -37,14 +37,14 @@ enum Lodable<T> {
     }
 }
 
-extension Lodable: Equatable {
+extension Loadable: Equatable {
 
-    static func == (lhs: Lodable, rhs: Lodable) -> Bool {
+    static func == (lhs: Loadable, rhs: Loadable) -> Bool {
         switch (lhs, rhs) {
-            case (Lodable.empty, Lodable.empty),
-                (Lodable.loading, Lodable.loading),
-                (Lodable.success(data: _), Lodable.success(data: _)),
-                (Lodable.error(error: _), Lodable.error(error: _)):
+            case (Loadable.empty, Loadable.empty),
+                (Loadable.loading, Loadable.loading),
+                (Loadable.success(data: _), Loadable.success(data: _)),
+                (Loadable.error(error: _), Loadable.error(error: _)):
                 return true
             default:
                 return false
@@ -52,7 +52,7 @@ extension Lodable: Equatable {
     }
 
 }
-extension Lodable: CustomStringConvertible where T: CustomStringConvertible {
+extension Loadable: CustomStringConvertible where T: CustomStringConvertible {
     var description: String {
         switch self {
             case .error(error: let error):

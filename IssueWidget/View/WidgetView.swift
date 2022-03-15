@@ -10,7 +10,7 @@ import WidgetKit
 
 struct IssueWidgetEntryView: View {
     @Environment(\.widgetFamily) private var family: WidgetFamily
-    var issues: Lodable<[Issue]>
+    var issues: Loadable<[Issue]>
 
     var body: some View {
         switch issues {
@@ -58,9 +58,9 @@ struct IssueErrorView: View {
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssue))
+            IssueWidgetEntryView(issues: Loadable.success(data: Issue.mocIssue))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            IssueWidgetEntryView(issues: Lodable.success(data: Issue.mocIssue))
+            IssueWidgetEntryView(issues: Loadable.success(data: Issue.mocIssue))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }

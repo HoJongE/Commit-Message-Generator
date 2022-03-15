@@ -8,21 +8,14 @@
 import SwiftUI
 
 struct TagSelectorList: View {
-    @Environment(\.managedObjectContext) private var managedObjectContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) private var tags: FetchedResults<Tag>
-
+    let tags: [Tag]
     let category: String
     let tagClick: (Tag) -> Void
     
-    private var filteredList: [Tag] {
-        tags.filter { tag in
-            tag.category == category
-        }
-    }
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 8) {
-                ForEach(filteredList, id: \.self) { tag in
+                ForEach(tags, id: \.self) { tag in
                     TagSelectorRow(tag)
                         .listRowInsets(.init())
                         .onTapGesture {
@@ -71,7 +64,7 @@ struct TagSelectorRow: View {
 struct TagSelectorList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagSelectorList(category: "태그") {_ in}
+            TagSelectorList(tags:[], category: "태그") {_ in}
                 .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
             TagSelectorRow(MockedCoreData.shared.tag())
         }

@@ -11,28 +11,12 @@ import AlertToast
 // MARK: - 커밋 작성 뷰
 struct CommitWriteHost: View {
 
-    @Environment(\.managedObjectContext) private var managedObjectContext
-
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var tags: FetchedResults<Tag>
-
     @EnvironmentObject private var commitViewModel: CommitViewModel
-
+    @EnvironmentObject private var tagViewModel: TagViewModel
     @State private var showingResetAlert: Bool = false
 
     @State private var showSuccess: Bool = false
     @State private var showError: Bool = false
-
-    private var basicTags: [Tag] {
-        tags.filter { tag in
-            tag.category == "태그"
-        }
-    }
-
-    private var functionTags: [Tag] {
-        tags.filter { tag in
-            tag.category == "기능"
-        }
-    }
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -41,16 +25,16 @@ struct CommitWriteHost: View {
                     Text("제목")
                         .font(.title2).fontWeight(.semibold)
                     HStack(spacing: 16) {
-                        TagSelector(selected: $commitViewModel.selectedTag, placeholder: "태그", tags: basicTags)
+                        TagSelector(selected: $commitViewModel.selectedTag, placeholder: "태그", tags: tagViewModel.tags)
 
-                        TagSelector(selected: $commitViewModel.selectedFunction, placeholder: "기능", tags: functionTags)
+                        TagSelector(selected: $commitViewModel.selectedFunction, placeholder: "기능", tags: tagViewModel.functions)
                     }
 
                     RoundedTextField(.title, $commitViewModel.title) {
                         HStack(spacing: 16) {
-                            TagSelector(selected: $commitViewModel.selectedTag, placeholder: "태그", tags: basicTags)
+                            TagSelector(selected: $commitViewModel.selectedTag, placeholder: "태그", tags: tagViewModel.tags)
 
-                            TagSelector(selected: $commitViewModel.selectedFunction, placeholder: "기능", tags: functionTags)
+                            TagSelector(selected: $commitViewModel.selectedFunction, placeholder: "기능", tags: tagViewModel.functions)
                         }
                     }
                 }
@@ -130,8 +114,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             CommitWriteHost()
-                .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
                 .environmentObject(CommitViewModel())
+                .environmentObject(TagViewModel())
         }
     }
 }

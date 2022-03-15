@@ -66,11 +66,11 @@ extension GithubConnect {
             }
             .navigationTitle("깃허브 설정")
             .onChange(of: authentication.deviceflowResult) {
-                if case Lodable.success(data: _) = $0 {
+                if case Loadable.success(data: _) = $0 {
                     showCode = true
                 }
             }
-            .sheet(isPresented: $showCode, onDismiss: {authentication.deviceflowResult = Lodable.empty}) {
+            .sheet(isPresented: $showCode, onDismiss: {authentication.deviceflowResult = Loadable.empty}) {
                 VerificationCode()
             }
         }

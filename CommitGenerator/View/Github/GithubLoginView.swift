@@ -25,7 +25,7 @@ struct GithubLoginView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .onChange(of: authentication.user) { newValue in
-            if case Lodable.success(data: _) = newValue {
+            if case Loadable.success(data: _) = newValue {
                 dismiss()
             }
         }

@@ -21,7 +21,7 @@ final class CommitViewModel: ObservableObject {
     @Published var selectedTag: Tag?
     @Published var selectedFunction: Tag?
     
-    @Published var issues: Lodable<[Issue]> = Lodable.empty
+    @Published var issues: Loadable<[Issue]> = Loadable.empty
     
     private var cancellableSet: Set<AnyCancellable> = []
     
@@ -43,11 +43,10 @@ final class CommitViewModel: ObservableObject {
     }
     
     private let commitWriter: CommitWriter = CommitWriter()
+    private let issueRepository: IssueRepository
     
-    private let githubService: GithubService
-    
-    init(githubService: GithubService = GithubService.shared) {
-        self.githubService = githubService
+    init(_ issueRepository: IssueRepository = DefaultIssueRepository.shared) {
+        self.issueRepository = issueRepository
     }
     
     func selectTag(_ tag: Tag) {
@@ -72,7 +71,7 @@ final class CommitViewModel: ObservableObject {
         }
         
         for issue in resolvedIssues {
-            githubService.closeIssue(issue)
+            issueRepository.closeIssue(issue)
         }
     }
     func reset() {
@@ -87,7 +86,8 @@ final class CommitViewModel: ObservableObject {
     }
     
     func getIssues(_ page: Int) {
-        githubService.getIssues(page)
+        issues = Loadable.loading
+        issueRepository.getIssues(page)
             .sink {
                 self.issues = $0
             }

@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> IssueEntry {
-        IssueEntry(date: Date(), issues: Lodable.success(data: Issue.mocIssue))
+        IssueEntry(date: Date(), issues: Loadable.success(data: Issue.mocIssue))
     }
 
     func getSnapshot(in context: Context, completion: @escaping (IssueEntry) -> Void) {
-        let entry = IssueEntry(date: Date(), issues: Lodable.success(data: Issue.mocIssue))
+        let entry = IssueEntry(date: Date(), issues: Loadable.success(data: Issue.mocIssue))
         completion(entry)
     }
 
@@ -24,7 +24,7 @@ struct Provider: TimelineProvider {
 
         let nextUpdateDate: Date = Calendar.current.date(byAdding: .minute, value: updateInterval, to: date)!
 
-        let entry = Entry(date: date, issues: Lodable.success(data: Issue.mocIssue))
+        let entry = Entry(date: date, issues: Loadable.success(data: Issue.mocIssue))
         let timeLine = Timeline(entries: [entry], policy: .after(nextUpdateDate))
         completion(timeLine)
         // TODO: 깃허브 서비스 연동해야함
@@ -38,7 +38,7 @@ struct Provider: TimelineProvider {
 
 struct IssueEntry: TimelineEntry {
     let date: Date
-    let issues: Lodable<[Issue]>
+    let issues: Loadable<[Issue]>
 }
 
 @main

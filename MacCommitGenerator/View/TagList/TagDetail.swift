@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TagDetail: View {
+    @EnvironmentObject private var tagViewModel: TagViewModel
     private let tag: Tag
-
     @State private var name: String
     @State private var tagDescription: String
     @State private var color: Color
@@ -64,7 +64,7 @@ struct TagDetail: View {
     private var deleteButton: some View {
         Button {
             withAnimation {
-                PersistenceController.shared.delete(tag)
+                tagViewModel.deleteTag(tag)
             }
         } label: {
             HStack {
@@ -76,10 +76,7 @@ struct TagDetail: View {
     
     private func saveChange() {
         showAlert = true
-        tag.colorHex = color.hexaRGB
-        tag.tagDescription = tagDescription
-        tag.name = name
-        PersistenceController.shared.save()
+        tagViewModel.modifyTag(change: tag, name: name, color: color.hexaRGB, description: tagDescription)
     }
 }
 #if DEBUG

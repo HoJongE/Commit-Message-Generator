@@ -35,7 +35,7 @@ struct IssuePicker: View {
             }
         }
         .onChange(of: authentication.user) { newValue in
-            if case Lodable.success(data: _) = newValue {
+            if case Loadable.success(data: _) = newValue {
                 commitViewModel.getIssues(1)
             }
         }

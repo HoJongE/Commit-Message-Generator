@@ -8,21 +8,13 @@
 import SwiftUI
 
 struct TagList: View {
+    let tags: [Tag]
     let category: String
-    
-    @Environment(\.managedObjectContext) private var managedObjectContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) private var tags: FetchedResults<Tag>
-
-    var filteredList: [Tag] {
-        tags.filter { tag in
-            tag.category == category
-        }
-    }
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(filteredList, id: \.self) { tag in
+                ForEach(tags, id: \.self) { tag in
                     TagRow(tag)
                         .listRowInsets(.init())
                 }
@@ -61,11 +53,9 @@ struct TagList: View {
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagList(category: "태그")
-                .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
+            TagList(tags: [], category: "태그")
                 .preferredColorScheme(.dark)
-            TagList(category: "태그")
-                .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
+            TagList(tags: [], category: "태그")
                 .preferredColorScheme(.light)
         }
     }
