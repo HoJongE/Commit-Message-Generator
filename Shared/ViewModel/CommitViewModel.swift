@@ -22,8 +22,10 @@ final class CommitViewModel: ObservableObject {
     @Published var selectedFunction: Tag?
     
     @Published var issues: Loadable<[Issue]> = Loadable.empty
-    
+    @Published var organization: String = "All"
+    @Published var repository: String = "All"
     private var cancellableSet: Set<AnyCancellable> = []
+    private (set) var issueFilter: IssueFilter = IssueFilter()
     
     var correctForm: Bool {
         selectedTag != nil && selectedFunction != nil && !title.isEmpty
@@ -32,12 +34,13 @@ final class CommitViewModel: ObservableObject {
     var filteredIssues: [Issue] {
         switch self.issues {
         case .success(data: let data):
-            return data.filter { issue in
+            return issueFilter.filteredIssue(data.filter { issue in
                 !resolvedIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
                 !fixingIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
                 !refIssues.contains {selectedIssue in issue.id == selectedIssue.id} &&
                 !relatedIssues.contains {selectedIssue in issue.id == selectedIssue.id}
-            }
+                
+            })
         default : return [Issue]()
         }
     }
@@ -90,7 +93,21 @@ final class CommitViewModel: ObservableObject {
         issueRepository.getIssues(page)
             .sink {
                 self.issues = $0
+                #if DEBUG
+                print($0)
+                #endif
             }
             .store(in: &cancellableSet)
+    }
+    func setRepository(_ repository: String) {
+        self.repository = repository
+        issueFilter.setRepository(repository)
+    }
+    func repositorys() -> [String] {
+        if case let Loadable.success(data: data) = issues {
+            return issueFilter.repositorys(origin: data)
+        } else {
+            return []
+        }
     }
 }

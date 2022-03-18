@@ -13,18 +13,21 @@ struct IssueList: View {
     @EnvironmentObject private var commitViewModel: CommitViewModel
     let issues: [Issue]
     let addIssue: (Issue) -> Void
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVStack {
-                ForEach(issues, id: \.self) { issue in
-                    DetailIssueItem(issue: issue)
-                        .onTapGesture {
-                            addIssueAndClose(issue)
+            LazyVStack(pinnedViews: [.sectionHeaders]) {
+                Section(header: headerView) {
+                    ForEach(issues, id: \.self) { issue in
+                        DetailIssueItem(issue: issue)
+                            .onTapGesture {
+                                addIssueAndClose(issue)
+                            }
+                        if issue.number != issues.last?.number {
+                            Divider()
+                                .background(Color.gray)
+                                .frame(maxWidth: .infinity)
                         }
-                    if issue.number != issues.last?.number {
-                        Divider()
-                            .background(Color.gray)
-                            .frame(maxWidth: .infinity)
                     }
                 }
             }
@@ -39,6 +42,16 @@ struct IssueList: View {
 #if os(iOS) 
         dismiss.wrappedValue.dismiss()
 #endif
+    }
+}
+// MARK: - 이슈 필터
+extension IssueList {
+    private var headerView: some View {
+        HStack {
+            IssueFilterSelector(icon: Image(systemName: "externaldrive.connected.to.line.below.fill"), options: commitViewModel.repositorys(), selected: $commitViewModel.repository, onOptionSelected: commitViewModel.setRepository(_:))
+        }
+        .padding(8)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 // MARK: - 이슈 row

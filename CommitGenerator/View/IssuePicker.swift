@@ -16,16 +16,7 @@ struct IssuePicker: View {
     @EnvironmentObject private var bottomSheetManager: BottomSheetManager
 
     var body: some View {
-        VStack(alignment: .center) {
-            switch commitViewModel.issues {
-                case .success(data: _):
-                    IssueList(issues: commitViewModel.filteredIssues, addIssue: issueAdd)
-                case .error(error: let error):
-                    ErrorView(error: error, retry: commitViewModel.getIssues(_:))
-                default:
-                    ProgressView()
-            }
-        }
+        content
         .onAppear {
             commitViewModel.getIssues(1)
             if let error = authentication.user.error {
@@ -43,6 +34,19 @@ struct IssuePicker: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .init(horizontal: .center, vertical: .top))
         .background(Color.background1.edgesIgnoringSafeArea(.all))
         .navigationTitle(issueType.korTitle)
+    }
+    
+    private var content: some View {
+        VStack(alignment: .center) {
+            switch commitViewModel.issues {
+                case .success(data: _):
+                    IssueList(issues: commitViewModel.filteredIssues, addIssue: issueAdd)
+                case .error(error: let error):
+                    ErrorView(error: error, retry: commitViewModel.getIssues(_:))
+                default:
+                    ProgressView()
+            }
+        }
     }
 }
 // MARK: - 이슈 로딩 실패
