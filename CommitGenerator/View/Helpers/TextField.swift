@@ -47,12 +47,10 @@ struct RoundedTextField<Content: View>: View {
 
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedTextField(.body, .constant("아하하하!!"), content: {
-
-        })
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .background(Color.black)
-            .preferredColorScheme(.dark)
+        RoundedTextField(.body, .constant("아하하하!!")) {}
+        .padding()
+        .previewLayout(.sizeThatFits)
+        .background(Color.black)
+        .preferredColorScheme(.dark)
     }
 }

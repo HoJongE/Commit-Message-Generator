@@ -36,16 +36,7 @@ final class Authentication: ObservableObject {
         user = Loadable.loading
         userRepository.requestAccessToken(with: code)
             .sink {
-                switch $0 {
-                case .success(data: let code):
-                    _ = KeyChainManager.shared.deleteToken()
-                   _ = KeyChainManager.shared.saveToken(code)
-                   self.getUser()
-                case .error(error: let error):
-                    self.user = Loadable.error(error: error)
-                default:
-                    self.user = Loadable.error(error: NetworkError.authenticationError)
-                }
+                self.user = $0
             }.store(in: &cancellableSet)
     }
 
@@ -90,16 +81,7 @@ final class Authentication: ObservableObject {
         user = Loadable.loading
         userRepository.requestAccessToken(with: data.device_code)
             .sink {
-                switch $0 {
-                case .success(data: let code):
-                    _ = KeyChainManager.shared.deleteToken()
-                   _ = KeyChainManager.shared.saveToken(code)
-                   self.getUser()
-                case .error(error: let error):
-                    self.user = Loadable.error(error: error)
-                default:
-                    self.user = Loadable.error(error: NetworkError.authenticationError)
-                }
+                self.user = $0
             }.store(in: &cancellableSet)
     }
     #endif

@@ -35,19 +35,24 @@ struct EditTagList: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background1)
         .navigationTitle(title)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: EditTagView(tag: nil, category: title)) {
-                    Image(systemName: "plus").foregroundColor(.brand)
-                }
-            }
-        }
+        .toolbar(content: toolbar)
     }
 
     private var listheader : some View {
         HStack {
             Image(systemName: "tag.fill")
             Text(title)
+        }
+    }
+}
+// MARK: - 툴바
+extension EditTagList {
+    @ToolbarContentBuilder
+    func toolbar() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            NavigationLink(destination: EditTagView(tag: nil, category: title)) {
+                Image(systemName: "plus").foregroundColor(.brand)
+            }
         }
     }
 }

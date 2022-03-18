@@ -33,9 +33,7 @@ struct EditTagView: View {
                 Text("이름")
                     .foregroundColor(.text3)
                     .font(.headline).fontWeight(.semibold)
-
                 ColorPicker("", selection: $color)
-
             }
             TextField("이름", text: $name)
                 .font(.body)

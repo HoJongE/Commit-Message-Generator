@@ -54,16 +54,11 @@ extension DefaultTagRepository: TagStore {
     
     func deleteTag(_ tag: Tag) {
         let context: NSManagedObjectContext = coreDataStack.viewContext
-        do {
-            context.delete(tag)
-            try context.save()
-        } catch {
-            print(error)
-        }
+        context.delete(tag)
+        save()
     }
     
     func modifyTag(change tag: Tag, withName name: String?, withColor colorHex: String?, withDescription tagDescription: String?) {
-        let context: NSManagedObjectContext = coreDataStack.viewContext
         if let name = name {
             tag.name = name
         }
@@ -73,11 +68,7 @@ extension DefaultTagRepository: TagStore {
         if let tagDescription = tagDescription {
             tag.tagDescription = tagDescription
         }
-        do {
-            try context.save()
-        } catch {
-            print(error)
-        }
+        save()
     }
     
     func addTag(name: String, colorHex: String, tagDescription: String, category: String) {
@@ -89,11 +80,7 @@ extension DefaultTagRepository: TagStore {
         tag.tagDescription = tagDescription
         tag.category = category
         context.performAndWait {
-            do {
-                try context.save()
-            } catch {
-                print(error)
-            }
+            save()
         }
     }
     
@@ -103,7 +90,7 @@ extension DefaultTagRepository: TagStore {
         
         do {
             try context.execute(deleteRequest)
-            try context.save()
+            save()
         } catch {
             print("removeAll tags error: \(error)")
         }
@@ -145,12 +132,13 @@ extension DefaultTagRepository: TagStore {
             tag.name = function[index]
             tag.category = "기능"
         }
-        
+        save()
+    }
+    fileprivate func save() {
         do {
-            try context.save()
+            try coreDataStack.viewContext.save()
         } catch {
-            print("reset error: \(error)")
+            print("error when save change \(error)")
         }
     }
-    
 }

@@ -11,12 +11,12 @@ import SwiftUI
 struct IssueItem: View {
     private let issue: Issue
     private let deleteIssue: (Issue) -> Void
-
+    
     init(_ issue: Issue, deleteIssue :@escaping (Issue) -> Void) {
         self.issue = issue
         self.deleteIssue = deleteIssue
     }
-
+    
     var body: some View {
         Text("#\(issue.number)")
             .foregroundColor(.white)
@@ -31,12 +31,12 @@ struct IssueItem: View {
 }
 // MARK: - 이슈 더하기 버튼
 struct IssuePlusButton: View {
-
+    
     let issueType: IssueType
     let onIssueAdded: (Issue) -> Void
-
+    
     var body: some View {
-
+        
         NavigationLink(destination: IssuePicker(issueType: issueType, issueAdd: onIssueAdded)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
@@ -52,9 +52,9 @@ struct IssueItem_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             IssueItem(Issue.mocIssue[0]) {_ in
-
+                
             }
-
+            
             IssuePlusButton(issueType: .related, onIssueAdded: {_ in })
         }
         .previewLayout(.sizeThatFits)

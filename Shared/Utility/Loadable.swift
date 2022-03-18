@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// MARK: - Data 상태를 나타내는 유틸리티 열거형
 enum Loadable<T> {
     case empty
     case loading
@@ -20,7 +20,6 @@ enum Loadable<T> {
             default: return nil
         }
     }
-
     var error: Error? {
         switch self {
             case .error(error: let error):
@@ -28,7 +27,6 @@ enum Loadable<T> {
             default: return nil
         }
     }
-
     var loading: Bool {
         switch self {
             case .loading: return true
@@ -36,7 +34,7 @@ enum Loadable<T> {
         }
     }
 }
-
+// MARK: - Equatable 프로토콜 구현
 extension Loadable: Equatable {
 
     static func == (lhs: Loadable, rhs: Loadable) -> Bool {
@@ -50,8 +48,8 @@ extension Loadable: Equatable {
                 return false
         }
     }
-
 }
+// MARK: - description 이 구현된 모델에 대해 description 프로토콜 구현
 extension Loadable: CustomStringConvertible where T: CustomStringConvertible {
     var description: String {
         switch self {

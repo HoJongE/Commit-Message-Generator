@@ -64,7 +64,7 @@ struct TagSelectorRow: View {
 struct TagSelectorList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagSelectorList(tags:[], category: "태그") {_ in}
+            TagSelectorList(tags: [], category: "태그") {_ in}
                 .environment(\.managedObjectContext, MockedCoreData.shared.container.viewContext)
             TagSelectorRow(MockedCoreData.shared.tag())
         }

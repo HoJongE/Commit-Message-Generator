@@ -11,19 +11,17 @@ import Combine
 // MARK: - User Repository 프로토콜
 protocol UserRepository {
     func getUser() -> AnyPublisher<Loadable<User>, Never>
-    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<String>, Never>
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<User>, Never>
     func deviceflow() -> AnyPublisher<Loadable<DeviceflowResult>, Never>
 }
 // MARK: - User Repository 인스턴스
 final class DefaultUserRepository {
     private let githubService: GithubServiceProtocol
-    private let tokenService: TokenServiceProtocol
     
     static let shared: DefaultUserRepository = DefaultUserRepository()
     
-    init(githubService: GithubServiceProtocol = GithubService.shared, tokenService: TokenServiceProtocol = TokenService.shared) {
+    init(githubService: GithubServiceProtocol = GithubService.shared) {
         self.githubService = githubService
-        self.tokenService = tokenService
     }
 }
 // MARK: - 프로토콜 구현부
@@ -32,12 +30,12 @@ extension DefaultUserRepository: UserRepository {
         return githubService.getUser()
     }
     
-    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<String>, Never> {
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<User>, Never> {
         #if os(iOS)
-        return tokenService.requestAccessToken(with: code)
+        return githubService.requestAccessToken(with: code)
         #endif
         #if os(macOS)
-        return tokenService.requestAccessTokenWithDeviceflow(with: code)
+        return githubService.requestAccessTokenWithDeviceflow(with: code)
         #endif
     }
     

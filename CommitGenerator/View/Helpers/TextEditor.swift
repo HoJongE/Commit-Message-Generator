@@ -46,21 +46,25 @@ struct FullScreenTextEditor<Content: View>: View {
             }
             .background(RoundedRectangle(cornerRadius: 6).fill(.white))
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                ResetButton {
-                    text = ""
-                }
-            }
-        }
+        .toolbar(content: toolbar)
         .padding()
         .navigationTitle(editorType.title)
-
     }
 
     func constraintTextLength(value: String) {
         if text.count > editorType.textLimit {
             text = String(text.prefix(editorType.textLimit))
+        }
+    }
+}
+// MARK: - 툴바 모음
+extension FullScreenTextEditor {
+    @ToolbarContentBuilder
+    func toolbar() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            ResetButton {
+                text = ""
+            }
         }
     }
 }
@@ -75,12 +79,10 @@ struct GuideButton: View {
                 .font(.subheadline)
 
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
+        .padding(.init(top: 12, leading: 16, bottom: 12, trailing: 16))
         .background(.white)
         .cornerRadius(6, corners: .topLeft)
         .cornerRadius(6, corners: .topRight)
-
     }
 
     private func onTap() {
@@ -116,7 +118,6 @@ struct GuideBox: View {
 
 struct TextEditor_Previews: PreviewProvider {
     static var previews: some View {
-
         Group {
             ForEach(PreviewDevice.mock, id: \.self) {
                 NavigationView {

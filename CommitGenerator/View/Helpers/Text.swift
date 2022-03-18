@@ -20,7 +20,6 @@ struct PointText: View {
                 .frame(width: 8, height: 8)
             Text(text)
                 .font(.subheadline)
-
         }
     }
 }
