@@ -53,6 +53,5 @@ struct CommitGeneratorApp: App {
                     print("unknown App Status")
             }
         }
-
     }
 }

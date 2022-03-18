@@ -12,8 +12,9 @@ import Combine
 protocol GithubServiceProtocol {
     func getIssues(_ page: Int) -> AnyPublisher<Loadable<[Issue]>, Never>
     func getUser() -> AnyPublisher<Loadable<User>, Never>
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<User>, Never>
+    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Loadable<User>, Never>
     func closeIssue(_ issue: Issue)
-    
 }
 // MARK: - 깃허브 인스턴스
 final class GithubService {
@@ -28,15 +29,16 @@ extension GithubService {
         case user(code: String)
         case deviceflow
         case closeIssue(issue: Issue, code: String)
+        case accessToken(code: String)
+        case deviceFlowToken(code: String)
     }
 }
 
 extension GithubService.API: APICall {
     var method: HTTPMethod {
         switch self {
-        case .issues: return .get
-        case .user: return .get
-        case .deviceflow: return .post
+        case .issues, .user: return .get
+        case .deviceflow, .accessToken, .deviceFlowToken: return .post
         case .closeIssue: return .patch
         }
     }
@@ -50,6 +52,8 @@ extension GithubService.API: APICall {
             return Const.URL.GITHUB_ISSUE
         case .user:
             return Const.URL.GITHUB_USER
+        case .accessToken, .deviceFlowToken:
+            return Const.URL.GITHUB_ACCESS_TOKEN
         }
     }
     
@@ -64,6 +68,14 @@ extension GithubService.API: APICall {
                     "scope": "repo,user"]
         case .closeIssue:
             return ["state": "closed"]
+        case .accessToken(code: let code):
+            return ["client_id": Const.GitHub.CLIEND_ID,
+                    "client_secret": Const.GitHub.CLIENT_SECRET,
+                    "code": code]
+        case .deviceFlowToken(code: let code):
+            return ["client_id": Const.GitHub.CLIEND_ID,
+                    "device_code": code,
+                    "grant_type": "urn:ietf:params:oauth:grant-type:device_code"]
         }
     }
     
@@ -80,6 +92,9 @@ extension GithubService.API: APICall {
         case .issues(let code):
             return ["Accept": "application/vnd.github.v3+json",
                                         "Authorization": "token \(code)"]
+        case .deviceFlowToken, .accessToken:
+            return ["Accept": "application/json"]
+
         }
     }
 }
@@ -142,5 +157,50 @@ extension GithubService: GithubServiceProtocol {
                 print(data)
                 print(data.debugDescription)
             }
+    }
+    
+    func requestAccessToken(with code: String) -> AnyPublisher<Loadable<User>, Never> {
+        return GithubService.API.accessToken(code: code)
+            .request(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
+            .publishResponse(using: DecodableResponseSerializer<[String: String]>())
+            .tryMap {
+                return try self.saveAndReturnToken(response: $0)
+            }
+            .flatMap { _ in
+                self.getUser()
+            }
+            .catch {
+                Just(Loadable.error(error: $0))
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    func requestAccessTokenWithDeviceflow(with code: String) -> AnyPublisher<Loadable<User>, Never> {
+        return
+            GithubService.API.deviceFlowToken(code: code)
+            .request(baseURL: Const.URL.GITHUB_AUTHENTICATE_BASE_URL)
+            .publishResponse(using: DecodableResponseSerializer<[String: String]>())
+            .tryMap {
+                return try self.saveAndReturnToken(response: $0)
+            }
+            .flatMap { _ in
+                self.getUser()
+            }
+            .catch {
+                Just(Loadable.error(error: $0))
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
+    private func saveAndReturnToken(response: DataResponse<[String: String], AFError>) throws -> String {
+        switch response.result {
+        case let .success(dic):
+            _ = KeyChainManager.shared.deleteToken()
+            _ = KeyChainManager.shared.saveToken(dic["access_token"]!)
+            return dic["access_token"]!
+        case let .failure(error):
+            throw error
+        }
     }
 }

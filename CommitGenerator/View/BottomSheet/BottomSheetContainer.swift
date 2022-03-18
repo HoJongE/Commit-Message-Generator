@@ -30,7 +30,6 @@ struct BottomSheetContainer: View {
                     GithubLoginView {dismiss()}
                 default: EmptyView()
             }
-
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

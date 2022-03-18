@@ -46,10 +46,9 @@ struct TagRow: View {
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .padding()
         .background(RoundedRectangle(cornerRadius: 6).fill(Color(hex: tag.colorHex ?? "123456") ).opacity(0.4))
-
     }
 }
-
+#if DEBUG
 struct TagRow_Previews: PreviewProvider {
 
     static var previews: some View {
@@ -58,10 +57,9 @@ struct TagRow_Previews: PreviewProvider {
         Group {
             TagRow(tag: mockedCoreData.tag(), selected: true)
             TagRow(tag: mockedCoreData.tag(), selected: false)
-
         }
         .padding()
         .previewLayout(.sizeThatFits)
-
     }
 }
+#endif
