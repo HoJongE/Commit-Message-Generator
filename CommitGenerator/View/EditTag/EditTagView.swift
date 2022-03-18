@@ -41,10 +41,9 @@ struct EditTagView: View {
                 .foregroundColor(.text3)
                 .font(.body).fontWeight(.semibold)
             TextField("설명", text: $tagDescription)
-            Spacer()
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .navigationTitle(tag == nil ? "\(category) 추가" : "\(category) 편집")
         .toolbar(content: toolbar)
     }

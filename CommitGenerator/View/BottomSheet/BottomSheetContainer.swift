@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BottomSheetContainer: View {
-
+    
     @EnvironmentObject private var bottomSheetManager: BottomSheetManager
     @Environment(\.dismiss) private var dismiss: DismissAction
 
