@@ -31,9 +31,8 @@ struct EditTagRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
-
+#if DEBUG
 // MARK: - EditTagRow Preview
-
 struct EditTagRow_Previews: PreviewProvider {
     static var previews: some View {
         EditTagRow(tag: MockedCoreData.shared.tag())
@@ -41,3 +40,4 @@ struct EditTagRow_Previews: PreviewProvider {
             .background(Color.background1)
     }
 }
+#endif

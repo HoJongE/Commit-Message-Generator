@@ -42,7 +42,7 @@ struct TagList: View {
         selected != nil && selected == tag
     }
 }
-
+#if DEBUG
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
@@ -51,3 +51,4 @@ struct TagList_Previews: PreviewProvider {
         .preferredColorScheme(.dark)
     }
 }
+#endif

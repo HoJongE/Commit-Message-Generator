@@ -15,6 +15,7 @@
 		000D01EC27DD7D2A00339EBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00CB3CFF27DCDDCD00394194 /* InfoPlist.strings */; };
 		000D01EE27DD8B8600339EBE /* CommitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D01ED27DD8B8600339EBE /* CommitStyle.swift */; };
 		0025A6E627D99AA700493959 /* CommitWriteIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */; };
+		00355A9827E609B800374CA1 /* TagUpdateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00355A9727E609B800374CA1 /* TagUpdateTest.swift */; };
 		0036434F27D58B59003AC248 /* AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036434E27D58B59003AC248 /* AddTag.swift */; };
 		004752BC27D8292F004D1013 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BB27D8292F004D1013 /* IssuePicker.swift */; };
 		004752BE27D83337004D1013 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004752BD27D83337004D1013 /* SelectedIssueList.swift */; };
@@ -206,6 +207,7 @@
 		0000C94D27D1CF98005A7D4A /* MacCommitGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCommitGenerator.entitlements; sourceTree = "<group>"; };
 		000D01ED27DD8B8600339EBE /* CommitStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitStyle.swift; sourceTree = "<group>"; };
 		0025A6E527D99AA700493959 /* CommitWriteIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitWriteIndicator.swift; sourceTree = "<group>"; };
+		00355A9727E609B800374CA1 /* TagUpdateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagUpdateTest.swift; sourceTree = "<group>"; };
 		0036434D27D58ACE003AC248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0036434E27D58B59003AC248 /* AddTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTag.swift; sourceTree = "<group>"; };
 		004752BB27D8292F004D1013 /* IssuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				0086A61A27E4A0C700A22F8A /* IssueFilterTest.swift */,
+				00355A9727E609B800374CA1 /* TagUpdateTest.swift */,
 			);
 			path = Testcase;
 			sourceTree = "<group>";
@@ -948,7 +951,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					0000C94127D1CF97005A7D4A = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -1354,6 +1357,7 @@
 			files = (
 				0086A61B27E4A0C700A22F8A /* IssueFilterTest.swift in Sources */,
 				0086A61827E49C7300A22F8A /* MockIssue.swift in Sources */,
+				00355A9827E609B800374CA1 /* TagUpdateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,6 +1438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MacCommitGenerator/MacCommitGenerator.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1467,6 +1472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MacCommitGenerator/MacCommitGenerator.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1790,7 +1796,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1819,7 +1825,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

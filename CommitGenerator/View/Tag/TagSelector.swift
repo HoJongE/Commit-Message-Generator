@@ -31,7 +31,7 @@ struct TagSelector: View {
         .background(RoundedRectangle(cornerRadius: 6).fill(selected == nil ? .white : Color(hex: selected!.colorHex ?? "123456")))
     }
 }
-
+#if DEBUG
 struct TagSelector_Previews: PreviewProvider {
     static var previews: some View {
         TagSelector(selected: .constant(nil), placeholder: "기능", tags: MockedCoreData.shared.tags())
@@ -40,3 +40,4 @@ struct TagSelector_Previews: PreviewProvider {
             .background(Color.black)
     }
 }
+#endif
