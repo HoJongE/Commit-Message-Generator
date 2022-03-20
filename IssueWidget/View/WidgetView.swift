@@ -54,7 +54,6 @@ struct IssueErrorView: View {
         Text("이슈를 불러오는데 에러가 발생했습니다.\n\(error.localizedDescription)")
     }
 }
-
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

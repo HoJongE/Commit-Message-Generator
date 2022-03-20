@@ -26,7 +26,7 @@ struct IssueFilterSelector: View {
         } label: {
             pickerLabel
         }
-        .animation(nil)
+        .animation(nil, value: selectedFilter)
         .onChange(of: selectedFilter, perform: onOptionSelected)
     }
     
@@ -62,7 +62,7 @@ struct IssueFilterSelector: View {
 struct IssueFilterSelector_Previews: PreviewProvider {
     static var previews: some View {
         IssueFilterSelector(icon: Image(systemName: "checkmark"), options: ["All", "123", "234", "345"], selected: .constant("All")) { _ in
-            
         }
+        .previewLayout(.sizeThatFits)
     }
 }

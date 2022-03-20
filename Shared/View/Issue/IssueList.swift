@@ -50,7 +50,7 @@ extension IssueList {
         HStack {
             IssueFilterSelector(icon: Image(systemName: "externaldrive.connected.to.line.below.fill"), options: commitViewModel.repositorys(), selected: $commitViewModel.repository, onOptionSelected: commitViewModel.setRepository(_:))
         }
-        .padding(8)
+        .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
@@ -131,7 +131,9 @@ struct Previews_IssueList_Previews: PreviewProvider {
             DetailIssueItem(issue: Issue.mocIssue[0])
                 .previewLayout(.sizeThatFits)
             IssueList(issues: Issue.mocIssue) {_ in}
+                .environmentObject(CommitViewModel())
         }
+        
         .preferredColorScheme(.dark)
         .background(Color.background1)
     }

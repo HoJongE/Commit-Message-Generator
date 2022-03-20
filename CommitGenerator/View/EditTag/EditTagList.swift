@@ -56,6 +56,7 @@ extension EditTagList {
         }
     }
 }
+#if DEBUG
 // MARK: - 이슈 편집 프리뷰
 struct EditTagList_Previews: PreviewProvider {
     static var previews: some View {
@@ -67,3 +68,4 @@ struct EditTagList_Previews: PreviewProvider {
         .preferredColorScheme(.dark)
     }
 }
+#endif

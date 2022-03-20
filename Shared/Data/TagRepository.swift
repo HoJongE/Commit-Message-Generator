@@ -31,7 +31,7 @@ final class DefaultTagRepository {
 // MARK: - 프로토콜 구현부
 extension DefaultTagRepository: TagStore {
     
-    func tags(category: String?) -> AnyPublisher<Loadable<[Tag]>, Never> {
+    func tags(category: String? = nil) -> AnyPublisher<Loadable<[Tag]>, Never> {
         let fetchRequest = Tag.fetchRequest()
         if let category = category {
             fetchRequest.predicate = NSPredicate(format: "category == %@", category)
