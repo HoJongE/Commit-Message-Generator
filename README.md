@@ -28,12 +28,12 @@
 
 ## 스크린샷
 ### IOS
-|커밋 작성|이슈 선택|태그 편집|깃허브 로그인|
-|:-------:|:-------:|:-------:|:-------:|
-| | | | |
+|커밋 작성|이슈 선택|태그 편집|
+|:-------:|:-------:|:-------:|
+|![2022-03-21 19 20 23 2](https://user-images.githubusercontent.com/57793298/159242495-b8d45752-0c4c-499a-a2e5-ffd7cd3b189a.gif)|![2022-03-21 19 20 23 1](https://user-images.githubusercontent.com/57793298/159242524-e3eea544-9d38-4e4d-b404-24102acce150.gif)|![2022-03-21 19 20 23 0](https://user-images.githubusercontent.com/57793298/159242544-82945c6c-6d9d-4da4-b651-42af565be1a3.gif)|
 
 ### mac OS
-|커밋 작성|이슈 선택|태그 편집|깃허브 로그인|
-|:-------:|:-------:|:-------:|:------:|
-| | | | |
+|커밋 작성|이슈 선택|태그 편집|
+|:-------:|:-------:|:-------:|
+|![2022-03-21 19 26 56](https://user-images.githubusercontent.com/57793298/159243477-1183608a-bba7-42ff-ad82-7a70a84bb388.gif)|![2022-03-21 19 27 15](https://user-images.githubusercontent.com/57793298/159243504-4e3c5e52-b24e-48c9-9bfb-9f22ef607be0.gif)|![2022-03-21 19 27 18](https://user-images.githubusercontent.com/57793298/159243514-3d392be5-abcb-45bd-85e0-f3e1c3550eb7.gif)|
 <p align="center">
