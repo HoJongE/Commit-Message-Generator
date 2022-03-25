@@ -1,6 +1,0 @@
-framework module AlertToast {
-  umbrella header "AlertToast-dynamic-umbrella.h"
-
-  export *
-  module * { export * }
-}
