@@ -1,0 +1,6 @@
+framework module Pods_Commit_GeneratorTests {
+  umbrella header "Pods-Commit GeneratorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

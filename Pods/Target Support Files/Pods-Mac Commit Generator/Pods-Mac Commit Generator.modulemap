@@ -1,0 +1,6 @@
+framework module Pods_Mac_Commit_Generator {
+  umbrella header "Pods-Mac Commit Generator-umbrella.h"
+
+  export *
+  module * { export * }
+}
