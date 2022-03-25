@@ -1,0 +1,1607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000602B327ED9DD7005BD920 /* Commit_GeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602B227ED9DD7005BD920 /* Commit_GeneratorApp.swift */; };
+		000602B727ED9DD8005BD920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000602B627ED9DD8005BD920 /* Assets.xcassets */; };
+		000602BA27ED9DD8005BD920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000602B927ED9DD8005BD920 /* Preview Assets.xcassets */; };
+		000602DF27ED9E40005BD920 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602DE27ED9E40005BD920 /* Loadable.swift */; };
+		000602E927ED9EB5005BD920 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602E827ED9EB5005BD920 /* StringExtension.swift */; };
+		000602EB27ED9EC9005BD920 /* ColorResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602EA27ED9EC9005BD920 /* ColorResources.swift */; };
+		000602F327ED9EF0005BD920 /* Mac_Commit_GeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602F227ED9EF0005BD920 /* Mac_Commit_GeneratorApp.swift */; };
+		000602F727ED9EF0005BD920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000602F627ED9EF0005BD920 /* Assets.xcassets */; };
+		000602FA27ED9EF0005BD920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000602F927ED9EF0005BD920 /* Preview Assets.xcassets */; };
+		0006030127ED9F38005BD920 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030027ED9F38005BD920 /* Authentication.swift */; };
+		0006030227ED9F38005BD920 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030027ED9F38005BD920 /* Authentication.swift */; };
+		0006030527ED9F5F005BD920 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030327ED9F5F005BD920 /* MockedData.swift */; };
+		0006030627ED9F5F005BD920 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030327ED9F5F005BD920 /* MockedData.swift */; };
+		0006030727ED9F5F005BD920 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030427ED9F5F005BD920 /* MockedModel.swift */; };
+		0006030827ED9F5F005BD920 /* MockedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030427ED9F5F005BD920 /* MockedModel.swift */; };
+		0006030C27ED9F69005BD920 /* IssueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030927ED9F69005BD920 /* IssueRepository.swift */; };
+		0006030D27ED9F69005BD920 /* IssueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030927ED9F69005BD920 /* IssueRepository.swift */; };
+		0006030E27ED9F69005BD920 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030A27ED9F69005BD920 /* TagRepository.swift */; };
+		0006030F27ED9F69005BD920 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030A27ED9F69005BD920 /* TagRepository.swift */; };
+		0006031027ED9F69005BD920 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030B27ED9F69005BD920 /* UserRepository.swift */; };
+		0006031127ED9F69005BD920 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006030B27ED9F69005BD920 /* UserRepository.swift */; };
+		0006031427ED9F72005BD920 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031227ED9F72005BD920 /* CommitViewModel.swift */; };
+		0006031527ED9F72005BD920 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031227ED9F72005BD920 /* CommitViewModel.swift */; };
+		0006031627ED9F72005BD920 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031327ED9F72005BD920 /* TagViewModel.swift */; };
+		0006031727ED9F72005BD920 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031327ED9F72005BD920 /* TagViewModel.swift */; };
+		0006031D27ED9F7F005BD920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031827ED9F7F005BD920 /* CoreDataStack.swift */; };
+		0006031E27ED9F7F005BD920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031827ED9F7F005BD920 /* CoreDataStack.swift */; };
+		0006031F27ED9F7F005BD920 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0006031927ED9F7F005BD920 /* Database.xcdatamodeld */; };
+		0006032027ED9F7F005BD920 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0006031927ED9F7F005BD920 /* Database.xcdatamodeld */; };
+		0006032127ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031B27ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift */; };
+		0006032227ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031B27ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift */; };
+		0006032327ED9F7F005BD920 /* Tag+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031C27ED9F7F005BD920 /* Tag+CoreDataClass copy.swift */; };
+		0006032427ED9F7F005BD920 /* Tag+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006031C27ED9F7F005BD920 /* Tag+CoreDataClass copy.swift */; };
+		0006032527ED9F9E005BD920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000602B627ED9DD8005BD920 /* Assets.xcassets */; };
+		0006032727ED9FB1005BD920 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032627ED9FB1005BD920 /* Const.swift */; };
+		0006032827ED9FB1005BD920 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032627ED9FB1005BD920 /* Const.swift */; };
+		0006032C27ED9FB9005BD920 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032927ED9FB9005BD920 /* NetworkError.swift */; };
+		0006032D27ED9FB9005BD920 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032927ED9FB9005BD920 /* NetworkError.swift */; };
+		0006032E27ED9FB9005BD920 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032A27ED9FB9005BD920 /* GithubService.swift */; };
+		0006032F27ED9FB9005BD920 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032A27ED9FB9005BD920 /* GithubService.swift */; };
+		0006033027ED9FB9005BD920 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032B27ED9FB9005BD920 /* APICall.swift */; };
+		0006033127ED9FB9005BD920 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006032B27ED9FB9005BD920 /* APICall.swift */; };
+		0006033A27ED9FC7005BD920 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033327ED9FC7005BD920 /* EditorType.swift */; };
+		0006033B27ED9FC7005BD920 /* EditorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033327ED9FC7005BD920 /* EditorType.swift */; };
+		0006033C27ED9FC7005BD920 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033427ED9FC7005BD920 /* DeepLinkHandler.swift */; };
+		0006033D27ED9FC7005BD920 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033427ED9FC7005BD920 /* DeepLinkHandler.swift */; };
+		0006034227ED9FC7005BD920 /* IssueFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033727ED9FC7005BD920 /* IssueFilter.swift */; };
+		0006034327ED9FC7005BD920 /* IssueFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006033727ED9FC7005BD920 /* IssueFilter.swift */; };
+		0006034927ED9FE9005BD920 /* CommitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034727ED9FE9005BD920 /* CommitWriter.swift */; };
+		0006034A27ED9FE9005BD920 /* CommitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034727ED9FE9005BD920 /* CommitWriter.swift */; };
+		0006034B27ED9FE9005BD920 /* CopyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034827ED9FE9005BD920 /* CopyType.swift */; };
+		0006034C27ED9FE9005BD920 /* CopyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034827ED9FE9005BD920 /* CopyType.swift */; };
+		0006034E27ED9FEE005BD920 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034D27ED9FEE005BD920 /* KeyChainManager.swift */; };
+		0006034F27ED9FEE005BD920 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006034D27ED9FEE005BD920 /* KeyChainManager.swift */; };
+		0006035427ED9FF6005BD920 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035027ED9FF6005BD920 /* Issue.swift */; };
+		0006035527ED9FF6005BD920 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035027ED9FF6005BD920 /* Issue.swift */; };
+		0006035627ED9FF6005BD920 /* IssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035127ED9FF6005BD920 /* IssueType.swift */; };
+		0006035727ED9FF6005BD920 /* IssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035127ED9FF6005BD920 /* IssueType.swift */; };
+		0006035827ED9FF6005BD920 /* DeviceflowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035227ED9FF6005BD920 /* DeviceflowResult.swift */; };
+		0006035927ED9FF6005BD920 /* DeviceflowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035227ED9FF6005BD920 /* DeviceflowResult.swift */; };
+		0006035A27ED9FF6005BD920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035327ED9FF6005BD920 /* User.swift */; };
+		0006035B27ED9FF6005BD920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035327ED9FF6005BD920 /* User.swift */; };
+		0006036227EDA012005BD920 /* SelectedIssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035E27EDA012005BD920 /* SelectedIssueItem.swift */; };
+		0006036327EDA012005BD920 /* SelectedIssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035E27EDA012005BD920 /* SelectedIssueItem.swift */; };
+		0006036427EDA012005BD920 /* IssueFilterSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035F27EDA012005BD920 /* IssueFilterSelector.swift */; };
+		0006036527EDA012005BD920 /* IssueFilterSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006035F27EDA012005BD920 /* IssueFilterSelector.swift */; };
+		0006036627EDA012005BD920 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006036027EDA012005BD920 /* IssueList.swift */; };
+		0006036727EDA012005BD920 /* IssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006036027EDA012005BD920 /* IssueList.swift */; };
+		0006036827EDA012005BD920 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006036127EDA012005BD920 /* SelectedIssueList.swift */; };
+		0006036C27EDA021005BD920 /* ImageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006036B27EDA021005BD920 /* ImageHelpers.swift */; };
+		0006036D27EDA021005BD920 /* ImageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006036B27EDA021005BD920 /* ImageHelpers.swift */; };
+		0006037827EDA0A1005BD920 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037727EDA0A1005BD920 /* ViewExtension.swift */; };
+		0006037A27EDA0A7005BD920 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037927EDA0A7005BD920 /* RootTabView.swift */; };
+		0006037F27EDA0AF005BD920 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037B27EDA0AF005BD920 /* ProfileView.swift */; };
+		0006038027EDA0AF005BD920 /* CommitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037C27EDA0AF005BD920 /* CommitStyle.swift */; };
+		0006038127EDA0AF005BD920 /* SettingHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037D27EDA0AF005BD920 /* SettingHost.swift */; };
+		0006038227EDA0AF005BD920 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037E27EDA0AF005BD920 /* SettingRow.swift */; };
+		0006038727EDA0B5005BD920 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038327EDA0B5005BD920 /* TextField.swift */; };
+		0006038827EDA0B5005BD920 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038427EDA0B5005BD920 /* Text.swift */; };
+		0006038927EDA0B5005BD920 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038527EDA0B5005BD920 /* TextEditor.swift */; };
+		0006038A27EDA0B5005BD920 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038627EDA0B5005BD920 /* Button.swift */; };
+		0006038E27EDA0BB005BD920 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038B27EDA0BB005BD920 /* TagList.swift */; };
+		0006038F27EDA0BB005BD920 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038C27EDA0BB005BD920 /* TagRow.swift */; };
+		0006039027EDA0BB005BD920 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006038D27EDA0BB005BD920 /* TagSelector.swift */; };
+		0006039227EDA0C0005BD920 /* CommitWriteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039127EDA0C0005BD920 /* CommitWriteHost.swift */; };
+		0006039427EDA0C5005BD920 /* GithubLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039327EDA0C5005BD920 /* GithubLoginView.swift */; };
+		0006039727EDA0CA005BD920 /* BottomSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039527EDA0CA005BD920 /* BottomSheetContainer.swift */; };
+		0006039827EDA0CA005BD920 /* BottomSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039627EDA0CA005BD920 /* BottomSheetManager.swift */; };
+		0006039C27EDA0D2005BD920 /* EditTagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039927EDA0D2005BD920 /* EditTagRow.swift */; };
+		0006039D27EDA0D2005BD920 /* EditTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039A27EDA0D2005BD920 /* EditTagView.swift */; };
+		0006039E27EDA0D2005BD920 /* EditTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039B27EDA0D2005BD920 /* EditTagList.swift */; };
+		000603A027EDA0D8005BD920 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006039F27EDA0D7005BD920 /* IssuePicker.swift */; };
+		000603A527EDA0FE005BD920 /* IssueFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603A327EDA0FE005BD920 /* IssueFilterTest.swift */; };
+		000603A627EDA0FE005BD920 /* TagUpdateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603A427EDA0FE005BD920 /* TagUpdateTest.swift */; };
+		000603A827EDA105005BD920 /* MockIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603A727EDA105005BD920 /* MockIssue.swift */; };
+		000603AA27EDA124005BD920 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 000603A927EDA124005BD920 /* .swiftlint.yml */; };
+		000603AB27EDA124005BD920 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 000603A927EDA124005BD920 /* .swiftlint.yml */; };
+		000603AD27EDA2B7005BD920 /* CommitWriteHostTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603AC27EDA2B7005BD920 /* CommitWriteHostTest.swift */; };
+		000603B127EDA36A005BD920 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603AF27EDA36A005BD920 /* Sidebar.swift */; };
+		000603B227EDA36A005BD920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603B027EDA36A005BD920 /* ContentView.swift */; };
+		000603BC27EDA390005BD920 /* SelectedIssueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603BA27EDA390005BD920 /* SelectedIssueList.swift */; };
+		000603BD27EDA390005BD920 /* IssuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603BB27EDA390005BD920 /* IssuePicker.swift */; };
+		000603BF27EDA394005BD920 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603BE27EDA394005BD920 /* TextEditor.swift */; };
+		000603C227EDA399005BD920 /* TagSelectorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C027EDA399005BD920 /* TagSelectorList.swift */; };
+		000603C327EDA399005BD920 /* TagSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C127EDA399005BD920 /* TagSelector.swift */; };
+		000603C627EDA39D005BD920 /* CommitWriteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C427EDA39D005BD920 /* CommitWriteHost.swift */; };
+		000603C727EDA39D005BD920 /* CommitWriteIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C527EDA39D005BD920 /* CommitWriteIndicator.swift */; };
+		000603CB27EDA3A2005BD920 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C827EDA3A2005BD920 /* Setting.swift */; };
+		000603CC27EDA3A2005BD920 /* VerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603C927EDA3A2005BD920 /* VerificationCode.swift */; };
+		000603CD27EDA3A2005BD920 /* GithubProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603CA27EDA3A2005BD920 /* GithubProfile.swift */; };
+		000603D227EDA3AA005BD920 /* AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603CE27EDA3A9005BD920 /* AddTag.swift */; };
+		000603D327EDA3AA005BD920 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603CF27EDA3A9005BD920 /* TagList.swift */; };
+		000603D427EDA3AA005BD920 /* TagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603D027EDA3A9005BD920 /* TagDetail.swift */; };
+		000603D527EDA3AA005BD920 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000603D127EDA3AA005BD920 /* TagRow.swift */; };
+		000603D627EDA3C5005BD920 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602DE27ED9E40005BD920 /* Loadable.swift */; };
+		000603D727EDA3E0005BD920 /* ColorResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602EA27ED9EC9005BD920 /* ColorResources.swift */; };
+		000603D827EDA3E4005BD920 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000602E827ED9EB5005BD920 /* StringExtension.swift */; };
+		000603DD27EDA437005BD920 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 000603DC27EDA437005BD920 /* LaunchAtLogin */; };
+		000603DE27EDA547005BD920 /* CommitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0006037C27EDA0AF005BD920 /* CommitStyle.swift */; };
+		4C0738C9AD5B7F50C3E34690 /* Pods_Commit_Generator_Commit_GeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96359E950A7E8E478784F7F /* Pods_Commit_Generator_Commit_GeneratorUITests.framework */; };
+		7D0574F2F593E74EB84E4FF2 /* Pods_Commit_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9791452FF47735FD4F6BE8A9 /* Pods_Commit_Generator.framework */; };
+		AECC1843EF8F7B474BEEE52E /* Pods_Mac_Commit_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F25360DE63DA8A652E1A36B /* Pods_Mac_Commit_Generator.framework */; };
+		E24ED5911339EFDBBA4E61B4 /* Pods_Commit_GeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BDC2930DA1DEF0F65FE451 /* Pods_Commit_GeneratorTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000602C027ED9DD8005BD920 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000602A727ED9DD7005BD920 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000602AE27ED9DD7005BD920;
+			remoteInfo = "Commit Generator";
+		};
+		000602CA27ED9DD8005BD920 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000602A727ED9DD7005BD920 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000602AE27ED9DD7005BD920;
+			remoteInfo = "Commit Generator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000602AF27ED9DD7005BD920 /* Commit Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Commit Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000602B227ED9DD7005BD920 /* Commit_GeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit_GeneratorApp.swift; sourceTree = "<group>"; };
+		000602B627ED9DD8005BD920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000602B927ED9DD8005BD920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		000602BF27ED9DD8005BD920 /* Commit GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Commit GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000602C927ED9DD8005BD920 /* Commit GeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Commit GeneratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000602DE27ED9E40005BD920 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		000602E827ED9EB5005BD920 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		000602EA27ED9EC9005BD920 /* ColorResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorResources.swift; sourceTree = "<group>"; };
+		000602F027ED9EF0005BD920 /* Mac Commit Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Commit Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000602F227ED9EF0005BD920 /* Mac_Commit_GeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Commit_GeneratorApp.swift; sourceTree = "<group>"; };
+		000602F627ED9EF0005BD920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000602F927ED9EF0005BD920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		000602FB27ED9EF0005BD920 /* Mac_Commit_Generator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_Commit_Generator.entitlements; sourceTree = "<group>"; };
+		0006030027ED9F38005BD920 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		0006030327ED9F5F005BD920 /* MockedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		0006030427ED9F5F005BD920 /* MockedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedModel.swift; sourceTree = "<group>"; };
+		0006030927ED9F69005BD920 /* IssueRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueRepository.swift; sourceTree = "<group>"; };
+		0006030A27ED9F69005BD920 /* TagRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRepository.swift; sourceTree = "<group>"; };
+		0006030B27ED9F69005BD920 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		0006031227ED9F72005BD920 /* CommitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
+		0006031327ED9F72005BD920 /* TagViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		0006031827ED9F7F005BD920 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0006031A27ED9F7F005BD920 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		0006031B27ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		0006031C27ED9F7F005BD920 /* Tag+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		0006032627ED9FB1005BD920 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		0006032927ED9FB9005BD920 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0006032A27ED9FB9005BD920 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		0006032B27ED9FB9005BD920 /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		0006033327ED9FC7005BD920 /* EditorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorType.swift; sourceTree = "<group>"; };
+		0006033427ED9FC7005BD920 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		0006033727ED9FC7005BD920 /* IssueFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFilter.swift; sourceTree = "<group>"; };
+		0006034727ED9FE9005BD920 /* CommitWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitWriter.swift; sourceTree = "<group>"; };
+		0006034827ED9FE9005BD920 /* CopyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyType.swift; sourceTree = "<group>"; };
+		0006034D27ED9FEE005BD920 /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		0006035027ED9FF6005BD920 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		0006035127ED9FF6005BD920 /* IssueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueType.swift; sourceTree = "<group>"; };
+		0006035227ED9FF6005BD920 /* DeviceflowResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceflowResult.swift; sourceTree = "<group>"; };
+		0006035327ED9FF6005BD920 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0006035E27EDA012005BD920 /* SelectedIssueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedIssueItem.swift; sourceTree = "<group>"; };
+		0006035F27EDA012005BD920 /* IssueFilterSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFilterSelector.swift; sourceTree = "<group>"; };
+		0006036027EDA012005BD920 /* IssueList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueList.swift; sourceTree = "<group>"; };
+		0006036127EDA012005BD920 /* SelectedIssueList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedIssueList.swift; sourceTree = "<group>"; };
+		0006036B27EDA021005BD920 /* ImageHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelpers.swift; sourceTree = "<group>"; };
+		0006037727EDA0A1005BD920 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		0006037927EDA0A7005BD920 /* RootTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		0006037B27EDA0AF005BD920 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0006037C27EDA0AF005BD920 /* CommitStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitStyle.swift; sourceTree = "<group>"; };
+		0006037D27EDA0AF005BD920 /* SettingHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingHost.swift; sourceTree = "<group>"; };
+		0006037E27EDA0AF005BD920 /* SettingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
+		0006038327EDA0B5005BD920 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0006038427EDA0B5005BD920 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		0006038527EDA0B5005BD920 /* TextEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		0006038627EDA0B5005BD920 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		0006038B27EDA0BB005BD920 /* TagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		0006038C27EDA0BB005BD920 /* TagRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
+		0006038D27EDA0BB005BD920 /* TagSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
+		0006039127EDA0C0005BD920 /* CommitWriteHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitWriteHost.swift; sourceTree = "<group>"; };
+		0006039327EDA0C5005BD920 /* GithubLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubLoginView.swift; sourceTree = "<group>"; };
+		0006039527EDA0CA005BD920 /* BottomSheetContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetContainer.swift; sourceTree = "<group>"; };
+		0006039627EDA0CA005BD920 /* BottomSheetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetManager.swift; sourceTree = "<group>"; };
+		0006039927EDA0D2005BD920 /* EditTagRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTagRow.swift; sourceTree = "<group>"; };
+		0006039A27EDA0D2005BD920 /* EditTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTagView.swift; sourceTree = "<group>"; };
+		0006039B27EDA0D2005BD920 /* EditTagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTagList.swift; sourceTree = "<group>"; };
+		0006039F27EDA0D7005BD920 /* IssuePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
+		000603A327EDA0FE005BD920 /* IssueFilterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFilterTest.swift; sourceTree = "<group>"; };
+		000603A427EDA0FE005BD920 /* TagUpdateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagUpdateTest.swift; sourceTree = "<group>"; };
+		000603A727EDA105005BD920 /* MockIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockIssue.swift; sourceTree = "<group>"; };
+		000603A927EDA124005BD920 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		000603AC27EDA2B7005BD920 /* CommitWriteHostTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitWriteHostTest.swift; sourceTree = "<group>"; };
+		000603AF27EDA36A005BD920 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		000603B027EDA36A005BD920 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		000603BA27EDA390005BD920 /* SelectedIssueList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedIssueList.swift; sourceTree = "<group>"; };
+		000603BB27EDA390005BD920 /* IssuePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuePicker.swift; sourceTree = "<group>"; };
+		000603BE27EDA394005BD920 /* TextEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		000603C027EDA399005BD920 /* TagSelectorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelectorList.swift; sourceTree = "<group>"; };
+		000603C127EDA399005BD920 /* TagSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelector.swift; sourceTree = "<group>"; };
+		000603C427EDA39D005BD920 /* CommitWriteHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitWriteHost.swift; sourceTree = "<group>"; };
+		000603C527EDA39D005BD920 /* CommitWriteIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitWriteIndicator.swift; sourceTree = "<group>"; };
+		000603C827EDA3A2005BD920 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		000603C927EDA3A2005BD920 /* VerificationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCode.swift; sourceTree = "<group>"; };
+		000603CA27EDA3A2005BD920 /* GithubProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubProfile.swift; sourceTree = "<group>"; };
+		000603CE27EDA3A9005BD920 /* AddTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTag.swift; sourceTree = "<group>"; };
+		000603CF27EDA3A9005BD920 /* TagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		000603D027EDA3A9005BD920 /* TagDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDetail.swift; sourceTree = "<group>"; };
+		000603D127EDA3AA005BD920 /* TagRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
+		000603DF27EDAAD8005BD920 /* Commit-Generator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Commit-Generator-Info.plist"; sourceTree = SOURCE_ROOT; };
+		34BDC2930DA1DEF0F65FE451 /* Pods_Commit_GeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commit_GeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD5B11361206864870E5851 /* Pods-Commit Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit Generator.release.xcconfig"; path = "Target Support Files/Pods-Commit Generator/Pods-Commit Generator.release.xcconfig"; sourceTree = "<group>"; };
+		3F25360DE63DA8A652E1A36B /* Pods_Mac_Commit_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mac_Commit_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		634855963F6569CA08567CA0 /* Pods-Commit Generator-Commit GeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit Generator-Commit GeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Commit Generator-Commit GeneratorUITests/Pods-Commit Generator-Commit GeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93DEEA47AD3B660A0F489160 /* Pods-Commit GeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit GeneratorTests.release.xcconfig"; path = "Target Support Files/Pods-Commit GeneratorTests/Pods-Commit GeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		963BE2B8B5F004DEB770A0B4 /* Pods-Commit GeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit GeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-Commit GeneratorTests/Pods-Commit GeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9791452FF47735FD4F6BE8A9 /* Pods_Commit_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commit_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A63F3F1161FD06B9FCA5E22 /* Pods-Mac Commit Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mac Commit Generator.debug.xcconfig"; path = "Target Support Files/Pods-Mac Commit Generator/Pods-Mac Commit Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		AA900AC024FB07448E614F40 /* Pods-Commit Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit Generator.debug.xcconfig"; path = "Target Support Files/Pods-Commit Generator/Pods-Commit Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		DC6953FF79960F83CA949B64 /* Pods-Commit Generator-Commit GeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commit Generator-Commit GeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-Commit Generator-Commit GeneratorUITests/Pods-Commit Generator-Commit GeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E96359E950A7E8E478784F7F /* Pods_Commit_Generator_Commit_GeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commit_Generator_Commit_GeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CFD707A83BBF1E673C8592 /* Pods-Mac Commit Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mac Commit Generator.release.xcconfig"; path = "Target Support Files/Pods-Mac Commit Generator/Pods-Mac Commit Generator.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000602AC27ED9DD7005BD920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0574F2F593E74EB84E4FF2 /* Pods_Commit_Generator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602BC27ED9DD8005BD920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E24ED5911339EFDBBA4E61B4 /* Pods_Commit_GeneratorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602C627ED9DD8005BD920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0738C9AD5B7F50C3E34690 /* Pods_Commit_Generator_Commit_GeneratorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602ED27ED9EF0005BD920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000603DD27EDA437005BD920 /* LaunchAtLogin in Frameworks */,
+				AECC1843EF8F7B474BEEE52E /* Pods_Mac_Commit_Generator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000602A627ED9DD7005BD920 = {
+			isa = PBXGroup;
+			children = (
+				000603A927EDA124005BD920 /* .swiftlint.yml */,
+				000602DC27ED9DE2005BD920 /* Shared */,
+				000602B127ED9DD7005BD920 /* Commit Generator */,
+				000602C227ED9DD8005BD920 /* Commit GeneratorTests */,
+				000602CC27ED9DD8005BD920 /* Commit GeneratorUITests */,
+				000602F127ED9EF0005BD920 /* Mac Commit Generator */,
+				000602B027ED9DD7005BD920 /* Products */,
+				D0429569F20F217B5553FB00 /* Pods */,
+				C47BBC0501AC41A33523D49E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		000602B027ED9DD7005BD920 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000602AF27ED9DD7005BD920 /* Commit Generator.app */,
+				000602BF27ED9DD8005BD920 /* Commit GeneratorTests.xctest */,
+				000602C927ED9DD8005BD920 /* Commit GeneratorUITests.xctest */,
+				000602F027ED9EF0005BD920 /* Mac Commit Generator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000602B127ED9DD7005BD920 /* Commit Generator */ = {
+			isa = PBXGroup;
+			children = (
+				000603DF27EDAAD8005BD920 /* Commit-Generator-Info.plist */,
+				000602FF27ED9F12005BD920 /* View */,
+				000602B227ED9DD7005BD920 /* Commit_GeneratorApp.swift */,
+				000602B627ED9DD8005BD920 /* Assets.xcassets */,
+				000602B827ED9DD8005BD920 /* Preview Content */,
+			);
+			path = "Commit Generator";
+			sourceTree = "<group>";
+		};
+		000602B827ED9DD8005BD920 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				000602B927ED9DD8005BD920 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		000602C227ED9DD8005BD920 /* Commit GeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				000603A227EDA0F2005BD920 /* Mock */,
+				000603A127EDA0ED005BD920 /* Testcase */,
+			);
+			path = "Commit GeneratorTests";
+			sourceTree = "<group>";
+		};
+		000602CC27ED9DD8005BD920 /* Commit GeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				000603AC27EDA2B7005BD920 /* CommitWriteHostTest.swift */,
+			);
+			path = "Commit GeneratorUITests";
+			sourceTree = "<group>";
+		};
+		000602DC27ED9DE2005BD920 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0006032627ED9FB1005BD920 /* Const.swift */,
+				0006035C27EDA006005BD920 /* View */,
+				000602E727ED9EA4005BD920 /* Extension */,
+				000602E627ED9E85005BD920 /* Resource */,
+				000602E527ED9E7E005BD920 /* CoreData */,
+				000602E427ED9E7A005BD920 /* Service */,
+				000602E327ED9E76005BD920 /* Model */,
+				000602E227ED9E71005BD920 /* ViewModel */,
+				000602E127ED9E6B005BD920 /* Data */,
+				000602E027ED9E64005BD920 /* Mocked */,
+				000602DD27ED9DF0005BD920 /* Utility */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		000602DD27ED9DF0005BD920 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				000602DE27ED9E40005BD920 /* Loadable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		000602E027ED9E64005BD920 /* Mocked */ = {
+			isa = PBXGroup;
+			children = (
+				0006030327ED9F5F005BD920 /* MockedData.swift */,
+				0006030427ED9F5F005BD920 /* MockedModel.swift */,
+			);
+			path = Mocked;
+			sourceTree = "<group>";
+		};
+		000602E127ED9E6B005BD920 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0006030927ED9F69005BD920 /* IssueRepository.swift */,
+				0006030A27ED9F69005BD920 /* TagRepository.swift */,
+				0006030B27ED9F69005BD920 /* UserRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		000602E227ED9E71005BD920 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0006031227ED9F72005BD920 /* CommitViewModel.swift */,
+				0006031327ED9F72005BD920 /* TagViewModel.swift */,
+				0006030027ED9F38005BD920 /* Authentication.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		000602E327ED9E76005BD920 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0006034627ED9FDD005BD920 /* Github */,
+				0006034527ED9FD8005BD920 /* KeyChain */,
+				0006034427ED9FD4005BD920 /* Commit */,
+				0006033427ED9FC7005BD920 /* DeepLinkHandler.swift */,
+				0006033327ED9FC7005BD920 /* EditorType.swift */,
+				0006033727ED9FC7005BD920 /* IssueFilter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		000602E427ED9E7A005BD920 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0006032B27ED9FB9005BD920 /* APICall.swift */,
+				0006032A27ED9FB9005BD920 /* GithubService.swift */,
+				0006032927ED9FB9005BD920 /* NetworkError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		000602E527ED9E7E005BD920 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0006031827ED9F7F005BD920 /* CoreDataStack.swift */,
+				0006031927ED9F7F005BD920 /* Database.xcdatamodeld */,
+				0006031C27ED9F7F005BD920 /* Tag+CoreDataClass copy.swift */,
+				0006031B27ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		000602E627ED9E85005BD920 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				000602EA27ED9EC9005BD920 /* ColorResources.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		000602E727ED9EA4005BD920 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				000602E827ED9EB5005BD920 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		000602F127ED9EF0005BD920 /* Mac Commit Generator */ = {
+			isa = PBXGroup;
+			children = (
+				000603AE27EDA35C005BD920 /* View */,
+				000602F227ED9EF0005BD920 /* Mac_Commit_GeneratorApp.swift */,
+				000602F627ED9EF0005BD920 /* Assets.xcassets */,
+				000602FB27ED9EF0005BD920 /* Mac_Commit_Generator.entitlements */,
+				000602F827ED9EF0005BD920 /* Preview Content */,
+			);
+			path = "Mac Commit Generator";
+			sourceTree = "<group>";
+		};
+		000602F827ED9EF0005BD920 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				000602F927ED9EF0005BD920 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		000602FF27ED9F12005BD920 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0006037927EDA0A7005BD920 /* RootTabView.swift */,
+				0006037627EDA096005BD920 /* Extension */,
+				0006037527EDA092005BD920 /* Setting */,
+				0006037427EDA08C005BD920 /* Helpers */,
+				0006037327EDA089005BD920 /* Tag */,
+				0006037227EDA085005BD920 /* Commit */,
+				0006037127EDA080005BD920 /* Github */,
+				0006037027EDA07A005BD920 /* BottomSheet */,
+				0006036F27EDA077005BD920 /* EditTag */,
+				0006036E27EDA068005BD920 /* Issue */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0006034427ED9FD4005BD920 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				0006034727ED9FE9005BD920 /* CommitWriter.swift */,
+				0006034827ED9FE9005BD920 /* CopyType.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		0006034527ED9FD8005BD920 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				0006034D27ED9FEE005BD920 /* KeyChainManager.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		0006034627ED9FDD005BD920 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				0006035227ED9FF6005BD920 /* DeviceflowResult.swift */,
+				0006035027ED9FF6005BD920 /* Issue.swift */,
+				0006035127ED9FF6005BD920 /* IssueType.swift */,
+				0006035327ED9FF6005BD920 /* User.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		0006035C27EDA006005BD920 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0006036A27EDA019005BD920 /* Helpers */,
+				0006035D27EDA00D005BD920 /* Issue */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0006035D27EDA00D005BD920 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				0006035F27EDA012005BD920 /* IssueFilterSelector.swift */,
+				0006036027EDA012005BD920 /* IssueList.swift */,
+				0006035E27EDA012005BD920 /* SelectedIssueItem.swift */,
+				0006036127EDA012005BD920 /* SelectedIssueList.swift */,
+			);
+			path = Issue;
+			sourceTree = "<group>";
+		};
+		0006036A27EDA019005BD920 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0006036B27EDA021005BD920 /* ImageHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0006036E27EDA068005BD920 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				0006039F27EDA0D7005BD920 /* IssuePicker.swift */,
+			);
+			path = Issue;
+			sourceTree = "<group>";
+		};
+		0006036F27EDA077005BD920 /* EditTag */ = {
+			isa = PBXGroup;
+			children = (
+				0006039B27EDA0D2005BD920 /* EditTagList.swift */,
+				0006039927EDA0D2005BD920 /* EditTagRow.swift */,
+				0006039A27EDA0D2005BD920 /* EditTagView.swift */,
+			);
+			path = EditTag;
+			sourceTree = "<group>";
+		};
+		0006037027EDA07A005BD920 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0006039527EDA0CA005BD920 /* BottomSheetContainer.swift */,
+				0006039627EDA0CA005BD920 /* BottomSheetManager.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		0006037127EDA080005BD920 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				0006039327EDA0C5005BD920 /* GithubLoginView.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		0006037227EDA085005BD920 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				0006039127EDA0C0005BD920 /* CommitWriteHost.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		0006037327EDA089005BD920 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				0006038B27EDA0BB005BD920 /* TagList.swift */,
+				0006038C27EDA0BB005BD920 /* TagRow.swift */,
+				0006038D27EDA0BB005BD920 /* TagSelector.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		0006037427EDA08C005BD920 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0006038627EDA0B5005BD920 /* Button.swift */,
+				0006038427EDA0B5005BD920 /* Text.swift */,
+				0006038527EDA0B5005BD920 /* TextEditor.swift */,
+				0006038327EDA0B5005BD920 /* TextField.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0006037527EDA092005BD920 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				0006037C27EDA0AF005BD920 /* CommitStyle.swift */,
+				0006037B27EDA0AF005BD920 /* ProfileView.swift */,
+				0006037D27EDA0AF005BD920 /* SettingHost.swift */,
+				0006037E27EDA0AF005BD920 /* SettingRow.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		0006037627EDA096005BD920 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0006037727EDA0A1005BD920 /* ViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		000603A127EDA0ED005BD920 /* Testcase */ = {
+			isa = PBXGroup;
+			children = (
+				000603A327EDA0FE005BD920 /* IssueFilterTest.swift */,
+				000603A427EDA0FE005BD920 /* TagUpdateTest.swift */,
+			);
+			path = Testcase;
+			sourceTree = "<group>";
+		};
+		000603A227EDA0F2005BD920 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				000603A727EDA105005BD920 /* MockIssue.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		000603AE27EDA35C005BD920 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				000603B927EDA388005BD920 /* TagList */,
+				000603B827EDA384005BD920 /* Setting */,
+				000603B727EDA381005BD920 /* Commit */,
+				000603B627EDA37D005BD920 /* Tag */,
+				000603B527EDA379005BD920 /* Helpers */,
+				000603B327EDA371005BD920 /* Issue */,
+				000603B027EDA36A005BD920 /* ContentView.swift */,
+				000603AF27EDA36A005BD920 /* Sidebar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		000603B327EDA371005BD920 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				000603BB27EDA390005BD920 /* IssuePicker.swift */,
+				000603BA27EDA390005BD920 /* SelectedIssueList.swift */,
+			);
+			path = Issue;
+			sourceTree = "<group>";
+		};
+		000603B527EDA379005BD920 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				000603BE27EDA394005BD920 /* TextEditor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		000603B627EDA37D005BD920 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				000603C127EDA399005BD920 /* TagSelector.swift */,
+				000603C027EDA399005BD920 /* TagSelectorList.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		000603B727EDA381005BD920 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				000603C427EDA39D005BD920 /* CommitWriteHost.swift */,
+				000603C527EDA39D005BD920 /* CommitWriteIndicator.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		000603B827EDA384005BD920 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				000603CA27EDA3A2005BD920 /* GithubProfile.swift */,
+				000603C827EDA3A2005BD920 /* Setting.swift */,
+				000603C927EDA3A2005BD920 /* VerificationCode.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		000603B927EDA388005BD920 /* TagList */ = {
+			isa = PBXGroup;
+			children = (
+				000603CE27EDA3A9005BD920 /* AddTag.swift */,
+				000603D027EDA3A9005BD920 /* TagDetail.swift */,
+				000603CF27EDA3A9005BD920 /* TagList.swift */,
+				000603D127EDA3AA005BD920 /* TagRow.swift */,
+			);
+			path = TagList;
+			sourceTree = "<group>";
+		};
+		C47BBC0501AC41A33523D49E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9791452FF47735FD4F6BE8A9 /* Pods_Commit_Generator.framework */,
+				E96359E950A7E8E478784F7F /* Pods_Commit_Generator_Commit_GeneratorUITests.framework */,
+				34BDC2930DA1DEF0F65FE451 /* Pods_Commit_GeneratorTests.framework */,
+				3F25360DE63DA8A652E1A36B /* Pods_Mac_Commit_Generator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0429569F20F217B5553FB00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA900AC024FB07448E614F40 /* Pods-Commit Generator.debug.xcconfig */,
+				3DD5B11361206864870E5851 /* Pods-Commit Generator.release.xcconfig */,
+				634855963F6569CA08567CA0 /* Pods-Commit Generator-Commit GeneratorUITests.debug.xcconfig */,
+				DC6953FF79960F83CA949B64 /* Pods-Commit Generator-Commit GeneratorUITests.release.xcconfig */,
+				963BE2B8B5F004DEB770A0B4 /* Pods-Commit GeneratorTests.debug.xcconfig */,
+				93DEEA47AD3B660A0F489160 /* Pods-Commit GeneratorTests.release.xcconfig */,
+				9A63F3F1161FD06B9FCA5E22 /* Pods-Mac Commit Generator.debug.xcconfig */,
+				F8CFD707A83BBF1E673C8592 /* Pods-Mac Commit Generator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000602AE27ED9DD7005BD920 /* Commit Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000602D327ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit Generator" */;
+			buildPhases = (
+				01C0EFDC378319C5924C13C3 /* [CP] Check Pods Manifest.lock */,
+				000602AB27ED9DD7005BD920 /* Sources */,
+				000602AC27ED9DD7005BD920 /* Frameworks */,
+				000602AD27ED9DD7005BD920 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Commit Generator";
+			packageProductDependencies = (
+			);
+			productName = "Commit Generator";
+			productReference = 000602AF27ED9DD7005BD920 /* Commit Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000602BE27ED9DD8005BD920 /* Commit GeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000602D627ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit GeneratorTests" */;
+			buildPhases = (
+				529D41B3F309AC72D3D5BA69 /* [CP] Check Pods Manifest.lock */,
+				000602BB27ED9DD8005BD920 /* Sources */,
+				000602BC27ED9DD8005BD920 /* Frameworks */,
+				000602BD27ED9DD8005BD920 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000602C127ED9DD8005BD920 /* PBXTargetDependency */,
+			);
+			name = "Commit GeneratorTests";
+			productName = "Commit GeneratorTests";
+			productReference = 000602BF27ED9DD8005BD920 /* Commit GeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		000602C827ED9DD8005BD920 /* Commit GeneratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000602D927ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit GeneratorUITests" */;
+			buildPhases = (
+				4905B54334EE9A43E82C4526 /* [CP] Check Pods Manifest.lock */,
+				000602C527ED9DD8005BD920 /* Sources */,
+				000602C627ED9DD8005BD920 /* Frameworks */,
+				000602C727ED9DD8005BD920 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000602CB27ED9DD8005BD920 /* PBXTargetDependency */,
+			);
+			name = "Commit GeneratorUITests";
+			productName = "Commit GeneratorUITests";
+			productReference = 000602C927ED9DD8005BD920 /* Commit GeneratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		000602EF27ED9EF0005BD920 /* Mac Commit Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000602FC27ED9EF0005BD920 /* Build configuration list for PBXNativeTarget "Mac Commit Generator" */;
+			buildPhases = (
+				AC20B1F801317684967D65D2 /* [CP] Check Pods Manifest.lock */,
+				000602EC27ED9EF0005BD920 /* Sources */,
+				000602ED27ED9EF0005BD920 /* Frameworks */,
+				000602EE27ED9EF0005BD920 /* Resources */,
+				000603E127EDAB66005BD920 /* Launch at Login Helper */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mac Commit Generator";
+			packageProductDependencies = (
+				000603DC27EDA437005BD920 /* LaunchAtLogin */,
+			);
+			productName = "Mac Commit Generator";
+			productReference = 000602F027ED9EF0005BD920 /* Mac Commit Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000602A727ED9DD7005BD920 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					000602AE27ED9DD7005BD920 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					000602BE27ED9DD8005BD920 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 000602AE27ED9DD7005BD920;
+					};
+					000602C827ED9DD8005BD920 = {
+						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
+						TestTargetID = 000602AE27ED9DD7005BD920;
+					};
+					000602EF27ED9EF0005BD920 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 000602AA27ED9DD7005BD920 /* Build configuration list for PBXProject "Commit Generator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000602A627ED9DD7005BD920;
+			packageReferences = (
+				000603D927EDA430005BD920 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
+			productRefGroup = 000602B027ED9DD7005BD920 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000602AE27ED9DD7005BD920 /* Commit Generator */,
+				000602EF27ED9EF0005BD920 /* Mac Commit Generator */,
+				000602BE27ED9DD8005BD920 /* Commit GeneratorTests */,
+				000602C827ED9DD8005BD920 /* Commit GeneratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000602AD27ED9DD7005BD920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000603AA27EDA124005BD920 /* .swiftlint.yml in Resources */,
+				000602BA27ED9DD8005BD920 /* Preview Assets.xcassets in Resources */,
+				000602B727ED9DD8005BD920 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602BD27ED9DD8005BD920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602C727ED9DD8005BD920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602EE27ED9EF0005BD920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000603AB27EDA124005BD920 /* .swiftlint.yml in Resources */,
+				000602FA27ED9EF0005BD920 /* Preview Assets.xcassets in Resources */,
+				0006032527ED9F9E005BD920 /* Assets.xcassets in Resources */,
+				000602F727ED9EF0005BD920 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		000603E127EDAB66005BD920 /* Launch at Login Helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Launch at Login Helper";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+		01C0EFDC378319C5924C13C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Commit Generator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4905B54334EE9A43E82C4526 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Commit Generator-Commit GeneratorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529D41B3F309AC72D3D5BA69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Commit GeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC20B1F801317684967D65D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mac Commit Generator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000602AB27ED9DD7005BD920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0006031027ED9F69005BD920 /* UserRepository.swift in Sources */,
+				0006039D27EDA0D2005BD920 /* EditTagView.swift in Sources */,
+				0006036C27EDA021005BD920 /* ImageHelpers.swift in Sources */,
+				0006037A27EDA0A7005BD920 /* RootTabView.swift in Sources */,
+				0006038727EDA0B5005BD920 /* TextField.swift in Sources */,
+				0006036627EDA012005BD920 /* IssueList.swift in Sources */,
+				0006031F27ED9F7F005BD920 /* Database.xcdatamodeld in Sources */,
+				0006034927ED9FE9005BD920 /* CommitWriter.swift in Sources */,
+				0006031427ED9F72005BD920 /* CommitViewModel.swift in Sources */,
+				0006039E27EDA0D2005BD920 /* EditTagList.swift in Sources */,
+				0006035A27ED9FF6005BD920 /* User.swift in Sources */,
+				0006034E27ED9FEE005BD920 /* KeyChainManager.swift in Sources */,
+				0006030E27ED9F69005BD920 /* TagRepository.swift in Sources */,
+				0006033A27ED9FC7005BD920 /* EditorType.swift in Sources */,
+				0006030727ED9F5F005BD920 /* MockedModel.swift in Sources */,
+				0006033027ED9FB9005BD920 /* APICall.swift in Sources */,
+				0006038027EDA0AF005BD920 /* CommitStyle.swift in Sources */,
+				000602EB27ED9EC9005BD920 /* ColorResources.swift in Sources */,
+				0006034B27ED9FE9005BD920 /* CopyType.swift in Sources */,
+				0006039427EDA0C5005BD920 /* GithubLoginView.swift in Sources */,
+				000602B327ED9DD7005BD920 /* Commit_GeneratorApp.swift in Sources */,
+				0006037F27EDA0AF005BD920 /* ProfileView.swift in Sources */,
+				0006033C27ED9FC7005BD920 /* DeepLinkHandler.swift in Sources */,
+				0006031D27ED9F7F005BD920 /* CoreDataStack.swift in Sources */,
+				0006035427ED9FF6005BD920 /* Issue.swift in Sources */,
+				0006037827EDA0A1005BD920 /* ViewExtension.swift in Sources */,
+				0006039227EDA0C0005BD920 /* CommitWriteHost.swift in Sources */,
+				000603A027EDA0D8005BD920 /* IssuePicker.swift in Sources */,
+				0006038827EDA0B5005BD920 /* Text.swift in Sources */,
+				000602DF27ED9E40005BD920 /* Loadable.swift in Sources */,
+				0006038A27EDA0B5005BD920 /* Button.swift in Sources */,
+				0006039C27EDA0D2005BD920 /* EditTagRow.swift in Sources */,
+				0006032127ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift in Sources */,
+				0006038227EDA0AF005BD920 /* SettingRow.swift in Sources */,
+				0006036227EDA012005BD920 /* SelectedIssueItem.swift in Sources */,
+				0006035627ED9FF6005BD920 /* IssueType.swift in Sources */,
+				000602E927ED9EB5005BD920 /* StringExtension.swift in Sources */,
+				0006036427EDA012005BD920 /* IssueFilterSelector.swift in Sources */,
+				0006031627ED9F72005BD920 /* TagViewModel.swift in Sources */,
+				0006032327ED9F7F005BD920 /* Tag+CoreDataClass copy.swift in Sources */,
+				0006039827EDA0CA005BD920 /* BottomSheetManager.swift in Sources */,
+				0006036827EDA012005BD920 /* SelectedIssueList.swift in Sources */,
+				0006035827ED9FF6005BD920 /* DeviceflowResult.swift in Sources */,
+				0006038127EDA0AF005BD920 /* SettingHost.swift in Sources */,
+				0006038F27EDA0BB005BD920 /* TagRow.swift in Sources */,
+				0006030C27ED9F69005BD920 /* IssueRepository.swift in Sources */,
+				0006030527ED9F5F005BD920 /* MockedData.swift in Sources */,
+				0006034227ED9FC7005BD920 /* IssueFilter.swift in Sources */,
+				0006039727EDA0CA005BD920 /* BottomSheetContainer.swift in Sources */,
+				0006039027EDA0BB005BD920 /* TagSelector.swift in Sources */,
+				0006038927EDA0B5005BD920 /* TextEditor.swift in Sources */,
+				0006030127ED9F38005BD920 /* Authentication.swift in Sources */,
+				0006038E27EDA0BB005BD920 /* TagList.swift in Sources */,
+				0006032727ED9FB1005BD920 /* Const.swift in Sources */,
+				0006032E27ED9FB9005BD920 /* GithubService.swift in Sources */,
+				0006032C27ED9FB9005BD920 /* NetworkError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602BB27ED9DD8005BD920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000603A827EDA105005BD920 /* MockIssue.swift in Sources */,
+				000603A527EDA0FE005BD920 /* IssueFilterTest.swift in Sources */,
+				000603A627EDA0FE005BD920 /* TagUpdateTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602C527ED9DD8005BD920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000603AD27EDA2B7005BD920 /* CommitWriteHostTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000602EC27ED9EF0005BD920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0006035527ED9FF6005BD920 /* Issue.swift in Sources */,
+				0006032427ED9F7F005BD920 /* Tag+CoreDataClass copy.swift in Sources */,
+				0006032F27ED9FB9005BD920 /* GithubService.swift in Sources */,
+				0006032D27ED9FB9005BD920 /* NetworkError.swift in Sources */,
+				0006030827ED9F5F005BD920 /* MockedModel.swift in Sources */,
+				0006034327ED9FC7005BD920 /* IssueFilter.swift in Sources */,
+				0006031527ED9F72005BD920 /* CommitViewModel.swift in Sources */,
+				000603D827EDA3E4005BD920 /* StringExtension.swift in Sources */,
+				0006030627ED9F5F005BD920 /* MockedData.swift in Sources */,
+				0006034F27ED9FEE005BD920 /* KeyChainManager.swift in Sources */,
+				0006033B27ED9FC7005BD920 /* EditorType.swift in Sources */,
+				000603D527EDA3AA005BD920 /* TagRow.swift in Sources */,
+				000603C727EDA39D005BD920 /* CommitWriteIndicator.swift in Sources */,
+				0006036327EDA012005BD920 /* SelectedIssueItem.swift in Sources */,
+				0006035727ED9FF6005BD920 /* IssueType.swift in Sources */,
+				000603D727EDA3E0005BD920 /* ColorResources.swift in Sources */,
+				000603D627EDA3C5005BD920 /* Loadable.swift in Sources */,
+				0006030D27ED9F69005BD920 /* IssueRepository.swift in Sources */,
+				0006035927ED9FF6005BD920 /* DeviceflowResult.swift in Sources */,
+				000603BD27EDA390005BD920 /* IssuePicker.swift in Sources */,
+				0006033127ED9FB9005BD920 /* APICall.swift in Sources */,
+				0006036727EDA012005BD920 /* IssueList.swift in Sources */,
+				000603C627EDA39D005BD920 /* CommitWriteHost.swift in Sources */,
+				0006036527EDA012005BD920 /* IssueFilterSelector.swift in Sources */,
+				0006031727ED9F72005BD920 /* TagViewModel.swift in Sources */,
+				000603B127EDA36A005BD920 /* Sidebar.swift in Sources */,
+				0006031E27ED9F7F005BD920 /* CoreDataStack.swift in Sources */,
+				0006034A27ED9FE9005BD920 /* CommitWriter.swift in Sources */,
+				000603CC27EDA3A2005BD920 /* VerificationCode.swift in Sources */,
+				000603D227EDA3AA005BD920 /* AddTag.swift in Sources */,
+				000603C327EDA399005BD920 /* TagSelector.swift in Sources */,
+				000603BF27EDA394005BD920 /* TextEditor.swift in Sources */,
+				0006030F27ED9F69005BD920 /* TagRepository.swift in Sources */,
+				000602F327ED9EF0005BD920 /* Mac_Commit_GeneratorApp.swift in Sources */,
+				000603B227EDA36A005BD920 /* ContentView.swift in Sources */,
+				0006035B27ED9FF6005BD920 /* User.swift in Sources */,
+				000603BC27EDA390005BD920 /* SelectedIssueList.swift in Sources */,
+				000603CB27EDA3A2005BD920 /* Setting.swift in Sources */,
+				000603CD27EDA3A2005BD920 /* GithubProfile.swift in Sources */,
+				0006032227ED9F7F005BD920 /* Tag+CoreDataProperties copy.swift in Sources */,
+				000603DE27EDA547005BD920 /* CommitStyle.swift in Sources */,
+				0006031127ED9F69005BD920 /* UserRepository.swift in Sources */,
+				0006034C27ED9FE9005BD920 /* CopyType.swift in Sources */,
+				0006032027ED9F7F005BD920 /* Database.xcdatamodeld in Sources */,
+				000603C227EDA399005BD920 /* TagSelectorList.swift in Sources */,
+				0006030227ED9F38005BD920 /* Authentication.swift in Sources */,
+				000603D327EDA3AA005BD920 /* TagList.swift in Sources */,
+				0006033D27ED9FC7005BD920 /* DeepLinkHandler.swift in Sources */,
+				000603D427EDA3AA005BD920 /* TagDetail.swift in Sources */,
+				0006036D27EDA021005BD920 /* ImageHelpers.swift in Sources */,
+				0006032827ED9FB1005BD920 /* Const.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000602C127ED9DD8005BD920 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000602AE27ED9DD7005BD920 /* Commit Generator */;
+			targetProxy = 000602C027ED9DD8005BD920 /* PBXContainerItemProxy */;
+		};
+		000602CB27ED9DD8005BD920 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000602AE27ED9DD7005BD920 /* Commit Generator */;
+			targetProxy = 000602CA27ED9DD8005BD920 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000602D127ED9DD8005BD920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000602D227ED9DD8005BD920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000602D427ED9DD8005BD920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA900AC024FB07448E614F40 /* Pods-Commit Generator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Commit Generator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Commit-Generator-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		000602D527ED9DD8005BD920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DD5B11361206864870E5851 /* Pods-Commit Generator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Commit Generator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Commit-Generator-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = per.JongHo.CommitGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		000602D727ED9DD8005BD920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963BE2B8B5F004DEB770A0B4 /* Pods-Commit GeneratorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Commit-GeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Commit Generator.app/Commit Generator";
+			};
+			name = Debug;
+		};
+		000602D827ED9DD8005BD920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DEEA47AD3B660A0F489160 /* Pods-Commit GeneratorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Commit-GeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Commit Generator.app/Commit Generator";
+			};
+			name = Release;
+		};
+		000602DA27ED9DD8005BD920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634855963F6569CA08567CA0 /* Pods-Commit Generator-Commit GeneratorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Commit-GeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Commit Generator";
+			};
+			name = Debug;
+		};
+		000602DB27ED9DD8005BD920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6953FF79960F83CA949B64 /* Pods-Commit Generator-Commit GeneratorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Commit-GeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Commit Generator";
+			};
+			name = Release;
+		};
+		000602FD27ED9EF0005BD920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A63F3F1161FD06B9FCA5E22 /* Pods-Mac Commit Generator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mac Commit Generator/Mac_Commit_Generator.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mac Commit Generator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Mac-Commit-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000602FE27ED9EF0005BD920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8CFD707A83BBF1E673C8592 /* Pods-Mac Commit Generator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mac Commit Generator/Mac_Commit_Generator.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mac Commit Generator/Preview Content\"";
+				DEVELOPMENT_TEAM = 44RS35G3C5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "per.JongHo.Mac-Commit-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000602AA27ED9DD7005BD920 /* Build configuration list for PBXProject "Commit Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000602D127ED9DD8005BD920 /* Debug */,
+				000602D227ED9DD8005BD920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000602D327ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000602D427ED9DD8005BD920 /* Debug */,
+				000602D527ED9DD8005BD920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000602D627ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit GeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000602D727ED9DD8005BD920 /* Debug */,
+				000602D827ED9DD8005BD920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000602D927ED9DD8005BD920 /* Build configuration list for PBXNativeTarget "Commit GeneratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000602DA27ED9DD8005BD920 /* Debug */,
+				000602DB27ED9DD8005BD920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000602FC27ED9EF0005BD920 /* Build configuration list for PBXNativeTarget "Mac Commit Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000602FD27ED9EF0005BD920 /* Debug */,
+				000602FE27ED9EF0005BD920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		000603D927EDA430005BD920 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		000603DC27EDA437005BD920 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 000603D927EDA430005BD920 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0006031927ED9F7F005BD920 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0006031A27ED9F7F005BD920 /* Database.xcdatamodel */,
+			);
+			currentVersion = 0006031A27ED9F7F005BD920 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 000602A727ED9DD7005BD920 /* Project object */;
+}

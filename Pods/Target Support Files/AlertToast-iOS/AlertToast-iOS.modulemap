@@ -1,0 +1,6 @@
+framework module AlertToast {
+  umbrella header "AlertToast-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
